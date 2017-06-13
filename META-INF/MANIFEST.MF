@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+MIDlet-Vendor: 东虹移动
+Media-Price: 0
+MIDlet-Version: 1.0.0
+MIDlet-1: 猿人时代,icon.png,MankeyMan
+MicroEdition-Configuration: CLDC-1.1
+MIDlet-Icon: icon.png
+MIDlet-Name: 猿人时代
+MicroEdition-Profile: MIDP-2.0
+MIDlet-Description: 基于诺基亚N7370系列策略冒险游戏
+
