@@ -90,10 +90,10 @@ final class p extends aa {
     }
 
     public final void c() {
-        this.o = this.n();
+        this.o = this.getC();
         q var2;
         label119:
-        switch(this.o()) {
+        switch(this.getD()) {
             case 0:
                 switch(this.r) {
                     case 0:
@@ -307,11 +307,11 @@ final class p extends aa {
     }
 
     public final boolean d() {
-        return this.o() == 0 && this.r == -1;
+        return this.getD() == 0 && this.r == -1;
     }
 
     public final boolean e() {
-        return this.o() == 1 && this.r == -1;
+        return this.getD() == 1 && this.r == -1;
     }
 
     public final boolean f() {
@@ -424,7 +424,7 @@ final class p extends aa {
         if(var1 == 0) {
             this.h[1].a(-1);
         } else {
-            Canvas.b(196, x[var1]);
+            Canvas.getImage(196, x[var1]);
             this.h[1].a(196, 1);
         }
 

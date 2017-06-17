@@ -14,7 +14,7 @@ final class j extends aa {
     private static int i;
     private static int j;
     private static int k;
-    private static int l;
+    private static int techId;
     private static int m;
     private static int[] o = new int[]{5, 7, 6, 9, 10, 8, 11};
     private static int[] p = new int[]{0, 50, 70, 90, 120, 150, 0, 10, 15, 20, 40, 50, 0, 20, 25, 30, 50, 0, 0, 5, 10, 15, 30, 0, 1, 3, 5, 10, 20, 0, 0, 5, 10, 15, 0, 0, 1, 3, 5, 10, 0, 0, 0, 30, 40, 50, 0, 80};
@@ -73,7 +73,7 @@ final class j extends aa {
     }
 
     public final void c() {
-        int n = this.n();
+        int n = this.getC();
 
         do {
             int var1;
@@ -90,7 +90,7 @@ final class j extends aa {
             int var29;
             int var36;
             int var38;
-            switch(this.o()) {
+            switch(this.getD()) {
                 case 0:
                     ae[] var37 = new ae[g];
                     ae[] var33 = new ae[g];
@@ -455,28 +455,28 @@ final class j extends aa {
                 case 9:
                     if(n != 0) {
                         if(n == 15) {
-                            if(l == 8) {
+                            if(techId == 8) {
                                 sClass.g();
                                 sClass.f();
                             }
 
                             aiClass.x.d();
                             q var31 = e[0].k();
-                            sClass.a(18, l, var31.a, var31.b - 30, e[0].m() + 1, 0);
+                            sClass.a(18, techId, var31.a, var31.b - 30, e[0].m() + 1, 0);
                             aiClass.b(13);
                             this.h(12);
-                            aiClass.d(q[l << 1] - aiClass.p * q[(l << 1) + 1]);
+                            aiClass.d(q[techId << 1] - aiClass.year * q[(techId << 1) + 1]);
                         }
                     } else {
                         i = 0;
-                        l = -1;
+                        techId = -1;
                         var2 = a.c[70];
                         var29 = a.c[71];
                         var4 = a.c[76];
-                        var5 = a.k(4);
-                        var36 = a.k(3);
-                        var38 = a.k(2);
-                        var8 = a.k(1);
+                        var5 = a.getHunted(4);
+                        var36 = a.getHunted(3);
+                        var38 = a.getHunted(2);
+                        var8 = a.getHunted(1);
                         var9 = a.c[74];
                         var10 = a.c[78];
                         int var11 = a.c[79];
@@ -487,7 +487,7 @@ final class j extends aa {
                                 var14 = var13.o();
                                 int var15 = var13.p() + m;
                                 int var16 = var13.q() + m;
-                                int var17 = var13.w();
+                                int var17 = var13.wMethod();
                                 int var18 = var13.r();
                                 int var19 = var13.s();
                                 int var20 = var13.c[18];
@@ -501,152 +501,152 @@ final class j extends aa {
                                     var26 = true;
                                 }
 
-                                if(aiClass.d >= 0 && l == -1 && !a.j(16) && var22 >= 8 && var26) {
-                                    l = 16;
+                                if(aiClass.d >= 0 && techId == -1 && !a.j(16) && var22 >= 8 && var26) {
+                                    techId = 16;
                                 }
 
-                                if(aiClass.d > 0 && l == -1) {
+                                if(aiClass.d > 0 && techId == -1) {
                                     if(!a.j(17)) {
                                         if(var22 >= 16 && var17 >= 350 && var19 >= 16 && var26) {
-                                            l = 17;
+                                            techId = 17;
                                         }
                                     } else if(!a.j(18)) {
                                         if(var22 >= 24 && var17 >= 400 && var19 >= 20 && var26) {
-                                            l = 18;
+                                            techId = 18;
                                         }
                                     } else if(!a.j(19) && var22 >= 32 && var17 >= 500 && var19 >= 24 && var26) {
-                                        l = 19;
+                                        techId = 19;
                                     }
 
                                     if(!a.j(5) && var22 >= 32 && var17 >= 400 && (var16 >= 69 || var25 > 50) && (b.c[10] == 2 || b.j(0).c[10] == 2 || b.j(1).c[10] == 2 || b.j(2).c[10] == 2 || b.j(3).c[10] == 2)) {
-                                        l = 5;
+                                        techId = 5;
                                     }
 
                                     if(!a.j(4) && var22 >= 44 && var17 >= 450 && var2 >= 1000 && (var15 >= 69 || var25 > 50)) {
-                                        l = 4;
+                                        techId = 4;
                                     }
 
                                     if(!a.j(1) && var22 >= 32 && var17 >= 500 && var18 >= 8 && var5 + var36 >= 15 && a.j(16) && (var15 >= 69 || var25 > 50)) {
-                                        l = 1;
+                                        techId = 1;
                                     }
                                 }
 
-                                if(aiClass.d >= 2 && l == -1) {
+                                if(aiClass.d >= 2 && techId == -1) {
                                     if(!a.j(20)) {
                                         if(var22 >= 16 && var17 >= 600 && var19 >= 20 && a.j(19) && var26) {
-                                            l = 20;
+                                            techId = 20;
                                         }
                                     } else if(!a.j(21) && var22 >= 24 && var17 >= 700 && var19 >= 24 && var26) {
-                                        l = 21;
+                                        techId = 21;
                                     }
 
                                     if(!a.j(3) && var22 >= 32 && var17 >= 550 && var18 + var19 >= 20 && var16 >= 69 && var25 > 50) {
-                                        l = 3;
+                                        techId = 3;
                                     }
 
                                     if(!a.j(14) && var22 >= 24 && var17 >= 750 && var9 >= 4 && (var16 >= 69 || var25 > 50)) {
-                                        l = 14;
+                                        techId = 14;
                                     }
 
                                     if(!a.j(8) && var22 >= 24 && var17 >= 750 && var24 == 1 && (var16 >= 69 || var25 > 50)) {
-                                        l = 8;
+                                        techId = 8;
                                     }
                                 }
 
-                                if(aiClass.d >= 3 && l == -1) {
+                                if(aiClass.d >= 3 && techId == -1) {
                                     if(!a.j(22)) {
                                         if(var22 >= 24 && var17 >= 800 && var19 >= 24 && a.j(21) && var26) {
-                                            l = 22;
+                                            techId = 22;
                                         }
                                     } else if(!a.j(23) && var22 >= 32 && var17 >= 900 && var19 >= 32 && var26) {
-                                        l = 23;
+                                        techId = 23;
                                     }
 
                                     if(!a.j(11) && var22 >= 32 && var17 >= 850 && var19 >= 24 && var29 >= 300 && (var15 >= 69 || var25 > 50)) {
-                                        l = 11;
+                                        techId = 11;
                                     }
 
                                     if(!a.j(0) && var22 >= 32 && var17 >= 950 && var4 >= 300 && a.j(5) && (var15 >= 69 || var25 > 50)) {
-                                        l = 0;
+                                        techId = 0;
                                     }
 
                                     if(!a.j(10) && var22 >= 32 && var17 >= 950 && (var24 == 6 || var24 == 5) && a.j(20) && (var15 >= 69 || var25 > 50)) {
-                                        l = 10;
+                                        techId = 10;
                                     }
 
                                     if(!a.j(12) && var22 >= 24 && var17 >= 800 && var23 <= 10 && a.j(5) && a.j(1) && var15 >= 69 && var25 > 50) {
-                                        l = 12;
+                                        techId = 12;
                                     }
 
                                     if(!a.j(13) && var22 >= 24 && var17 >= 850 && var18 + var19 >= 20 && var21 >= 48 && var10 >= 3 && a.j(3) && (var15 >= 69 || var25 > 50)) {
-                                        l = 13;
+                                        techId = 13;
                                     }
                                 }
 
-                                if(aiClass.d >= 4 && l == -1) {
+                                if(aiClass.d >= 4 && techId == -1) {
                                     if(!a.j(24)) {
                                         if(var22 >= 24 && var17 >= 1000 && var19 >= 32 && var26 && a.j(23)) {
-                                            l = 24;
+                                            techId = 24;
                                         }
                                     } else if(!a.j(25) && var22 >= 32 && var17 >= 1100 && var19 >= 36 && var26) {
-                                        l = 25;
+                                        techId = 25;
                                     }
 
                                     if(!a.j(15) && var22 >= 32 && var17 >= 1050 && var18 >= 60 && var11 >= 2 && a.j(24) && (var14 + var15 >= 99 || var25 > 50)) {
-                                        l = 15;
+                                        techId = 15;
                                     }
 
                                     if(!a.j(7) && var22 >= 32 && var17 >= 1150 && a.j(3) && (var16 >= 69 || var25 > 50)) {
-                                        l = 7;
+                                        techId = 7;
                                     }
                                 }
 
-                                if(aiClass.d >= 5 && l == -1) {
+                                if(aiClass.d >= 5 && techId == -1) {
                                     if(!a.j(26) && var22 >= 32 && var17 >= 1200 && var19 >= 36 && var26 && a.j(25)) {
-                                        l = 26;
+                                        techId = 26;
                                     }
 
                                     if(!a.j(2) && var22 >= 32 && var17 >= 1250 && var5 + var36 >= 20 && var8 >= 2 && var38 >= 2 && a.j(12) && (var15 >= 69 || var25 > 50)) {
-                                        l = 2;
+                                        techId = 2;
                                     }
                                 }
 
-                                if(aiClass.d >= 6 && l == -1) {
+                                if(aiClass.d >= 6 && techId == -1) {
                                     if(!a.j(27) && var22 >= 48 && var17 >= 1300 && var19 >= 40 && var26) {
-                                        l = 27;
+                                        techId = 27;
                                     }
 
                                     if(!a.j(9) && var22 >= 48 && var17 >= 1300 && a.j(7) && a.j(8) && (var16 >= 69 || var25 > 50)) {
-                                        l = 9;
+                                        techId = 9;
                                     }
 
                                     if(!a.j(6) && var22 >= 48 && var17 >= 1350 && var21 >= 64 && var20 >= 30 && a.j(9) && a.j(13) && (var16 >= 69 || var25 > 50)) {
-                                        l = 6;
+                                        techId = 6;
                                     }
                                 }
                             }
 
-                            if(l != -1) {
+                            if(techId != -1) {
                                 e[0] = var13;
                                 i = 1;
-                                var29 = l;
+                                var29 = techId;
                                 ao var30 = a;
                                 var4 = var29 / 16;
                                 var29 %= 16;
                                 var30.c[var4 + 11] |= 1 << var29;
-                                aiClass.a(Canvas.getMessage(217 + l));
+                                aiClass.a(Canvas.getMessage(217 + techId));
                                 var13.s(0);
                                 sClass.c(var13.getName(true));
                                 sClass.c("▽");
                                 sClass.d(162);
-                                sClass.d(217 + l);
+                                sClass.d(217 + techId);
                                 sClass.c("▽");
-                                sClass.d(134 + l);
+                                sClass.d(134 + techId);
                                 break;
                             }
                         }
 
-                        if(l != -1) {
+                        if(techId != -1) {
                             this.d();
                             aiClass.A.d(0);
                         } else {
@@ -701,7 +701,7 @@ final class j extends aa {
                 case 12:
                     if(n == 0) {
                         sClass.h();
-                        Canvas.option(1, (String)null);
+                        Canvas.option(1, null);
                     }
 
                     if(sClass.j() && Canvas.d(1048576)) {
@@ -713,7 +713,6 @@ final class j extends aa {
                         Canvas.f(0);
                         aiClass.x.d();
                         aiClass.b(22);
-                        boolean var27 = true;
 
                         for(var5 = 0; var5 < i; ++var5) {
                             ae var6;
@@ -761,12 +760,11 @@ final class j extends aa {
                     aiClass.A.d(1);
                     this.f(0);
             }
-        } while(this.o() == 3 && i == 0);
+        } while(this.getD() == 3 && i == 0);
 
     }
 
     private void d() {
-        boolean var1 = true;
         q[] var4 = new q[16];
 
         int var2;

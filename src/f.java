@@ -25,7 +25,7 @@ final class f extends aa {
 
     public final boolean a() {
         this.i(1664);
-        Canvas.b(150, 96);
+        Canvas.getImage(150, 96);
         this.b = 0;
         this.a = new d[14];
         Canvas.a(this.a);
@@ -34,14 +34,14 @@ final class f extends aa {
         this.a[2].a(150, 1, var1?new z(0, 19, 86, 19):new z(0, 38, 86, 19));
         Canvas.option(0, null);
         Canvas.option(1, null);
-        int var5 = aiClass.e;
+        int score = aiClass.score;
         int var2 = 100000;
 
-        for(int var3 = 0; var3 < 6; var2 /= 10) {
-            int var4 = var5 / var2;
-            var5 -= var4 * var2;
-            this.a[var3 + 6].a(143, 1, new z(var4 << 3, 0, 8, 10));
-            ++var3;
+        for(int digit = 0; digit < 6; var2 /= 10) {
+            int var4 = score / var2;
+            score -= var4 * var2;
+            this.a[digit + 6].a(143, 1, new z(var4 << 3, 0, 8, 10));
+            ++digit;
         }
 
         this.d();
@@ -54,10 +54,10 @@ final class f extends aa {
     }
 
     public final void c() {
-        int c = this.n();
+        int c = this.getC();
         int var1;
         int var2;
-        switch(this.o()) {
+        switch(this.getD()) {
             case 0:
                 if(c == 0) {
                     this.a[12].setFlag2(false);
@@ -181,7 +181,7 @@ final class f extends aa {
                     return;
                 }
 
-                c = this.n();
+                c = this.getC();
                 switch(this.m) {
                     case 0:
                         Canvas.option(1, "返回");
@@ -268,7 +268,7 @@ final class f extends aa {
                     return;
                 }
 
-                c = this.n();
+                c = this.getC();
                 switch(this.m) {
                     case 0:
                         Canvas.option(1, "返回");
@@ -399,9 +399,9 @@ final class f extends aa {
         this.l[0].a(12, 25);
         this.l[0].g(6142);
         this.l[0].setColor(5470627);
-        int var1;
-        int var2;
-        int var3;
+        int hour;
+        int minute;
+        int second;
         switch(this.o) {
             case 0:
                 String _message = Canvas.getMessage(245);     // "───────　部落人数▽"
@@ -430,87 +430,87 @@ final class f extends aa {
                 this.l[0].a(_message);
                 return;
             case 1:
-                _message = Canvas.getMessage(256);
-                _message = _message + Canvas.getMessage(257);
+                _message = Canvas.getMessage(256);            // "───────　狩猎记录▽"
+                _message = _message + Canvas.getMessage(257); // "兔子  -------　"
                 _message = _message + acClass.getNumberString(aiClass.records[9], 4, true);
-                _message = _message + Canvas.getMessage(249);
-                _message = _message + Canvas.getMessage(258);
+                _message = _message + Canvas.getMessage(249); // " ▽"
+                _message = _message + Canvas.getMessage(258); // "羚羊  -------　"
                 _message = _message + acClass.getNumberString(aiClass.records[10], 4, true);
-                _message = _message + Canvas.getMessage(249);
-                _message = _message + Canvas.getMessage(259);
+                _message = _message + Canvas.getMessage(249); //
+                _message = _message + Canvas.getMessage(259); // "老虎  -------　"
                 _message = _message + acClass.getNumberString(aiClass.records[11], 4, true);
                 _message = _message + Canvas.getMessage(249);
-                _message = _message + Canvas.getMessage(260);
+                _message = _message + Canvas.getMessage(260); // "猛犸象  ----　"
                 _message = _message + acClass.getNumberString(aiClass.records[12], 4, true);
                 _message = _message + Canvas.getMessage(249);
-                _message = _message + Canvas.getMessage(261);
+                _message = _message + Canvas.getMessage(261); // "鱼   ---------　"
                 _message = _message + acClass.getNumberString(aiClass.records[13], 4, true);
                 _message = _message + Canvas.getMessage(249);
-                _message = _message + Canvas.getMessage(262);
+                _message = _message + Canvas.getMessage(262); // "鹦鹉螺  ----　"
                 _message = _message + acClass.getNumberString(aiClass.records[14], 4, true);
                 _message = _message + Canvas.getMessage(249);
-                _message = _message + Canvas.getMessage(263);
+                _message = _message + Canvas.getMessage(263); // "鲸鱼  -------　"
                 _message = _message + acClass.getNumberString(aiClass.records[15], 4, true);
                 _message = _message + Canvas.getMessage(249);
-                _message = _message + Canvas.getMessage(264);
+                _message = _message + Canvas.getMessage(264); // "恐龙  -------　"
                 _message = _message + acClass.getNumberString(aiClass.records[16], 4, true);
                 _message = _message + Canvas.getMessage(249);
-                _message = _message + Canvas.getMessage(265);
+                _message = _message + Canvas.getMessage(265); // "合计  ----　"
                 _message = _message + acClass.getNumberString(aiClass.records[17], 5, true);
                 _message = _message + Canvas.getMessage(249);
                 this.l[0].a(_message);
                 return;
             case 2:
-                _message = Canvas.getMessage(266);
-                _message = _message + Canvas.getMessage(267);
+                _message = Canvas.getMessage(266);            // "───────　采集记录▽"
+                _message = _message + Canvas.getMessage(267); // "食物  --- "
                 _message = _message + acClass.getNumberString(aiClass.records[7], 5, true);
-                _message = _message + Canvas.getMessage(268);
-                _message = _message + Canvas.getMessage(269);
-                _message = _message + Canvas.getMessage(270);
+                _message = _message + Canvas.getMessage(268); // "个▽▽"
+                _message = _message + Canvas.getMessage(269); // "───────　石器记录▽"
+                _message = _message + Canvas.getMessage(270); // "石器  --- "
                 _message = _message + acClass.getNumberString(aiClass.records[8], 5, true);
-                _message = _message + Canvas.getMessage(268);
-                _message = _message + Canvas.getMessage(276);
-                _message = _message + Canvas.getMessage(271);
-                _message = _message + acClass.getNumberString(aiClass.e, 6, true);
-                _message = _message + Canvas.getMessage(272);
-                var1 = aiClass.c / '티' % 99; // '티': 54000
-                var2 = aiClass.c % '티' / 900 % 60; // '티': 54000
-                var3 = aiClass.c / 15 % 60;
-                _message = _message + Canvas.getMessage(273);
-                _message = _message + acClass.getNumberString(var1, 2, true);
+                _message = _message + Canvas.getMessage(268); // "个▽▽"
+                _message = _message + Canvas.getMessage(276); // "───────　其　它▽"
+                _message = _message + Canvas.getMessage(271); // "积分  --- "
+                _message = _message + acClass.getNumberString(aiClass.score, 6, true);
+                _message = _message + Canvas.getMessage(272); // "点▽"
+                hour = aiClass.gameTime / 54000 % 99; // '티': 54000
+                minute = aiClass.gameTime % 54000 / 900 % 60; // '티': 54000
+                second = aiClass.gameTime / 15 % 60;
+                _message = _message + Canvas.getMessage(273); // "计时＝"
+                _message = _message + acClass.getNumberString(hour, 2, true);
                 _message = _message + "：";
-                _message = _message + acClass.getNumberString(var2, 2, true);
+                _message = _message + acClass.getNumberString(minute, 2, true);
                 _message = _message + "：";
-                _message = _message + acClass.getNumberString(var3, 2, true);
+                _message = _message + acClass.getNumberString(second, 2, true);
                 this.l[0].a(_message);
                 return;
             default:
-                var1 = (this.o - 3) * 9;
+                hour = (this.o - 3) * 9;
                 this.l[0].f(6, 24);
-                _message = Canvas.getMessage(275);
+                _message = Canvas.getMessage(275); // "─────────　大事记▽"
 
-                for(var2 = 0; var2 < 9; ++var2) {
-                    for(var3 = 0; var3 < 20; ++var3) {
-                        _message = _message + String.valueOf(aiClass.n[var1 * 20 + var3]);
+                for(minute = 0; minute < 9; ++minute) {
+                    for(second = 0; second < 20; ++second) {
+                        _message = _message + String.valueOf(aiClass.n[hour * 20 + second]);
                     }
 
                     _message = _message + "▽";
-                    if(var1 >= 64 || var1 >= aiClass.l) {
+                    if(hour >= 64 || hour >= aiClass.l) {
                         break;
                     }
 
-                    ++var1;
+                    ++hour;
                 }
 
-                String var4 = "";
+                String s = "";
 
-                for(var1 = 0; var1 < _message.length(); ++var1) {
-                    if(_message.charAt(var1) != 0) {
-                        var4 = var4 + _message.charAt(var1);
+                for(hour = 0; hour < _message.length(); ++hour) {
+                    if(_message.charAt(hour) != 0) {
+                        s = s + _message.charAt(hour);
                     }
                 }
 
-                this.l[0].a(var4);
+                this.l[0].a(s);
         }
     }
 }

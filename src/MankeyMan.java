@@ -11,13 +11,13 @@ public class MankeyMan extends MID {
     }
 
     protected void pauseApp() {
-        aiClass.a();
+        aiClass.recordGame();
         super.pauseApp();
         Canvas.a(true);
     }
 
-    protected void destroyApp(boolean var1) {
-        aiClass.a();
-        super.destroyApp(var1);
+    protected void destroyApp(boolean destroy) {
+        aiClass.recordGame();
+        super.destroyApp(destroy);
     }
 }

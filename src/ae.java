@@ -738,7 +738,7 @@ final class ae extends aj {
         }
     }
 
-    public final int w() {
+    final int wMethod() {
         return super.c[30];
     }
 

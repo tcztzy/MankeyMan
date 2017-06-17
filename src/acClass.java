@@ -235,9 +235,9 @@ public final class acClass extends aa {
     }
 
     public final void c() {
-        o = this.n();
+        o = this.getC();
         int var2;
-        switch(this.o()) {
+        switch(this.getD()) {
             case 0:
                 aiClass.b();
                 if(Canvas.d) {
@@ -423,7 +423,7 @@ public final class acClass extends aa {
                             break;
                         case 6:
                             if(!c) {
-                                Canvas.b(215, 204);
+                                Canvas.getImage(215, 204);
                                 this.u = new d[5];
                                 Canvas.a(this.u);
                                 this.u[0].a(215, 0);
@@ -476,7 +476,7 @@ public final class acClass extends aa {
                             break;
                         case 7:
                             if(!this.w) {
-                                Canvas.b(133, 133);
+                                Canvas.getImage(133, 133);
                                 this.v = new d[1];
                                 Canvas.a(this.v);
                                 this.v[0].a(133, 0);
@@ -525,7 +525,7 @@ public final class acClass extends aa {
                                 Canvas.option(0, null);
                                 this.C = true;
                             } else {
-                                o = this.n();
+                                o = this.getC();
                                 switch(this.z) {
                                     case 0:
                                         Canvas.option(1, "返回");
@@ -638,13 +638,13 @@ public final class acClass extends aa {
                 k = null;
                 j = null;
                 Canvas.a(this.K, null, null, null, false);
-                Canvas.b(230, 130);
-                Canvas.b(231, 200);
-                Canvas.b(232, 201);
-                Canvas.b(233, 202);
-                Canvas.b(234, 203);
-                Canvas.b(240, 300);
-                Canvas.b(241, 301);
+                Canvas.getImage(230, 130);
+                Canvas.getImage(231, 200);
+                Canvas.getImage(232, 201);
+                Canvas.getImage(233, 202);
+                Canvas.getImage(234, 203);
+                Canvas.getImage(240, 300);
+                Canvas.getImage(241, 301);
                 Canvas.a(s = new d[6]);
                 s[0].a(230);
                 s[0].setFlag2(false);
@@ -693,7 +693,7 @@ public final class acClass extends aa {
             case 8:
                 if(g != null) {
                     if(!g.isFlag1()) {
-                        switch(g.l()) {
+                        switch(g.getE()) {
                             case 3:
                                 this.h(9);
                                 break;

@@ -47,13 +47,13 @@ final class e extends aa {
 
     public final void c() {
         this.j = 0;
-        this.c = this.n();
+        this.c = this.getC();
         e var1;
         int var3;
         int var4;
         int var5;
         int var6;
-        switch(this.o()) {
+        switch(this.getD()) {
             case 1:
                 var1 = this;
 
@@ -201,7 +201,7 @@ final class e extends aa {
     }
 
     public final void d() {
-        if(this.o() != 3) {
+        if(this.getD() != 3) {
             for(int var1 = 0; var1 < this.e; ++var1) {
                 this.a[var1].setFlag2(false);
             }

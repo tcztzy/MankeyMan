@@ -43,8 +43,8 @@ final class ab extends aa {
     }
 
     public final void c() {
-        this.m = this.n();
-        if(this.o() == 1) {
+        this.m = this.getC();
+        if(this.getD() == 1) {
             if(this.i > 0 && --this.i == 0) {
                 this.g(0);
                 this.m = 0;
@@ -381,7 +381,7 @@ final class ab extends aa {
     }
 
     public final boolean e() {
-        return this.o() == 1;
+        return this.getD() == 1;
     }
 
     public final void a(int var1, int var2) {

@@ -9,9 +9,9 @@ final class aiClass {
     private static int G;
     public static int a;
     public static int[] b = new int[5];
-    public static int c;
+    static int gameTime;
     public static int d;
-    public static int e;
+    static int score;
     public static q f = new q(0, 0);
     public static int[] g = new int[4];
     public static int[] h = new int[29];
@@ -21,8 +21,8 @@ final class aiClass {
     public static int l;
     public static int m;
     public static char[] n = new char[1800];
-    public static int[] records = new int[20];
-    public static int p;
+    static int[] records = new int[20];
+    static int year;
     public static int q;
     public static int r;
     static int s;
@@ -46,7 +46,7 @@ final class aiClass {
     public aiClass() {
     }
 
-    public static void a() {
+    static void recordGame() {
         recordStore = null;
 
         try {
@@ -78,9 +78,9 @@ final class aiClass {
                 appendIntToRecord(b[var0]);
             }
 
-            appendIntToRecord(c);
+            appendIntToRecord(gameTime);
             appendIntToRecord(d);
-            appendIntToRecord(e);
+            appendIntToRecord(score);
             appendIntToRecord(f.a);
             appendIntToRecord(f.b);
 
@@ -163,9 +163,9 @@ final class aiClass {
                 b[var0] = getIntFromRecord();
             }
 
-            c = getIntFromRecord();
+            gameTime = getIntFromRecord();
             d = getIntFromRecord();
-            e = getIntFromRecord();
+            score = getIntFromRecord();
             f.a = getIntFromRecord();
             f.b = getIntFromRecord();
 

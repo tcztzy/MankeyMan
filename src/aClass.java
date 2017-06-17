@@ -45,11 +45,11 @@ final class aClass extends aa {
     }
 
     public final void c() {
-        int c = this.n();
+        int c = this.getC();
         int var1;
         int var2;
         int var3;
-        switch(this.o()) {
+        switch(this.getD()) {
             case 1:
                 if(c == 0) {
                     var1 = this.k.a - 10 * (this.d - 1);

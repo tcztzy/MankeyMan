@@ -29,7 +29,7 @@ abstract class aj {
         sClass.b(this);
     }
 
-    public final boolean w() {
+    final boolean w() {
         return (this.a & -2147483648) != 0;
     }
 

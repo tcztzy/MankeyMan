@@ -673,17 +673,29 @@ final class ao extends aj {
         }
     }
 
-    public final int k(int var1) {
-        if(var1 != 8) {
-            return super.c[var1 + 42];
+    final int getHunted(int specie) {
+        /*
+        specie:
+            0: dinosaur
+            1: mammoth
+            2: tiger
+            3: antelope
+            4: rabbit
+            5: nautilus
+            6: fish
+            7: whale
+            8: summation
+         */
+        if(specie != 8) {
+            return super.c[specie + 42];
         } else {
-            var1 = 0;
+            specie = 0;
 
-            for(int var2 = 0; var2 < 8; ++var2) {
-                var1 += super.c[var2 + 42];
+            for(int i = 0; i < 8; ++i) {
+                specie += super.c[i + 42];
             }
 
-            return var1;
+            return specie;
         }
     }
 
@@ -712,7 +724,14 @@ final class ao extends aj {
     }
 
     final int getDeath(int cause) {
-        return cause > 0 ? super.c[66 + (cause - 1)]:0;
+        /*
+        cause:
+            1: illness
+            2: injury
+            3: starvation
+            4: eol end of life
+         */
+        return cause > 0 ? super.c[66 + (cause - 1)] : 0;
     }
 
     public final boolean p() {
@@ -750,6 +769,12 @@ final class ao extends aj {
     }
 
     final int getPopulation(int gender) {
+        /*
+        gender:
+            0: male
+            1: female
+            2: summation
+         */
         return gender == 2 ? super.c[72] + super.c[73] : super.c[gender + 72];
     }
 }

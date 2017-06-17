@@ -228,7 +228,7 @@ final class sClass extends aa {
     }
 
     public final void c() {
-        p = this.n();
+        p = this.getC();
 
         do {
             int var2;
@@ -236,7 +236,7 @@ final class sClass extends aa {
             int var4;
             ao var5;
             int var12;
-            switch(this.o()) {
+            switch(this.getD()) {
                 case 0:
                     if(p != 0) {
                         aiClass.A.d(0);
@@ -257,9 +257,9 @@ final class sClass extends aa {
                             var10 = this;
                             Canvas.setI((int)System.currentTimeMillis());
                             aiClass.a &= -16;
-                            aiClass.c = 1;
+                            aiClass.gameTime = 1;
                             aiClass.d = 0;
-                            aiClass.e = 0;
+                            aiClass.score = 0;
                             aiClass.l = 0;
                             aiClass.m = 0;
                             aiClass.w = false;
@@ -770,7 +770,7 @@ final class sClass extends aa {
                             x = (f) Canvas.a(new f(), this);
                         }
                     } else if(!x.isFlag1()) {
-                        if(x.l() == 6) {
+                        if(x.getE() == 6) {
                             this.f(4);
                         } else {
                             x = null;
@@ -780,7 +780,7 @@ final class sClass extends aa {
                     break;
                 case 27:
                     if(p == 0) {
-                        aiClass.t = r(aiClass.e);
+                        aiClass.t = r(aiClass.score);
                         aiClass.a("全灭");
                         this.W();
                         aiClass.y.a(2, 2, Canvas.getMessage(381));
@@ -805,7 +805,7 @@ final class sClass extends aa {
                         this.e();
                         T();
                         if(t()) {
-                            aiClass.t = r(aiClass.e);
+                            aiClass.t = r(aiClass.score);
                             aiClass.a |= 4;
                             this.W();
                         }
@@ -863,11 +863,11 @@ final class sClass extends aa {
                         y = null;
                     }
             }
-        } while(this.o() == 7);
+        } while(this.getD() == 7);
 
         this.s();
-        if(!t() && aiClass.c < 13486500) {
-            ++aiClass.c;
+        if(!t() && aiClass.gameTime < 13486500) {
+            ++aiClass.gameTime;
         }
 
     }
@@ -1316,7 +1316,7 @@ final class sClass extends aa {
                 switch(af) {
                     case 0:
                         if(p != 0) {
-                            if(!aiClass.A.l()) {
+                            if(!aiClass.A.dNotEqualToZero()) {
                                 if(aE > 0) {
                                     af = 1;
                                 } else {
@@ -3534,7 +3534,7 @@ final class sClass extends aa {
                     T[ag++] = b.a(var2);
                 }
 
-                Canvas.b(158, 7);
+                Canvas.getImage(158, 7); // dinosaur
                 b.a(5, false);
                 if((var2 = 1 + Canvas.h() % 3) > ag) {
                     var2 = ag;
@@ -3679,8 +3679,8 @@ final class sClass extends aa {
 
             for(int var5 = 0; var5 < var3.c[9]; ++var5) {
                 ae var6 = var3.a(var5);
-                if(var4 < var6.w()) {
-                    var4 = var6.w();
+                if(var4 < var6.wMethod()) {
+                    var4 = var6.wMethod();
                 }
             }
 
@@ -3693,7 +3693,7 @@ final class sClass extends aa {
             int var7 = aiClass.d + 1;
             aiClass.a(Canvas.getMessage(var7 + 319));
             int var8;
-            if((var8 = by[var7 << 1] - aiClass.p * by[(var7 << 1) + 1]) < 0) {
+            if((var8 = by[var7 << 1] - aiClass.year * by[(var7 << 1) + 1]) < 0) {
                 var8 = 0;
             }
 
@@ -5456,8 +5456,8 @@ final class sClass extends aa {
 
             var1 = m;
             if(n != var1) {
-                Canvas.b(0, bu[var1]);
-                Canvas.b(1, bv[var1]);
+                Canvas.getImage(0, bu[var1]);
+                Canvas.getImage(1, bv[var1]);
                 n = var1;
             }
 
@@ -5572,15 +5572,15 @@ final class sClass extends aa {
             c(16);
             switch(r) {
                 case 2:
-                    Canvas.b(8, 115);
-                    Canvas.b(9, 116);
+                    Canvas.getImage(8, 115);
+                    Canvas.getImage(9, 116);
                     a(5, 2, 120, 240, 18432, 0);
                     a(5, 1, 30, 120, 23376, 0);
                     a(5, 1, 160, 50, 23376, 0);
                     a(5, 0, 200, 150, 23076, 0);
                     break;
                 case 3:
-                    Canvas.b(10, 117);
+                    Canvas.getImage(10, 117);
 
                     for(var1 = 0; var1 < 4; ++var1) {
                         a(13, var1 << 1, var1 * 80, 280, 18432, 0);
@@ -5591,7 +5591,7 @@ final class sClass extends aa {
                     }
                     break;
                 case 4:
-                    Canvas.b(11, 113);
+                    Canvas.getImage(11, 113);
                     this.a(14, 0, new q(41, 19), 0, 0);
                     this.a(14, 0, new q(185, 37), 0, 0);
                     this.a(14, 0, new q(4, 99), 0, 0);
@@ -5604,7 +5604,7 @@ final class sClass extends aa {
                     break;
                 case 6:
                 case 7:
-                    Canvas.b(12, 114);
+                    Canvas.getImage(12, 114);
                     switch(m) {
                         case 0:
                         case 2:
@@ -6071,7 +6071,7 @@ final class sClass extends aa {
     private void V() {
         aiClass.C = a;
         aiClass.q = a.c[5];
-        aiClass.p = a.c[4];
+        aiClass.year = a.c[4];
         aiClass.r = b.k();
         aiClass.s = b.c[41];
         aiClass.D = b;
@@ -6085,15 +6085,15 @@ final class sClass extends aa {
             aiClass.records[4] = b.getDeath(3);
             aiClass.records[7] = b.c[70];
             aiClass.records[8] = b.c[71];
-            aiClass.records[9] = b.k(4);
-            aiClass.records[10] = b.k(3);
-            aiClass.records[11] = b.k(2);
-            aiClass.records[12] = b.k(1);
-            aiClass.records[13] = b.k(6);
-            aiClass.records[14] = b.k(5);
-            aiClass.records[15] = b.k(7);
-            aiClass.records[16] = b.k(0);
-            aiClass.records[17] = b.k(8);
+            aiClass.records[9] = b.getHunted(4);
+            aiClass.records[10] = b.getHunted(3);
+            aiClass.records[11] = b.getHunted(2);
+            aiClass.records[12] = b.getHunted(1);
+            aiClass.records[13] = b.getHunted(6);
+            aiClass.records[14] = b.getHunted(5);
+            aiClass.records[15] = b.getHunted(7);
+            aiClass.records[16] = b.getHunted(0);
+            aiClass.records[17] = b.getHunted(8);
             aiClass.records[18] = b.c[76];
         }
 
@@ -6175,7 +6175,7 @@ final class sClass extends aa {
             if(aiClass.l == 89) {
                 s = "截止为止...";
             } else {
-                s = acClass.getNumberString(aiClass.p, 3, true) + "年" + acClass.getSeason(aiClass.q) + " " + var1;
+                s = acClass.getNumberString(aiClass.year, 3, true) + "年" + acClass.getSeason(aiClass.q) + " " + var1;
             }
 
             int var3 = s.length();
@@ -6225,12 +6225,12 @@ final class sClass extends aa {
 
     public final void e(int var1) {
         if(!t()) {
-            if((aiClass.e += var1) < 0) {
-                aiClass.e = 0;
+            if((aiClass.score += var1) < 0) {
+                aiClass.score = 0;
             }
 
-            if(aiClass.e > 999999) {
-                aiClass.e = 999999;
+            if(aiClass.score > 999999) {
+                aiClass.score = 999999;
             }
         }
 

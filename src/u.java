@@ -67,8 +67,8 @@ final class u extends aa {
     }
 
     public final void c() {
-        this.c = this.n();
-        switch(this.o()) {
+        this.c = this.getC();
+        switch(this.getD()) {
             case 0:
                 if(this.c == 0) {
                     switch(this.d) {

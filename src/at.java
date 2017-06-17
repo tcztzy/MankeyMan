@@ -76,13 +76,13 @@ final class at extends wClass {
 
     }
 
-    private void a(String var1, int var2) {
+    private void a(String message, int var2) {
         this.i = 0;
         this.j = 0;
         this.h = 0;
         this.g = 0;
         this.n = false;
-        this.o = var1;
+        this.o = message;
         this.m = 0;
         this.l = 0;
         if(this.o != null) {
@@ -101,8 +101,8 @@ final class at extends wClass {
         this.a(var1, 0);
     }
 
-    public final void a(int var1) {
-        this.a(Canvas.getMessage(var1), 0);
+    public final void a(int messageId) {
+        this.a(Canvas.getMessage(messageId), 0);
     }
 
     public final void a(int var1, int var2) {

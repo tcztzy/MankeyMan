@@ -40,7 +40,7 @@ final class al extends d {
         this.setFlag2(true);
     }
 
-    public final boolean l() {
+    final boolean dNotEqualToZero() {
         return this.d != 0;
     }
 }

@@ -62,7 +62,7 @@ final class av extends aa {
     }
 
     public final void c() {
-        this.d = this.n();
+        this.d = this.getC();
         if((this.c & 4) != 0 && aiClass.D != null && !aiClass.D.p()) {
             this.a[3].setFlag2(this.d / 2 % 2 == 0);
         }
@@ -90,7 +90,7 @@ final class av extends aa {
             p[3] = aiClass.B.r();
             p[4] = aiClass.B.s();
             p[5] = aiClass.B.c[36];
-            var3 = aiClass.B.a[0].d();
+            var3 = aiClass.B.a[0].getK();
             this.a[46].c(var3);
             this.a[46].e();
             String var8;
@@ -107,7 +107,7 @@ final class av extends aa {
                 var2.a[var5 + 76].a(-1);
             }
 
-            var5 = aiClass.B.w();
+            var5 = aiClass.B.wMethod();
             var6 = 1000;
 
             for(var3 = 0; var3 < 4; var6 /= 10) {
@@ -517,7 +517,7 @@ final class av extends aa {
             this.a[70].a(16);
         }
 
-        int var3 = aiClass.p;
+        int var3 = aiClass.year;
         int var4 = 100;
 
         for(int var5 = 0; var5 < 3; var4 /= 10) {

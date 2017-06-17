@@ -12,7 +12,7 @@ class d extends wClass {
     private ImageSize g = new ImageSize(0, 0);
     private ImageSize h = new ImageSize(256, 256);
     private int i = 0;
-    private PNGImage j;
+    private PNGImage image;
     private int k = -1;
     private int l = 0;
     private int m = 0;
@@ -49,8 +49,8 @@ class d extends wClass {
             int var4 = this.g.width * this.h.width >> 8;
             int var5 = this.g.height * this.h.height >> 8;
             if(var3 >= -var4 && var3 < var4 + 240 && var6 >= -var5 && var6 < var5 + 320) {
-                if(this.j != null) {
-                    Image var7 = this.j.image;
+                if(this.image != null) {
+                    Image var7 = this.image.image;
                     if((super.flags & 16) != 0) {
                         x.b(graphics, var7, this.e.a, this.e.b, this.g.width, this.g.height, this.i, wClass.c.a + var3, wClass.c.b + var6, 20);
                         return;
@@ -72,10 +72,10 @@ class d extends wClass {
     }
 
     public final void a(int imageId, int var2) {
-        this.j = Canvas.getPNGImage(imageId);
-        if(this.j != null) {
-            Image var3 = this.j.image;
-            if(this.j.image != null) {
+        this.image = Canvas.getPNGImage(imageId);
+        if(this.image != null) {
+            Image var3 = this.image.image;
+            if(this.image.image != null) {
                 this.g.width = var3.getWidth();
                 this.g.height = var3.getHeight();
                 this.e.a = 0;
@@ -89,8 +89,8 @@ class d extends wClass {
     }
 
     public final void a(int imageId, int var2, z var3) {
-        this.j = Canvas.getPNGImage(imageId);
-        if(this.j != null) {
+        this.image = Canvas.getPNGImage(imageId);
+        if(this.image != null) {
             this.e.a = var3.a;
             this.e.b = var3.b;
             this.g.width = var3.width;
@@ -179,8 +179,7 @@ class d extends wClass {
                 this.a(var2.c, var2.f);
             }
 
-            int var3 = var2.e;
-            this.i = var3;
+            this.i = var2.e;
             ++this.m;
         }
 
@@ -198,7 +197,7 @@ class d extends wClass {
         this.l();
     }
 
-    public final int d() {
+    public final int getK() {
         return this.k;
     }
 

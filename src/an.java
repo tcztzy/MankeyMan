@@ -168,7 +168,7 @@ final class an extends aj {
     }
 
     public final void f() {
-        an var1 = this;
+        an self = this;
         q var2 = this.g();
         int var3 = super.c[4];
         int var4;
@@ -180,11 +180,11 @@ final class an extends aj {
         int var10;
         if((super.c[6] & 511) != 0) {
             for(var4 = 0; var4 < 5; ++var4) {
-                if((var1.c[var4 + 10] & 1) != 0) {
-                    var1.c[var4 + 10] = 0;
-                    var5 = var1.c[var4 + 15];
-                    var6 = var1.c[var4 + 20];
-                    var1.a(var5, var6).a(0, 0);
+                if((self.c[var4 + 10] & 1) != 0) {
+                    self.c[var4 + 10] = 0;
+                    var5 = self.c[var4 + 15];
+                    var6 = self.c[var4 + 20];
+                    self.a(var5, var6).a(0, 0);
                 }
             }
         } else if(var3 >= 20) {
@@ -204,22 +204,22 @@ final class an extends aj {
 
             for(var5 = 0; var5 < var4; ++var5) {
                 for(var6 = 0; var6 < 10; ++var6) {
-                    if((var1.c[var5 + 10] & 1) == 0) {
+                    if((self.c[var5 + 10] & 1) == 0) {
                         var7 = Canvas.h() % 9;
                         var8 = Canvas.h() % 10;
-                        var10 = (var9 = var1.a(var7, var8)).a_();
+                        var10 = (var9 = self.a(var7, var8)).a_();
                         if(var9.b(0) == 0 && var9.f() == 0 && var10 != 7 && var10 != 6 && var10 != 5 && var10 != 8 && var9.c[10] == 0 && (var2.a - 2 > var7 || var2.a + 2 < var7 || var2.b - 2 > var8 || var2.b + 2 < var8)) {
                             var9.a(0, 1);
-                            var1.c[var5 + 10] = 1;
-                            var1.c[var5 + 15] = var7;
-                            var1.c[var5 + 20] = var8;
+                            self.c[var5 + 10] = 1;
+                            self.c[var5 + 15] = var7;
+                            self.c[var5 + 20] = var8;
                         }
                     }
                 }
             }
         }
 
-        var1 = this;
+        self = this;
         var2 = this.g();
         if((var3 = super.c[4]) >= 30) {
             if(var3 >= 50) {
@@ -238,14 +238,14 @@ final class an extends aj {
 
             for(var5 = 0; var5 < var4; ++var5) {
                 for(var6 = 0; var6 < 10; ++var6) {
-                    if((var1.c[var5 + 26] & 1) == 0) {
+                    if((self.c[var5 + 26] & 1) == 0) {
                         var7 = Canvas.h() % 9;
                         var8 = Canvas.h() % 10;
-                        if((var9 = var1.a(var7, var8)).b(0) == 0 && var9.f() == 0 && var9.a_() != 7 && var9.c[10] == 0 && (var2.a - 2 > var7 || var2.a + 2 < var7 || var2.b - 2 > var8 || var2.b + 2 < var8)) {
+                        if((var9 = self.a(var7, var8)).b(0) == 0 && var9.f() == 0 && var9.a_() != 7 && var9.c[10] == 0 && (var2.a - 2 > var7 || var2.a + 2 < var7 || var2.b - 2 > var8 || var2.b + 2 < var8)) {
                             var9.i(1);
-                            var1.c[var5 + 26] = 1;
-                            var1.c[var5 + 31] = var7;
-                            var1.c[var5 + 36] = var8;
+                            self.c[var5 + 26] = 1;
+                            self.c[var5 + 31] = var7;
+                            self.c[var5 + 36] = var8;
                             break;
                         }
                     }
@@ -253,20 +253,20 @@ final class an extends aj {
             }
         }
 
-        var1 = this;
+        self = this;
 
         for(var3 = 0; var3 < 90; ++var3) {
             var4 = var3 % 9;
             var5 = var3 / 9;
-            var1.a(var4, var5).a(0, 0);
+            self.a(var4, var5).a(0, 0);
         }
 
-        q var12 = var1.g();
+        q var12 = self.g();
 
         for(var4 = 0; var4 < 5; ++var4) {
-            if((var1.c[var4 + 10] & 1) != 0) {
-                var5 = var1.c[var4 + 15];
-                var6 = var1.c[var4 + 20];
+            if((self.c[var4 + 10] & 1) != 0) {
+                var5 = self.c[var4 + 15];
+                var6 = self.c[var4 + 20];
                 if(!aiClass.w && var5 == var12.a && var6 == var12.b) {
                     for(var7 = 0; var7 < 10; ++var7) {
                         var8 = var5;
@@ -302,7 +302,7 @@ final class an extends aj {
                         }
 
                         b var11;
-                        var10 = (var11 = var1.a(var8, var13)).a_();
+                        var10 = (var11 = self.a(var8, var13)).a_();
                         if(var11.b(0) == 0 && var11.f() == 0 && var10 != 7 && var10 != 6 && var10 != 5 && var10 != 8 && var11.c[10] == 0) {
                             var5 = var8;
                             var6 = var13;
@@ -311,24 +311,24 @@ final class an extends aj {
                     }
                 }
 
-                var1.c[var4 + 15] = var5;
-                var1.c[var4 + 20] = var6;
-                var1.a(var5, var6).a(0, 1);
+                self.c[var4 + 15] = var5;
+                self.c[var4 + 20] = var6;
+                self.a(var5, var6).a(0, 1);
             }
         }
 
-        var1 = this;
+        self = this;
 
         for(var3 = 0; var3 < 90; ++var3) {
             var4 = var3 % 9;
             var5 = var3 / 9;
-            var1.a(var4, var5).i(0);
+            self.a(var4, var5).i(0);
         }
 
         for(var3 = 0; var3 < 5; ++var3) {
-            if((var1.c[var3 + 26] & 1) != 0) {
-                var4 = var1.c[var3 + 31];
-                var5 = var1.c[var3 + 36];
+            if((self.c[var3 + 26] & 1) != 0) {
+                var4 = self.c[var3 + 31];
+                var5 = self.c[var3 + 36];
                 if(!aiClass.w) {
                     for(var6 = 0; var6 < 10; ++var6) {
                         var7 = var4;
@@ -364,7 +364,7 @@ final class an extends aj {
                         }
 
                         b var14;
-                        if((var14 = var1.a(var7, var8)).b(0) == 0 && var14.f() == 0 && var14.a_() != 7 && var14.c[10] == 0) {
+                        if((var14 = self.a(var7, var8)).b(0) == 0 && var14.f() == 0 && var14.a_() != 7 && var14.c[10] == 0) {
                             var4 = var7;
                             var5 = var8;
                             break;
@@ -372,9 +372,9 @@ final class an extends aj {
                     }
                 }
 
-                var1.c[var3 + 31] = var4;
-                var1.c[var3 + 36] = var5;
-                var1.a(var4, var5).i(1);
+                self.c[var3 + 31] = var4;
+                self.c[var3 + 36] = var5;
+                self.a(var4, var5).i(1);
             }
         }
 

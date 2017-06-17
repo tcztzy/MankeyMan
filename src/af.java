@@ -46,8 +46,8 @@ final class af extends aa {
     }
 
     public final void c() {
-        this.j = this.n();
-        if(this.o() == 1) {
+        this.j = this.getC();
+        if(this.getD() == 1) {
             this.i();
         }
 

@@ -28,8 +28,8 @@ abstract class Canvas extends GameCanvas implements Runnable, PlayerListener {
     private static q n;
     private static ImageSize o;
     private static ImageSize p;
-    private static String q;
-    private static int r;
+    private static String loadingString;
+    private static int process;
     private static int keyFlags;
     private static int t;
     private static int u;
@@ -78,8 +78,8 @@ abstract class Canvas extends GameCanvas implements Runnable, PlayerListener {
         J = new i[acClass.d.length];
         messages = new String[acClass.MESSAGES.length];
         L = new am[180];
-        q = "";
-        r = 0;
+        loadingString = "";
+        process = 0;
         F = new kClass();
         kClass.a(this);
         optionStrings = new String[2];
@@ -98,7 +98,6 @@ abstract class Canvas extends GameCanvas implements Runnable, PlayerListener {
         if(!var2.equals("deviceUnavailable") && var2.equals("deviceAvailable")) {
             F.a();
         }
-
     }
 
     public void a(MID var1) {
@@ -204,27 +203,29 @@ abstract class Canvas extends GameCanvas implements Runnable, PlayerListener {
                     }
                 }
             } else {
-                int var5 = r;
-                String var7 = q;
+                int process = Canvas.process;
+                String loadingString = Canvas.loadingString;
                 graphics.setFont(font);
                 graphics.setColor(0);
                 graphics.fillRect(n.a, n.b, 240, 320);
                 graphics.setColor(16777215);
                 graphics.drawRect(n.a + 40, n.b + 149, 160, 5);
                 graphics.setColor(16777215);
-                graphics.fillRect(n.a + 41, n.b + 150, var5 * 104857 >> 16, 4);
+                graphics.fillRect(n.a + 41, n.b + 150, process * 104857 >> 16, 4);
                 graphics.setColor(16777215);
-                graphics.drawString(var7, n.a + 40, n.b + 140, 68);
-                var7 = "";
-                if(var5 < 10) {
-                    var7 = "  ";
-                } else if(var5 < 100) {
-                    var7 = " ";
+                graphics.drawString(loadingString, n.a + 40, n.b + 140, 68);
+
+                // zfill
+                loadingString = "";
+                if(process < 10) {
+                    loadingString = "  ";
+                } else if(process < 100) {
+                    loadingString = " ";
                 }
 
-                var7 = var7 + var5;
-                graphics.drawString(var7 + "%", n.a + 176, n.b + 174, 68);
-                if(r == 100 && k == 0) {
+                loadingString = loadingString + process;
+                graphics.drawString(loadingString + "%", n.a + 176, n.b + 174, 68);
+                if(Canvas.process == 100 && k == 0) {
                     flags &= -16385;
                 }
             }
@@ -342,7 +343,7 @@ abstract class Canvas extends GameCanvas implements Runnable, PlayerListener {
                         var3 = false;
 
                         for(var5 = 0; var5 < A - 1; ++var5) {
-                            if(z[var5].p() > z[var5 + 1].p()) {
+                            if(z[var5].getB() > z[var5 + 1].getB()) {
                                 aa var4 = z[var5];
                                 z[var5] = z[var5 + 1];
                                 z[var5 + 1] = var4;
@@ -576,7 +577,7 @@ abstract class Canvas extends GameCanvas implements Runnable, PlayerListener {
     }
 
     private static void o(int var0) {
-        r = var0;
+        process = var0;
         if((flags & 16384) != 0) {
             g.gameCanvas();
         }
@@ -585,7 +586,7 @@ abstract class Canvas extends GameCanvas implements Runnable, PlayerListener {
 
     public static aa a(aa var0, aa var1) {
         if(var0 != null && A < 128) {
-            var0.a(var1);
+            var0.setA(var1);
             if(var0.a()) {
                 z[A++] = var0;
                 return var0;
@@ -601,7 +602,7 @@ abstract class Canvas extends GameCanvas implements Runnable, PlayerListener {
 
     public static void b(aa var0) {
         for(int var1 = 0; var1 < A; ++var1) {
-            if(z[var1] != null && z[var1].q() == var0) {
+            if(z[var1] != null && z[var1].getA() == var0) {
                 z[var1].f(0);
             }
         }
@@ -724,7 +725,7 @@ abstract class Canvas extends GameCanvas implements Runnable, PlayerListener {
     }
 
     public static boolean a(l[] var0, y[] var1, Message[] messages, m[] var3, boolean var4) {
-        String var9 = "载入中...";
+        String loading = "载入中...";
         y[0] = optionStrings[0];
         y[1] = optionStrings[1];
         optionStrings[0] = null;
@@ -735,7 +736,7 @@ abstract class Canvas extends GameCanvas implements Runnable, PlayerListener {
             flags = (flags &= -16385) | 6;
         }
 
-        q = var9;
+        loadingString = loading;
         o(0);
         G = 0;
         H = 0;
@@ -744,7 +745,7 @@ abstract class Canvas extends GameCanvas implements Runnable, PlayerListener {
             G += var0.length;
 
             for(i = 0; i < var0.length; ++i) {
-                b(var0[i].a, var0[i].b);
+                getImage(var0[i].a, var0[i].b);
                 o(++H * 100 / G);
             }
         }
@@ -797,7 +798,7 @@ abstract class Canvas extends GameCanvas implements Runnable, PlayerListener {
 
     }
 
-    public static boolean b(int imageId, int imageName) {
+    public static boolean getImage(int imageId, int imageName) {
         nullImage(imageId);
 
         try {
@@ -856,8 +857,8 @@ abstract class Canvas extends GameCanvas implements Runnable, PlayerListener {
         return var0 >= 0 && var0 < acClass.d.length?J[var0]:null;
     }
 
-    static String getMessage(int var0) {
-        return var0 >= 0 && var0 < acClass.MESSAGES.length ? messages[var0] : null;
+    static String getMessage(int messageIndex) {
+        return messageIndex >= 0 && messageIndex < acClass.MESSAGES.length ? messages[messageIndex] : null;
     }
 
     public static am k(int var0) {
@@ -978,17 +979,15 @@ abstract class Canvas extends GameCanvas implements Runnable, PlayerListener {
     }
 
     public static int a(int var0, int var1, int var2) {
-        if (var2 == 0) {
-            return 65536 / var0 * var1 >> 8;
-        }
-        else if (var2 == 1) {
-            return ((var1 + 1) * var1 / 2 << 16) / ((var0 + 1) * var0 / 2) >> 8;
-        }
-        else if (var2 == 2) {
-            return (((var0 << 1) - var1 + 1) * var1 / 2 << 16) / ((var0 + 1) * var0 / 2) >> 8;
-        }
-        else {
-            return 0;
+        switch (var2) {
+            case 0:
+                return 65536 / var0 * var1 >> 8;
+            case 1:
+                return ((var1 + 1) * var1 / 2 << 16) / ((var0 + 1) * var0 / 2) >> 8;
+            case 2:
+                return (((var0 << 1) - var1 + 1) * var1 / 2 << 16) / ((var0 + 1) * var0 / 2) >> 8;
+            default:
+                return 0;
         }
     }
 }

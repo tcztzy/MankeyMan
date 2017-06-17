@@ -30,7 +30,7 @@ abstract class aa extends FlagBase {
         Canvas.b(this);
     }
 
-    public final int l() {
+    public final int getE() {
         return this.e;
     }
 
@@ -43,7 +43,7 @@ abstract class aa extends FlagBase {
         super.flags |= 2;
     }
 
-    public final int n() {
+    public final int getC() {
         return this.c;
     }
 
@@ -53,7 +53,7 @@ abstract class aa extends FlagBase {
         super.flags |= 2;
     }
 
-    public final int o() {
+    public final int getD() {
         return this.d;
     }
 
@@ -62,15 +62,15 @@ abstract class aa extends FlagBase {
         Canvas.setFlagTrue(256); // flag9
     }
 
-    public final int p() {
+    public final int getB() {
         return this.b;
     }
 
-    public final void a(aa var1) {
+    public final void setA(aa var1) {
         this.a = var1;
     }
 
-    public final aa q() {
+    public final aa getA() {
         return this.a;
     }
 

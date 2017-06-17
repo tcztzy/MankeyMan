@@ -177,7 +177,7 @@ final class ah extends aj {
         this.d.e(super.c[13]);
         this.d.d(super.c[14]);
         this.d.g(20480);
-        this.d.setFlag2(super.c[10] == 0?false:this.e);
+        this.d.setFlag2(super.c[10] != 0 && this.e);
     }
 
     public final int m() {
@@ -250,13 +250,13 @@ final class ah extends aj {
             this.a[var5 + 2].a(147, 1, new z(var6 << 3, 0, 8, 10));
             this.a[var5 + 2].f(var4.a - (var2 << 3) / 2 + (var5 << 3) + 5, var4.b + 8);
             this.a[var5 + 2].g(20480);
-            this.a[var5 + 2].setFlag2(super.c[10] == 0?false:this.e);
+            this.a[var5 + 2].setFlag2(super.c[10] != 0 && this.e);
             ++var5;
         }
 
         this.a[1].a(147, 1, new z(99, 0, 11, 10));
         this.a[1].f(var4.a - (var2 << 3) / 2 - 6, var4.b + 8);
         this.a[1].g(20480);
-        this.a[1].setFlag2(super.c[10] == 0?false:this.e);
+        this.a[1].setFlag2(super.c[10] != 0 && this.e);
     }
 }
