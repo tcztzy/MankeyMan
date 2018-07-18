@@ -2,18 +2,19 @@
 // Source code recreated from option .class file by IntelliJ IDEA
 // (powered by Fernflower decompiler)
 //
+package com.tcztzy;
 
-public class MankeyMan extends MID {
+public class MankeyMan extends MankeyManMIDlet {
     public MankeyMan() {
-        g var1 = new g();
+        MainCanvas var1 = new MainCanvas();
         new nClass(this, var1);
-        var1.a(this);
+        var1.repaint(this);
     }
 
     protected void pauseApp() {
         aiClass.recordGame();
         super.pauseApp();
-        Canvas.a(true);
+        MankeyManCanvas.a(true);
     }
 
     protected void destroyApp(boolean destroy) {

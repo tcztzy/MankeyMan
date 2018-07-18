@@ -2,10 +2,11 @@
 // Source code recreated from name .class file by IntelliJ IDEA
 // (powered by Fernflower decompiler)
 //
+package com.tcztzy;
 
 final class ao extends aj {
-    private q a;
-    private q d;
+    private Point a;
+    private Point d;
     private int e;
     private int f;
     private int g;
@@ -20,8 +21,8 @@ final class ao extends aj {
 
     public final void a() {
         this.x(4144);
-        this.a = new q(0, 0);
-        this.d = new q(0, 0);
+        this.a = new Point(0, 0);
+        this.d = new Point(0, 0);
         this.i = true;
         super.c[9] = 0;
 
@@ -39,12 +40,12 @@ final class ao extends aj {
     public final void b_() {
         if(!this.i) {
             if(++this.g < this.f) {
-                int var1 = Canvas.a(this.f, this.g, this.h);
-                this.a((this.a.a << 8) + (this.d.a - this.a.a) * var1 >> 8, (this.a.b << 8) + (this.d.b - this.a.b) * var1 >> 8);
+                int var1 = MankeyManCanvas.a(this.f, this.g, this.h);
+                this.a((this.a.x << 8) + (this.d.x - this.a.x) * var1 >> 8, (this.a.y << 8) + (this.d.y - this.a.y) * var1 >> 8);
                 return;
             }
 
-            this.a(this.d.a, this.d.b);
+            this.a(this.d.x, this.d.y);
             this.i = true;
         }
 
@@ -66,7 +67,7 @@ final class ao extends aj {
             case 2:
             case 3:
             case 4:
-                if((var9 = 1 + Canvas.h() % 3) > super.c[9]) {
+                if((var9 = 1 + MankeyManCanvas.h() % 3) > super.c[9]) {
                     var9 = super.c[9];
                 }
 
@@ -77,7 +78,7 @@ final class ao extends aj {
                         break label105;
                     }
 
-                    var1.a(var4).r(1 + Canvas.h() % 3);
+                    var1.a(var4).r(1 + MankeyManCanvas.h() % 3);
                     ++var4;
                 }
             case 6:
@@ -86,7 +87,7 @@ final class ao extends aj {
 
                 for(var4 = 0; var4 < var1.c[9]; ++var4) {
                     ae var5 = var1.a(var4);
-                    if((!var3 || Canvas.h() % 100 < 50) && (var5.q() < 80 || var5.q() >= 80 && Canvas.h() % 100 < 50)) {
+                    if((!var3 || MankeyManCanvas.h() % 100 < 50) && (var5.q() < 80 || var5.q() >= 80 && MankeyManCanvas.h() % 100 < 50)) {
                         var5.p(1);
                     }
                 }
@@ -193,18 +194,18 @@ final class ao extends aj {
 
     }
 
-    public final q h() {
-        return new q(super.c[4], super.c[5]);
+    public final Point h() {
+        return new Point(super.c[4], super.c[5]);
     }
 
     public final void a(int var1, int var2, int var3, int var4) {
         if(var3 == 0) {
             this.a(120, var2);
         } else {
-            this.a.a = super.c[4];
-            this.a.b = super.c[5];
-            this.d.a = 120;
-            this.d.b = var2;
+            this.a.x = super.c[4];
+            this.a.y = super.c[5];
+            this.d.x = 120;
+            this.d.y = var2;
             this.f = var3;
             this.g = 0;
             this.h = var4;
@@ -345,8 +346,8 @@ final class ao extends aj {
                         var3 = 12 + (544 * var1.c[9] >> 8);
 
                         for(var6 = 0; var6 < var1.c[9]; ++var6) {
-                            var4 = Canvas.cos(var5 = -90 + (92160 / var1.c[9] * var6 >> 8)) * var2 >> 8;
-                            var5 = Canvas.sin(var5) * var3 >> 8;
+                            var4 = MankeyManCanvas.cos(var5 = -90 + (92160 / var1.c[9] * var6 >> 8)) * var2 >> 8;
+                            var5 = MankeyManCanvas.sin(var5) * var3 >> 8;
                             var4 += (var4 & 1) != 0?1:0;
                             var1.a(var6).a(var4, var5, var1.e, 2);
                         }
@@ -388,8 +389,8 @@ final class ao extends aj {
                     var3 = 12 + (544 * var1.c[9] >> 8);
 
                     for(var6 = 1; var6 < var1.c[9]; ++var6) {
-                        var4 = Canvas.cos(var5 = -90 + (92160 / (var1.c[9] - 1) * (var6 - 1) >> 8)) * var2 >> 8;
-                        var5 = Canvas.sin(var5) * var3 >> 8;
+                        var4 = MankeyManCanvas.cos(var5 = -90 + (92160 / (var1.c[9] - 1) * (var6 - 1) >> 8)) * var2 >> 8;
+                        var5 = MankeyManCanvas.sin(var5) * var3 >> 8;
                         var4 += (var4 & 1) != 0?1:0;
                         var1.a(var6).a(var4, var5, var1.e, 2);
                     }

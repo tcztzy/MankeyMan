@@ -2,6 +2,7 @@
 // Source code recreated from name .class file by IntelliJ IDEA
 // (powered by Fernflower decompiler)
 //
+package com.tcztzy;
 
 import javax.microedition.lcdui.Canvas;
 import javax.microedition.lcdui.Display;

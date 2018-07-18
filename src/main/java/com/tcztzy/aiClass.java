@@ -2,6 +2,7 @@
 // Source code recreated from name .class file by IntelliJ IDEA
 // (powered by Fernflower decompiler)
 //
+package com.tcztzy;
 
 import javax.microedition.rms.RecordStore;
 
@@ -12,7 +13,7 @@ final class aiClass {
     static int gameTime;
     public static int d;
     static int score;
-    public static q f = new q(0, 0);
+    public static Point f = new Point(0, 0);
     public static int[] g = new int[4];
     public static int[] h = new int[29];
     public static int i;
@@ -81,8 +82,8 @@ final class aiClass {
             appendIntToRecord(gameTime);
             appendIntToRecord(d);
             appendIntToRecord(score);
-            appendIntToRecord(f.a);
-            appendIntToRecord(f.b);
+            appendIntToRecord(f.x);
+            appendIntToRecord(f.y);
 
             for(var0 = 0; var0 < 4; ++var0) {
                 appendIntToRecord(g[var0]);
@@ -166,8 +167,8 @@ final class aiClass {
             gameTime = getIntFromRecord();
             d = getIntFromRecord();
             score = getIntFromRecord();
-            f.a = getIntFromRecord();
-            f.b = getIntFromRecord();
+            f.x = getIntFromRecord();
+            f.y = getIntFromRecord();
 
             for(var0 = 0; var0 < 4; ++var0) {
                 g[var0] = getIntFromRecord();
@@ -209,11 +210,11 @@ final class aiClass {
     }
 
     public static void b(int var0) {
-        acClass.a(var0, 255);
+        DataStore.a(var0, 255);
     }
 
     public static void c() {
-        acClass.a(0, 128);
+        DataStore.a(0, 128);
     }
 
     public static void a(String var0) {

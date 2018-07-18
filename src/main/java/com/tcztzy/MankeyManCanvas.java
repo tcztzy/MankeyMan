@@ -2,6 +2,7 @@
 // Source code recreated from name .class file by IntelliJ IDEA
 // (powered by Fernflower decompiler)
 //
+package com.tcztzy;
 
 import java.io.InputStream;
 import java.util.Random;
@@ -12,20 +13,20 @@ import javax.microedition.lcdui.game.GameCanvas;
 import javax.microedition.media.Player;
 import javax.microedition.media.PlayerListener;
 
-abstract class Canvas extends GameCanvas implements Runnable, PlayerListener {
+abstract class MankeyManCanvas extends GameCanvas implements Runnable, PlayerListener {
     public static Font font = Font.getFont(32, 0, 8);
     public static int b = -40;
     private static Image optionsImage = null;
     private static boolean f = false;
-    public static MID midlet;
+    public static MankeyManMIDlet midlet;
     private static v g;
     private static Thread h;
     private static int i;
     private static int flags;
     private static int k;
     private static int l;
-    private static q m;
-    private static q n;
+    private static Point m;
+    private static Point n;
     private static ImageSize o;
     private static ImageSize p;
     private static String loadingString;
@@ -37,23 +38,23 @@ abstract class Canvas extends GameCanvas implements Runnable, PlayerListener {
     private static int w;
     private static String[] optionStrings;
     private static String[] y;
-    private static aa[] z;
+    private static DataStoreBase[] z;
     private static int A;
-    private static aa B;
+    private static DataStoreBase B;
     private static wClass[] C;
     private static int D;
     private static int E;
-    private static kClass F;
+    private static MankeyManPlayer F;
     public static boolean d;
     private static int G;
     private static int H;
     private static PNGImage[] pngImages;
-    private static i[] J;
+    private static MankeyManAudio[] audioList;
     private static String[] messages;
     private static am[] L;
     private static int[] MagicArray = new int[]{0, 4, 8, 13, 17, 22, 26, 31, 35, 40, 44, 48, 53, 57, 61, 66, 70, 74, 79, 83, 87, 91, 95, 100, 104, 108, 112, 116, 120, 124, 127, 131, 135, 139, 143, 146, 150, 154, 157, 161, 164, 167, 171, 174, 177, 181, 184, 187, 190, 193, 196, 198, 201, 204, 207, 209, 212, 214, 217, 219, 221, 223, 226, 228, 230, 232, 233, 235, 237, 238, 240, 242, 243, 244, 246, 247, 248, 249, 250, 251, 252, 252, 253, 254, 254, 255, 255, 255, 255, 255, 256, 256, 255, 255, 255, 255, 255, 254, 254, 253, 252, 252, 251, 250, 249, 248, 247, 246, 244, 243, 242, 240, 238, 237, 235, 233, 232, 230, 228, 226, 223, 221, 219, 217, 214, 212, 209, 207, 204, 201, 198, 196, 193, 190, 187, 184, 181, 177, 174, 171, 167, 164, 161, 157, 154, 150, 146, 143, 139, 135, 131, 128, 124, 120, 116, 112, 108, 104, 100, 95, 91, 87, 83, 79, 74, 70, 66, 61, 57, 53, 48, 44, 40, 35, 31, 26, 22, 17, 13, 8, 4, 0, 0, 40, 81, 122, 162, 203, 244, 285, 325, 366, 407, 447, 488, 529, 569, 610, 651, 691, 732, 772, 813, 853, 894, 934, 974, 1015, 1055, 1096, 1136, 1176, 1216, 1256, 1297, 1337, 1377, 1417, 1457, 1497, 1537, 1576, 1616, 1656, 1696, 1735, 1775, 1814, 1854, 1893, 1933, 1972, 2011, 2051, 2090, 2129, 2168, 2207, 2246, 2285, 2323, 2362, 2401, 2439, 2478, 2516, 2555, 2593, 2631, 2669, 2708, 2746, 2784, 2821, 2859, 2897, 2935, 2972, 3010, 3047, 3084, 3122, 3159, 3196, 3233, 3270, 3307, 3343, 3380, 3416, 3453, 3489, 3526, 3562, 3598, 3634, 3670, 3706, 3742, 3777, 3813, 3848, 3884, 3919, 3954, 3989, 4024, 4059, 4094, 4129, 4164, 4198, 4233, 4267, 4301, 4335, 4369, 4403, 4437, 4471, 4505, 4538, 4572, 4605, 4638, 4671, 4704, 4737, 4770, 4803, 4836, 4868, 4901, 4933, 4965, 4997, 5029, 5061, 5093, 5125, 5156, 5188, 5219, 5251, 5282, 5313, 5344, 5375, 5406, 5436, 5467, 5497, 5528, 5558, 5588, 5618, 5648, 5678, 5708, 5738, 5767, 5797, 5826, 5855, 5884, 5913, 5942, 5971, 6000, 6028, 6057, 6085, 6114, 6142, 6170, 6198, 6226, 6254, 6282, 6309, 6337, 6364, 6391, 6419, 6446, 6473, 6500, 6527, 6553, 6580, 6606, 6633, 6659, 6685, 6711, 6737, 6763, 6789, 6815, 6841, 6866, 6892, 6917, 6942, 6967, 6992, 7017, 7042, 7067, 7092, 7116, 7141, 7165, 7190, 7214, 7238, 7262, 7286, 7310, 7333, 7357, 7381, 7404, 7428, 7451, 7474, 7497, 7520, 7543, 7566, 7589, 7611, 7634, 7657, 7679, 7701, 7724, 7746, 7768, 7790, 7812, 7833, 7855, 7877, 7898, 7920, 7941, 7963, 7984, 8005, 8026, 8047, 8068, 8089, 8109, 8130, 8151, 8171};
 
-    public Canvas() {
+    public MankeyManCanvas() {
         super(false);
         this.setFullScreenMode(true);
         midlet = null;
@@ -67,21 +68,21 @@ abstract class Canvas extends GameCanvas implements Runnable, PlayerListener {
         flags = 524288; // the 20th bit is 1 and reset is 0
         p = new ImageSize(this.getWidth(), this.getHeight());
         o = new ImageSize(240, 320);
-        n = new q((p.width - o.width) / 2, (p.height - o.height) / 2);
-        m = new q(0, 0);
-        z = new aa[128];
+        n = new Point((p.width - o.width) / 2, (p.height - o.height) / 2);
+        m = new Point(0, 0);
+        z = new DataStoreBase[128];
         A = 0;
         C = new wClass[720];
         D = 0;
         E = 0;
         pngImages = new PNGImage[256];
-        J = new i[acClass.d.length];
-        messages = new String[acClass.MESSAGES.length];
+        audioList = new MankeyManAudio[DataStore.d.length];
+        messages = new String[DataStore.MESSAGES.length];
         L = new am[180];
         loadingString = "";
         process = 0;
-        F = new kClass();
-        kClass.a(this);
+        F = new MankeyManPlayer();
+        MankeyManPlayer.a(this);
         optionStrings = new String[2];
         y = new String[2];
 
@@ -100,9 +101,9 @@ abstract class Canvas extends GameCanvas implements Runnable, PlayerListener {
         }
     }
 
-    public void a(MID var1) {
-        g.gameCanvas();
-        midlet = var1;
+    public void repaint(MankeyManMIDlet mmmidlet) {
+        g.repaintGameCanvas();
+        midlet = mmmidlet;
         (h = new Thread(this)).start();
     }
 
@@ -126,7 +127,7 @@ abstract class Canvas extends GameCanvas implements Runnable, PlayerListener {
                 }
             }
 
-            kClass.d();
+            MankeyManPlayer.d();
         } else {
             f = false;
             flags &= -8193;
@@ -135,7 +136,7 @@ abstract class Canvas extends GameCanvas implements Runnable, PlayerListener {
                 C[var1].setFlagFalse(8);
             }
 
-            if(!acClass.b && !acClass.c) {
+            if(!DataStore.b && !DataStore.c) {
                 F.a();
             }
 
@@ -150,16 +151,16 @@ abstract class Canvas extends GameCanvas implements Runnable, PlayerListener {
         flags &= -9;
     }
 
-    public static q b() {
-        return new q(n.a, n.b);
+    public static Point b() {
+        return new Point(n.x, n.y);
     }
 
     public static void a(int var0, int var1) {
-        m.a = var0;
-        m.b = var1;
+        m.x = var0;
+        m.y = var1;
     }
 
-    public static q c() {
+    public static Point getPoint() {
         return m;
     }
 
@@ -192,7 +193,7 @@ abstract class Canvas extends GameCanvas implements Runnable, PlayerListener {
         if((flags & 1048576) == 0) { // 21 bit, 1 followed by 20 zeros
             if(((flags |= 1048576) & 8) != 0 || l == 0) {
                 graphics.setColor(E);
-                graphics.fillRect(n.a, n.b, o.width, o.height);
+                graphics.fillRect(n.x, n.y, o.width, o.height);
             }
 
             if((flags & 16384) == 0) { // 15, 1 followed by 14 zeros
@@ -203,17 +204,17 @@ abstract class Canvas extends GameCanvas implements Runnable, PlayerListener {
                     }
                 }
             } else {
-                int process = Canvas.process;
-                String loadingString = Canvas.loadingString;
+                int process = MankeyManCanvas.process;
+                String loadingString = MankeyManCanvas.loadingString;
                 graphics.setFont(font);
                 graphics.setColor(0);
-                graphics.fillRect(n.a, n.b, 240, 320);
+                graphics.fillRect(n.x, n.y, 240, 320);
                 graphics.setColor(16777215);
-                graphics.drawRect(n.a + 40, n.b + 149, 160, 5);
+                graphics.drawRect(n.x + 40, n.y + 149, 160, 5);
                 graphics.setColor(16777215);
-                graphics.fillRect(n.a + 41, n.b + 150, process * 104857 >> 16, 4);
+                graphics.fillRect(n.x + 41, n.y + 150, process * 104857 >> 16, 4);
                 graphics.setColor(16777215);
-                graphics.drawString(loadingString, n.a + 40, n.b + 140, 68);
+                graphics.drawString(loadingString, n.x + 40, n.y + 140, 68);
 
                 // zfill
                 loadingString = "";
@@ -224,13 +225,13 @@ abstract class Canvas extends GameCanvas implements Runnable, PlayerListener {
                 }
 
                 loadingString = loadingString + process;
-                graphics.drawString(loadingString + "%", n.a + 176, n.b + 174, 68);
-                if(Canvas.process == 100 && k == 0) {
+                graphics.drawString(loadingString + "%", n.x + 176, n.y + 174, 68);
+                if(MankeyManCanvas.process == 100 && k == 0) {
                     flags &= -16385;
                 }
             }
 
-            if(n.b > 0) {
+            if(n.y > 0) {
                 int var6 = (p.height - o.height) / 2;
                 graphics.setColor(0);
                 graphics.fillRect(0, 0, p.width, var6);
@@ -241,7 +242,7 @@ abstract class Canvas extends GameCanvas implements Runnable, PlayerListener {
                 graphics.fillRect(0, p.height - var6, p.width, var6);
             }
 
-            if(!acClass.b && !acClass.c) {
+            if(!DataStore.b && !DataStore.c) {
                 if(optionStrings[0] != null && optionStrings[0].equals("中止")) {
                     graphics.drawRegion(optionsImage, 0, 0, 34, 18, 0, 0, 302, 20);
                 } else if(optionStrings[0] != null && optionStrings[0].equals("是")) {
@@ -344,7 +345,7 @@ abstract class Canvas extends GameCanvas implements Runnable, PlayerListener {
 
                         for(var5 = 0; var5 < A - 1; ++var5) {
                             if(z[var5].getB() > z[var5 + 1].getB()) {
-                                aa var4 = z[var5];
+                                DataStoreBase var4 = z[var5];
                                 z[var5] = z[var5 + 1];
                                 z[var5 + 1] = var4;
                                 var3 = true;
@@ -452,7 +453,7 @@ abstract class Canvas extends GameCanvas implements Runnable, PlayerListener {
                 }
             }
 
-            g.gameCanvas();
+            g.repaintGameCanvas();
             this.serviceRepaints();
             long stopTimeMillis = System.currentTimeMillis();
             int var8;
@@ -579,12 +580,12 @@ abstract class Canvas extends GameCanvas implements Runnable, PlayerListener {
     private static void o(int var0) {
         process = var0;
         if((flags & 16384) != 0) {
-            g.gameCanvas();
+            g.repaintGameCanvas();
         }
 
     }
 
-    public static aa a(aa var0, aa var1) {
+    public static DataStoreBase a(DataStoreBase var0, DataStoreBase var1) {
         if(var0 != null && A < 128) {
             var0.setA(var1);
             if(var0.a()) {
@@ -596,11 +597,11 @@ abstract class Canvas extends GameCanvas implements Runnable, PlayerListener {
         return null;
     }
 
-    public static aa a(aa var0) {
+    public static DataStoreBase a(DataStoreBase var0) {
         return a(var0, null);
     }
 
-    public static void b(aa var0) {
+    public static void b(DataStoreBase var0) {
         for(int var1 = 0; var1 < A; ++var1) {
             if(z[var1] != null && z[var1].getA() == var0) {
                 z[var1].f(0);
@@ -644,7 +645,7 @@ abstract class Canvas extends GameCanvas implements Runnable, PlayerListener {
                 var2.a(aVar1.b, aVar1.c);
             }
 
-            var2.b(aVar1.f);
+            var2.changeTransform(aVar1.f);
             var2.b(aVar1.e);
             var2.g(aVar1.d);
             var2.setFlag2(aVar1.h);
@@ -684,12 +685,12 @@ abstract class Canvas extends GameCanvas implements Runnable, PlayerListener {
         if((flags & 16) != 0 && !var1) {
             return false;
         } else {
-            if(kClass.c()) {
-                kClass.b();
+            if(MankeyManPlayer.isPlayerStarted()) {
+                MankeyManPlayer.b();
             }
 
             if(var0 != -1) {
-                kClass.a(var0, var1);
+                MankeyManPlayer.a(var0, var1);
             }
 
             return true;
@@ -701,7 +702,7 @@ abstract class Canvas extends GameCanvas implements Runnable, PlayerListener {
     }
 
     public static void d() {
-        kClass.b();
+        MankeyManPlayer.b();
     }
 
     public static void e() {
@@ -721,10 +722,10 @@ abstract class Canvas extends GameCanvas implements Runnable, PlayerListener {
     }
 
     public static void f() {
-        kClass.d();
+        MankeyManPlayer.d();
     }
 
-    public static boolean a(l[] var0, y[] var1, Message[] messages, m[] var3, boolean var4) {
+    public static boolean loading(l[] var0, AudioResource[] audioResources, Message[] messages, m[] var3, boolean var4) {
         String loading = "载入中...";
         y[0] = optionStrings[0];
         y[1] = optionStrings[1];
@@ -750,11 +751,11 @@ abstract class Canvas extends GameCanvas implements Runnable, PlayerListener {
             }
         }
 
-        if(var1 != null) {
-            G += var1.length;
+        if(audioResources != null) {
+            G += audioResources.length;
 
-            for(i = 0; i < var1.length; ++i) {
-                d(var1[i].a, var1[i].b);
+            for(i = 0; i < audioResources.length; ++i) {
+                loadAudio(audioResources[i].audioIndex, audioResources[i].audioBaseName);
                 o(++H * 100 / G);
             }
         }
@@ -762,7 +763,7 @@ abstract class Canvas extends GameCanvas implements Runnable, PlayerListener {
         if(messages != null) {
 
             for(i = 0; i < messages.length; ++i) {
-                Canvas.messages[messages[i].index] = messages[i].message;
+                MankeyManCanvas.messages[messages[i].index] = messages[i].message;
             }
         }
 
@@ -787,7 +788,7 @@ abstract class Canvas extends GameCanvas implements Runnable, PlayerListener {
         return true;
     }
 
-    public static void a(l[] var0, y[] var1, Message[] var2, m[] var3) {
+    public static void a(l[] var0, AudioResource[] var1, Message[] var2, m[] var3) {
         if(var0 != null) {
             var0 = var0;
 
@@ -823,42 +824,42 @@ abstract class Canvas extends GameCanvas implements Runnable, PlayerListener {
         return imageId >= 0 && imageId < 256? pngImages[imageId]:null;
     }
 
-    private static boolean d(int var0, int audioName) {
-        p(var0);
+    private static void loadAudio(int audioIndex, int audioBaseName) {
+        checkAudioIndex(audioIndex);
 
         try {
-            String audio = "/" + audioName + ".mid";
-            int audioAvailable;
-            InputStream var6;
-            if((audioAvailable = (var6 = Canvas.class.getResourceAsStream(audio)).available()) > 0) {
-                byte[] var7 = new byte[audioAvailable];
-                var6.read(var7);
-                J[var0] = new i(var7, audioName);
+            String audioPath = "/" + audioBaseName + ".mid";
+            InputStream audio = MankeyManCanvas.class.getResourceAsStream(audioPath);
+            int audioAvailable = audio.available();
+            if(audioAvailable > 0) {
+                byte[] audioBytes = new byte[audioAvailable];
+                audio.read(audioBytes);
+                audioList[audioIndex] = new MankeyManAudio(audioBytes, audioBaseName);
             }
 
-            return true;
-        } catch (Exception var5) {
-            return false;
-        }
+        } catch (Exception ignored) {}
     }
 
-    private static void p(int var0) {
-        if(J[var0] != null) {
+    private static void checkAudioIndex(int audioIndex) {
+        if(audioList[audioIndex] != null) {
             try {
-                J[var0].a = null;
+                audioList[audioIndex].audioBytes = null;
             } catch (Exception ignored) {}
 
-            J[var0] = null;
+            audioList[audioIndex] = null;
         }
 
     }
 
-    public static i i(int var0) {
-        return var0 >= 0 && var0 < acClass.d.length?J[var0]:null;
+    public static MankeyManAudio i(int index) {
+        if (index >= 0 && index < DataStore.d.length)
+            return audioList[index];
+        else
+            return null;
     }
 
     static String getMessage(int messageIndex) {
-        return messageIndex >= 0 && messageIndex < acClass.MESSAGES.length ? messages[messageIndex] : null;
+        return messageIndex >= 0 && messageIndex < DataStore.MESSAGES.length ? messages[messageIndex] : null;
     }
 
     public static am k(int var0) {

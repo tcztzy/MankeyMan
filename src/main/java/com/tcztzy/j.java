@@ -2,8 +2,9 @@
 // Source code recreated from name .class file by IntelliJ IDEA
 // (powered by Fernflower decompiler)
 //
+package com.tcztzy;
 
-final class j extends aa {
+final class j extends DataStoreBase {
     private static ao a;
     private static b b;
     private static ae[] c;
@@ -19,7 +20,7 @@ final class j extends aa {
     private static int[] o = new int[]{5, 7, 6, 9, 10, 8, 11};
     private static int[] p = new int[]{0, 50, 70, 90, 120, 150, 0, 10, 15, 20, 40, 50, 0, 20, 25, 30, 50, 0, 0, 5, 10, 15, 30, 0, 1, 3, 5, 10, 20, 0, 0, 5, 10, 15, 0, 0, 1, 3, 5, 10, 0, 0, 0, 30, 40, 50, 0, 80};
     private static int[] q = new int[]{1500, 2, 1000, 2, 5000, 2, 1500, 2, 1000, 2, 1000, 2, 10000, 5, 3000, 3, 1500, 2, 10000, 5, 1500, 2, 1500, 2, 1500, 2, 1500, 2, 1500, 2, 3000, 3, 100, 1, 200, 1, 300, 1, 400, 1, 500, 1, 600, 1, 700, 1, 800, 1, 900, 1, 1000, 1, 1200, 1, 1300, 1};
-    private static q[] r = new q[]{new q(0, 0), new q(8, -26), new q(-8, -16), new q(8, -6)};
+    private static Point[] r = new Point[]{new Point(0, 0), new Point(8, -26), new Point(-8, -16), new Point(8, -6)};
     private static final int[] s = new int[]{1, 2, 3, 5};
 
     public j(ao var1) {
@@ -131,23 +132,23 @@ final class j extends aa {
 
                         for(var36 = 0; var36 < var5; ++var36) {
                             if((var39 = var33[var36]) != null) {
-                                ae var40 = var37[Canvas.h() % var4];
+                                ae var40 = var37[MankeyManCanvas.h() % var4];
                                 boolean var42 = false;
                                 if(var40 != null) {
                                     if(!var39.B()) {
                                         if(!var40.B()) {
-                                            if(Canvas.h() % 100 < 80) {
+                                            if(MankeyManCanvas.h() % 100 < 80) {
                                                 var42 = true;
                                             }
-                                        } else if(Canvas.h() % 100 < 30) {
+                                        } else if(MankeyManCanvas.h() % 100 < 30) {
                                             var42 = true;
                                         }
                                     } else if(var39.D()) {
                                         if(!var40.B()) {
-                                            if(Canvas.h() % 100 < 50) {
+                                            if(MankeyManCanvas.h() % 100 < 50) {
                                                 var42 = true;
                                             }
-                                        } else if(Canvas.h() % 100 < 10) {
+                                        } else if(MankeyManCanvas.h() % 100 < 10) {
                                             var42 = true;
                                         }
                                     }
@@ -208,8 +209,8 @@ final class j extends aa {
                         for(var1 = 0; var1 < i; ++var1) {
                             if((var28 = e[var1]).c[41] > 0) {
                                 var29 = var28.c[41];
-                                q var34 = var28.k();
-                                sClass.a(17, 0, var34.a + r[var29].a, var34.b + r[var29].b, var28.m() - 2, 1);
+                                Point var34 = var28.k();
+                                sClass.a(17, 0, var34.x + r[var29].x, var34.y + r[var29].y, var28.m() - 2, 1);
                                 var28.r(-1);
                             }
 
@@ -231,7 +232,7 @@ final class j extends aa {
                 case 6:
                     if(n == 0) {
                         i = 0;
-                        var1 = Canvas.h() % g;
+                        var1 = MankeyManCanvas.h() % g;
                         var2 = b.a_();
                         if(a(var3 = c[var1]) && var3.n() >= 2 && var3.G() && var2 != 6 && var2 != 5) {
                             var4 = var3.q() + m;
@@ -262,7 +263,7 @@ final class j extends aa {
                                     var1 = 0;
                             }
 
-                            if(Canvas.h() % 100 < var1) {
+                            if(MankeyManCanvas.h() % 100 < var1) {
                                 i = 1;
                                 e[0] = var3;
                             }
@@ -271,7 +272,7 @@ final class j extends aa {
                         if(i > 0) {
                             sClass.c(e[0].getName(true));
                             sClass.d(172);
-                            sClass.c(acClass.getNumberString(k, 5, false));
+                            sClass.c(DataStore.getNumberString(k, 5, false));
                             sClass.d(173);
                             a.f(k);
                             this.d();
@@ -307,7 +308,7 @@ final class j extends aa {
                             for(var2 = 0; var2 < g; ++var2) {
                                 if(a(var3 = c[var2]) && var3.n() >= 2 && var3.G()) {
                                     for(var4 = 0; var4 < 8; ++var4) {
-                                        var36 = Canvas.h() % 6;
+                                        var36 = MankeyManCanvas.h() % 6;
                                         var38 = a.c[var4 + 50];
                                         var8 = a.c[var4 + 58];
                                         var9 = var3.p() + m;
@@ -372,11 +373,11 @@ final class j extends aa {
                                                 i = 1;
                                                 sClass.c(e[0].getName(true));
                                                 sClass.c("用");
-                                                sClass.c(Canvas.getMessage(var12 + 181));
+                                                sClass.c(MankeyManCanvas.getMessage(var12 + 181));
                                                 sClass.c("▽");
                                                 sClass.d(175);
-                                                sClass.c(Canvas.getMessage(var44 + 340));
-                                                sClass.c(Canvas.getMessage(var36 + 194));
+                                                sClass.c(MankeyManCanvas.getMessage(var44 + 340));
+                                                sClass.c(MankeyManCanvas.getMessage(var36 + 194));
                                                 aiClass.d(var14);
                                                 break;
                                             }
@@ -430,7 +431,7 @@ final class j extends aa {
                                         var35 = 0;
                                     }
 
-                                    if(Canvas.h() % 100 < var35) {
+                                    if(MankeyManCanvas.h() % 100 < var35) {
                                         b.m(1);
                                         e[i++] = var3;
                                         sClass.c(var3.getName(true));
@@ -461,8 +462,8 @@ final class j extends aa {
                             }
 
                             aiClass.x.d();
-                            q var31 = e[0].k();
-                            sClass.a(18, techId, var31.a, var31.b - 30, e[0].m() + 1, 0);
+                            Point var31 = e[0].k();
+                            sClass.a(18, techId, var31.x, var31.y - 30, e[0].m() + 1, 0);
                             aiClass.b(13);
                             this.h(12);
                             aiClass.d(q[techId << 1] - aiClass.year * q[(techId << 1) + 1]);
@@ -495,7 +496,7 @@ final class j extends aa {
                                 int var22 = var13.H();
                                 int var23 = b.c[9];
                                 int var24 = b.a_();
-                                int var25 = Canvas.h() % 100;
+                                int var25 = MankeyManCanvas.h() % 100;
                                 boolean var26 = false;
                                 if(var14 + var15 < 99 && var25 > 50 || var14 + var15 >= 99) {
                                     var26 = true;
@@ -634,7 +635,7 @@ final class j extends aa {
                                 var4 = var29 / 16;
                                 var29 %= 16;
                                 var30.c[var4 + 11] |= 1 << var29;
-                                aiClass.a(Canvas.getMessage(217 + techId));
+                                aiClass.a(MankeyManCanvas.getMessage(217 + techId));
                                 var13.s(0);
                                 sClass.c(var13.getName(true));
                                 sClass.c("▽");
@@ -701,26 +702,26 @@ final class j extends aa {
                 case 12:
                     if(n == 0) {
                         sClass.h();
-                        Canvas.option(1, null);
+                        MankeyManCanvas.option(1, null);
                     }
 
-                    if(sClass.j() && Canvas.d(1048576)) {
+                    if(sClass.j() && MankeyManCanvas.d(1048576)) {
                         sClass.i();
                         sClass.c(1);
                         sClass.c(15);
                         sClass.c(18);
-                        Canvas.c(8);
-                        Canvas.f(0);
+                        MankeyManCanvas.c(8);
+                        MankeyManCanvas.f(0);
                         aiClass.x.d();
                         aiClass.b(22);
 
                         for(var5 = 0; var5 < i; ++var5) {
                             ae var6;
-                            q var7 = (var6 = e[var5]).i();
-                            var6.a(var7.a - 200, var7.b, 12 + Canvas.h() % 5, 1, false);
+                            Point var7 = (var6 = e[var5]).i();
+                            var6.a(var7.x - 200, var7.y, 12 + MankeyManCanvas.h() % 5, 1, false);
                         }
 
-                        Canvas.b(17, false);
+                        MankeyManCanvas.b(17, false);
                         this.g(1);
                     }
 
@@ -731,7 +732,7 @@ final class j extends aa {
                     }
                     break;
                 case 13:
-                    Canvas.option(1, (String)null);
+                    MankeyManCanvas.option(1, (String)null);
 
                     for(var2 = 0; var2 < g; ++var2) {
                         ++(var3 = c[var2]).c[42];
@@ -765,46 +766,46 @@ final class j extends aa {
     }
 
     private void d() {
-        q[] var4 = new q[16];
+        Point[] var4 = new Point[16];
 
         int var2;
         for(var2 = 0; var2 < 16; ++var2) {
-            var4[var2] = new q(0, 0);
+            var4[var2] = new Point(0, 0);
         }
 
         if(i == 1) {
-            var4[0].a = 0;
-            var4[0].b = 0;
+            var4[0].x = 0;
+            var4[0].y = 0;
         } else if(i == 2) {
-            var4[0].a = -16;
-            var4[0].b = 0;
-            var4[1].a = 16;
-            var4[1].b = 0;
+            var4[0].x = -16;
+            var4[0].y = 0;
+            var4[1].x = 16;
+            var4[1].y = 0;
         } else if(i == 3) {
-            var4[0].a = 0;
-            var4[0].b = 0;
-            var4[1].a = 32;
-            var4[1].b = 0;
-            var4[2].a = -32;
-            var4[2].b = 0;
+            var4[0].x = 0;
+            var4[0].y = 0;
+            var4[1].x = 32;
+            var4[1].y = 0;
+            var4[2].x = -32;
+            var4[2].y = 0;
         } else {
             for(var2 = 0; var2 < i; ++var2) {
                 int var3 = -90 + (92160 / i * var2 >> 8);
-                var4[var2].a = Canvas.cos(var3) * (36 + (544 * i >> 8)) >> 8;
-                var4[var2].b = Canvas.sin(var3) * (12 + (544 * i >> 8)) >> 8;
+                var4[var2].x = MankeyManCanvas.cos(var3) * (36 + (544 * i >> 8)) >> 8;
+                var4[var2].y = MankeyManCanvas.sin(var3) * (12 + (544 * i >> 8)) >> 8;
             }
         }
 
         for(var2 = 0; var2 < i; ++var2) {
             ae var5;
             (var5 = e[var2]).b(120, 144);
-            var5.a(var4[var2].a + 200, var4[var2].b);
-            var5.a(var4[var2].a, var4[var2].b, 12 + Canvas.h() % 5, 2, false);
+            var5.a(var4[var2].x + 200, var4[var2].y);
+            var5.a(var4[var2].x, var4[var2].y, 12 + MankeyManCanvas.h() % 5, 2, false);
             var5.f();
             d[h++] = var5;
         }
 
-        Canvas.b(17, false);
+        MankeyManCanvas.b(17, false);
     }
 
     private static boolean a(ae var0) {

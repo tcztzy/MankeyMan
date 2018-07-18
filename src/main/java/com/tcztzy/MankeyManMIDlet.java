@@ -2,12 +2,13 @@
 // Source code recreated from option .class file by IntelliJ IDEA
 // (powered by Fernflower decompiler)
 //
+package com.tcztzy;
 
 import javax.microedition.midlet.MIDlet;
 import javax.microedition.midlet.MIDletStateChangeException;
 
-abstract class MID extends MIDlet {
-    MID() {
+abstract class MankeyManMIDlet extends MIDlet {
+    MankeyManMIDlet() {
     }
 
     protected void startApp() {

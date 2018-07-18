@@ -4,10 +4,10 @@
 //
 package com.tcztzy;
 
-final class i {
-    public byte[] a;
+final class MankeyManAudio {
+    public byte[] audioBytes;
 
-    public i(byte[] var1, int var2) {
-        this.a = var1;
+    public MankeyManAudio(byte[] var1, int var2) {
+        this.audioBytes = var1;
     }
 }

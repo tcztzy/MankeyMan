@@ -2,12 +2,13 @@
 // Source code recreated from name .class file by IntelliJ IDEA
 // (powered by Fernflower decompiler)
 //
+package com.tcztzy;
 
 final class ae extends aj {
     public d[] a;
     private boolean d;
-    private q f;
-    private q g;
+    private Point f;
+    private Point g;
     private int h;
     private int i;
     private int j;
@@ -30,12 +31,12 @@ final class ae extends aj {
         this.x(4160);
         this.k = true;
         this.d = true;
-        this.f = new q(0, 0);
-        this.g = new q(0, 0);
+        this.f = new Point(0, 0);
+        this.g = new Point(0, 0);
         this.a = new d[8];
 
         for(int var1 = 0; var1 < 8; ++var1) {
-            this.a[var1] = Canvas.a(new d());
+            this.a[var1] = MankeyManCanvas.a(new d());
             this.a[var1].setFlagTrue(1073741824);
         }
 
@@ -86,10 +87,10 @@ final class ae extends aj {
             }
 
             if(++this.i < this.h) {
-                var2 = Canvas.a(this.h, this.i, this.j);
-                this.a((this.f.a << 8) + (this.g.a - this.f.a) * var2 >> 8, (this.f.b << 8) + (this.g.b - this.f.b) * var2 >> 8);
+                var2 = MankeyManCanvas.a(this.h, this.i, this.j);
+                this.a((this.f.x << 8) + (this.g.x - this.f.x) * var2 >> 8, (this.f.y << 8) + (this.g.y - this.f.y) * var2 >> 8);
             } else {
-                this.a(this.g.a, this.g.b);
+                this.a(this.g.x, this.g.y);
                 this.k = true;
             }
         }
@@ -103,7 +104,7 @@ final class ae extends aj {
             var4 = super.c[8];
             var5 = super.c[9];
             var6 = super.c[13];
-            this.a[2].f(var2 + var4, var3 + var5 - (var6 * 36 >> 8) + (3 * Canvas.sin(45 * (this.m % 8)) >> 8));
+            this.a[2].f(var2 + var4, var3 + var5 - (var6 * 36 >> 8) + (3 * MankeyManCanvas.sin(45 * (this.m % 8)) >> 8));
             this.a[2].g(this.m() - 2);
         }
 
@@ -115,7 +116,7 @@ final class ae extends aj {
             var5 = super.c[9];
             var6 = super.c[12];
             var7 = super.c[13];
-            this.a[3].f(var2 + var4 - (var6 * 8 >> 8) - (3 * Canvas.sin(9 * (this.m % 10)) >> 8), var3 + var5 - (var7 * 10 >> 8));
+            this.a[3].f(var2 + var4 - (var6 * 8 >> 8) - (3 * MankeyManCanvas.sin(9 * (this.m % 10)) >> 8), var3 + var5 - (var7 * 10 >> 8));
             this.a[3].g(this.m() - 3);
         }
 
@@ -165,7 +166,7 @@ final class ae extends aj {
             var6 = super.c[12];
             var7 = super.c[13];
             var2 = var2 + var4 + (var6 >> 8);
-            var4 = 20 + (3 * Canvas.sin(36 * this.m % 360) >> 8);
+            var4 = 20 + (3 * MankeyManCanvas.sin(36 * this.m % 360) >> 8);
             var3 = var3 + var5 - (var4 * var7 >> 8);
             this.a[7].f(var2, var3);
             this.a[7].g(this.m() + 1);
@@ -206,7 +207,7 @@ final class ae extends aj {
 
         super.c[17] = var3;
         super.c[18] = var2;
-        super.c[16] = Canvas.h() % 3;
+        super.c[16] = MankeyManCanvas.h() % 3;
         if(var4 != null) {
             super.c[26] = var4.c[1];
             super.c[27] = var4.c[56];
@@ -222,22 +223,22 @@ final class ae extends aj {
             switch(aiClass.d) {
                 case 0:
                 case 1:
-                    var6 = 400 + Canvas.h() % 30;
+                    var6 = 400 + MankeyManCanvas.h() % 30;
                     break;
                 case 2:
-                    var6 = 600 + Canvas.h() % 200;
+                    var6 = 600 + MankeyManCanvas.h() % 200;
                     break;
                 case 3:
-                    var6 = 800 + Canvas.h() % 200;
+                    var6 = 800 + MankeyManCanvas.h() % 200;
                     break;
                 case 4:
-                    var6 = 1000 + Canvas.h() % 200;
+                    var6 = 1000 + MankeyManCanvas.h() % 200;
                     break;
                 case 5:
-                    var6 = 1200 + Canvas.h() % 100;
+                    var6 = 1200 + MankeyManCanvas.h() % 100;
                     break;
                 case 6:
-                    var6 = 1300 + Canvas.h() % 100;
+                    var6 = 1300 + MankeyManCanvas.h() % 100;
                     break;
                 case 7:
                     var6 = 1450;
@@ -248,7 +249,7 @@ final class ae extends aj {
         if(var4 != null) {
             var2 = var4.c[50];
         } else {
-            var2 = 24 + Canvas.h() % 5;
+            var2 = 24 + MankeyManCanvas.h() % 5;
         }
 
         this.b(var2);
@@ -258,10 +259,10 @@ final class ae extends aj {
         } else {
             switch(var3) {
                 case 0:
-                    var2 = 50 + Canvas.h() % 50;
+                    var2 = 50 + MankeyManCanvas.h() % 50;
                     break;
                 case 1:
-                    var2 = 40 + Canvas.h() % 30;
+                    var2 = 40 + MankeyManCanvas.h() % 30;
             }
         }
 
@@ -273,16 +274,16 @@ final class ae extends aj {
             switch(var3) {
                 case 0:
                     if(var2 >= 70) {
-                        var7 = 30 + Canvas.h() % 20;
+                        var7 = 30 + MankeyManCanvas.h() % 20;
                     } else {
-                        var7 = 50 + Canvas.h() % 50;
+                        var7 = 50 + MankeyManCanvas.h() % 50;
                     }
                     break;
                 case 1:
                     if(var2 >= 50) {
-                        var7 = 50 + Canvas.h() % 20;
+                        var7 = 50 + MankeyManCanvas.h() % 20;
                     } else {
-                        var7 = 70 + Canvas.h() % 30;
+                        var7 = 70 + MankeyManCanvas.h() % 30;
                     }
             }
         }
@@ -294,10 +295,10 @@ final class ae extends aj {
         } else {
             switch(var3) {
                 case 0:
-                    var2 = 40 + Canvas.h() % 50;
+                    var2 = 40 + MankeyManCanvas.h() % 50;
                     break;
                 case 1:
-                    var2 = 30 + Canvas.h() % 70;
+                    var2 = 30 + MankeyManCanvas.h() % 70;
             }
         }
 
@@ -305,7 +306,7 @@ final class ae extends aj {
         if(var4 != null) {
             var2 = var4.c[55];
         } else {
-            var2 = 4 + Canvas.h() % 7;
+            var2 = 4 + MankeyManCanvas.h() % 7;
         }
 
         this.i(var2);
@@ -337,7 +338,7 @@ final class ae extends aj {
         }
 
         if(var1) {
-            name = name + acClass.getGender(super.c[17]);
+            name = name + DataStore.getGender(super.c[17]);
         }
 
         return name;
@@ -354,12 +355,12 @@ final class ae extends aj {
         this.a[0].g(24576 - (super.c[11] + var2) * 10);
     }
 
-    public final void a(q var1) {
-        this.a(var1.a, var1.b);
+    public final void a(Point var1) {
+        this.a(var1.x, var1.y);
     }
 
-    public final q i() {
-        return new q(super.c[8], super.c[9]);
+    public final Point i() {
+        return new Point(super.c[8], super.c[9]);
     }
 
     public final void b(int var1, int var2) {
@@ -368,16 +369,16 @@ final class ae extends aj {
         this.a(super.c[8], super.c[9]);
     }
 
-    public final void b(q var1) {
-        this.b(var1.a, var1.b);
+    public final void b(Point var1) {
+        this.b(var1.x, var1.y);
     }
 
-    public final q j() {
-        return new q(super.c[10], super.c[11]);
+    public final Point j() {
+        return new Point(super.c[10], super.c[11]);
     }
 
-    public final q k() {
-        return new q(super.c[10] + super.c[8], super.c[11] + super.c[9]);
+    public final Point k() {
+        return new Point(super.c[10] + super.c[8], super.c[11] + super.c[9]);
     }
 
     public final void a(int var1, int var2, int var3, int var4) {
@@ -388,10 +389,10 @@ final class ae extends aj {
         if(var3 == 0) {
             this.a(var1, var2);
         } else {
-            this.f.a = super.c[8];
-            this.f.b = super.c[9];
-            this.g.a = var1;
-            this.g.b = var2;
+            this.f.x = super.c[8];
+            this.f.y = super.c[9];
+            this.g.x = var1;
+            this.g.y = var2;
             this.h = var3;
             this.i = 0;
             this.j = var4;
@@ -407,7 +408,7 @@ final class ae extends aj {
 
     public final void c(int var1, int var2) {
         for(int var3 = 0; var3 < 8; ++var3) {
-            this.a[var3].d(var1, var2);
+            this.a[var3].setEnd(var1, var2);
         }
 
         super.c[12] = 256;
@@ -602,7 +603,7 @@ final class ae extends aj {
             var3 = 5;
         }
 
-        int var5 = Canvas.h() % 3;
+        int var5 = MankeyManCanvas.h() % 3;
         var1 = var4 * 36 + (var3 * 3 << 1) + (var1 << 1) + var2;
         this.a[0].e(n[var1], var5);
         this.a[0].setFlag2(this.d);
@@ -754,8 +755,8 @@ final class ae extends aj {
             var2 = var3.j(14);
         }
 
-        if(!var2 && super.c[39] > 0 && super.c[20] > 0 && Canvas.h() % 100 < 50) {
-            this.p(Canvas.h() % 2);
+        if(!var2 && super.c[39] > 0 && super.c[20] > 0 && MankeyManCanvas.h() % 100 < 50) {
+            this.p(MankeyManCanvas.h() % 2);
         }
 
         if(super.c[19] - super.c[20] < super.c[18]) {
@@ -906,7 +907,7 @@ final class ae extends aj {
 
             int var1 = this.K().c(1);
             int var4 = this.K().c(0);
-            var4 = var1 >= 3 && var4 >= 3? Canvas.h() % 2:(var1 > var4?0:1);
+            var4 = var1 >= 3 && var4 >= 3? MankeyManCanvas.h() % 2:(var1 > var4?0:1);
             super.c[51] = var4;
             var1 = var3?20:0;
             if(super.c[27] != super.c[28]) {
@@ -914,16 +915,16 @@ final class ae extends aj {
                     case 0:
                     case 1:
                     case 2:
-                        var1 += 25 + Canvas.h() % 16;
+                        var1 += 25 + MankeyManCanvas.h() % 16;
                         break;
                     case 3:
                     case 4:
-                        var1 += 25 + Canvas.h() % 21;
+                        var1 += 25 + MankeyManCanvas.h() % 21;
                         break;
                     case 5:
                     case 6:
                     case 7:
-                        var1 += 30 + Canvas.h() % 16;
+                        var1 += 30 + MankeyManCanvas.h() % 16;
                 }
             }
 
@@ -959,12 +960,12 @@ final class ae extends aj {
             }
 
             super.c[49] = var1;
-            if((var1 = (super.c[19] + var2.c[19]) / 2 - (2 + Canvas.h() % 11)) < 24) {
+            if((var1 = (super.c[19] + var2.c[19]) / 2 - (2 + MankeyManCanvas.h() % 11)) < 24) {
                 var1 = 24;
             }
 
             super.c[50] = var1;
-            var1 = (var2.o() + this.o() + 30) / 2 + -20 + Canvas.h() % 41;
+            var1 = (var2.o() + this.o() + 30) / 2 + -20 + MankeyManCanvas.h() % 41;
             if(var4 == 1) {
                 var1 -= 30;
                 if(var1 > 69) {
@@ -974,12 +975,12 @@ final class ae extends aj {
 
             if(var3) {
                 var1 += 3;
-                if(Canvas.h() % 100 <= 0) {
+                if(MankeyManCanvas.h() % 100 <= 0) {
                     var1 += 30;
-                } else if(Canvas.h() % 100 < 2) {
+                } else if(MankeyManCanvas.h() % 100 < 2) {
                     var1 -= 15;
                 }
-            } else if(Canvas.h() % 100 < 3) {
+            } else if(MankeyManCanvas.h() % 100 < 3) {
                 var1 -= 30;
             }
 
@@ -988,45 +989,45 @@ final class ae extends aj {
             switch(var4) {
                 case 0:
                     if(var1 >= 70) {
-                        var7 += -30 + Canvas.h() % 41;
+                        var7 += -30 + MankeyManCanvas.h() % 41;
                     }
 
                     if(var1 <= 69) {
-                        var7 += -20 + Canvas.h() % 41;
+                        var7 += -20 + MankeyManCanvas.h() % 41;
                     }
                     break;
                 case 1:
                     if(var1 >= 50) {
-                        var7 += -10 + Canvas.h() % 21;
+                        var7 += -10 + MankeyManCanvas.h() % 21;
                     }
 
                     if(var1 <= 49) {
-                        var7 += -10 + Canvas.h() % 41;
+                        var7 += -10 + MankeyManCanvas.h() % 41;
                     }
             }
 
             if(var3) {
-                if(Canvas.h() % 100 <= 0) {
+                if(MankeyManCanvas.h() % 100 <= 0) {
                     var7 += 30;
                 }
 
-                if(Canvas.h() % 100 < 2) {
+                if(MankeyManCanvas.h() % 100 < 2) {
                     var7 -= 15;
                 }
-            } else if(Canvas.h() % 100 < 3) {
+            } else if(MankeyManCanvas.h() % 100 < 3) {
                 var7 -= 30;
             }
 
             super.c[53] = var7;
-            var1 = (var2.c[33] + super.c[33]) / 2 + -18 + Canvas.h() % 37;
+            var1 = (var2.c[33] + super.c[33]) / 2 + -18 + MankeyManCanvas.h() % 37;
             if(var3) {
                 var1 += 3;
-                if(Canvas.h() % 100 <= 0) {
+                if(MankeyManCanvas.h() % 100 <= 0) {
                     var1 += 30;
-                } else if(Canvas.h() % 100 < 2) {
+                } else if(MankeyManCanvas.h() % 100 < 2) {
                     var1 -= 15;
                 }
-            } else if(Canvas.h() % 100 < 3) {
+            } else if(MankeyManCanvas.h() % 100 < 3) {
                 var1 -= 30;
             }
 

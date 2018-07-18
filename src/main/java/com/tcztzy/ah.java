@@ -2,13 +2,14 @@
 // Source code recreated from name .class file by IntelliJ IDEA
 // (powered by Fernflower decompiler)
 //
+package com.tcztzy;
 
 final class ah extends aj {
     private d[] a;
     private r d;
     private boolean e;
-    private q f;
-    private q g;
+    private Point f;
+    private Point g;
     private int h;
     private int i;
     private int j;
@@ -27,8 +28,8 @@ final class ah extends aj {
     ah(int var1) {
         super.b = 17;
         super.c = new int[17];
-        this.f = new q(0, 0);
-        this.g = new q(0, 0);
+        this.f = new Point(0, 0);
+        this.g = new Point(0, 0);
         super.c[0] = 4;
         super.c[11] = var1;
     }
@@ -40,16 +41,16 @@ final class ah extends aj {
 
         int var1;
         for(var1 = 0; var1 < 6; ++var1) {
-            this.a[var1] = Canvas.a(new d());
+            this.a[var1] = MankeyManCanvas.a(new d());
             this.a[var1].setFlagTrue(1073741824);
         }
 
-        this.d = (r) Canvas.a(new r(0));
+        this.d = (r) MankeyManCanvas.a(new r(0));
         this.d.setFlagTrue(1073741824);
         this.d.setFlag2(false);
         var1 = super.c[11];
-        super.c[15] = m[var1] - m[var1 + 8] + Canvas.h() % (1 + (m[var1 + 8] << 1));
-        super.c[13] = m[var1 + 16] - m[var1 + 24] + Canvas.h() % (1 + (m[var1 + 24] << 1));
+        super.c[15] = m[var1] - m[var1 + 8] + MankeyManCanvas.h() % (1 + (m[var1 + 8] << 1));
+        super.c[13] = m[var1 + 16] - m[var1 + 24] + MankeyManCanvas.h() % (1 + (m[var1 + 24] << 1));
         super.c[14] = super.c[13];
         super.c[9] = m[var1 + 32];
         this.a(0);
@@ -68,12 +69,12 @@ final class ah extends aj {
     public final void b_() {
         if(!this.k) {
             if(++this.i < this.h) {
-                int var1 = Canvas.a(this.h, this.i, this.j);
-                this.a((this.f.a << 8) + (this.g.a - this.f.a) * var1 >> 8, (this.f.b << 8) + (this.g.b - this.f.b) * var1 >> 8);
+                int var1 = MankeyManCanvas.a(this.h, this.i, this.j);
+                this.a((this.f.x << 8) + (this.g.x - this.f.x) * var1 >> 8, (this.f.y << 8) + (this.g.y - this.f.y) * var1 >> 8);
                 return;
             }
 
-            this.a(this.g.a, this.g.b);
+            this.a(this.g.x, this.g.y);
             this.k = true;
         }
 
@@ -90,8 +91,8 @@ final class ah extends aj {
         this.s();
     }
 
-    public final q f() {
-        return new q(super.c[5], super.c[6]);
+    public final Point f() {
+        return new Point(super.c[5], super.c[6]);
     }
 
     public final void b(int var1, int var2) {
@@ -100,22 +101,22 @@ final class ah extends aj {
         this.a(super.c[5], super.c[6]);
     }
 
-    public final q g() {
-        return new q(super.c[7], super.c[8]);
+    public final Point g() {
+        return new Point(super.c[7], super.c[8]);
     }
 
-    public final q h() {
-        return new q(super.c[7] + super.c[5], super.c[8] + super.c[6]);
+    public final Point h() {
+        return new Point(super.c[7] + super.c[5], super.c[8] + super.c[6]);
     }
 
     public final void a(int var1, int var2, int var3, int var4) {
         if(var3 == 0) {
             this.a(var1, var2);
         } else {
-            this.f.a = super.c[5];
-            this.f.b = super.c[6];
-            this.g.a = var1;
-            this.g.b = var2;
+            this.f.x = super.c[5];
+            this.f.y = super.c[6];
+            this.g.x = var1;
+            this.g.y = var2;
             this.h = var3;
             this.i = 0;
             this.j = var4;
@@ -129,7 +130,7 @@ final class ah extends aj {
 
     public final void a(int var1) {
         super.c[12] = var1;
-        this.a[0].e(l[super.c[11] * 3 + super.c[12]], Canvas.h() % 3);
+        this.a[0].e(l[super.c[11] * 3 + super.c[12]], MankeyManCanvas.h() % 3);
     }
 
     public final void j() {
@@ -172,8 +173,8 @@ final class ah extends aj {
     }
 
     private void r() {
-        q var1 = this.h();
-        this.d.f(var1.a, var1.b + 4);
+        Point var1 = this.h();
+        this.d.f(var1.x, var1.y + 4);
         this.d.e(super.c[13]);
         this.d.d(super.c[14]);
         this.d.g(20480);
@@ -237,7 +238,7 @@ final class ah extends aj {
             var3 = 10;
         }
 
-        q var4 = this.h();
+        Point var4 = this.h();
 
         int var5;
         for(var5 = 0; var5 < 4; ++var5) {
@@ -248,14 +249,14 @@ final class ah extends aj {
             int var6 = var1 / var3;
             var1 -= var6 * var3;
             this.a[var5 + 2].a(147, 1, new z(var6 << 3, 0, 8, 10));
-            this.a[var5 + 2].f(var4.a - (var2 << 3) / 2 + (var5 << 3) + 5, var4.b + 8);
+            this.a[var5 + 2].f(var4.x - (var2 << 3) / 2 + (var5 << 3) + 5, var4.y + 8);
             this.a[var5 + 2].g(20480);
             this.a[var5 + 2].setFlag2(super.c[10] != 0 && this.e);
             ++var5;
         }
 
         this.a[1].a(147, 1, new z(99, 0, 11, 10));
-        this.a[1].f(var4.a - (var2 << 3) / 2 - 6, var4.b + 8);
+        this.a[1].f(var4.x - (var2 << 3) / 2 - 6, var4.y + 8);
         this.a[1].g(20480);
         this.a[1].setFlag2(super.c[10] != 0 && this.e);
     }

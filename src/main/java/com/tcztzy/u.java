@@ -2,8 +2,9 @@
 // Source code recreated from name .class file by IntelliJ IDEA
 // (powered by Fernflower decompiler)
 //
+package com.tcztzy;
 
-final class u extends aa {
+final class u extends DataStoreBase {
     private d[] a;
     private at[] b;
     private int c;
@@ -18,7 +19,7 @@ final class u extends aa {
     public final boolean a() {
         this.i(1792);
         this.a = new d[5];
-        Canvas.a(this.a);
+        MankeyManCanvas.a(this.a);
         this.a[0].setColor(15854563);
         this.a[0].b(240, 320);
         this.a[0].f(0, 0);
@@ -40,14 +41,14 @@ final class u extends aa {
         }
 
         this.b = new at[1];
-        Canvas.a(this.b);
-        aiClass.F[2] = Canvas.getMessage(131); // "────────　得分榜▽"
+        MankeyManCanvas.a(this.b);
+        aiClass.F[2] = MankeyManCanvas.getMessage(131); // "────────　得分榜▽"
 
         for(int var1 = 0; var1 < 5; ++var1) {
-            aiClass.F[2] = aiClass.F[2] + acClass.getNumberString(var1 + 1, 5, false);
-            aiClass.F[2] = aiClass.F[2] + Canvas.getMessage(132); // "　---　"
-            aiClass.F[2] = aiClass.F[2] + acClass.getNumberString(aiClass.b[var1], 6, true);
-            aiClass.F[2] = aiClass.F[2] + Canvas.getMessage(133); // "点▽"
+            aiClass.F[2] = aiClass.F[2] + DataStore.getNumberString(var1 + 1, 5, false);
+            aiClass.F[2] = aiClass.F[2] + MankeyManCanvas.getMessage(132); // "　---　"
+            aiClass.F[2] = aiClass.F[2] + DataStore.getNumberString(aiClass.b[var1], 6, true);
+            aiClass.F[2] = aiClass.F[2] + MankeyManCanvas.getMessage(133); // "点▽"
         }
 
         aiClass.F[2] = aiClass.F[2] + "　";
@@ -60,9 +61,9 @@ final class u extends aa {
     }
 
     public final void b() {
-        Canvas.b(this.b);
+        MankeyManCanvas.b(this.b);
         this.b = null;
-        Canvas.b(this.a);
+        MankeyManCanvas.b(this.a);
         this.a = null;
     }
 
@@ -74,12 +75,12 @@ final class u extends aa {
                     switch(this.d) {
                         case 0:
                         case 1:
-                            Canvas.option(1, null);
-                            Canvas.option(0, "继续");
+                            MankeyManCanvas.option(1, null);
+                            MankeyManCanvas.option(0, "继续");
                             break;
                         case 2:
-                            Canvas.option(1, "返回");
-                            Canvas.option(0, null);
+                            MankeyManCanvas.option(1, "返回");
+                            MankeyManCanvas.option(0, null);
                     }
                 }
 
@@ -89,7 +90,7 @@ final class u extends aa {
                 }
                 break;
             case 1:
-                if(this.d == 2 && Canvas.d(4194304) || this.d == 1 && Canvas.d(2097152) || this.d == 0 && Canvas.d(2097152)) {
+                if(this.d == 2 && MankeyManCanvas.d(4194304) || this.d == 1 && MankeyManCanvas.d(2097152) || this.d == 0 && MankeyManCanvas.d(2097152)) {
                     this.h(2);
                 }
 
@@ -97,7 +98,7 @@ final class u extends aa {
                 return;
             case 2:
                 if(this.c == 2) {
-                    Canvas.option(1, null);
+                    MankeyManCanvas.option(1, null);
                     this.f(0);
                 }
         }

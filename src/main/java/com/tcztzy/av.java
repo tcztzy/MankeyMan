@@ -2,14 +2,15 @@
 // Source code recreated from name .class file by IntelliJ IDEA
 // (powered by Fernflower decompiler)
 //
+package com.tcztzy;
 
-final class av extends aa {
+final class av extends DataStoreBase {
     private d[] a;
     private r[] b;
     private int c;
     private int d;
-    private static q[] e = new q[]{new q(110, 19), new q(110, 37), new q(110, 57), new q(186, 19), new q(186, 38), new q(186, 57)};
-    private static q[] g = new q[]{new q(144, 18), new q(144, 37), new q(144, 56), new q(220, 18), new q(220, 37), new q(220, 56)};
+    private static Point[] e = new Point[]{new Point(110, 19), new Point(110, 37), new Point(110, 57), new Point(186, 19), new Point(186, 38), new Point(186, 57)};
+    private static Point[] g = new Point[]{new Point(144, 18), new Point(144, 37), new Point(144, 56), new Point(220, 18), new Point(220, 37), new Point(220, 56)};
     private static z[] h = new z[]{new z(0, 0, 0, 0), new z(0, 0, 20, 20), new z(40, 0, 20, 20), new z(20, 40, 20, 20)};
     private static z[] i = new z[]{new z(0, 0, 26, 18), new z(26, 0, 26, 18), new z(52, 0, 26, 18), new z(26, 18, 26, 18), new z(52, 18, 26, 18), new z(0, 18, 26, 18), new z(78, 0, 26, 18), new z(78, 18, 26, 18), new z(26, 18, 26, 18)};
     private static z[] j = new z[]{new z(80, 0, 20, 20), new z(100, 0, 20, 20), new z(140, 0, 20, 20), new z(0, 0, 20, 20), new z(40, 0, 20, 20), new z(20, 40, 20, 20), new z(0, 40, 20, 20), new z(40, 40, 20, 20), new z(60, 40, 20, 20), new z(80, 40, 20, 20), new z(100, 40, 20, 20)};
@@ -27,7 +28,7 @@ final class av extends aa {
         this.i(768);
         this.c = 0;
         this.a = new d[87];
-        Canvas.a(this.a);
+        MankeyManCanvas.a(this.a);
 
         int var1;
         for(var1 = 0; var1 < 87; ++var1) {
@@ -37,9 +38,9 @@ final class av extends aa {
         this.b = new r[6];
 
         for(var1 = 0; var1 < 6; ++var1) {
-            this.b[var1] = (r) Canvas.a(new r(1));
+            this.b[var1] = (r) MankeyManCanvas.a(new r(1));
             this.b[var1].setFlagFalse(1073741824);
-            this.b[var1].f(e[var1].a, e[var1].b - 120);
+            this.b[var1].f(e[var1].x, e[var1].y - 120);
         }
 
         this.b(3);
@@ -57,7 +58,7 @@ final class av extends aa {
         }
 
         this.b = null;
-        Canvas.b(this.a);
+        MankeyManCanvas.b(this.a);
         this.a = null;
     }
 
@@ -99,7 +100,7 @@ final class av extends aa {
             int var5;
             int var6;
             for(var5 = 0; var5 < var4; ++var5) {
-                var6 = acClass.a(var8.charAt(var5));
+                var6 = DataStore.a(var8.charAt(var5));
                 var2.a[var5 + 76].a(164, 1, new z(var6 % 20 * 12, var6 / 20 * 13, 12, 13));
             }
 
@@ -174,15 +175,15 @@ final class av extends aa {
             }
 
             for(var4 = 0; var4 < 6; ++var4) {
-                this.b[var4 + 0].a(e[var4].a, e[var4].b, var1, 2);
+                this.b[var4 + 0].a(e[var4].x, e[var4].y, var1, 2);
                 this.b[var4 + 0].g(12287);
                 this.b[var4 + 0].setFlag2(true);
-                this.a[49 + (var4 << 1)].f(g[var4].a, g[var4].b - 120);
-                this.a[49 + (var4 << 1)].a(g[var4].a, g[var4].b, var1, 2);
+                this.a[49 + (var4 << 1)].f(g[var4].x, g[var4].y - 120);
+                this.a[49 + (var4 << 1)].a(g[var4].x, g[var4].y, var1, 2);
                 this.a[49 + (var4 << 1)].g(12286);
                 this.a[49 + (var4 << 1)].setFlag2(true);
-                this.a[49 + (var4 << 1) + 1].f(g[var4].a + 7, g[var4].b - 120);
-                this.a[49 + (var4 << 1) + 1].a(g[var4].a + 7, g[var4].b, var1, 2);
+                this.a[49 + (var4 << 1) + 1].f(g[var4].x + 7, g[var4].y - 120);
+                this.a[49 + (var4 << 1) + 1].a(g[var4].x + 7, g[var4].y, var1, 2);
                 this.a[49 + (var4 << 1) + 1].g(12286);
                 this.a[49 + (var4 << 1) + 1].setFlag2(true);
             }
@@ -202,15 +203,15 @@ final class av extends aa {
         this.c &= -3;
 
         int var2;
-        q var3;
+        Point var3;
         for(var2 = 0; var2 < 25; ++var2) {
             var3 = this.a[n[var2]].f();
-            this.a[n[var2]].a(var3.a, var3.b - 120, var1, 1);
+            this.a[n[var2]].a(var3.x, var3.y - 120, var1, 1);
         }
 
         for(var2 = 0; var2 < 6; ++var2) {
             var3 = this.b[var2].f();
-            this.b[var2].a(var3.a, var3.b - 120, var1, 1);
+            this.b[var2].a(var3.x, var3.y - 120, var1, 1);
             this.b[var2].setFlag2(false);
         }
 
@@ -383,8 +384,8 @@ final class av extends aa {
             var4 = var3 % 3;
             int var5 = var3 / 3;
             int var6 = 7;
-            var4 += aiClass.f.a - 1;
-            var5 += aiClass.f.b - 1;
+            var4 += aiClass.f.x - 1;
+            var5 += aiClass.f.y - 1;
             if(var4 < 0) {
                 var4 = 8;
             }

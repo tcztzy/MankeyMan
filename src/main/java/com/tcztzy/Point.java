@@ -4,32 +4,32 @@
 //
 package com.tcztzy;
 
-final class q {
+final class Point {
     public int x;
     public int y;
 
-    public q() {
+    public Point() {
         this.x = 0;
         this.y = 0;
     }
 
-    public q(int var1, int var2) {
-        this.x = var1;
-        this.y = var2;
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
     }
 
-    public q(q var1) {
-        this.x = var1.x;
-        this.y = var1.y;
+    public Point(Point point) {
+        this.x = point.x;
+        this.y = point.y;
     }
 
-    public final void a(int var1, int var2) {
-        this.x = var1;
-        this.y = var2;
+    public final void moveTo(int x, int y) {
+        this.x = x;
+        this.y = y;
     }
 
-    public final void a(q var1) {
-        this.x = var1.x;
-        this.y = var1.y;
+    public final void moveTo(Point point) {
+        this.x = point.x;
+        this.y = point.y;
     }
 }

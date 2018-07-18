@@ -2,8 +2,9 @@
 // Source code recreated from name .class file by IntelliJ IDEA
 // (powered by Fernflower decompiler)
 //
+package com.tcztzy;
 
-final class sClass extends aa {
+final class sClass extends DataStoreBase {
     private static an a;
     private static ao b;
     private static ao c;
@@ -38,7 +39,7 @@ final class sClass extends aa {
     private static int G;
     private static int H;
     private static int I;
-    private static q J;
+    private static Point J;
     private static boolean K;
     private static af L;
     private static e M;
@@ -57,7 +58,7 @@ final class sClass extends aa {
     private static ae Z;
     private static d[] aa;
     private static at[] ab;
-    private static q[] ac;
+    private static Point[] ac;
     private static o[] ad;
     private static int[] ae;
     private static int af;
@@ -70,11 +71,11 @@ final class sClass extends aa {
     private static int am;
     private static int an;
     private static int ao;
-    private static q[] ap;
+    private static Point[] ap;
     private static aClass[] aq;
-    private static q[] ar;
-    private static q[] as;
-    private static q[] at;
+    private static Point[] ar;
+    private static Point[] as;
+    private static Point[] at;
     private static boolean au;
     private static boolean av;
     private static b aw;
@@ -106,13 +107,13 @@ final class sClass extends aa {
     private static int[] aW;
     private static aj aX;
     private static aj aY;
-    private static q aZ;
-    private static q ba;
-    private static q bb;
-    private static q bc;
-    private static q bd;
-    private static q be;
-    private static q bf;
+    private static Point aZ;
+    private static Point ba;
+    private static Point bb;
+    private static Point bc;
+    private static Point bd;
+    private static Point be;
+    private static Point bf;
     private static int bg;
     private static int bh;
     private static int bi;
@@ -133,16 +134,16 @@ final class sClass extends aa {
     private static int[] bx = new int[]{0, 600, 800, 1000, 1200, 1300, 1450, 0};
     private static int[] by = new int[]{0, 0, 1500, 1, 3000, 2, 5000, 3, 10000, 5, 20000, 10, 30000, 15, '썐', 30};
     private static People[] nameList = new People[]{new People("裘长", 0), new People("卡卡", 0), new People("图龙", 0), new People("蒙雷", 0), new People("雷凯", 0), new People("瑞气", 0), new People("泰阳", 0), new People("阳皮", 0), new People("泰米", 0), new People("皮丹", 0), new People("尚息", 0), new People("徳龙", 0), new People("枫火", 0), new People("古龙", 0), new People("金石", 0), new People("凯凯", 0), new People("桑雷", 0), new People("洪强", 0), new People("詹暑", 0), new People("昌猎", 0), new People("波波", 0), new People("巴桑", 0), new People("罗其", 0), new People("文凡", 0), new People("洪宏", 0), new People("孔雷", 0), new People("雷文", 0), new People("雷阳", 0), new People("雷巴", 0), new People("雷丹", 0), new People("雷泰", 0), new People("文正", 0), new People("文罗", 0), new People("文凯", 0), new People("阳枫", 0), new People("皮波", 0), new People("罗丹", 0), new People("罗恶", 0), new People("米罗", 0), new People("裘卡", 0), new People("图卡", 0), new People("孔卡", 0), new People("正芬", 0), new People("波古", 0), new People("欧正", 0), new People("雷丹", 0), new People("雷波", 0), new People("枫巴", 0), new People("凯伊", 0), new People("图文", 0), new People("金古", 0), new People("泰米", 0), new People("罗桑", 0), new People("皮欧", 0), new People("枫卡", 0), new People("皮雷", 0), new People("巴凡", 0), new People("凯蒙", 0), new People("凯瑞", 0), new People("桑卡", 0), new People("丽丽", 1), new People("菁菁", 1), new People("文菁", 1), new People("芬芬", 1), new People("惠芬", 1), new People("娜娜", 1), new People("米莉", 1), new People("休丹", 1), new People("丹婴", 1), new People("伊琳", 1), new People("夏雨", 1), new People("雪丽", 1), new People("露露", 1), new People("文垛", 1), new People("欧莉", 1), new People("金奈", 1), new People("阳冰", 1), new People("纱纱", 1), new People("萨娜", 1), new People("伽莉", 1), new People("洪婖", 1), new People("玛琳", 1), new People("布雨", 1), new People("金禆", 1), new People("瑟风", 1), new People("龙芋", 1), new People("虞惠", 1), new People("米雪", 1), new People("布玛", 1), new People("莉莉", 1), new People("玛晴", 1), new People("露美", 1), new People("伊奈", 1), new People("伊休", 1), new People("伊娜", 1), new People("图丽", 1), new People("詹娜", 1), new People("惠娜", 1), new People("米娜", 1), new People("米休", 1), new People("卡波", 1), new People("琳琳", 1), new People("露娜", 1), new People("夏玛", 1), new People("丹瑟", 1), new People("萨米", 1), new People("玛文", 1), new People("伽布", 1), new People("伽美", 1), new People("露丽", 1), new People("玛休", 1), new People("萨垛", 1), new People("夏垛", 1), new People("卡琳", 1), new People("伽玛", 1), new People("雪丽", 1), new People("奈丽", 1), new People("米奈", 1), new People("纱莉", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("芬芬", 1), new People("芬芬", 1), new People("芬芬", 1), new People("芬芬", 1), new People("芬芬", 1), new People("芬芬", 1), new People("芬芬", 1), new People("芬芬", 1), new People("芬芬", 1), new People("芬芬", 1), new People("卡卡", 0), new People("图龙", 0), new People("蒙雷", 0), new People("雷凯", 0), new People("瑞气", 0), new People("泰阳", 0), new People("阳皮", 0), new People("泰米", 0), new People("皮丹", 0), new People("尚息", 0), new People("徳龙", 0), new People("枫火", 0), new People("古龙", 0), new People("金石", 0), new People("凯凯", 0), new People("桑雷", 0), new People("洪强", 0), new People("詹暑", 0), new People("昌猎", 0), new People("波波", 0), new People("巴桑", 0), new People("罗其", 0), new People("文凡", 0), new People("洪宏", 0), new People("孔雷", 0), new People("雷文", 0), new People("雷阳", 0), new People("雷巴", 0), new People("雷丹", 0), new People("雷泰", 0), new People("文正", 0), new People("文罗", 0), new People("文凯", 0), new People("阳枫", 0), new People("皮波", 0), new People("罗丹", 0), new People("罗恶", 0), new People("米罗", 0), new People("裘卡", 0), new People("图卡", 0), new People("孔卡", 0), new People("正芬", 0), new People("波古", 0), new People("欧正", 0), new People("雷丹", 0), new People("雷波", 0), new People("枫巴", 0), new People("凯伊", 0), new People("图文", 0), new People("金古", 0), new People("泰米", 0), new People("罗桑", 0), new People("皮欧", 0), new People("枫卡", 0), new People("皮雷", 0), new People("巴凡", 0), new People("凯蒙", 0), new People("凯瑞", 0), new People("桑卡", 0), new People("丽丽", 1), new People("菁菁", 1), new People("文菁", 1), new People("芬芬", 1), new People("惠芬", 1), new People("娜娜", 1), new People("米莉", 1), new People("休丹", 1), new People("丹婴", 1), new People("伊琳", 1), new People("夏雨", 1), new People("雪丽", 1), new People("露露", 1), new People("文垛", 1), new People("欧莉", 1), new People("金奈", 1), new People("阳冰", 1), new People("纱纱", 1), new People("萨娜", 1), new People("伽莉", 1), new People("洪婖", 1), new People("玛琳", 1), new People("布雨", 1), new People("金禆", 1), new People("瑟风", 1), new People("龙芋", 1), new People("虞惠", 1), new People("米雪", 1), new People("布玛", 1), new People("莉莉", 1), new People("玛晴", 1), new People("露美", 1), new People("伊奈", 1), new People("伊休", 1), new People("伊娜", 1), new People("图丽", 1), new People("詹娜", 1), new People("惠娜", 1), new People("米娜", 1), new People("米休", 1), new People("卡波", 1), new People("琳琳", 1), new People("露娜", 1), new People("夏玛", 1), new People("丹瑟", 1), new People("萨米", 1), new People("玛文", 1), new People("伽布", 1), new People("伽美", 1), new People("露丽", 1), new People("玛休", 1), new People("萨垛", 1), new People("夏垛", 1), new People("卡琳", 1), new People("伽玛", 1), new People("雪丽", 1), new People("奈丽", 1), new People("米奈", 1), new People("纱莉", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("芬芬", 1), new People("芬芬", 1), new People("芬芬", 1), new People("芬芬", 1), new People("芬芬", 1), new People("芬芬", 1), new People("芬芬", 1), new People("芬芬", 1), new People("芬芬", 1), new People("芬芬", 1), new People("卡卡", 0), new People("图龙", 0), new People("蒙雷", 0), new People("雷凯", 0), new People("瑞气", 0), new People("泰阳", 0), new People("阳皮", 0), new People("泰米", 0), new People("皮丹", 0), new People("尚息", 0), new People("徳龙", 0), new People("枫火", 0), new People("古龙", 0), new People("金石", 0), new People("凯凯", 0), new People("桑雷", 0), new People("洪强", 0), new People("詹暑", 0), new People("昌猎", 0), new People("波波", 0), new People("巴桑", 0), new People("罗其", 0), new People("文凡", 0), new People("洪宏", 0), new People("孔雷", 0), new People("雷文", 0), new People("雷阳", 0), new People("雷巴", 0), new People("雷丹", 0), new People("雷泰", 0), new People("文正", 0), new People("文罗", 0), new People("文凯", 0), new People("阳枫", 0), new People("皮波", 0), new People("罗丹", 0), new People("罗恶", 0), new People("米罗", 0), new People("裘卡", 0), new People("图卡", 0), new People("孔卡", 0), new People("正芬", 0), new People("波古", 0), new People("欧正", 0), new People("雷丹", 0), new People("雷波", 0), new People("枫巴", 0), new People("凯伊", 0), new People("图文", 0), new People("金古", 0), new People("泰米", 0), new People("罗桑", 0), new People("皮欧", 0), new People("枫卡", 0), new People("皮雷", 0), new People("巴凡", 0), new People("凯蒙", 0), new People("凯瑞", 0), new People("桑卡", 0), new People("丽丽", 1), new People("菁菁", 1), new People("文菁", 1), new People("芬芬", 1), new People("惠芬", 1), new People("娜娜", 1), new People("米莉", 1), new People("休丹", 1), new People("丹婴", 1), new People("伊琳", 1), new People("夏雨", 1), new People("雪丽", 1), new People("露露", 1), new People("文垛", 1), new People("欧莉", 1), new People("金奈", 1), new People("阳冰", 1), new People("纱纱", 1), new People("萨娜", 1), new People("伽莉", 1), new People("洪婖", 1), new People("玛琳", 1), new People("布雨", 1), new People("金禆", 1), new People("瑟风", 1), new People("龙芋", 1), new People("虞惠", 1), new People("米雪", 1), new People("布玛", 1), new People("莉莉", 1), new People("玛晴", 1), new People("露美", 1), new People("伊奈", 1), new People("伊休", 1), new People("伊娜", 1), new People("图丽", 1), new People("詹娜", 1), new People("惠娜", 1), new People("米娜", 1), new People("米休", 1), new People("卡波", 1), new People("琳琳", 1), new People("露娜", 1), new People("夏玛", 1), new People("丹瑟", 1), new People("萨米", 1), new People("玛文", 1), new People("伽布", 1), new People("伽美", 1), new People("露丽", 1), new People("玛休", 1), new People("萨垛", 1), new People("夏垛", 1), new People("卡琳", 1), new People("伽玛", 1), new People("雪丽", 1), new People("奈丽", 1), new People("米奈", 1), new People("纱莉", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("垛垛", 1), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("泰米", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("阳皮", 0), new People("芬芬", 1), new People("芬芬", 1), new People("芬芬", 1), new People("芬芬", 1), new People("芬芬", 1), new People("芬芬", 1), new People("芬芬", 1), new People("芬芬", 1), new People("芬芬", 1)};
-    private static ap[] bA = new ap[]{new ap(17, 1, 8, 0, new q(168, 35), new z(62, 27, 33, 22), 0, true), new ap(18, 1, 8, 0, new q(206, 82), new z(62, 27, 33, 22), 0, true), new ap(19, 1, 8, 0, new q(49, 200), new z(62, 27, 33, 22), 0, true), new ap(20, 1, 8, 0, new q(216, 212), new z(62, 27, 33, 22), 0, true), new ap(21, 1, 8, 0, new q(91, 61), new z(62, 0, 43, 27), 0, true), new ap(22, 1, 8, 0, new q(110, 62), new z(62, 0, 43, 27), 0, true), new ap(23, 1, 8, 0, new q(28, 100), new z(62, 0, 43, 27), 0, true), new ap(24, 1, 8, 0, new q(210, 137), new z(62, 0, 43, 27), 0, true), new ap(25, 1, 0, 0, new q(-31, 200), new z(0, 0, 62, 49), 28670, true)};
-    private static ap[] bB = new ap[]{new ap(17, 1, 1, 0, new q(0, 0), new z(0, 0, 105, 72), 20736, true), new ap(18, 1, 3, 2, new q(240, 0), new z(0, 0, 105, 72), 20736, true), new ap(19, 1, 2, 1, new q(0, 320), new z(0, 0, 105, 72), 20736, true), new ap(20, 1, 4, 3, new q(240, 320), new z(0, 0, 105, 72), 20736, true), new ap(21, 1, 8, 0, new q(121, 76), new z(49, 72, 31, 31), 0, true), new ap(22, 1, 8, 0, new q(207, 134), new z(49, 72, 31, 31), 0, true), new ap(23, 1, 8, 0, new q(220, 143), new z(49, 72, 31, 31), 0, true), new ap(24, 1, 8, 0, new q(27, 158), new z(0, 72, 49, 51), 0, true), new ap(25, 1, 8, 0, new q(102, 72), new z(0, 72, 49, 51), 0, true), new ap(26, 1, 1, 0, new q(146, 0), new z(105, 0, 94, 116), 20737, false)};
-    private static ap[] bC = new ap[]{new ap(17, 1, 1, 0, new q(0, 0), new z(0, 0, 0, 0), 20736, true), new ap(18, 1, 3, 2, new q(360, 0), new z(0, 0, 0, 0), 20736, true), new ap(19, 1, 2, 1, new q(0, 360), new z(0, 0, 0, 0), 20736, true), new ap(20, 1, 4, 3, new q(360, 360), new z(0, 0, 0, 0), 20736, true)};
-    private static ap[] bD = new ap[]{new ap(17, 1, 8, 0, new q(185, 217), new z(19, 0, 10, 17), 0, true), new ap(18, 1, 8, 0, new q(36, 72), new z(19, 0, 10, 17), 0, true), new ap(19, 1, 8, 0, new q(103, 28), new z(19, 17, 15, 22), 0, true), new ap(20, 1, 8, 0, new q(25, 127), new z(19, 17, 15, 22), 0, true), new ap(21, 1, 8, 0, new q(49, 195), new z(19, 17, 15, 22), 0, true), new ap(22, 1, 8, 0, new q(196, 214), new z(19, 17, 15, 22), 0, true), new ap(23, 1, 8, 0, new q(14, 180), new z(0, 5, 19, 34), 0, true), new ap(24, 1, 8, 0, new q(215, 134), new z(0, 5, 19, 34), 0, true), new ap(25, 1, 8, 0, new q(156, 57), new z(0, 5, 19, 34), 0, true)};
-    private static ap[] bE = new ap[]{new ap(17, 1, 8, 0, new q(47, 51), new z(96, 0, 31, 24), 0, true), new ap(18, 1, 8, 0, new q(191, 69), new z(96, 0, 31, 24), 0, true), new ap(19, 1, 8, 0, new q(150, 112), new z(96, 0, 31, 24), 0, true), new ap(20, 1, 8, 0, new q(219, 147), new z(96, 0, 31, 24), 0, true), new ap(21, 1, 8, 0, new q(18, 163), new z(0, 0, 32, 57), 0, true), new ap(22, 1, 8, 0, new q(134, 60), new z(0, 0, 32, 57), 0, true), new ap(23, 1, 8, 0, new q(219, 215), new z(0, 0, 32, 57), 0, true)};
-    private static ap[] bF = new ap[]{new ap(17, 1, 8, 0, new q(24, 174), new z(0, 0, 36, 38), 0, true), new ap(18, 1, 8, 0, new q(199, 246), new z(0, 0, 36, 38), 0, true), new ap(19, 1, 8, 0, new q(214, 129), new z(0, 0, 36, 38), 0, true), new ap(20, 1, 8, 0, new q(168, 56), new z(36, 0, 51, 33), 0, true), new ap(21, 1, 8, 0, new q(46, 82), new z(36, 0, 51, 33), 0, true), new ap(22, 1, 8, 0, new q(215, 197), new z(87, 11, 13, 9), 0, true), new ap(23, 1, 8, 0, new q(44, 194), new z(87, 0, 18, 11), 0, true), new ap(24, 1, 8, 0, new q(91, 53), new z(87, 20, 8, 6), 0, true), new ap(25, 1, 8, 0, new q(66, 222), new z(87, 26, 18, 12), 0, true), new ap(26, 1, 8, 0, new q(204, 32), new z(87, 26, 18, 12), 0, true)};
-    private static ap[] bG = new ap[]{new ap(17, 1, 8, 0, new q(20, 163), new z(80, 22, 16, 19), 28669, true), new ap(18, 1, 8, 0, new q(224, 64), new z(80, 22, 16, 19), 28669, true), new ap(19, 1, 8, 0, new q(25, 123), new z(96, 26, 12, 15), 28669, true), new ap(20, 1, 8, 0, new q(221, 141), new z(96, 26, 12, 15), 28669, true), new ap(21, 1, 8, 0, new q(157, 59), new z(80, 5, 16, 16), 28669, true), new ap(22, 1, 8, 0, new q(136, 218), new z(80, 5, 16, 16), 28669, true)};
-    private static ap[] bH = new ap[]{new ap(17, 1, 8, 0, new q(82, 85), new z(32, 0, 64, 60), 0, true), new ap(18, 1, 8, 0, new q(120, 125), new z(0, 60, 161, 80), 28671, true), new ap(19, 1, 8, 0, new q(65, 106), new z(96, 0, 31, 24), 0, true), new ap(20, 1, 8, 0, new q(149, 106), new z(96, 0, 31, 24), 0, true), new ap(21, 1, 8, 0, new q(163, 98), new z(96, 0, 31, 24), 0, true), new ap(22, 1, 8, 0, new q(136, 50), new z(96, 0, 31, 24), 0, true)};
+    private static ap[] bA = new ap[]{new ap(17, 1, 8, 0, new Point(168, 35), new z(62, 27, 33, 22), 0, true), new ap(18, 1, 8, 0, new Point(206, 82), new z(62, 27, 33, 22), 0, true), new ap(19, 1, 8, 0, new Point(49, 200), new z(62, 27, 33, 22), 0, true), new ap(20, 1, 8, 0, new Point(216, 212), new z(62, 27, 33, 22), 0, true), new ap(21, 1, 8, 0, new Point(91, 61), new z(62, 0, 43, 27), 0, true), new ap(22, 1, 8, 0, new Point(110, 62), new z(62, 0, 43, 27), 0, true), new ap(23, 1, 8, 0, new Point(28, 100), new z(62, 0, 43, 27), 0, true), new ap(24, 1, 8, 0, new Point(210, 137), new z(62, 0, 43, 27), 0, true), new ap(25, 1, 0, 0, new Point(-31, 200), new z(0, 0, 62, 49), 28670, true)};
+    private static ap[] bB = new ap[]{new ap(17, 1, 1, 0, new Point(0, 0), new z(0, 0, 105, 72), 20736, true), new ap(18, 1, 3, 2, new Point(240, 0), new z(0, 0, 105, 72), 20736, true), new ap(19, 1, 2, 1, new Point(0, 320), new z(0, 0, 105, 72), 20736, true), new ap(20, 1, 4, 3, new Point(240, 320), new z(0, 0, 105, 72), 20736, true), new ap(21, 1, 8, 0, new Point(121, 76), new z(49, 72, 31, 31), 0, true), new ap(22, 1, 8, 0, new Point(207, 134), new z(49, 72, 31, 31), 0, true), new ap(23, 1, 8, 0, new Point(220, 143), new z(49, 72, 31, 31), 0, true), new ap(24, 1, 8, 0, new Point(27, 158), new z(0, 72, 49, 51), 0, true), new ap(25, 1, 8, 0, new Point(102, 72), new z(0, 72, 49, 51), 0, true), new ap(26, 1, 1, 0, new Point(146, 0), new z(105, 0, 94, 116), 20737, false)};
+    private static ap[] bC = new ap[]{new ap(17, 1, 1, 0, new Point(0, 0), new z(0, 0, 0, 0), 20736, true), new ap(18, 1, 3, 2, new Point(360, 0), new z(0, 0, 0, 0), 20736, true), new ap(19, 1, 2, 1, new Point(0, 360), new z(0, 0, 0, 0), 20736, true), new ap(20, 1, 4, 3, new Point(360, 360), new z(0, 0, 0, 0), 20736, true)};
+    private static ap[] bD = new ap[]{new ap(17, 1, 8, 0, new Point(185, 217), new z(19, 0, 10, 17), 0, true), new ap(18, 1, 8, 0, new Point(36, 72), new z(19, 0, 10, 17), 0, true), new ap(19, 1, 8, 0, new Point(103, 28), new z(19, 17, 15, 22), 0, true), new ap(20, 1, 8, 0, new Point(25, 127), new z(19, 17, 15, 22), 0, true), new ap(21, 1, 8, 0, new Point(49, 195), new z(19, 17, 15, 22), 0, true), new ap(22, 1, 8, 0, new Point(196, 214), new z(19, 17, 15, 22), 0, true), new ap(23, 1, 8, 0, new Point(14, 180), new z(0, 5, 19, 34), 0, true), new ap(24, 1, 8, 0, new Point(215, 134), new z(0, 5, 19, 34), 0, true), new ap(25, 1, 8, 0, new Point(156, 57), new z(0, 5, 19, 34), 0, true)};
+    private static ap[] bE = new ap[]{new ap(17, 1, 8, 0, new Point(47, 51), new z(96, 0, 31, 24), 0, true), new ap(18, 1, 8, 0, new Point(191, 69), new z(96, 0, 31, 24), 0, true), new ap(19, 1, 8, 0, new Point(150, 112), new z(96, 0, 31, 24), 0, true), new ap(20, 1, 8, 0, new Point(219, 147), new z(96, 0, 31, 24), 0, true), new ap(21, 1, 8, 0, new Point(18, 163), new z(0, 0, 32, 57), 0, true), new ap(22, 1, 8, 0, new Point(134, 60), new z(0, 0, 32, 57), 0, true), new ap(23, 1, 8, 0, new Point(219, 215), new z(0, 0, 32, 57), 0, true)};
+    private static ap[] bF = new ap[]{new ap(17, 1, 8, 0, new Point(24, 174), new z(0, 0, 36, 38), 0, true), new ap(18, 1, 8, 0, new Point(199, 246), new z(0, 0, 36, 38), 0, true), new ap(19, 1, 8, 0, new Point(214, 129), new z(0, 0, 36, 38), 0, true), new ap(20, 1, 8, 0, new Point(168, 56), new z(36, 0, 51, 33), 0, true), new ap(21, 1, 8, 0, new Point(46, 82), new z(36, 0, 51, 33), 0, true), new ap(22, 1, 8, 0, new Point(215, 197), new z(87, 11, 13, 9), 0, true), new ap(23, 1, 8, 0, new Point(44, 194), new z(87, 0, 18, 11), 0, true), new ap(24, 1, 8, 0, new Point(91, 53), new z(87, 20, 8, 6), 0, true), new ap(25, 1, 8, 0, new Point(66, 222), new z(87, 26, 18, 12), 0, true), new ap(26, 1, 8, 0, new Point(204, 32), new z(87, 26, 18, 12), 0, true)};
+    private static ap[] bG = new ap[]{new ap(17, 1, 8, 0, new Point(20, 163), new z(80, 22, 16, 19), 28669, true), new ap(18, 1, 8, 0, new Point(224, 64), new z(80, 22, 16, 19), 28669, true), new ap(19, 1, 8, 0, new Point(25, 123), new z(96, 26, 12, 15), 28669, true), new ap(20, 1, 8, 0, new Point(221, 141), new z(96, 26, 12, 15), 28669, true), new ap(21, 1, 8, 0, new Point(157, 59), new z(80, 5, 16, 16), 28669, true), new ap(22, 1, 8, 0, new Point(136, 218), new z(80, 5, 16, 16), 28669, true)};
+    private static ap[] bH = new ap[]{new ap(17, 1, 8, 0, new Point(82, 85), new z(32, 0, 64, 60), 0, true), new ap(18, 1, 8, 0, new Point(120, 125), new z(0, 60, 161, 80), 28671, true), new ap(19, 1, 8, 0, new Point(65, 106), new z(96, 0, 31, 24), 0, true), new ap(20, 1, 8, 0, new Point(149, 106), new z(96, 0, 31, 24), 0, true), new ap(21, 1, 8, 0, new Point(163, 98), new z(96, 0, 31, 24), 0, true), new ap(22, 1, 8, 0, new Point(136, 50), new z(96, 0, 31, 24), 0, true)};
     private static z[] bI = new z[]{new z(0, 0, 74, 50), new z(74, 0, 74, 50), new z(148, 0, 74, 50), new z(74, 50, 74, 50), new z(148, 50, 74, 50), new z(0, 50, 74, 50), new z(222, 0, 74, 50), new z(222, 50, 74, 50), new z(74, 50, 74, 50), new z(0, 0, 0, 0), new z(0, 0, 20, 20), new z(40, 0, 20, 20), new z(20, 40, 20, 20), new z(0, 0, 0, 0), new z(40, 40, 20, 20), new z(0, 40, 20, 20), new z(60, 40, 20, 20), new z(100, 40, 20, 20), new z(80, 40, 20, 20), new z(140, 0, 20, 20), new z(140, 0, 20, 20)};
-    private static q[] bJ = new q[]{new q(-1, -1), new q(0, -1), new q(1, -1), new q(-1, 0), new q(0, 0), new q(1, 0), new q(-1, 1), new q(0, 1), new q(1, 1)};
+    private static Point[] bJ = new Point[]{new Point(-1, -1), new Point(0, -1), new Point(1, -1), new Point(-1, 0), new Point(0, 0), new Point(1, 0), new Point(-1, 1), new Point(0, 1), new Point(1, 1)};
     private static int[] bK = new int[]{0, 0, 2, 2, 3, 3, 4, 4, 6, 6, 6, 6, 6, 6, 2, 2};
     private static int[] bL = new int[]{5, 20, 60, 50, 30, 20, 5, 3, 2, 1, 0, 0, 8, 6, 3, 1, 0, 0, 0, 0, 0, 0, 5, 3, 1, 0, 0, 0, 0, 0};
     private static int[] bM = new int[]{5, 3, 2, 1, 22, 45, 44, 1};
@@ -184,8 +185,8 @@ final class sClass extends aa {
         s = "";
         t = "";
         av = false;
-        Canvas.a(bm, (y[])null, (Message[])null, (m[])null, false);
-        Canvas.a(u = new d[27]);
+        MankeyManCanvas.loading(bm, (AudioResource[])null, (Message[])null, (m[])null, false);
+        MankeyManCanvas.a(u = new d[27]);
 
         for(var1 = 0; var1 < 27; ++var1) {
             u[var1].setFlagTrue(1073741824);
@@ -193,21 +194,21 @@ final class sClass extends aa {
 
         g = new aj[192];
         i = 0;
-        aiClass.z = (av) Canvas.a(new av(), this);
+        aiClass.z = (av) MankeyManCanvas.a(new av(), this);
         w = new ab[40];
 
         for(var1 = 0; var1 < 40; ++var1) {
-            w[var1] = (ab) Canvas.a(new ab(), this);
+            w[var1] = (ab) MankeyManCanvas.a(new ab(), this);
         }
 
-        Canvas.f(0);
+        MankeyManCanvas.f(0);
         aiClass.A.setColor(0);
         aiClass.A.d(1);
         return true;
     }
 
     public final void b() {
-        acClass.d();
+        DataStore.d();
         this.setFlagTrue(268435456);
 
         for(int var1 = 0; var1 < i; ++var1) {
@@ -219,9 +220,9 @@ final class sClass extends aa {
         this.s();
         g = null;
         w = null;
-        Canvas.b(u);
+        MankeyManCanvas.b(u);
         u = null;
-        Canvas.a(bm, null, null, null);
+        MankeyManCanvas.a(bm, null, null, null);
         s = null;
         t = null;
         aiClass.x = null;
@@ -255,7 +256,7 @@ final class sClass extends aa {
                     switch(j) {
                         case 0:
                             var10 = this;
-                            Canvas.setI((int)System.currentTimeMillis());
+                            MankeyManCanvas.setI((int)System.currentTimeMillis());
                             aiClass.a &= -16;
                             aiClass.gameTime = 1;
                             aiClass.d = 0;
@@ -264,9 +265,9 @@ final class sClass extends aa {
                             aiClass.m = 0;
                             aiClass.w = false;
                             aiClass.j = 1;
-                            aiClass.f.a = 3 + Canvas.h() % 3;
-                            aiClass.f.b = 3 + Canvas.h() % 2;
-                            aiClass.i = Canvas.getI();
+                            aiClass.f.x = 3 + MankeyManCanvas.h() % 3;
+                            aiClass.f.y = 3 + MankeyManCanvas.h() % 2;
+                            aiClass.i = MankeyManCanvas.getI();
 
                             for(var3 = 0; var3 < 4; ++var3) {
                                 aiClass.g[var3] = 0;
@@ -294,7 +295,7 @@ final class sClass extends aa {
                             for(var3 = 0; var3 < 4; ++var3) {
                                 ae var13;
                                 if((var13 = (ae)var10.a((aj)(new ae()))) != null) {
-                                    var13.a(Canvas.h() % 4, 6 + Canvas.h() % 7, var3 % 2);
+                                    var13.a(MankeyManCanvas.h() % 4, 6 + MankeyManCanvas.h() % 7, var3 % 2);
                                     var13.l(3);
                                     b.a(var13);
                                     b.g(var13.c[17], b.getPopulation(var13.c[17]) + 1);
@@ -356,7 +357,7 @@ final class sClass extends aa {
                                     q(3);
                                     aiClass.y.a(1, 0, br[var2 * 5 + 1], br[var2 * 5 + 2], br[var2 * 5 + 3]);
                                     if(br[var2 * 5 + 4] != -1) {
-                                        Canvas.b(br[var2 * 5 + 4], false);
+                                        MankeyManCanvas.b(br[var2 * 5 + 4], false);
                                     }
                                     break;
                                 }
@@ -368,8 +369,8 @@ final class sClass extends aa {
                         }
                     }
 
-                    if(aiClass.y.f() && aiClass.y.d() && Canvas.d(1048576)) {
-                        Canvas.b(22, false);
+                    if(aiClass.y.f() && aiClass.y.d() && MankeyManCanvas.d(1048576)) {
+                        MankeyManCanvas.b(22, false);
                         aiClass.y.a(1);
                     }
 
@@ -381,13 +382,13 @@ final class sClass extends aa {
                     if(p == 0) {
                         if(b.c[40] > 0) {
                             d(371);
-                            c(acClass.getNumberString(b.c[40], 5, false));
+                            c(DataStore.getNumberString(b.c[40], 5, false));
                             c("个");
                             d(370);
                         }
 
                         if((var2 = b.m().c[10]) != 0) {
-                            c(Canvas.getMessage(var2 + 384));
+                            c(MankeyManCanvas.getMessage(var2 + 384));
                             c("▽");
                         }
 
@@ -397,8 +398,8 @@ final class sClass extends aa {
                         }
                     }
 
-                    if(aiClass.y.d() && Canvas.d(1048576)) {
-                        Canvas.b(22, false);
+                    if(aiClass.y.d() && MankeyManCanvas.d(1048576)) {
+                        MankeyManCanvas.b(22, false);
                         i();
                     }
 
@@ -409,8 +410,8 @@ final class sClass extends aa {
                 case 3:
                     if(p == 0) {
                         this.V();
-                        Canvas.option(1, "迁徙");
-                        Canvas.option(0, "出发");
+                        MankeyManCanvas.option(1, "迁徙");
+                        MankeyManCanvas.option(0, "出发");
                         a.b(aiClass.f);
                         b.a(a.a(aiClass.f));
                         aiClass.w = false;
@@ -432,15 +433,15 @@ final class sClass extends aa {
                         }
 
                         if(var8) {
-                            Canvas.b(11, false);
+                            MankeyManCanvas.b(11, false);
                         }
 
                         if(var9) {
-                            Canvas.b(23, false);
+                            MankeyManCanvas.b(23, false);
                         }
 
                         if(!b.p()) {
-                            Canvas.b(5, false);
+                            MankeyManCanvas.b(5, false);
                         }
                     }
 
@@ -454,26 +455,26 @@ final class sClass extends aa {
                         this.h(28);
                     } else if(b.j() == null) {
                         this.h(5);
-                    } else if(Canvas.d(2097152)) {
-                        Canvas.b(22, false);
+                    } else if(MankeyManCanvas.d(2097152)) {
+                        MankeyManCanvas.b(22, false);
                         k = 0;
                         this.h(7);
-                    } else if(Canvas.d(4194304)) {
-                        Canvas.b(22, false);
+                    } else if(MankeyManCanvas.d(4194304)) {
+                        MankeyManCanvas.b(22, false);
                         this.h(6);
-                    } else if(Canvas.d(1048576)) {
-                        Canvas.b(22, false);
+                    } else if(MankeyManCanvas.d(1048576)) {
+                        MankeyManCanvas.b(22, false);
                         this.h(4);
-                    } else if(Canvas.d(1024)) {
-                        Canvas.b(22, false);
+                    } else if(MankeyManCanvas.d(1024)) {
+                        MankeyManCanvas.b(22, false);
                         this.h(26);
                     }
                     break;
                 case 4:
                     if(!av) {
                         q(3);
-                        L = (af) Canvas.a(new af(), this);
-                        M = (e) Canvas.a(new e(), this);
+                        L = (af) MankeyManCanvas.a(new af(), this);
+                        M = (e) MankeyManCanvas.a(new e(), this);
                         am = -1;
                         af = 0;
                         av = true;
@@ -502,12 +503,12 @@ final class sClass extends aa {
                                 } else if(p >= 4) {
                                     if(p == 4) {
                                         aiClass.y.a(1, 0, bN[(var2 << 2) + 1], bN[(var2 << 2) + 2], bN[(var2 << 2) + 3]);
-                                        Canvas.option(0, null);
-                                        Canvas.option(1, null);
+                                        MankeyManCanvas.option(0, null);
+                                        MankeyManCanvas.option(1, null);
                                     }
 
-                                    if(aiClass.y.f() && aiClass.y.d() && Canvas.d(1048576)) {
-                                        Canvas.b(22, false);
+                                    if(aiClass.y.f() && aiClass.y.d() && MankeyManCanvas.d(1048576)) {
+                                        MankeyManCanvas.b(22, false);
                                         aiClass.y.a(1);
                                     }
 
@@ -525,25 +526,25 @@ final class sClass extends aa {
                             case 2:
                                 if(p == 0) {
                                     L.a(b);
-                                    aiClass.y.a(2, 2, Canvas.getMessage(291)); // aiClass.y.name(2, 2, "请给大家指派任务")
-                                    Canvas.option(1, "返回");
-                                    Canvas.option(0, "出发");
+                                    aiClass.y.a(2, 2, MankeyManCanvas.getMessage(291)); // aiClass.AudioResource.name(2, 2, "请给大家指派任务")
+                                    MankeyManCanvas.option(1, "返回");
+                                    MankeyManCanvas.option(0, "出发");
                                 }
 
                                 if(L.h()) {
                                     aiClass.B = L.g();
                                     aiClass.z.d();
-                                } else if(Canvas.d(1048576)) {
-                                    Canvas.b(22, false);
+                                } else if(MankeyManCanvas.d(1048576)) {
+                                    MankeyManCanvas.b(22, false);
                                     L.a(false);
                                     aiClass.y.a(2);
                                     af = 3;
                                     this.g(0);
-                                } else if(Canvas.d(4194304)) {
+                                } else if(MankeyManCanvas.d(4194304)) {
                                     am = 7;
                                     af = 4;
                                     this.g(0);
-                                } else if(Canvas.d(2097152)) {
+                                } else if(MankeyManCanvas.d(2097152)) {
                                     am = 8;
                                     af = 4;
                                     this.g(0);
@@ -572,18 +573,18 @@ final class sClass extends aa {
                                 }
 
                                 if(M.e() != O) {
-                                    aiClass.F[2] = Canvas.getMessage(292) + Canvas.getMessage(206 + b.m().d() * 5 + M.e()); // "工作任务：" + Canvas.j(206 + gender.m().d() * 5 + M.e())
+                                    aiClass.F[2] = MankeyManCanvas.getMessage(292) + MankeyManCanvas.getMessage(206 + b.m().d() * 5 + M.e()); // "工作任务：" + MankeyManCanvas.j(206 + gender.m().setEnd() * 5 + M.e())
                                     aiClass.y.a(0, 2, aiClass.F[2]);
                                     O = M.e();
                                 }
 
                                 var3 = M.f();
-                                if(!Canvas.d(1048576) && var3 == 0) {
-                                    if(Canvas.d(4194304)) {
+                                if(!MankeyManCanvas.d(1048576) && var3 == 0) {
+                                    if(MankeyManCanvas.d(4194304)) {
                                         am = 7;
                                         af = 4;
                                         this.g(0);
-                                    } else if(Canvas.d(2097152)) {
+                                    } else if(MankeyManCanvas.d(2097152)) {
                                         am = 8;
                                         if(!o(bO[M.e()])) {
                                             M.d();
@@ -601,7 +602,7 @@ final class sClass extends aa {
 
                                     switch(var3) {
                                         case 0:
-                                            Canvas.b(22, false);
+                                            MankeyManCanvas.b(22, false);
                                             M.d();
                                             aiClass.y.a(2);
                                             af = 1;
@@ -623,7 +624,7 @@ final class sClass extends aa {
                                 break;
                             case 4:
                                 if(p == 0) {
-                                    Canvas.b(22, false);
+                                    MankeyManCanvas.b(22, false);
                                     L.f();
                                     aiClass.z.e();
                                     aiClass.y.a(2);
@@ -674,7 +675,7 @@ final class sClass extends aa {
                     if(aiClass.w) {
                         this.h(7);
                     } else if(v == null) {
-                        if((v = (j) Canvas.a(new j(b), this)) != null) {
+                        if((v = (j) MankeyManCanvas.a(new j(b), this)) != null) {
                             this.a(b.m(), 0);
                             this.d();
                             T();
@@ -718,32 +719,32 @@ final class sClass extends aa {
                     if(aiClass.w) {
                         switch(o) {
                             case 0:
-                                --aiClass.f.b;
+                                --aiClass.f.y;
                                 break;
                             case 1:
-                                ++aiClass.f.b;
+                                ++aiClass.f.y;
                                 break;
                             case 2:
-                                --aiClass.f.a;
+                                --aiClass.f.x;
                                 break;
                             case 3:
-                                ++aiClass.f.a;
+                                ++aiClass.f.x;
                         }
 
-                        if(aiClass.f.a < 0) {
-                            aiClass.f.a += 9;
+                        if(aiClass.f.x < 0) {
+                            aiClass.f.x += 9;
                         }
 
-                        if(aiClass.f.b < 0) {
-                            aiClass.f.b += 10;
+                        if(aiClass.f.y < 0) {
+                            aiClass.f.y += 10;
                         }
 
-                        if(aiClass.f.a >= 9) {
-                            aiClass.f.a -= 9;
+                        if(aiClass.f.x >= 9) {
+                            aiClass.f.x -= 9;
                         }
 
-                        if(aiClass.f.b >= 10) {
-                            aiClass.f.b -= 10;
+                        if(aiClass.f.y >= 10) {
+                            aiClass.f.y -= 10;
                         }
 
                         a.b(aiClass.f);
@@ -766,8 +767,8 @@ final class sClass extends aa {
                         if(p == 0) {
                             q(3);
                         } else if(p >= 3) {
-                            acClass.a = true;
-                            x = (f) Canvas.a(new f(), this);
+                            DataStore.a = true;
+                            x = (f) MankeyManCanvas.a(new f(), this);
                         }
                     } else if(!x.isFlag1()) {
                         if(x.getE() == 6) {
@@ -783,14 +784,14 @@ final class sClass extends aa {
                         aiClass.t = r(aiClass.score);
                         aiClass.a("全灭");
                         this.W();
-                        aiClass.y.a(2, 2, Canvas.getMessage(381));
-                        Canvas.option(0, null);
-                        Canvas.option(1, null);
-                        Canvas.b(9, false);
+                        aiClass.y.a(2, 2, MankeyManCanvas.getMessage(381));
+                        MankeyManCanvas.option(0, null);
+                        MankeyManCanvas.option(1, null);
+                        MankeyManCanvas.b(9, false);
                     }
 
-                    if(aiClass.y.d() && Canvas.d(1048576)) {
-                        Canvas.b(22, false);
+                    if(aiClass.y.d() && MankeyManCanvas.d(1048576)) {
+                        MankeyManCanvas.b(22, false);
                         aiClass.y.a(2);
                     }
 
@@ -816,21 +817,21 @@ final class sClass extends aa {
                         this.g(0);
                     } else {
                         if(p == 0) {
-                            acClass.d();
+                            DataStore.d();
                             aiClass.c();
-                            Canvas.option(1, null);
-                            Canvas.option(0, "继续");
+                            MankeyManCanvas.option(1, null);
+                            MankeyManCanvas.option(0, "继续");
                             aiClass.A.setColor(0);
                             aiClass.A.d(1);
-                            (ab = new at[1])[0] = Canvas.a(new at());
+                            (ab = new at[1])[0] = MankeyManCanvas.a(new at());
                             ab[0].a(12, 18);
                             ab[0].setColor(16777215);
                             ab[0].a(108);
                             ab[0].f(12, 87);
                             ab[0].g(0);
                             ab[0].setFlag2(true);
-                        } else if(Canvas.d(2097152)) {
-                            Canvas.b(22, false);
+                        } else if(MankeyManCanvas.d(2097152)) {
+                            MankeyManCanvas.b(22, false);
                             av = false;
                         }
 
@@ -853,7 +854,7 @@ final class sClass extends aa {
                         this.e();
                         T();
                         aiClass.A.d(0);
-                        y = (u) Canvas.a(new u(0, aiClass.t), this);
+                        y = (u) MankeyManCanvas.a(new u(0, aiClass.t), this);
                     } else if(!y.isFlag1()) {
                         this.a(b.m(), 0);
                         this.d();
@@ -948,8 +949,8 @@ final class sClass extends aa {
     private void v() {
         if(p != 0) {
             if(p == 4) {
-                Canvas.option(1, null);
-                Canvas.option(0, null);
+                MankeyManCanvas.option(1, null);
+                MankeyManCanvas.option(0, null);
             } else {
                 if(p == 13) {
                     aiClass.A.setColor(0);
@@ -985,30 +986,30 @@ final class sClass extends aa {
                 aiClass.d(var7 * 3);
             }
 
-            Canvas.setI(aiClass.i);
+            MankeyManCanvas.setI(aiClass.i);
             if(aiClass.w) {
                 for(var2 = 0; var2 < var7; ++var2) {
                     ae var8;
-                    q var9 = (var8 = b.a(var2)).i();
+                    Point var9 = (var8 = b.a(var2)).i();
                     switch(o) {
                         case 0:
-                            var9.b -= 200;
+                            var9.y -= 200;
                             break;
                         case 1:
-                            var9.b += 200;
+                            var9.y += 200;
                             break;
                         case 2:
-                            var9.a -= 200;
+                            var9.x -= 200;
                             break;
                         case 3:
-                            var9.a += 200;
+                            var9.x += 200;
                     }
 
                     var8.u();
-                    var8.a(var9.a, var9.b, 10 + Canvas.h() % 4, 1, false);
+                    var8.a(var9.x, var9.y, 10 + MankeyManCanvas.h() % 4, 1, false);
                 }
 
-                Canvas.b(17, false);
+                MankeyManCanvas.b(17, false);
             } else {
                 var2 = 0;
 
@@ -1016,14 +1017,14 @@ final class sClass extends aa {
                     int var5;
                     ae var10;
                     if((var5 = (var10 = b.a(var3)).c[24]) != 4) {
-                        q var11 = var10.i();
-                        var10.a(var11.a + (Canvas.cos(bp[var5]) * 240 >> 8), var11.b + (Canvas.sin(bp[var5]) * 320 >> 8), 10 + Canvas.h() % 4, 1, false);
+                        Point var11 = var10.i();
+                        var10.a(var11.x + (MankeyManCanvas.cos(bp[var5]) * 240 >> 8), var11.y + (MankeyManCanvas.sin(bp[var5]) * 320 >> 8), 10 + MankeyManCanvas.h() % 4, 1, false);
                         ++var2;
                     }
                 }
 
                 if(var2 > 0) {
-                    Canvas.b(17, false);
+                    MankeyManCanvas.b(17, false);
                 }
             }
 
@@ -1037,7 +1038,7 @@ final class sClass extends aa {
         int var8;
         int var9;
         if(p == 0) {
-            aiClass.i = Canvas.getI();
+            aiClass.i = MankeyManCanvas.getI();
             byte var7 = 1;
             b.a(var7, true);
             b.a(120, 186);
@@ -1077,32 +1078,32 @@ final class sClass extends aa {
         } else {
             b.f();
             var1 = b.c[9];
-            q var5;
+            Point var5;
             if(aiClass.w) {
                 for(var8 = 0; var8 < var1; ++var8) {
                     ae var3;
-                    q var4 = (var3 = b.a(var8)).i();
+                    Point var4 = (var3 = b.a(var8)).i();
                     var5 = var3.i();
                     switch(o) {
                         case 0:
-                            var5.b += 200;
+                            var5.y += 200;
                             break;
                         case 1:
-                            var5.b -= 200;
+                            var5.y -= 200;
                             break;
                         case 2:
-                            var5.a += 200;
+                            var5.x += 200;
                             break;
                         case 3:
-                            var5.a -= 200;
+                            var5.x -= 200;
                     }
 
                     var3.a(var5);
-                    var3.a(var4.a, var4.b, 10 + Canvas.h() % 4, 2, false);
+                    var3.a(var4.x, var4.y, 10 + MankeyManCanvas.h() % 4, 2, false);
                 }
 
                 if(var1 > 0) {
-                    Canvas.b(17, false);
+                    MankeyManCanvas.b(17, false);
                 }
             } else {
                 var8 = 0;
@@ -1111,14 +1112,14 @@ final class sClass extends aa {
                     ae var10;
                     var5 = (var10 = b.a(var9)).i();
                     if((var6 = var10.c[24]) != 4) {
-                        var10.a(var5.a + (Canvas.cos(bp[var6]) * 240 >> 8), var5.b + (Canvas.sin(bp[var6]) * 320 >> 8));
-                        var10.a(var5.a, var5.b, 10 + Canvas.h() % 4, 2, false);
+                        var10.a(var5.x + (MankeyManCanvas.cos(bp[var6]) * 240 >> 8), var5.y + (MankeyManCanvas.sin(bp[var6]) * 320 >> 8));
+                        var10.a(var5.x, var5.y, 10 + MankeyManCanvas.h() % 4, 2, false);
                         ++var8;
                     }
                 }
 
                 if(var8 > 0) {
-                    Canvas.b(17, false);
+                    MankeyManCanvas.b(17, false);
                 }
             }
 
@@ -1142,13 +1143,13 @@ final class sClass extends aa {
             int var11;
             if(!av) {
                 aw = b.m();
-                aZ = new q();
-                ba = new q();
-                bb = new q();
-                bc = new q();
-                bd = new q();
-                be = new q();
-                bf = new q();
+                aZ = new Point();
+                ba = new Point();
+                bb = new Point();
+                bc = new Point();
+                bd = new Point();
+                be = new Point();
+                bf = new Point();
                 ax = new ae[16];
                 az = new ae[16];
                 aB = new ah[64];
@@ -1157,8 +1158,8 @@ final class sClass extends aa {
                 aE = 0;
                 aC = 0;
                 bl = null;
-                bc.a = 180;
-                bc.b = 180;
+                bc.x = 180;
+                bc.y = 180;
                 bg = 0;
                 bh = 0;
                 bi = 0;
@@ -1207,13 +1208,13 @@ final class sClass extends aa {
                             aB[aC++] = (ah)this.a((aj)(new ah(0)));
                             aD[0].a(aB[0]);
                         } else if(aw.b(8) > 0) {
-                            var4 = 1 + Canvas.h() % 6;
+                            var4 = 1 + MankeyManCanvas.h() % 6;
 
                             for(var5 = 0; var5 < var4; ++var5) {
                                 for(var6 = 0; var6 < 10; ++var6) {
-                                    var7 = bU[Canvas.h() % 7];
-                                    if(Canvas.h() % 100 < bV[var7] && var17[var7] < bW[var7] && (var8 = aw.b(var7) - var18[var7]) > 0) {
-                                        if((var9 = 1 + Canvas.h() % var8) > bX[var7]) {
+                                    var7 = bU[MankeyManCanvas.h() % 7];
+                                    if(MankeyManCanvas.h() % 100 < bV[var7] && var17[var7] < bW[var7] && (var8 = aw.b(var7) - var18[var7]) > 0) {
+                                        if((var9 = 1 + MankeyManCanvas.h() % var8) > bX[var7]) {
                                             var9 = bX[var7];
                                         }
 
@@ -1241,13 +1242,13 @@ final class sClass extends aa {
                             case 5:
                             case 6:
                             case 7:
-                                Canvas.a(cb, null, null, null, false);
+                                MankeyManCanvas.loading(cb, null, null, null, false);
                                 break;
                             default:
-                                Canvas.a(ca, null, null, null, false);
+                                MankeyManCanvas.loading(ca, null, null, null, false);
                         }
 
-                        Canvas.a(bl = new d[7]);
+                        MankeyManCanvas.a(bl = new d[7]);
                         bl[0].a(163, 0, new z(13, 0, 12, 15));
                         bl[1].a(163, 0, new z(25, 0, 12, 15));
                         bl[0].setFlagTrue(1073741824);
@@ -1303,14 +1304,14 @@ final class sClass extends aa {
                     this.h(7);
                 }
             } else {
-                q var10000;
+                Point var10000;
                 int var20;
-                q var22;
-                q var24;
+                Point var22;
+                Point var24;
                 ae var29;
-                q var33;
+                Point var33;
                 int var34;
-                q var35;
+                Point var35;
                 boolean var37;
                 label820:
                 switch(af) {
@@ -1347,11 +1348,11 @@ final class sClass extends aa {
                         aH = -1;
                         aI = -1;
                         aiClass.A.d(0);
-                        acClass.a(30);
+                        DataStore.a(30);
                         break;
                     case 1:
                         if(p == 0) {
-                            Canvas.option(1, " → ");
+                            MankeyManCanvas.option(1, " → ");
                         } else if(p == 4) {
                             this.a(240, 160, 8, 0);
                         } else if(p == 12) {
@@ -1362,18 +1363,18 @@ final class sClass extends aa {
                             this.a(120, 160, 10, 0);
                         } else if(p == 36) {
                             var10000 = var35 = aD[0].e();
-                            var10000.b -= 24;
-                            this.a(var35.a, var35.b, 8, 2);
+                            var10000.y -= 24;
+                            this.a(var35.x, var35.y, 8, 2);
                         } else if(p == 44) {
                             af = 2;
                             this.g(0);
                         }
 
-                        if(Canvas.d(4194304)) {
-                            Canvas.b(22, false);
+                        if(MankeyManCanvas.d(4194304)) {
+                            MankeyManCanvas.b(22, false);
                             var10000 = var35 = aD[0].e();
-                            var10000.b -= 24;
-                            a(var35.a, var35.b);
+                            var10000.y -= 24;
+                            a(var35.x, var35.y);
                             af = 2;
                             this.g(0);
                         }
@@ -1390,8 +1391,8 @@ final class sClass extends aa {
                             bl[1].setFlag2(true);
                             d(344);
                             h();
-                            Canvas.option(0, "中止");
-                            Canvas.option(1, null);
+                            MankeyManCanvas.option(0, "中止");
+                            MankeyManCanvas.option(1, null);
                             aH = -1;
 
                             for(var20 = 0; var20 < aE; ++var20) {
@@ -1409,16 +1410,16 @@ final class sClass extends aa {
                             var37 = true;
                         }
 
-                        if(aiClass.y.d() && Canvas.d(1048576)) {
-                            Canvas.b(22, false);
+                        if(aiClass.y.d() && MankeyManCanvas.d(1048576)) {
+                            MankeyManCanvas.b(22, false);
                             i();
                             A();
                             af = 3;
                             this.g(0);
                         } else {
-                            if(aiClass.y.d() && Canvas.d(2097152)) {
+                            if(aiClass.y.d() && MankeyManCanvas.d(2097152)) {
                                 aT = true;
-                                Canvas.b(16, false);
+                                MankeyManCanvas.b(16, false);
                                 i();
                                 A();
                                 af = 10;
@@ -1426,16 +1427,16 @@ final class sClass extends aa {
                                 break;
                             }
 
-                            if(Canvas.e(65536)) {
+                            if(MankeyManCanvas.e(65536)) {
                                 --aH;
                                 var37 = true;
-                            } else if(Canvas.e(262144)) {
+                            } else if(MankeyManCanvas.e(262144)) {
                                 ++aH;
                                 var37 = true;
                             }
 
                             if(var37) {
-                                Canvas.b(8, false);
+                                MankeyManCanvas.b(8, false);
                                 if(aH < 0) {
                                     aH = aE - 1;
                                 }
@@ -1445,35 +1446,35 @@ final class sClass extends aa {
                                 }
 
                                 var10000 = var22 = aD[aH].e();
-                                var10000.b -= 24;
-                                bf.a(aD[aH].f());
+                                var10000.y -= 24;
+                                bf.moveTo(aD[aH].f());
                                 aM = 0;
                                 if(var20 != -1) {
-                                    this.a(var22.a, var22.b, 4, 2);
+                                    this.a(var22.x, var22.y, 4, 2);
                                 } else {
-                                    this.a(var22.a, var22.b, 0, 2);
+                                    this.a(var22.x, var22.y, 0, 2);
                                 }
                             }
 
-                            var6 = Canvas.sin(18 * (aM % 6)) << 3 >> 8;
-                            bl[0].f(bf.a - 32 - var6, bf.b - 32);
+                            var6 = MankeyManCanvas.sin(18 * (aM % 6)) << 3 >> 8;
+                            bl[0].f(bf.x - 32 - var6, bf.y - 32);
                             bl[0].setFlag2(true);
-                            bl[1].f(bf.a + 32 + var6, bf.b - 32);
+                            bl[1].f(bf.x + 32 + var6, bf.y - 32);
                             bl[1].setFlag2(true);
                             ++aM;
                         }
                         break;
                     case 3:
                         if(p == 0) {
-                            Canvas.option(0, null);
-                            Canvas.option(1, null);
+                            MankeyManCanvas.option(0, null);
+                            MankeyManCanvas.option(1, null);
                             t var43;
                             aI = (var43 = aD[aH]).c[1];
                             aD[aH].j();
                             this.a(180, 180, 0, 0);
                             this.e();
-                            Canvas.setFlagTrue(8);
-                            Canvas.f(0);
+                            MankeyManCanvas.setFlagTrue(8);
+                            MankeyManCanvas.f(0);
                             aD[aH].a(1);
                             aD[aH].a(128, 150, 8, 2);
                             var35 = aD[aH].e();
@@ -1485,8 +1486,8 @@ final class sClass extends aa {
                                 }
 
                                 if(var20 != aH) {
-                                    var5 = Canvas.c((var22 = aD[var20].e()).a - var35.a, var22.b - var35.b);
-                                    aD[var20].a(var35.a + (Canvas.cos(var5) * 360 >> 8), var35.b + (Canvas.sin(var5) * 360 >> 8), 8, 1);
+                                    var5 = MankeyManCanvas.c((var22 = aD[var20].e()).x - var35.x, var22.y - var35.y);
+                                    aD[var20].a(var35.x + (MankeyManCanvas.cos(var5) * 360 >> 8), var35.y + (MankeyManCanvas.sin(var5) * 360 >> 8), 8, 1);
                                 }
 
                                 ++var20;
@@ -1526,7 +1527,7 @@ final class sClass extends aa {
                             if(p == 8) {
                                 bl[2].setFlag2(true);
                                 bl[3].setFlag2(true);
-                                Canvas.c(8);
+                                MankeyManCanvas.c(8);
                                 this.d();
                             } else if(p == 10) {
                                 af = 5;
@@ -1534,7 +1535,7 @@ final class sClass extends aa {
                             }
                             break;
                         } else {
-                            Canvas.option(1, null);
+                            MankeyManCanvas.option(1, null);
                             aJ = 0;
                             aK = 0;
                             aS = false;
@@ -1601,14 +1602,14 @@ final class sClass extends aa {
                                 case 3:
                                 case 4:
                                 case 8:
-                                    q var44 = aD[aH].e();
+                                    Point var44 = aD[aH].e();
 
                                     int var45;
                                     for(var45 = 0; var45 < ay; ++var45) {
                                         if((var40 = ax[var45]).c[41] == 0) {
                                             var41 = var7 == 0?(var6 >= 10?9:var6 - 1):var6 - 11;
-                                            var34 = var44.a + ((130 + var7 * 30) * Canvas.cos(45 - var41 * 6 + var8 * 12) >> 8);
-                                            var11 = var44.b + ((110 + var7 * 30) * Canvas.sin(45 - var41 * 6 + var8 * 12) >> 8);
+                                            var34 = var44.x + ((130 + var7 * 30) * MankeyManCanvas.cos(45 - var41 * 6 + var8 * 12) >> 8);
+                                            var11 = var44.y + ((110 + var7 * 30) * MankeyManCanvas.sin(45 - var41 * 6 + var8 * 12) >> 8);
                                             var40.a(var34, var11);
                                             ++var8;
                                             if(var8 >= 10) {
@@ -1630,26 +1631,26 @@ final class sClass extends aa {
                                             break label785;
                                         }
 
-                                        q var16 = (var40 = ax[var45]).i();
+                                        Point var16 = (var40 = ax[var45]).i();
                                         if(var40.c[41] == 0) {
-                                            var2 = Canvas.c(var16.a - var44.a, var16.b - var44.b);
-                                            var34 = var44.a + (Canvas.cos(var2) * 360 >> 8);
-                                            var11 = var44.b + (Canvas.sin(var2) * 360 >> 8);
+                                            var2 = MankeyManCanvas.c(var16.x - var44.x, var16.y - var44.y);
+                                            var34 = var44.x + (MankeyManCanvas.cos(var2) * 360 >> 8);
+                                            var11 = var44.y + (MankeyManCanvas.sin(var2) * 360 >> 8);
                                         }
 
                                         var40.a(var34, var11);
-                                        var40.a(var16.a, var16.b, 8, 2);
+                                        var40.a(var16.x, var16.y, 8, 2);
                                         ++var45;
                                     }
                                 case 5:
                                 case 6:
                                 case 7:
                                     for(var42 = 0; var42 < ay; ++var42) {
-                                        q var14 = bl[var7 + 4].f();
+                                        Point var14 = bl[var7 + 4].f();
                                         if((var40 = ax[var42]).c[41] == 0) {
                                             var41 = bZ[var7];
-                                            var34 = var14.a + (Canvas.cos(-90 + 360 / var41 * var8) * 30 >> 8) - 8;
-                                            var11 = var14.b + (Canvas.sin(-90 + 360 / var41 * var8) * 15 >> 8);
+                                            var34 = var14.x + (MankeyManCanvas.cos(-90 + 360 / var41 * var8) * 30 >> 8) - 8;
+                                            var11 = var14.y + (MankeyManCanvas.sin(-90 + 360 / var41 * var8) * 15 >> 8);
                                             var40.a(var34, var11);
                                             ++var8;
                                             if(var8 >= bZ[var7]) {
@@ -1674,8 +1675,8 @@ final class sClass extends aa {
 
                                 ae var46 = az[var42];
                                 var33 = m(var42);
-                                var46.a(var33.a, var33.b + 40);
-                                var46.a(var33.a, var33.b, 10, 2);
+                                var46.a(var33.x, var33.y + 40);
+                                var46.a(var33.x, var33.y, 10, 2);
                                 ++var42;
                             }
                         }
@@ -1695,7 +1696,7 @@ final class sClass extends aa {
                                         var6 /= 4;
                                     } else {
                                         var7 = 100 - ((var3.p() + var3.r() << 8) / 2 + 255 >> 8);
-                                        if(Canvas.h() % 100 < var7) {
+                                        if(MankeyManCanvas.h() % 100 < var7) {
                                             b.i(1);
                                             ++aQ;
                                         }
@@ -1728,7 +1729,7 @@ final class sClass extends aa {
                                     }
 
                                     var9 = 0;
-                                    if(Canvas.h() % 100 < var6 + var8) {
+                                    if(MankeyManCanvas.h() % 100 < var6 + var8) {
                                         byte var38 = 0;
                                         if(var3.c[17] == 1) {
                                             var38 = 10;
@@ -1744,12 +1745,12 @@ final class sClass extends aa {
                                     bb = var26.f();
                                     af = 6;
                                     this.g(0);
-                                    if(var3.q() + var3.r() + aU < bR[var5] - Canvas.h() % 21 && Canvas.h() % 100 > var3.q() / 2 && var5 != 7) {
+                                    if(var3.q() + var3.r() + aU < bR[var5] - MankeyManCanvas.h() % 21 && MankeyManCanvas.h() % 100 > var3.q() / 2 && var5 != 7) {
                                         aS = true;
                                     }
                                 }
                             } else {
-                                var6 = bS[var5 << 1] + Canvas.h() % bS[(var5 << 1) + 1];
+                                var6 = bS[var5 << 1] + MankeyManCanvas.h() % bS[(var5 << 1) + 1];
                                 if(var3.c[18] >= 23) {
                                     ++var6;
                                 }
@@ -1776,32 +1777,32 @@ final class sClass extends aa {
                         if(p == 0) {
                             var33 = var23.g();
                             var24 = var23.h();
-                            q var28 = var30.k();
+                            Point var28 = var30.k();
                             var8 = var23.o();
-                            var9 = Canvas.c(var28.a - var24.a, var28.b - var24.b);
-                            var30.a(var24.a + (Canvas.cos(var9) * var8 >> 8), var24.b + (Canvas.sin(var9) * var8 >> 8), 5, 1);
-                            aZ.a = var24.a - var33.a + (Canvas.cos(var9 + 180) * var8 >> 8);
-                            aZ.b = var24.b - var33.b + (Canvas.sin(var9 + 180) * var8 >> 8);
+                            var9 = MankeyManCanvas.c(var28.x - var24.x, var28.y - var24.y);
+                            var30.a(var24.x + (MankeyManCanvas.cos(var9) * var8 >> 8), var24.y + (MankeyManCanvas.sin(var9) * var8 >> 8), 5, 1);
+                            aZ.x = var24.x - var33.x + (MankeyManCanvas.cos(var9 + 180) * var8 >> 8);
+                            aZ.y = var24.y - var33.y + (MankeyManCanvas.sin(var9 + 180) * var8 >> 8);
                         } else if(p == 5) {
                             var33 = var23.h();
                             var6 = var23.o();
-                            this.a(2, bk, var33.a, var33.b - var6, 0);
+                            this.a(2, bk, var33.x, var33.y - var6, 0);
                             var23.b(0);
                             var23.a(1);
-                            var23.a(aZ.a, aZ.b, 5, 2);
+                            var23.a(aZ.x, aZ.y, 5, 2);
                             var23.e(-bk);
                             if(var23.c[14] <= 0) {
-                                this.a(3, var23.p(), var33.a, var33.b, var23.l() - 10);
+                                this.a(3, var23.p(), var33.x, var33.y, var23.l() - 10);
                             }
 
                             if(bk > 0) {
-                                Canvas.b(3, false);
+                                MankeyManCanvas.b(3, false);
                                 aD[aH].b(0).q();
                             }
                         } else if(p == 10) {
                             var23.a(0);
-                            var23.a(bb.a, bb.b, 5, 1);
-                            var30.a(ba.a, ba.b, 3, 2);
+                            var23.a(bb.x, bb.y, 5, 1);
+                            var30.a(ba.x, ba.y, 3, 2);
                         } else if(p == 15) {
                             var23.b(1);
                             if(var23.c[14] <= 0) {
@@ -1822,9 +1823,9 @@ final class sClass extends aa {
                                 ++aW[var4];
                                 var33 = var23.h();
                                 this.a(1, var23.p(), var33, var23.l());
-                                a(15, var23.m(), var33.a, var33.b - 16, 17153, 4);
+                                a(15, var23.m(), var33.x, var33.y - 16, 17153, 4);
                                 aL += var23.m();
-                                if(aF == -1 && Canvas.h() % 100 < var30.q() + aU) {
+                                if(aF == -1 && MankeyManCanvas.h() % 100 < var30.q() + aU) {
                                     aF = var4;
                                     switch(var4) {
                                         case 0:
@@ -1832,7 +1833,7 @@ final class sClass extends aa {
                                         case 2:
                                         case 3:
                                         case 4:
-                                            aG = Canvas.h() % 100 < 80?0:1;
+                                            aG = MankeyManCanvas.h() % 100 < 80?0:1;
                                             break;
                                         case 5:
                                         case 6:
@@ -1862,33 +1863,33 @@ final class sClass extends aa {
                             var33 = var27.h();
                             var24 = var27.g();
                             var7 = var27.o();
-                            var8 = Canvas.c(var33.a - var22.a, var33.b - var22.b);
+                            var8 = MankeyManCanvas.c(var33.x - var22.x, var33.y - var22.y);
                             var27.a(2);
-                            var27.a(var22.a + (Canvas.cos(var8) * var7 >> 8) - var24.a, var22.b + (Canvas.sin(var8) * var7 >> 8) - var24.b, 5, 1);
+                            var27.a(var22.x + (MankeyManCanvas.cos(var8) * var7 >> 8) - var24.x, var22.y + (MankeyManCanvas.sin(var8) * var7 >> 8) - var24.y, 5, 1);
                             var27.b(0);
                             if(bk == 0) {
-                                aZ.a = var22.a + (Canvas.cos(var8 + 180) * var7 >> 8);
-                                aZ.b = var22.b + (Canvas.sin(var8 + 180) * var7 >> 8);
+                                aZ.x = var22.x + (MankeyManCanvas.cos(var8 + 180) * var7 >> 8);
+                                aZ.y = var22.y + (MankeyManCanvas.sin(var8 + 180) * var7 >> 8);
                             } else {
-                                aZ.a = var22.a + (Canvas.cos(var8 + 180) * 130 >> 8);
-                                aZ.b = var22.b + (Canvas.sin(var8 + 180) * 130 >> 8);
-                                bb.a = aZ.a;
-                                bb.b = aZ.b;
+                                aZ.x = var22.x + (MankeyManCanvas.cos(var8 + 180) * 130 >> 8);
+                                aZ.y = var22.y + (MankeyManCanvas.sin(var8 + 180) * 130 >> 8);
+                                bb.x = aZ.x;
+                                bb.y = aZ.y;
                             }
                         } else if(p == 5) {
                             aiClass.A.g(0);
                             aiClass.A.setColor(16711680);
                             aiClass.A.d(2);
-                            var3.a(aZ.a, aZ.b, 5, 2);
+                            var3.a(aZ.x, aZ.y, 5, 2);
                             if(bk > 0) {
-                                Canvas.b(3, false);
+                                MankeyManCanvas.b(3, false);
                             } else {
-                                Canvas.b(4, false);
+                                MankeyManCanvas.b(4, false);
                             }
                         } else if(p == 10) {
                             var3.a(1);
-                            var3.a(bb.a, bb.b, 5, 1);
-                            var27.a(ba.a, ba.b, 3, 2);
+                            var3.a(bb.x, bb.y, 5, 1);
+                            var27.a(ba.x, ba.y, 3, 2);
                         } else if(p == 15) {
                             var27.a(0);
                             var27.b(1);
@@ -1896,11 +1897,11 @@ final class sClass extends aa {
                                 var3.r(bk);
                                 az[aA++] = var3;
                                 var22 = m(aA - 1);
-                                var3.a(var22.a, var22.b + 40);
+                                var3.a(var22.x, var22.y + 40);
 
                                 for(var5 = 0; var5 < aA; ++var5) {
                                     var22 = m(var5);
-                                    az[var5].a(var22.a, var22.b, 10, 2);
+                                    az[var5].a(var22.x, var22.y, 10, 2);
                                 }
                             }
 
@@ -1967,7 +1968,7 @@ final class sClass extends aa {
                                                 var9 = bY[var25.b(0).i()];
                                             }
 
-                                            if(Canvas.h() % 100 >= var9) {
+                                            if(MankeyManCanvas.h() % 100 >= var9) {
                                                 break;
                                             }
 
@@ -2012,8 +2013,8 @@ final class sClass extends aa {
                         }
 
                         if(p != 3) {
-                            if(aiClass.y.d() && Canvas.d(1048576)) {
-                                Canvas.b(22, false);
+                            if(aiClass.y.d() && MankeyManCanvas.d(1048576)) {
+                                MankeyManCanvas.b(22, false);
                                 i();
                             } else if(aiClass.y.e()) {
                                 af = 11;
@@ -2026,12 +2027,12 @@ final class sClass extends aa {
                             }
 
                             if(aL > 0) {
-                                Canvas.b(13, false);
+                                MankeyManCanvas.b(13, false);
                                 d(346);
-                                c(acClass.getNumberString(aL, 5, false));
+                                c(DataStore.getNumberString(aL, 5, false));
                                 d(347);
                             } else if(!aT) {
-                                Canvas.b(14, false);
+                                MankeyManCanvas.b(14, false);
                                 if(aC == 0) {
                                     d(348);
                                 } else {
@@ -2041,7 +2042,7 @@ final class sClass extends aa {
 
                             if(aQ > 0) {
                                 d(351);
-                                c(acClass.getNumberString(aQ, 5, false));
+                                c(DataStore.getNumberString(aQ, 5, false));
                                 d(350);
                             }
 
@@ -2055,11 +2056,11 @@ final class sClass extends aa {
                                 }
 
                                 d(352);
-                                c(Canvas.getMessage(181 + (aG << 3) + aF));
+                                c(MankeyManCanvas.getMessage(181 + (aG << 3) + aF));
                             }
 
                             h();
-                            Canvas.option(0, null);
+                            MankeyManCanvas.option(0, null);
                             var2 = 0;
 
                             for(var20 = 0; var20 < 8; ++var20) {
@@ -2085,7 +2086,7 @@ final class sClass extends aa {
                             }
                         }
                     case 11:
-                        acClass.d();
+                        DataStore.d();
 
                         for(var2 = 0; var2 < ay; ++var2) {
                             ++(var3 = ax[var2]).c[45];
@@ -2142,10 +2143,10 @@ final class sClass extends aa {
 
                 if(!bj) {
                     if(++bh < bg) {
-                        var1 = Canvas.a(bg, bh, bi);
-                        a((bd.a << 8) + (be.a - bd.a) * var1 >> 8, (bd.b << 8) + (be.b - bd.b) * var1 >> 8);
+                        var1 = MankeyManCanvas.a(bg, bh, bi);
+                        a((bd.x << 8) + (be.x - bd.x) * var1 >> 8, (bd.y << 8) + (be.y - bd.y) * var1 >> 8);
                     } else {
-                        a(be.a, be.b);
+                        a(be.x, be.y);
                         bj = true;
                     }
                 }
@@ -2159,7 +2160,7 @@ final class sClass extends aa {
                 if(!av) {
                     a(0, 0);
                     if(u != null) {
-                        Canvas.b(bl);
+                        MankeyManCanvas.b(bl);
                         bl = null;
                     }
 
@@ -2167,10 +2168,10 @@ final class sClass extends aa {
                         case 5:
                         case 6:
                         case 7:
-                            Canvas.a(cb, null, null, null);
+                            MankeyManCanvas.a(cb, null, null, null);
                             break;
                         default:
-                            Canvas.a(ca, null, null, null);
+                            MankeyManCanvas.a(ca, null, null, null);
                     }
 
                     this.e();
@@ -2223,7 +2224,7 @@ final class sClass extends aa {
 
                 for(var2 = 1; var2 < aE; ++var2) {
                     int var3 = -90 + (92160 / (aE - 1) * (var2 - 1) >> 8);
-                    aD[var2].a(180 + (Canvas.cos(var3) * var0 >> 8), 200 + (Canvas.sin(var3) * var5 >> 8));
+                    aD[var2].a(180 + (MankeyManCanvas.cos(var3) * var0 >> 8), 200 + (MankeyManCanvas.sin(var3) * var5 >> 8));
                 }
 
                 aD[0].a(180, 200);
@@ -2280,9 +2281,9 @@ final class sClass extends aa {
             var1 = 320;
         }
 
-        bc.a = var0;
-        bc.b = var1;
-        Canvas.a(120 - var0, 160 - var1);
+        bc.x = var0;
+        bc.y = var1;
+        MankeyManCanvas.a(120 - var0, 160 - var1);
     }
 
     private void a(int var1, int var2, int var3, int var4) {
@@ -2303,13 +2304,13 @@ final class sClass extends aa {
         }
 
         if(bj) {
-            a(be.a, be.b);
+            a(be.x, be.y);
         }
 
-        bd.a = bc.a;
-        bd.b = bc.b;
-        be.a = var1;
-        be.b = var2;
+        bd.x = bc.x;
+        bd.y = bc.y;
+        be.x = var1;
+        be.y = var2;
         bg = var3;
         bi = var4;
         bh = 0;
@@ -2326,9 +2327,9 @@ final class sClass extends aa {
         bl[3].setFlag2(false);
     }
 
-    private static q m(int var0) {
+    private static Point m(int var0) {
         int var1 = aA <= 7?30:'혀' / aA >> 8;
-        return new q(bc.a - 120 + 240 - 26 - var0 * var1, bc.b - 160 + 260);
+        return new Point(bc.x - 120 + 240 - 26 - var0 * var1, bc.y - 160 + 260);
     }
 
     private void C() {
@@ -2378,7 +2379,7 @@ final class sClass extends aa {
                         al = (var4 = b.m().a_()) != 6 && var4 != 5?0:1;
 
                         for(var1 = 0; var1 < aj; ++var1) {
-                            ad[var1] = (o)this.a((aj)(new o((al << 2) + Canvas.h() % 4)));
+                            ad[var1] = (o)this.a((aj)(new o((al << 2) + MankeyManCanvas.h() % 4)));
                         }
 
                         this.a(b.m(), 0);
@@ -2402,10 +2403,10 @@ final class sClass extends aa {
                     case 0:
                         for(var1 = 0; var1 < ag; ++var1) {
                             var6 = T[var1];
-                            var5 = Canvas.h() % 360;
+                            var5 = MankeyManCanvas.h() % 360;
                             var6.b(0, 0);
                             var6.l();
-                            var6.a(120 + (Canvas.cos(var5) * 240 >> 8), 160 + (Canvas.sin(var5) * 320 >> 8));
+                            var6.a(120 + (MankeyManCanvas.cos(var5) * 240 >> 8), 160 + (MankeyManCanvas.sin(var5) * 320 >> 8));
                             var6.f();
                         }
 
@@ -2423,9 +2424,9 @@ final class sClass extends aa {
                                 }
 
                                 o var9 = ad[var1];
-                                var5 = Canvas.h() % 360;
-                                var4 = Canvas.h() % 80;
-                                var9.a(120 + (Canvas.cos(var5) * var4 >> 8), 140 + (Canvas.sin(var5) * var4 >> 8));
+                                var5 = MankeyManCanvas.h() % 360;
+                                var4 = MankeyManCanvas.h() % 80;
+                                var9.a(120 + (MankeyManCanvas.cos(var5) * var4 >> 8), 140 + (MankeyManCanvas.sin(var5) * var4 >> 8));
                                 var9.f();
                                 ++var1;
                             }
@@ -2448,35 +2449,35 @@ final class sClass extends aa {
                         for(var1 = 0; var1 < ag; ++var1) {
                             var6 = T[var1];
                             if(var1 < aj) {
-                                q var7 = ad[var1].e();
-                                var6.a(var7.a, var7.b - 4, 8 + Canvas.h() % 4, 2);
+                                Point var7 = ad[var1].e();
+                                var6.a(var7.x, var7.y - 4, 8 + MankeyManCanvas.h() % 4, 2);
                             } else {
-                                var6.a(20 + Canvas.h() % 200, 20 + Canvas.h() % 200, 8 + Canvas.h() % 4, 2);
+                                var6.a(20 + MankeyManCanvas.h() % 200, 20 + MankeyManCanvas.h() % 200, 8 + MankeyManCanvas.h() % 4, 2);
                             }
 
                             var6.f();
                         }
 
-                        Canvas.a(17, false);
+                        MankeyManCanvas.a(17, false);
                         break;
                     case 3:
                         if(p == 0) {
                             if(ak > 0) {
-                                Canvas.a(13, false);
-                                c(Canvas.getMessage(287));
-                                c(acClass.getNumberString(ak, 5, false));
-                                c(Canvas.getMessage(289 + al));
+                                MankeyManCanvas.a(13, false);
+                                c(MankeyManCanvas.getMessage(287));
+                                c(DataStore.getNumberString(ak, 5, false));
+                                c(MankeyManCanvas.getMessage(289 + al));
                             } else {
-                                Canvas.a(14, false);
-                                c(Canvas.getMessage(288));
-                                c(Canvas.getMessage(289 + al));
+                                MankeyManCanvas.a(14, false);
+                                c(MankeyManCanvas.getMessage(288));
+                                c(MankeyManCanvas.getMessage(289 + al));
                             }
 
                             h();
                         }
 
-                        if(aiClass.y.d() && Canvas.d(1048576)) {
-                            Canvas.b(22, false);
+                        if(aiClass.y.d() && MankeyManCanvas.d(1048576)) {
+                            MankeyManCanvas.b(22, false);
                             i();
                         }
 
@@ -2648,7 +2649,7 @@ final class sClass extends aa {
 
                                 for(var8 = 0; var8 < ag; ++var8) {
                                     var4 = -90 + (92160 / ag * var8 >> 8);
-                                    T[var8].a(Canvas.cos(var4) * var1 >> 8, Canvas.sin(var4) * var2 >> 8);
+                                    T[var8].a(MankeyManCanvas.cos(var4) * var1 >> 8, MankeyManCanvas.sin(var4) * var2 >> 8);
                                 }
                             }
                         }
@@ -2669,33 +2670,33 @@ final class sClass extends aa {
                             }
 
                             for(var1 = 0; var1 < ag; ++var1) {
-                                q var9;
-                                q var10000 = var9 = T[var1].k();
-                                var10000.b -= 8;
+                                Point var9;
+                                Point var10000 = var9 = T[var1].k();
+                                var10000.y -= 8;
                                 var8 = T[var1].m() - 1;
                                 this.a(4, 0, var9, var8);
                             }
 
-                            Canvas.b(25, false);
+                            MankeyManCanvas.b(25, false);
                         }
                         break;
                     case 2:
                         if(p == 0) {
                             if(z > 0) {
-                                Canvas.b(13, false);
+                                MankeyManCanvas.b(13, false);
                                 d(367);
-                                c(acClass.getNumberString(z, 5, false));
+                                c(DataStore.getNumberString(z, 5, false));
                                 d(350);
                             } else {
-                                Canvas.b(16, false);
+                                MankeyManCanvas.b(16, false);
                                 d(368);
                             }
 
                             h();
                         }
 
-                        if(aiClass.y.d() && Canvas.d(1048576)) {
-                            Canvas.b(22, false);
+                        if(aiClass.y.d() && MankeyManCanvas.d(1048576)) {
+                            MankeyManCanvas.b(22, false);
                             i();
                         }
 
@@ -2823,7 +2824,7 @@ final class sClass extends aa {
                                     var8 = 2;
                                 }
 
-                                if(Canvas.h() % 100 < bL[var8 * 10 + var6]) {
+                                if(MankeyManCanvas.h() % 100 < bL[var8 * 10 + var6]) {
                                     T[ag++] = var3;
                                     T[ag++] = var4;
                                     var3.E();
@@ -2848,7 +2849,7 @@ final class sClass extends aa {
                         }
 
                         if(p == 2) {
-                            Canvas.b(7, false);
+                            MankeyManCanvas.b(7, false);
                             W = T[ah++];
                             X = T[ah++];
                             W.a(144, 144);
@@ -2861,7 +2862,7 @@ final class sClass extends aa {
                             X.f();
                             this.a(10, 0, 120, 104, 28671);
                             aiClass.A.d(0);
-                        } else if(p == 10 || Canvas.d(1048576)) {
+                        } else if(p == 10 || MankeyManCanvas.d(1048576)) {
                             af = 2;
                             this.g(0);
                         }
@@ -2873,8 +2874,8 @@ final class sClass extends aa {
                             h();
                         }
 
-                        if(aiClass.y.d() && Canvas.d(1048576)) {
-                            Canvas.b(22, false);
+                        if(aiClass.y.d() && MankeyManCanvas.d(1048576)) {
+                            MankeyManCanvas.b(22, false);
                             i();
                             this.g(1);
                         }
@@ -2912,7 +2913,7 @@ final class sClass extends aa {
                 }
 
                 if(aa != null) {
-                    Canvas.b(aa);
+                    MankeyManCanvas.b(aa);
                     aa = null;
                 }
             }
@@ -2995,7 +2996,7 @@ final class sClass extends aa {
                             var4.l(3);
                         }
 
-                        Canvas.a(aa = new d[1]);
+                        MankeyManCanvas.a(aa = new d[1]);
                         aa[0].b(240, 320);
                         aa[0].setColor(5406097);
                         aa[0].g(28672);
@@ -3016,7 +3017,7 @@ final class sClass extends aa {
                 switch(af) {
                     case 1:
                         if(p != 0) {
-                            if(p == 8 || Canvas.d(1048576)) {
+                            if(p == 8 || MankeyManCanvas.d(1048576)) {
                                 af = 2;
                                 this.g(0);
                             }
@@ -3034,7 +3035,7 @@ final class sClass extends aa {
                         break;
                     case 2:
                         if(p == 0) {
-                            Canvas.b(14, false);
+                            MankeyManCanvas.b(14, false);
                             if(ag == 1) {
                                 c(T[0].getName(true));
                                 c("▽");
@@ -3055,8 +3056,8 @@ final class sClass extends aa {
                             h();
                         }
 
-                        if(aiClass.y.d() && Canvas.d(1048576)) {
-                            Canvas.b(22, false);
+                        if(aiClass.y.d() && MankeyManCanvas.d(1048576)) {
+                            MankeyManCanvas.b(22, false);
                             i();
                         }
 
@@ -3076,7 +3077,7 @@ final class sClass extends aa {
                 }
 
                 if(!av) {
-                    Canvas.b(aa);
+                    MankeyManCanvas.b(aa);
                     aa = null;
                     T = null;
                     this.h(7);
@@ -3173,7 +3174,7 @@ final class sClass extends aa {
                     }
 
                     if(p == 2) {
-                        Canvas.b(6, false);
+                        MankeyManCanvas.b(6, false);
                         Y = T[ah++];
                         Z = T[ah++];
                         Y.F();
@@ -3183,7 +3184,7 @@ final class sClass extends aa {
                         Z.f();
                         this.a(10, 0, 120, 104, 28671);
                         aiClass.A.d(0);
-                    } else if(p == 10 || Canvas.d(1048576)) {
+                    } else if(p == 10 || MankeyManCanvas.d(1048576)) {
                         af = 1;
                         this.g(0);
                     }
@@ -3196,8 +3197,8 @@ final class sClass extends aa {
                         h();
                     }
 
-                    if(aiClass.y.d() && Canvas.d(1048576)) {
-                        Canvas.b(22, false);
+                    if(aiClass.y.d() && MankeyManCanvas.d(1048576)) {
+                        MankeyManCanvas.b(22, false);
                         i();
                         this.g(1);
                     }
@@ -3235,7 +3236,7 @@ final class sClass extends aa {
             }
 
             if(aa != null) {
-                Canvas.b(aa);
+                MankeyManCanvas.b(aa);
                 aa = null;
             }
         }
@@ -3252,7 +3253,7 @@ final class sClass extends aa {
                     b.b(B);
                     this.e();
                     T();
-                    Canvas.a(aa = new d[1]);
+                    MankeyManCanvas.a(aa = new d[1]);
                     aa[0].b(240, 320);
                     aa[0].setColor(13820128);
                     aa[0].g(28672);
@@ -3267,14 +3268,14 @@ final class sClass extends aa {
             } else {
                 switch(af) {
                     case 0:
-                        D = Canvas.h() % 8;
+                        D = MankeyManCanvas.h() % 8;
                         aiClass.A.d(0);
                         af = 1;
                         this.g(0);
                         break;
                     case 1:
                         if(p == 0) {
-                            Canvas.b(12, false);
+                            MankeyManCanvas.b(12, false);
                             B.a(120, 144);
                             B.f();
                             a(12, 2, 138, 32, 18432, 0);
@@ -3290,7 +3291,7 @@ final class sClass extends aa {
                             a(12, 0, 176, 186, 18432, 10);
                             a(12, 0, 210, 162, 18432, 11);
                             a(12, 0, 230, 92, 18432, 12);
-                        } else if(p == 8 || Canvas.d(1048576)) {
+                        } else if(p == 8 || MankeyManCanvas.d(1048576)) {
                             af = 2;
                             this.g(0);
                         }
@@ -3302,7 +3303,7 @@ final class sClass extends aa {
                             int var7 = b.c[9];
                             ae var3 = B;
                             ae var4;
-                            if(var7 > 0 && (var4 = b.a(Canvas.h() % var7)).A()) {
+                            if(var7 > 0 && (var4 = b.a(MankeyManCanvas.h() % var7)).A()) {
                                 var3 = var4;
                             }
 
@@ -3342,12 +3343,12 @@ final class sClass extends aa {
                                     }
 
                                     d(397);
-                                    Canvas.b(13, false);
+                                    MankeyManCanvas.b(13, false);
                                     break;
                                 case 2:
                                     var10 = var1.c[18];
                                     var11 = var1.e() - var10;
-                                    if((var7 = 10 + Canvas.h() % 11) > var11) {
+                                    if((var7 = 10 + MankeyManCanvas.h() % 11) > var11) {
                                         var7 = var11;
                                     }
 
@@ -3362,19 +3363,19 @@ final class sClass extends aa {
                                     d(var6 + 393);
                                     d(399);
                                     c("");
-                                    c(acClass.getNumberString(var7, 5, false));
+                                    c(DataStore.getNumberString(var7, 5, false));
                                     d(var6 + 395);
-                                    Canvas.b(13, false);
+                                    MankeyManCanvas.b(13, false);
                                     break;
                                 case 3:
                                     do {
-                                        var10 = Canvas.h() % 8;
+                                        var10 = MankeyManCanvas.h() % 8;
                                     } while(bK[var10 << 1] <= 0);
 
                                     var8 = var1.c(var10);
                                     var11 = var1.b(var10);
                                     var7 = var8 - var11;
-                                    if((var8 = bK[var10 << 1] + Canvas.h() % (1 + bK[(var10 << 1) + 1])) > var7) {
+                                    if((var8 = bK[var10 << 1] + MankeyManCanvas.h() % (1 + bK[(var10 << 1) + 1])) > var7) {
                                         var8 = var7;
                                     }
 
@@ -3382,10 +3383,10 @@ final class sClass extends aa {
                                         var1.a(var10, var11 + var8);
                                         d(400);
                                         d(401);
-                                        c(acClass.getNumberString(var8, 5, false));
+                                        c(DataStore.getNumberString(var8, 5, false));
                                         c("只");
-                                        c(Canvas.getMessage(var10 + 327));
-                                        Canvas.b(13, false);
+                                        c(MankeyManCanvas.getMessage(var10 + 327));
+                                        MankeyManCanvas.b(13, false);
                                     } else {
                                         D = 0;
                                     }
@@ -3395,7 +3396,7 @@ final class sClass extends aa {
                                         var3.c(1);
                                         c(var3.getName(true));
                                         d(402);
-                                        Canvas.b(13, false);
+                                        MankeyManCanvas.b(13, false);
                                     } else {
                                         D = 0;
                                     }
@@ -3405,7 +3406,7 @@ final class sClass extends aa {
                                         var3.d(1);
                                         c(var3.getName(true));
                                         d(403);
-                                        Canvas.b(13, false);
+                                        MankeyManCanvas.b(13, false);
                                     } else {
                                         D = 0;
                                     }
@@ -3415,7 +3416,7 @@ final class sClass extends aa {
                                         var3.e(1);
                                         c(var3.getName(true));
                                         d(404);
-                                        Canvas.b(13, false);
+                                        MankeyManCanvas.b(13, false);
                                     } else {
                                         D = 0;
                                     }
@@ -3444,21 +3445,21 @@ final class sClass extends aa {
                                         B.q(0);
                                         B.o(0);
                                         d(405);
-                                        Canvas.b(13, false);
+                                        MankeyManCanvas.b(13, false);
                                     }
                             }
 
                             if(D == 0) {
                                 B.b(B.c[19] - 1);
                                 d(406);
-                                Canvas.b(16, false);
+                                MankeyManCanvas.b(16, false);
                             }
 
                             h();
                         }
 
-                        if(aiClass.y.d() && Canvas.d(1048576)) {
-                            Canvas.b(22, false);
+                        if(aiClass.y.d() && MankeyManCanvas.d(1048576)) {
+                            MankeyManCanvas.b(22, false);
                             i();
                         }
 
@@ -3483,7 +3484,7 @@ final class sClass extends aa {
                 }
 
                 if(aa != null) {
-                    Canvas.b(aa);
+                    MankeyManCanvas.b(aa);
                     aa = null;
                 }
             }
@@ -3534,9 +3535,9 @@ final class sClass extends aa {
                     T[ag++] = b.a(var2);
                 }
 
-                Canvas.getImage(158, 7); // dinosaur
+                MankeyManCanvas.getImage(158, 7); // dinosaur
                 b.a(5, false);
-                if((var2 = 1 + Canvas.h() % 3) > ag) {
+                if((var2 = 1 + MankeyManCanvas.h() % 3) > ag) {
                     var2 = ag;
                 }
 
@@ -3553,7 +3554,7 @@ final class sClass extends aa {
                 }
 
                 C = (ah)this.a((aj)(new ah(0)));
-                acClass.a(30);
+                DataStore.a(30);
                 av = true;
                 af = 1;
                 this.g(0);
@@ -3572,7 +3573,7 @@ final class sClass extends aa {
                         C.q();
 
                         for(var3 = 0; var3 < ag; ++var3) {
-                            (var4 = T[var3]).a(120 + (100 * Canvas.cos(90 - var2 / 2 + (var5 * var3 >> 8)) >> 8), 140 + (50 * Canvas.sin(90 - var2 / 2 + (var5 * var3 >> 8)) >> 8));
+                            (var4 = T[var3]).a(120 + (100 * MankeyManCanvas.cos(90 - var2 / 2 + (var5 * var3 >> 8)) >> 8), 140 + (50 * MankeyManCanvas.sin(90 - var2 / 2 + (var5 * var3 >> 8)) >> 8));
                             var4.f();
                         }
 
@@ -3586,7 +3587,7 @@ final class sClass extends aa {
                         aiClass.A.d(2);
 
                         for(var3 = 0; var3 < ag; ++var3) {
-                            T[var3].a(120 + (300 * Canvas.cos(90 - var2 / 2 + (var5 * var3 >> 8)) >> 8), 140 + (150 * Canvas.sin(90 - var2 / 2 + (var5 * var3 >> 8)) >> 8), 15, 2);
+                            T[var3].a(120 + (300 * MankeyManCanvas.cos(90 - var2 / 2 + (var5 * var3 >> 8)) >> 8), 140 + (150 * MankeyManCanvas.sin(90 - var2 / 2 + (var5 * var3 >> 8)) >> 8), 15, 2);
                         }
 
                         for(var3 = 0; var3 < F; ++var3) {
@@ -3595,9 +3596,9 @@ final class sClass extends aa {
                             this.a(3, 2, var4.k(), var4.m() - 10);
                         }
 
-                        Canvas.b(20, false);
+                        MankeyManCanvas.b(20, false);
                         if(ag - F > 0) {
-                            Canvas.b(17, false);
+                            MankeyManCanvas.b(17, false);
                         }
                     } else if(p == 15) {
                         af = 2;
@@ -3627,8 +3628,8 @@ final class sClass extends aa {
                         h();
                     }
 
-                    if(aiClass.y.d() && Canvas.d(1048576)) {
-                        Canvas.b(22, false);
+                    if(aiClass.y.d() && MankeyManCanvas.d(1048576)) {
+                        MankeyManCanvas.b(22, false);
                         i();
                     }
 
@@ -3651,7 +3652,7 @@ final class sClass extends aa {
 
             if(!av) {
                 this.e();
-                Canvas.nullImage(158);
+                MankeyManCanvas.nullImage(158);
                 E = null;
                 T = null;
                 this.h(7);
@@ -3691,7 +3692,7 @@ final class sClass extends aa {
 
         if(var2) {
             int var7 = aiClass.d + 1;
-            aiClass.a(Canvas.getMessage(var7 + 319));
+            aiClass.a(MankeyManCanvas.getMessage(var7 + 319));
             int var8;
             if((var8 = by[var7 << 1] - aiClass.year * by[(var7 << 1) + 1]) < 0) {
                 var8 = 0;
@@ -3714,12 +3715,12 @@ final class sClass extends aa {
             aa = null;
             T = new ae[16];
             U = new ae[16];
-            ac = new q[16];
+            ac = new Point[16];
             ae = new int[16];
             H = 1;
 
             for(var1 = 0; var1 < 16; ++var1) {
-                ac[var1] = new q(0, 0);
+                ac[var1] = new Point(0, 0);
             }
 
             var4 = b;
@@ -3744,7 +3745,7 @@ final class sClass extends aa {
                     var3.b(0, 0);
                 }
 
-                Canvas.a(aa = new d[2]);
+                MankeyManCanvas.a(aa = new d[2]);
                 aa[0].b(240, 320);
                 aa[0].g(28672);
                 aa[0].setFlag2(false);
@@ -3816,7 +3817,7 @@ final class sClass extends aa {
                     break;
                 case 1:
                     if(p == 0) {
-                        Canvas.b(9, false);
+                        MankeyManCanvas.b(9, false);
                         switch(H) {
                             case 1:
                             case 2:
@@ -3847,13 +3848,13 @@ final class sClass extends aa {
 
                         for(var1 = 0; var1 < ai; ++var1) {
                             U[var1].f();
-                            ac[var1].a = 120 + bP[var1 % 3];
-                            ac[var1].b = 200 + var1 * 40 + Canvas.h() % 10;
-                            ae[var1] = Canvas.h() % 10;
+                            ac[var1].x = 120 + bP[var1 % 3];
+                            ac[var1].y = 200 + var1 * 40 + MankeyManCanvas.h() % 10;
+                            ae[var1] = MankeyManCanvas.h() % 10;
                         }
 
                         aiClass.A.d(0);
-                    } else if(p == 8 || Canvas.d(1048576)) {
+                    } else if(p == 8 || MankeyManCanvas.d(1048576)) {
                         af = 2;
                         this.g(0);
                     }
@@ -3871,12 +3872,12 @@ final class sClass extends aa {
                         }
 
                         c(aiClass.F[2]);
-                        c(Canvas.getMessage(277 + H));
+                        c(MankeyManCanvas.getMessage(277 + H));
                         h();
                     }
 
-                    if(aiClass.y.d() && Canvas.d(1048576)) {
-                        Canvas.b(22, false);
+                    if(aiClass.y.d() && MankeyManCanvas.d(1048576)) {
+                        MankeyManCanvas.b(22, false);
                         i();
                     }
 
@@ -3908,7 +3909,7 @@ final class sClass extends aa {
             }
 
             if(!av) {
-                Canvas.b(aa);
+                MankeyManCanvas.b(aa);
                 aa = null;
                 ae = null;
                 ac = null;
@@ -3922,7 +3923,7 @@ final class sClass extends aa {
 
     private static void L() {
         for(int var0 = 0; var0 < ai; ++var0) {
-            U[var0].a(ac[var0].a + (20 * Canvas.sin(10 * ae[var0] % 360) >> 8), ac[var0].b - 2 * ae[var0]);
+            U[var0].a(ac[var0].x + (20 * MankeyManCanvas.sin(10 * ae[var0] % 360) >> 8), ac[var0].y - 2 * ae[var0]);
             ++ae[var0];
         }
 
@@ -3935,18 +3936,18 @@ final class sClass extends aa {
                 aiClass.A.setColor(0);
                 aiClass.A.d(1);
                 (c = (ao)this.a((aj)(new ao()))).a(b.m());
-                c.f(30 + Canvas.h() % 70);
-                c.h(30 + Canvas.h() % 100);
-                int var4 = 4 + Canvas.h() % 12;
+                c.f(30 + MankeyManCanvas.h() % 70);
+                c.h(30 + MankeyManCanvas.h() % 100);
+                int var4 = 4 + MankeyManCanvas.h() % 12;
                 int var2 = 0;
 
                 while(var2 < var4) {
                     ae var3 = (ae)this.a((aj)(new ae()));
                     if(var2 == 0) {
-                        var3.a(Canvas.h() % 4, 15 + Canvas.h() % 15, Canvas.h() % 2, (ae)null);
+                        var3.a(MankeyManCanvas.h() % 4, 15 + MankeyManCanvas.h() % 15, MankeyManCanvas.h() % 2, (ae)null);
                         var3.k(1);
                     } else {
-                        var3.a(Canvas.h() % 4, Canvas.h() % 33, var2 % 2, (ae)null);
+                        var3.a(MankeyManCanvas.h() % 4, MankeyManCanvas.h() % 33, var2 % 2, (ae)null);
                     }
 
                     if(var3.c[18] > 27) {
@@ -3954,12 +3955,12 @@ final class sClass extends aa {
                     }
 
                     var3.l(3);
-                    var3.i(3 + Canvas.h() % 29);
+                    var3.i(3 + MankeyManCanvas.h() % 29);
                     switch(var3.n()) {
                         case 1:
                         default:
-                            var3.h(3 + Canvas.h() % 29);
-                            var3.f(3 + Canvas.h() % 29);
+                            var3.h(3 + MankeyManCanvas.h() % 29);
+                            var3.f(3 + MankeyManCanvas.h() % 29);
                         case 0:
                         case 2:
                             c.a(var3);
@@ -4016,7 +4017,7 @@ final class sClass extends aa {
                             var6 = 5;
                         }
 
-                        if(Canvas.h() % 100 >= var6) {
+                        if(MankeyManCanvas.h() % 100 >= var6) {
                             var4 = 0;
                             if(b.k() >= 20) {
                                 ++var4;
@@ -4091,10 +4092,10 @@ final class sClass extends aa {
         int var1;
         if(!av) {
             E = new ae[16];
-            ap = new q[16];
+            ap = new Point[16];
 
             for(var1 = 0; var1 < 16; ++var1) {
-                ap[var1] = new q(0, 0);
+                ap[var1] = new Point(0, 0);
             }
 
             F = 0;
@@ -4110,7 +4111,7 @@ final class sClass extends aa {
             int var4;
             int var8;
             ae var9;
-            q var10;
+            Point var10;
             switch(af) {
                 case 0:
                     b.d(1);
@@ -4143,13 +4144,13 @@ final class sClass extends aa {
                                 var3 += 40;
                             }
 
-                            if(Canvas.h() % 100 < var3) {
+                            if(MankeyManCanvas.h() % 100 < var3) {
                                 I = 0;
                             }
                         }
                     }
 
-                    acClass.a(30);
+                    DataStore.a(30);
                     af = 1;
                     this.g(0);
                     break;
@@ -4166,14 +4167,14 @@ final class sClass extends aa {
 
                         for(var8 = 0; var8 < var1; ++var8) {
                             var10 = (var9 = b.a(var8)).i();
-                            var9.a(var10.a + (Canvas.cos(225) * 240 >> 8), var10.b + (Canvas.sin(225) * 320 >> 8), 12 + Canvas.h() % 4, 2, false);
+                            var9.a(var10.x + (MankeyManCanvas.cos(225) * 240 >> 8), var10.y + (MankeyManCanvas.sin(225) * 320 >> 8), 12 + MankeyManCanvas.h() % 4, 2, false);
                         }
 
-                        Canvas.b(17, false);
-                        Canvas.b(20, false);
+                        MankeyManCanvas.b(17, false);
+                        MankeyManCanvas.b(20, false);
                     } else if(p != 5) {
                         if(p == 6) {
-                            c(Canvas.getMessage(308));
+                            c(MankeyManCanvas.getMessage(308));
                             h();
                         }
                     } else {
@@ -4184,16 +4185,16 @@ final class sClass extends aa {
 
                         for(var8 = 0; var8 < var1; ++var8) {
                             var10 = (var9 = c.a(var8)).i();
-                            var9.a(var10.a + (Canvas.cos(45) * 240 >> 8), var10.b + (Canvas.sin(45) * 320 >> 8), 12 + Canvas.h() % 4, 2, false);
+                            var9.a(var10.x + (MankeyManCanvas.cos(45) * 240 >> 8), var10.y + (MankeyManCanvas.sin(45) * 320 >> 8), 12 + MankeyManCanvas.h() % 4, 2, false);
                         }
 
-                        Canvas.b(17, false);
-                        Canvas.b(20, false);
+                        MankeyManCanvas.b(17, false);
+                        MankeyManCanvas.b(20, false);
                     }
 
                     if(p > 6) {
-                        if(aiClass.y.d() && Canvas.d(1048576)) {
-                            Canvas.b(22, false);
+                        if(aiClass.y.d() && MankeyManCanvas.d(1048576)) {
+                            MankeyManCanvas.b(22, false);
                             i();
                         }
 
@@ -4225,37 +4226,37 @@ final class sClass extends aa {
 
                         for(var3 = 0; var3 < var1; ++var3) {
                             ae var11 = d.b(0, var3);
-                            q var6 = e.a(Canvas.h() % var8).k();
-                            q var7 = d.h();
-                            var11.a(var6.a - var7.a, var6.b - var7.b, 10, 1, false);
-                            ap[var3].a(var11.i());
+                            Point var6 = e.a(MankeyManCanvas.h() % var8).k();
+                            Point var7 = d.h();
+                            var11.a(var6.x - var7.x, var6.y - var7.y, 10, 1, false);
+                            ap[var3].moveTo(var11.i());
                         }
 
-                        Canvas.b(17, false);
-                        Canvas.b(20, false);
+                        MankeyManCanvas.b(17, false);
+                        MankeyManCanvas.b(20, false);
                     } else if(p == 6) {
                         var2 = e;
                         var1 = e.c[9];
 
                         for(var8 = 0; var8 < var1; ++var8) {
                             var10 = e.a(var8).k();
-                            this.a(3, 2, var10.a, var10.b, 0);
+                            this.a(3, 2, var10.x, var10.y, 0);
                         }
 
-                        Canvas.b(3, false);
-                        Canvas.b(20, false);
+                        MankeyManCanvas.b(3, false);
+                        MankeyManCanvas.b(20, false);
                     } else if(p == 15) {
                         var1 = d.b(0);
 
                         for(var8 = 0; var8 < var1; ++var8) {
-                            d.b(0, var8).a(ap[var8].a, ap[var8].b, 12 + Canvas.h() % 4, 2, false);
+                            d.b(0, var8).a(ap[var8].x, ap[var8].y, 12 + MankeyManCanvas.h() % 4, 2, false);
                         }
 
                         var2 = e;
                         var3 = (var8 = e.c[9]) > 3?3:var8;
 
                         do {
-                            var4 = Canvas.h() % var3;
+                            var4 = MankeyManCanvas.h() % var3;
                             ae var13 = e.a(var4);
                             boolean var12 = false;
 
@@ -4268,7 +4269,7 @@ final class sClass extends aa {
 
                             if(!var12) {
                                 E[F++] = var13;
-                                var13.r(1 + Canvas.h() % 3);
+                                var13.r(1 + MankeyManCanvas.h() % 3);
                             }
                         } while(F < var3);
 
@@ -4286,11 +4287,11 @@ final class sClass extends aa {
 
                         for(var8 = 0; var8 < var1; ++var8) {
                             var10 = (var9 = c.a(var8)).i();
-                            var9.a(var10.a + (Canvas.cos(225) * 240 >> 8), var10.b + (Canvas.sin(225) * 320 >> 8), 12 + Canvas.h() % 4, 1, false);
+                            var9.a(var10.x + (MankeyManCanvas.cos(225) * 240 >> 8), var10.y + (MankeyManCanvas.sin(225) * 320 >> 8), 12 + MankeyManCanvas.h() % 4, 1, false);
                         }
 
-                        Canvas.b(17, false);
-                        Canvas.b(20, false);
+                        MankeyManCanvas.b(17, false);
+                        MankeyManCanvas.b(20, false);
                     } else if(p == 15) {
                         af = 5;
                         this.g(0);
@@ -4315,20 +4316,20 @@ final class sClass extends aa {
 
                                 if(var4 > 0) {
                                     b.f(var4);
-                                    c(Canvas.getMessage(310));
-                                    c(acClass.getNumberString(var4, 5, false));
-                                    c(Canvas.getMessage(309));
+                                    c(MankeyManCanvas.getMessage(310));
+                                    c(DataStore.getNumberString(var4, 5, false));
+                                    c(MankeyManCanvas.getMessage(309));
                                 }
 
                                 if(var5 > 0) {
                                     b.i(var5);
-                                    c(Canvas.getMessage(312));
-                                    c(acClass.getNumberString(var5, 5, false));
-                                    c(Canvas.getMessage(311));
+                                    c(MankeyManCanvas.getMessage(312));
+                                    c(DataStore.getNumberString(var5, 5, false));
+                                    c(MankeyManCanvas.getMessage(311));
                                 }
 
-                                c(Canvas.getMessage(313));
-                                Canvas.b(13, false);
+                                c(MankeyManCanvas.getMessage(313));
+                                MankeyManCanvas.b(13, false);
                                 break;
                             case 1:
                                 if(F > 0) {
@@ -4358,33 +4359,33 @@ final class sClass extends aa {
 
                                 if(var4 > 0) {
                                     b.g(var4);
-                                    c(Canvas.getMessage(316));
-                                    c(acClass.getNumberString(var4, 5, false));
-                                    c(Canvas.getMessage(309));
+                                    c(MankeyManCanvas.getMessage(316));
+                                    c(DataStore.getNumberString(var4, 5, false));
+                                    c(MankeyManCanvas.getMessage(309));
                                 }
 
                                 if(var5 > 0) {
                                     b.i(var5);
-                                    c(Canvas.getMessage(312));
-                                    c(acClass.getNumberString(var5, 5, false));
-                                    c(Canvas.getMessage(311));
+                                    c(MankeyManCanvas.getMessage(312));
+                                    c(DataStore.getNumberString(var5, 5, false));
+                                    c(MankeyManCanvas.getMessage(311));
                                 }
 
-                                c(Canvas.getMessage(317));
-                                Canvas.b(16, false);
+                                c(MankeyManCanvas.getMessage(317));
+                                MankeyManCanvas.b(16, false);
                         }
 
                         h();
-                        Canvas.option(0, null);
+                        MankeyManCanvas.option(0, null);
                     }
 
-                    if(aiClass.y.d() && Canvas.d(1048576)) {
-                        Canvas.b(22, false);
+                    if(aiClass.y.d() && MankeyManCanvas.d(1048576)) {
+                        MankeyManCanvas.b(22, false);
                         i();
                     }
 
                     if(aiClass.y.e()) {
-                        acClass.d();
+                        DataStore.d();
                         af = 6;
                         this.g(0);
                     }
@@ -4436,7 +4437,7 @@ final class sClass extends aa {
     private void P() {
         if(!av) {
             q(3);
-            L = (af) Canvas.a(new af(), this);
+            L = (af) MankeyManCanvas.a(new af(), this);
             av = true;
             af = 0;
             this.g(0);
@@ -4458,8 +4459,8 @@ final class sClass extends aa {
                             if(this.n(bM[var1 << 2])) {
                                 q(3);
                                 aiClass.y.a(1, 0, bM[(var1 << 2) + 1], bM[(var1 << 2) + 2], bM[(var1 << 2) + 3]);
-                                Canvas.option(0, null);
-                                Canvas.option(1, null);
+                                MankeyManCanvas.option(0, null);
+                                MankeyManCanvas.option(1, null);
                                 break;
                             }
                         }
@@ -4470,8 +4471,8 @@ final class sClass extends aa {
                         }
                     }
 
-                    if(aiClass.y.d() && aiClass.y.f() && Canvas.d(1048576)) {
-                        Canvas.b(22, false);
+                    if(aiClass.y.d() && aiClass.y.f() && MankeyManCanvas.d(1048576)) {
+                        MankeyManCanvas.b(22, false);
                         aiClass.y.a(1);
                     }
 
@@ -4484,8 +4485,8 @@ final class sClass extends aa {
                     if(p == 0) {
                         L.a(b);
                         aiClass.y.a(2, 2, "请选择族长");
-                        Canvas.option(0, null);
-                        Canvas.option(1, null);
+                        MankeyManCanvas.option(0, null);
+                        MankeyManCanvas.option(1, null);
                     }
 
                     if(L.h()) {
@@ -4493,8 +4494,8 @@ final class sClass extends aa {
                         aiClass.z.d();
                     }
 
-                    if(aiClass.y.d() && Canvas.d(1048576)) {
-                        Canvas.b(22, false);
+                    if(aiClass.y.d() && MankeyManCanvas.d(1048576)) {
+                        MankeyManCanvas.b(22, false);
                         b.a(120, 194, 4, 1);
                         aiClass.B.k(1);
                         if(aiClass.B.c[19] < 30) {
@@ -4513,11 +4514,11 @@ final class sClass extends aa {
                     break;
                 case 3:
                     aiClass.a("族长・" + aiClass.B.getName(true));
-                    Canvas.b(2, false);
+                    MankeyManCanvas.b(2, false);
                     b.e(2);
                     b.e(1);
                     b.d(1, 6);
-                    acClass.d();
+                    DataStore.d();
                     av = false;
             }
 
@@ -4545,26 +4546,26 @@ final class sClass extends aa {
             S = new ao[2];
             V = new ae[2];
             R = new int[2];
-            ar = new q[2];
-            as = new q[2];
-            at = new q[2];
+            ar = new Point[2];
+            as = new Point[2];
+            at = new Point[2];
             P = 0;
             au = false;
             S[ao] = b;
             S[ao ^ 1] = c;
-            Canvas.a(aa = new d[3]);
+            MankeyManCanvas.a(aa = new d[3]);
             aa[0].a(163, 0, new z(67, 0, 15, 14));
             aa[0].f(120, 120);
-            aa[0].d(512, 512);
+            aa[0].setEnd(512, 512);
             aa[0].g(8192);
             aa[0].setFlag2(false);
             aq = new aClass[2];
 
             for(var1 = 0; var1 < 2; ++var1) {
-                aq[var1] = (aClass) Canvas.a(new aClass(ao), this);
-                ar[var1] = new q();
-                as[var1] = new q();
-                at[var1] = new q();
+                aq[var1] = (aClass) MankeyManCanvas.a(new aClass(ao), this);
+                ar[var1] = new Point();
+                as[var1] = new Point();
+                at[var1] = new Point();
             }
 
             this.a(b.m(), 0);
@@ -4576,7 +4577,7 @@ final class sClass extends aa {
         } else {
             ao var2;
             ae var3;
-            q var4;
+            Point var4;
             int var7;
             boolean var9;
             label403:
@@ -4592,7 +4593,7 @@ final class sClass extends aa {
                         var3.l(3);
                     }
 
-                    acClass.a(29);
+                    DataStore.a(29);
                     af = 1;
                     this.g(0);
                     break;
@@ -4607,12 +4608,12 @@ final class sClass extends aa {
 
                         for(var7 = 0; var7 < var1; ++var7) {
                             var4 = (var3 = b.a(var7)).i();
-                            var3.a(var4.a + (Canvas.cos(45) * 240 >> 8), var4.b + (Canvas.sin(45) * 320 >> 8));
-                            var3.a(var4.a, var4.b, 12 + Canvas.h() % 4, 2);
+                            var3.a(var4.x + (MankeyManCanvas.cos(45) * 240 >> 8), var4.y + (MankeyManCanvas.sin(45) * 320 >> 8));
+                            var3.a(var4.x, var4.y, 12 + MankeyManCanvas.h() % 4, 2);
                         }
 
-                        Canvas.b(17, false);
-                        Canvas.b(20, false);
+                        MankeyManCanvas.b(17, false);
+                        MankeyManCanvas.b(20, false);
                     } else if(p == 5) {
                         c.a(80, 80);
                         c.f();
@@ -4621,12 +4622,12 @@ final class sClass extends aa {
 
                         for(var7 = 0; var7 < var1; ++var7) {
                             var4 = (var3 = c.a(var7)).i();
-                            var3.a(var4.a + (Canvas.cos(225) * 240 >> 8), var4.b + (Canvas.sin(225) * 320 >> 8));
-                            var3.a(var4.a, var4.b, 12 + Canvas.h() % 4, 2);
+                            var3.a(var4.x + (MankeyManCanvas.cos(225) * 240 >> 8), var4.y + (MankeyManCanvas.sin(225) * 320 >> 8));
+                            var3.a(var4.x, var4.y, 12 + MankeyManCanvas.h() % 4, 2);
                         }
 
-                        Canvas.b(17, false);
-                        Canvas.b(20, false);
+                        MankeyManCanvas.b(17, false);
+                        MankeyManCanvas.b(20, false);
                     } else if(p == 6) {
                         if(ao == 0) {
                             d(295);
@@ -4636,8 +4637,8 @@ final class sClass extends aa {
 
                         h();
                     } else if(p > 6) {
-                        if(aiClass.y.d() && Canvas.d(1048576)) {
-                            Canvas.b(22, false);
+                        if(aiClass.y.d() && MankeyManCanvas.d(1048576)) {
+                            MankeyManCanvas.b(22, false);
                             i();
                         }
 
@@ -4657,8 +4658,8 @@ final class sClass extends aa {
                         }
                     }
 
-                    if(aiClass.y.f() && aiClass.y.d() && Canvas.d(1048576)) {
-                        Canvas.b(22, false);
+                    if(aiClass.y.f() && aiClass.y.d() && MankeyManCanvas.d(1048576)) {
+                        MankeyManCanvas.b(22, false);
                         aiClass.y.a(1);
                     }
 
@@ -4673,14 +4674,14 @@ final class sClass extends aa {
                         aq[0].a(S[0]);
                         aq[1].a(120, 164);
                         aq[1].a(S[1]);
-                        Q = 24 + (Canvas.h() % 5 << 2);
+                        Q = 24 + (MankeyManCanvas.h() % 5 << 2);
                     } else if(p >= 3) {
                         if(p == 3) {
                             aq[0].d();
                             if(ao == 0) {
                                 d(297);
                                 h();
-                                Canvas.option(0, "中止");
+                                MankeyManCanvas.option(0, "中止");
                             } else {
                                 d(298);
                                 h();
@@ -4688,14 +4689,14 @@ final class sClass extends aa {
                         }
 
                         if(aiClass.y.d()) {
-                            if(Canvas.d(2097152)) {
-                                Canvas.b(16, false);
+                            if(MankeyManCanvas.d(2097152)) {
+                                MankeyManCanvas.b(16, false);
                                 au = true;
                                 af = 8;
                                 this.g(0);
                                 i();
-                            } else if(Canvas.d(1048576)) {
-                                Canvas.b(22, false);
+                            } else if(MankeyManCanvas.d(1048576)) {
+                                MankeyManCanvas.b(22, false);
                                 aq[0].f();
                                 R[0] = aq[0].g();
                                 af = 4;
@@ -4714,7 +4715,7 @@ final class sClass extends aa {
                             }
 
                             if(var9) {
-                                Canvas.b(22, false);
+                                MankeyManCanvas.b(22, false);
                                 aq[0].f();
                                 R[0] = aq[0].g();
                                 i();
@@ -4729,14 +4730,14 @@ final class sClass extends aa {
                     break;
                 case 4:
                     if(p == 0) {
-                        Q = 24 + (Canvas.h() % 5 << 2);
+                        Q = 24 + (MankeyManCanvas.h() % 5 << 2);
                     } else if(p >= 3) {
                         if(p == 3) {
                             aq[1].a(R[0]);
                             if(ao == 0) {
                                 d(299);
                                 h();
-                                Canvas.option(1, "返回");
+                                MankeyManCanvas.option(1, "返回");
                             } else {
                                 d(300);
                                 h();
@@ -4744,13 +4745,13 @@ final class sClass extends aa {
                         }
 
                         if(aiClass.y.d()) {
-                            if(Canvas.d(4194304)) {
-                                Canvas.b(22, false);
+                            if(MankeyManCanvas.d(4194304)) {
+                                MankeyManCanvas.b(22, false);
                                 af = 3;
                                 this.g(0);
                                 i();
-                            } else if(Canvas.d(1048576)) {
-                                Canvas.b(22, false);
+                            } else if(MankeyManCanvas.d(1048576)) {
+                                MankeyManCanvas.b(22, false);
                                 aq[1].f();
                                 R[1] = aq[1].g();
                                 af = 5;
@@ -4760,7 +4761,7 @@ final class sClass extends aa {
                         }
 
                         if(ao == 1 && p == Q) {
-                            Canvas.b(22, false);
+                            MankeyManCanvas.b(22, false);
                             aq[1].f();
                             R[1] = aq[1].g();
                             i();
@@ -4777,16 +4778,16 @@ final class sClass extends aa {
                         aa[0].setFlag2(true);
                     } else if(p >= 3) {
                         if(p == 3) {
-                            Canvas.b(20, false);
+                            MankeyManCanvas.b(20, false);
                             d(301);
                             h();
-                            Canvas.option(0, " 是 ");
-                            Canvas.option(1, " 否 ");
+                            MankeyManCanvas.option(0, " 是 ");
+                            MankeyManCanvas.option(1, " 否 ");
                         }
 
                         if(aiClass.y.d()) {
-                            if(Canvas.d(4194304)) {
-                                Canvas.b(22, false);
+                            if(MankeyManCanvas.d(4194304)) {
+                                MankeyManCanvas.b(22, false);
                                 switch(ao) {
                                     case 0:
                                         af = 4;
@@ -4801,12 +4802,12 @@ final class sClass extends aa {
                                         this.g(0);
                                 }
 
-                                Canvas.option(0, null);
-                                Canvas.option(1, null);
+                                MankeyManCanvas.option(0, null);
+                                MankeyManCanvas.option(1, null);
                                 i();
-                            } else if(Canvas.d(2097152)) {
-                                Canvas.b(22, false);
-                                Canvas.option(1, null);
+                            } else if(MankeyManCanvas.d(2097152)) {
+                                MankeyManCanvas.b(22, false);
+                                MankeyManCanvas.option(1, null);
                                 i();
                                 aq[0].e();
                                 aq[1].e();
@@ -4818,7 +4819,7 @@ final class sClass extends aa {
                                     int var14;
                                     ae var15;
                                     do {
-                                        var14 = Canvas.h() % var7;
+                                        var14 = MankeyManCanvas.h() % var7;
                                     } while((var15 = S[ao ^ 1].c(var1, var14)).c[23] == 1);
 
                                     V[ao ^ 1] = var15;
@@ -4829,7 +4830,7 @@ final class sClass extends aa {
                                         an = 0;
                                     }
 
-                                    if(Canvas.h() % 100 >= an && ao != 1) {
+                                    if(MankeyManCanvas.h() % 100 >= an && ao != 1) {
                                         au = true;
                                         af = 8;
                                     } else {
@@ -4848,19 +4849,19 @@ final class sClass extends aa {
                 case 6:
                     if(L == null) {
                         var1 = R[ao] == 2?1:2;
-                        (L = (af) Canvas.a(new af(), this)).a(S[ao], var1);
+                        (L = (af) MankeyManCanvas.a(new af(), this)).a(S[ao], var1);
                         d(302);
                         h();
-                        Canvas.option(0, null);
+                        MankeyManCanvas.option(0, null);
                     }
 
                     if(L.h()) {
                         aiClass.B = L.g();
                         var9 = true;
                         aiClass.z.a(5);
-                    } else if(Canvas.d(1048576)) {
+                    } else if(MankeyManCanvas.d(1048576)) {
                         if(aiClass.B.c[23] != 1) {
-                            Canvas.b(22, false);
+                            MankeyManCanvas.b(22, false);
                             V[ao] = aiClass.B;
                             V[ao].c(256, 256);
                             L.f();
@@ -4871,7 +4872,7 @@ final class sClass extends aa {
                             af = 7;
                             this.g(0);
                         } else {
-                            Canvas.b(16, false);
+                            MankeyManCanvas.b(16, false);
                         }
                     }
                     break;
@@ -4900,29 +4901,29 @@ final class sClass extends aa {
                             }
 
                             ae var6;
-                            q var10;
-                            q var13;
+                            Point var10;
+                            Point var13;
                             if((var11 = R[var5]) != 0 && var11 != 1) {
                                 var13 = (var6 = V[var5]).j();
                                 var10 = var6.i();
-                                at[var5].a = var10.a + var13.a;
-                                at[var5].b = var10.b + var13.b;
+                                at[var5].x = var10.x + var13.x;
+                                at[var5].y = var10.y + var13.y;
                                 var13 = S[var5 ^ 1].h();
-                                at[var5].a -= var13.a;
-                                at[var5].b -= var13.b;
+                                at[var5].x -= var13.x;
+                                at[var5].y -= var13.y;
                                 S[var5].b(var6);
                                 var6.a(at[var5]);
-                                Canvas.b(17, false);
-                                Canvas.b(20, false);
+                                MankeyManCanvas.b(17, false);
+                                MankeyManCanvas.b(20, false);
                             } else {
                                 var13 = (var6 = S[var5].a(0)).j();
                                 var10 = var6.i();
-                                ar[var5].a = var13.a + var10.a;
-                                ar[var5].b = var13.b + var10.b;
+                                ar[var5].x = var13.x + var10.x;
+                                ar[var5].y = var13.y + var10.y;
                                 var13 = (var6 = S[var5 ^ 1].a(0)).j();
                                 var10 = var6.i();
-                                as[var5].a = var13.a + var10.a;
-                                as[var5].b = var13.b + var10.b;
+                                as[var5].x = var13.x + var10.x;
+                                as[var5].y = var13.y + var10.y;
                                 aa[var5 + 1].a(2, 8, bq[var11]);
                                 aa[var5 + 1].b(ar[var5]);
                                 aa[var5 + 1].setFlag2(true);
@@ -4942,7 +4943,7 @@ final class sClass extends aa {
                     }
 
                     if(p <= 15) {
-                        q var8 = new q(0, 0);
+                        Point var8 = new Point(0, 0);
                         var7 = 0;
 
                         while(true) {
@@ -4951,12 +4952,12 @@ final class sClass extends aa {
                             }
 
                             d var12 = aa[var7 + 1];
-                            var11 = Canvas.sin(12 * p);
-                            var8.a = ar[var7].a + ((as[var7].a - ar[var7].a << 8) / 15 * p >> 8);
-                            var8.b = ar[var7].b + ((as[var7].b - ar[var7].b << 8) / 15 * p >> 8);
-                            var8.b -= var11 * 60 >> 8;
+                            var11 = MankeyManCanvas.sin(12 * p);
+                            var8.x = ar[var7].x + ((as[var7].x - ar[var7].x << 8) / 15 * p >> 8);
+                            var8.y = ar[var7].y + ((as[var7].y - ar[var7].y << 8) / 15 * p >> 8);
+                            var8.y -= var11 * 60 >> 8;
                             var12.b(var8);
-                            var12.d(var11 + 256, var11 + 256);
+                            var12.setEnd(var11 + 256, var11 + 256);
                             ++var7;
                         }
                     } else {
@@ -4978,12 +4979,12 @@ final class sClass extends aa {
 
                         for(var7 = 0; var7 < var1; ++var7) {
                             var4 = (var3 = c.a(var7)).i();
-                            var3.a(var4.a + (Canvas.cos(225) * 240 >> 8), var4.b + (Canvas.sin(225) * 320 >> 8), 12 + Canvas.h() % 4, 1, false);
+                            var3.a(var4.x + (MankeyManCanvas.cos(225) * 240 >> 8), var4.y + (MankeyManCanvas.sin(225) * 320 >> 8), 12 + MankeyManCanvas.h() % 4, 1, false);
                         }
 
-                        Canvas.b(17, false);
-                        Canvas.b(20, false);
-                        Canvas.option(0, null);
+                        MankeyManCanvas.b(17, false);
+                        MankeyManCanvas.b(20, false);
+                        MankeyManCanvas.option(0, null);
                     } else if(p == 15) {
                         af = 9;
                         this.g(0);
@@ -4993,10 +4994,10 @@ final class sClass extends aa {
                     if(p >= 3) {
                         if(p == 3) {
                             if(au) {
-                                Canvas.b(16, false);
+                                MankeyManCanvas.b(16, false);
                                 d(303);
                             } else {
-                                Canvas.b(13, false);
+                                MankeyManCanvas.b(13, false);
                                 switch(R[ao ^ 1]) {
                                     case 0:
                                         d(304);
@@ -5015,8 +5016,8 @@ final class sClass extends aa {
                             h();
                         }
 
-                        if(aiClass.y.d() && Canvas.d(1048576)) {
-                            Canvas.b(22, false);
+                        if(aiClass.y.d() && MankeyManCanvas.d(1048576)) {
+                            MankeyManCanvas.b(22, false);
                             i();
                             af = 10;
                             this.g(0);
@@ -5049,7 +5050,7 @@ final class sClass extends aa {
                 }
 
                 if(aa != null) {
-                    Canvas.b(aa);
+                    MankeyManCanvas.b(aa);
                     aa = null;
                 }
 
@@ -5070,21 +5071,21 @@ final class sClass extends aa {
         if(!av) {
             q(0);
             b.g();
-            Canvas.setFlagTrue(8);
+            MankeyManCanvas.setFlagTrue(8);
             this.e();
             T();
             aiClass.D = null;
             J = a.g();
             G = 4;
             P = 0;
-            Canvas.a(aa = new d[31]);
+            MankeyManCanvas.a(aa = new d[31]);
             aa[30].a(98, 1);
             aa[30].g(24566);
             aa[30].setFlag2(false);
-            Canvas.f(0);
+            MankeyManCanvas.f(0);
             aiClass.A.setColor(0);
             aiClass.A.d(1);
-            Canvas.option(1, null);
+            MankeyManCanvas.option(1, null);
             af = 0;
             av = true;
             this.g(0);
@@ -5101,8 +5102,8 @@ final class sClass extends aa {
                     for(var2 = 0; var2 < 9; ++var2) {
                         var12 = var2 % 3;
                         var4 = var2 / 3;
-                        int var6 = J.a - 1 + var12;
-                        int var7 = J.b - 1 + var4;
+                        int var6 = J.x - 1 + var12;
+                        int var7 = J.y - 1 + var4;
                         if(var6 < 0) {
                             var6 += 9;
                         }
@@ -5137,7 +5138,7 @@ final class sClass extends aa {
                                 aa[var9 + 9].a(2, 0, bI[var13 + 13]);
                                 aa[var9 + 9].g(24575);
                                 aa[var9 + 9].f(46 + var12 * 75, 82 + var4 * 51 + 2);
-                                aa[var9 + 9].d(512, 512);
+                                aa[var9 + 9].setEnd(512, 512);
                                 aa[var9 + 9].setFlag2(true);
                                 ++var9;
                             }
@@ -5146,7 +5147,7 @@ final class sClass extends aa {
                                 aa[var9 + 9].a(2, 0, new z(100, 0, 20, 20));
                                 aa[var9 + 9].g(24575);
                                 aa[var9 + 9].f(46 + var12 * 75, 82 + var4 * 51 + 2);
-                                aa[var9 + 9].d(512, 512);
+                                aa[var9 + 9].setEnd(512, 512);
                                 aa[var9 + 9].setFlag2(true);
                                 ++var9;
                             }
@@ -5155,13 +5156,13 @@ final class sClass extends aa {
                                 aa[var9 + 9].a(2, 0, new z(80, 0, 20, 20));
                                 aa[var9 + 9].g(24575);
                                 aa[var9 + 9].f(46 + var12 * 75, 82 + var4 * 51 + 2);
-                                aa[var9 + 9].d(512, 512);
+                                aa[var9 + 9].setEnd(512, 512);
                                 aa[var9 + 9].setFlag2(true);
                                 ++var9;
                             }
                         }
 
-                        if(J.a == var6 && J.b == var7) {
+                        if(J.x == var6 && J.y == var7) {
                             aa[29].a(162, 8, new z(0, 0, 24, 22));
                             aa[29].g(24573);
                             aa[29].f(46 + var12 * 75, 96 + var4 * 51);
@@ -5182,8 +5183,8 @@ final class sClass extends aa {
                     if(p == 0) {
                         if(this.n(24)) {
                             aiClass.y.a(1, 0, 49, 48, 13);
-                            Canvas.option(0, null);
-                            Canvas.option(1, null);
+                            MankeyManCanvas.option(0, null);
+                            MankeyManCanvas.option(1, null);
                             aiClass.A.d(0);
                         }
 
@@ -5193,8 +5194,8 @@ final class sClass extends aa {
                         }
                     }
 
-                    if(aiClass.y.f() && aiClass.y.d() && Canvas.d(1048576)) {
-                        Canvas.b(22, false);
+                    if(aiClass.y.f() && aiClass.y.d() && MankeyManCanvas.d(1048576)) {
+                        MankeyManCanvas.b(22, false);
                         aiClass.y.a(1);
                     }
 
@@ -5205,9 +5206,9 @@ final class sClass extends aa {
                     break;
                 case 2:
                     if(p == 0) {
-                        aiClass.y.a(0, 2, Canvas.getMessage(294));
-                        Canvas.option(1, "返回");
-                        Canvas.option(0, null);
+                        aiClass.y.a(0, 2, MankeyManCanvas.getMessage(294));
+                        MankeyManCanvas.option(1, "返回");
+                        MankeyManCanvas.option(0, null);
                         aiClass.z.b(0, 1);
                         aiClass.z.a(0, 1);
                         aiClass.A.d(0);
@@ -5215,67 +5216,67 @@ final class sClass extends aa {
 
                     boolean var10 = false;
                     boolean var11 = false;
-                    if(Canvas.e(65536) && G % 3 != 0) {
+                    if(MankeyManCanvas.e(65536) && G % 3 != 0) {
                         --G;
                         var10 = true;
-                    } else if(Canvas.e(262144) && G % 3 != 2) {
+                    } else if(MankeyManCanvas.e(262144) && G % 3 != 2) {
                         ++G;
                         var10 = true;
-                    } else if(Canvas.e(131072) && G / 3 != 0) {
+                    } else if(MankeyManCanvas.e(131072) && G / 3 != 0) {
                         G -= 3;
                         var10 = true;
-                    } else if(Canvas.e(524288) && G / 3 != 2) {
+                    } else if(MankeyManCanvas.e(524288) && G / 3 != 2) {
                         G += 3;
                         var10 = true;
                     }
 
-                    var12 = bJ[G].a;
-                    var4 = bJ[G].b;
-                    b var5 = a.a(J.a + var12, J.b + var4);
+                    var12 = bJ[G].x;
+                    var4 = bJ[G].y;
+                    b var5 = a.a(J.x + var12, J.y + var4);
                     if((G == 1 || G == 3 || G == 5 || G == 7) && var5 != null && var5.a_() != 7 && var5.c[10] != 1) {
                         var11 = true;
                     }
 
                     if(var10) {
-                        Canvas.b(8, false);
+                        MankeyManCanvas.b(8, false);
                         P = 0;
-                        aiClass.f.a = J.a + var12;
-                        aiClass.f.b = J.b + var4;
-                        if(aiClass.f.a < 0) {
-                            aiClass.f.a += 9;
+                        aiClass.f.x = J.x + var12;
+                        aiClass.f.y = J.y + var4;
+                        if(aiClass.f.x < 0) {
+                            aiClass.f.x += 9;
                         }
 
-                        if(aiClass.f.b < 0) {
-                            aiClass.f.b += 10;
+                        if(aiClass.f.y < 0) {
+                            aiClass.f.y += 10;
                         }
 
-                        if(aiClass.f.a >= 9) {
-                            aiClass.f.a -= 9;
+                        if(aiClass.f.x >= 9) {
+                            aiClass.f.x -= 9;
                         }
 
-                        if(aiClass.f.b >= 10) {
-                            aiClass.f.b -= 10;
+                        if(aiClass.f.y >= 10) {
+                            aiClass.f.y -= 10;
                         }
 
                         aiClass.z.b(0, 1);
                         aiClass.z.a(0, 1);
-                        aiClass.f.a = J.a;
-                        aiClass.f.b = J.b;
+                        aiClass.f.x = J.x;
+                        aiClass.f.y = J.y;
                     }
 
-                    if(Canvas.d(4194304)) {
-                        Canvas.b(22, false);
+                    if(MankeyManCanvas.d(4194304)) {
+                        MankeyManCanvas.b(22, false);
                         K = false;
                         af = 3;
                         this.g(0);
-                    } else if(Canvas.d(1048576)) {
+                    } else if(MankeyManCanvas.d(1048576)) {
                         if(var11) {
-                            Canvas.b(22, false);
+                            MankeyManCanvas.b(22, false);
                             K = true;
                             af = 3;
                             this.g(0);
                         } else {
-                            Canvas.b(16, false);
+                            MankeyManCanvas.b(16, false);
                         }
                     }
 
@@ -5292,8 +5293,8 @@ final class sClass extends aa {
 
                     if(aiClass.y.e()) {
                         av = false;
-                        Canvas.option(0, null);
-                        Canvas.option(1, null);
+                        MankeyManCanvas.option(0, null);
+                        MankeyManCanvas.option(1, null);
                         aiClass.z.c(0, 1);
                         aiClass.z.d(0);
                         aiClass.z.q(0);
@@ -5331,13 +5332,13 @@ final class sClass extends aa {
             }
 
             if(!av) {
-                Canvas.b(aa);
+                MankeyManCanvas.b(aa);
                 aa = null;
-                Canvas.f(0);
+                MankeyManCanvas.f(0);
                 aiClass.D = b;
                 this.a(b.m(), 0);
                 this.d();
-                Canvas.c(8);
+                MankeyManCanvas.c(8);
                 b.f();
                 if(o == -1) {
                     p(0);
@@ -5415,14 +5416,14 @@ final class sClass extends aa {
 
     public final String b(int var1) {
         if(var1 == -1) {
-            var1 = Canvas.h() % 2;
+            var1 = MankeyManCanvas.h() % 2;
         }
 
         int var3;
         People var4;
         do {
             do {
-                int var2 = var3 = Canvas.h() % nameList.length;
+                int var2 = var3 = MankeyManCanvas.h() % nameList.length;
                 var4 = nameList[var2];
             } while((aiClass.h[var3 / 32] & 1 << var3 % 32) != 0);
         } while(var4.gender != var1);
@@ -5456,8 +5457,8 @@ final class sClass extends aa {
 
             var1 = m;
             if(n != var1) {
-                Canvas.getImage(0, bu[var1]);
-                Canvas.getImage(1, bv[var1]);
+                MankeyManCanvas.getImage(0, bu[var1]);
+                MankeyManCanvas.getImage(1, bv[var1]);
                 n = var1;
             }
 
@@ -5490,7 +5491,7 @@ final class sClass extends aa {
 
             switch(m) {
                 case 0:
-                    Canvas.a(u, bA);
+                    MankeyManCanvas.a(u, bA);
                 case 1:
                 case 5:
                 case 7:
@@ -5501,32 +5502,32 @@ final class sClass extends aa {
                 default:
                     break;
                 case 2:
-                    Canvas.a(u, bB);
+                    MankeyManCanvas.a(u, bB);
                     break;
                 case 3:
-                    Canvas.a(u, bC);
+                    MankeyManCanvas.a(u, bC);
                     break;
                 case 4:
-                    Canvas.a(u, bD);
+                    MankeyManCanvas.a(u, bD);
                     break;
                 case 6:
-                    Canvas.a(u, bE);
+                    MankeyManCanvas.a(u, bE);
                     break;
                 case 8:
-                    Canvas.a(u, bF);
+                    MankeyManCanvas.a(u, bF);
                     break;
                 case 12:
-                    Canvas.a(u, bG);
+                    MankeyManCanvas.a(u, bG);
                     break;
                 case 14:
-                    Canvas.a(u, bH);
+                    MankeyManCanvas.a(u, bH);
             }
 
             int var2;
             for(var2 = 0; var2 < 10; ++var2) {
                 if(u[var2 + 17].j() == 0) {
-                    q var3 = u[var2 + 17].f();
-                    u[var2 + 17].g(24576 - var3.b * 10);
+                    Point var3 = u[var2 + 17].f();
+                    u[var2 + 17].g(24576 - var3.y * 10);
                 }
             }
 
@@ -5538,16 +5539,16 @@ final class sClass extends aa {
             switch(q) {
                 case 2:
                     for(var1 = 0; var1 < 15; ++var1) {
-                        a(8, 2, 40 + var1 * 20, 0, 18432, Canvas.h() % 10);
+                        a(8, 2, 40 + var1 * 20, 0, 18432, MankeyManCanvas.h() % 10);
                     }
 
                     for(var1 = 0; var1 < 5; ++var1) {
-                        a(8, 0, 80 + var1 * 40, 0, 18432, 5 + Canvas.h() % 10);
+                        a(8, 0, 80 + var1 * 40, 0, 18432, 5 + MankeyManCanvas.h() % 10);
                     }
                     break;
                 case 3:
                     for(var1 = 0; var1 < 17; ++var1) {
-                        a(6, 0 + Canvas.h() % 3, 40 + var1 * 25, 0, 18432, Canvas.h() % 10);
+                        a(6, 0 + MankeyManCanvas.h() % 3, 40 + var1 * 25, 0, 18432, MankeyManCanvas.h() % 10);
                     }
 
                     for(var1 = 0; var1 < 3; ++var1) {
@@ -5557,11 +5558,11 @@ final class sClass extends aa {
 
             var2 = aiClass.v;
             if(r != var2 && r != -1) {
-                Canvas.nullImage(8);
-                Canvas.nullImage(9);
-                Canvas.nullImage(10);
-                Canvas.nullImage(11);
-                Canvas.nullImage(12);
+                MankeyManCanvas.nullImage(8);
+                MankeyManCanvas.nullImage(9);
+                MankeyManCanvas.nullImage(10);
+                MankeyManCanvas.nullImage(11);
+                MankeyManCanvas.nullImage(12);
             }
 
             r = var2;
@@ -5572,39 +5573,39 @@ final class sClass extends aa {
             c(16);
             switch(r) {
                 case 2:
-                    Canvas.getImage(8, 115);
-                    Canvas.getImage(9, 116);
+                    MankeyManCanvas.getImage(8, 115);
+                    MankeyManCanvas.getImage(9, 116);
                     a(5, 2, 120, 240, 18432, 0);
                     a(5, 1, 30, 120, 23376, 0);
                     a(5, 1, 160, 50, 23376, 0);
                     a(5, 0, 200, 150, 23076, 0);
                     break;
                 case 3:
-                    Canvas.getImage(10, 117);
+                    MankeyManCanvas.getImage(10, 117);
 
                     for(var1 = 0; var1 < 4; ++var1) {
                         a(13, var1 << 1, var1 * 80, 280, 18432, 0);
                     }
 
                     for(var1 = 0; var1 < 15; ++var1) {
-                        a(9, 2, 40 + var1 * 20, 0, 18432, Canvas.h() % 10);
+                        a(9, 2, 40 + var1 * 20, 0, 18432, MankeyManCanvas.h() % 10);
                     }
                     break;
                 case 4:
-                    Canvas.getImage(11, 113);
-                    this.a(14, 0, new q(41, 19), 0, 0);
-                    this.a(14, 0, new q(185, 37), 0, 0);
-                    this.a(14, 0, new q(4, 99), 0, 0);
-                    this.a(14, 0, new q(213, 115), 0, 0);
-                    this.a(14, 0, new q(205, 151), 0, 0);
-                    this.a(14, 0, new q(160, 202), 0, 0);
-                    this.a(14, 0, new q(42, 58), 0, 0);
+                    MankeyManCanvas.getImage(11, 113);
+                    this.a(14, 0, new Point(41, 19), 0, 0);
+                    this.a(14, 0, new Point(185, 37), 0, 0);
+                    this.a(14, 0, new Point(4, 99), 0, 0);
+                    this.a(14, 0, new Point(213, 115), 0, 0);
+                    this.a(14, 0, new Point(205, 151), 0, 0);
+                    this.a(14, 0, new Point(160, 202), 0, 0);
+                    this.a(14, 0, new Point(42, 58), 0, 0);
                 case 5:
                 default:
                     break;
                 case 6:
                 case 7:
-                    Canvas.getImage(12, 114);
+                    MankeyManCanvas.getImage(12, 114);
                     switch(m) {
                         case 0:
                         case 2:
@@ -5614,17 +5615,17 @@ final class sClass extends aa {
                         case 10:
                         case 12:
                         case 14:
-                            this.a(16, 0, new q(44, 211), 0, 0);
-                            this.a(16, 1, new q(84, 210), 0, 0);
-                            this.a(16, 3, new q(21, 228), 0, 0);
-                            this.a(16, 4, new q(68, 232), 0, 0);
-                            this.a(16, 1, new q(201, 222), 0, 0);
-                            this.a(16, 2, new q(225, 214), 0, 0);
-                            this.a(16, 2, new q(212, 237), 0, 0);
-                            this.a(16, 3, new q(181, 232), 0, 0);
-                            this.a(16, 0, new q(184, 38), 0, 0);
-                            this.a(16, 2, new q(161, 45), 0, 0);
-                            this.a(16, 4, new q(220, 48), 0, 0);
+                            this.a(16, 0, new Point(44, 211), 0, 0);
+                            this.a(16, 1, new Point(84, 210), 0, 0);
+                            this.a(16, 3, new Point(21, 228), 0, 0);
+                            this.a(16, 4, new Point(68, 232), 0, 0);
+                            this.a(16, 1, new Point(201, 222), 0, 0);
+                            this.a(16, 2, new Point(225, 214), 0, 0);
+                            this.a(16, 2, new Point(212, 237), 0, 0);
+                            this.a(16, 3, new Point(181, 232), 0, 0);
+                            this.a(16, 0, new Point(184, 38), 0, 0);
+                            this.a(16, 2, new Point(161, 45), 0, 0);
+                            this.a(16, 4, new Point(220, 48), 0, 0);
                         case 1:
                         case 3:
                         case 5:
@@ -5673,12 +5674,12 @@ final class sClass extends aa {
         aiClass.v = var1.c[10];
     }
 
-    public final int a(int var1, int var2, q var3, int var4) {
-        return a(var1, var2, var3.a, var3.b, var4, 0);
+    public final int a(int var1, int var2, Point var3, int var4) {
+        return a(var1, var2, var3.x, var3.y, var4, 0);
     }
 
-    private int a(int var1, int var2, q var3, int var4, int var5) {
-        return a(var1, var2, var3.a, var3.b, 0, 0);
+    private int a(int var1, int var2, Point var3, int var4, int var5) {
+        return a(var1, var2, var3.x, var3.y, 0, 0);
     }
 
     private int a(int var1, int var2, int var3, int var4, int var5) {
@@ -6128,14 +6129,14 @@ final class sClass extends aa {
 
     public static void f() {
         if(b.j(8)) {
-            acClass.a(31);
+            DataStore.a(31);
         } else {
-            acClass.a(32);
+            DataStore.a(32);
         }
     }
 
     public static void g() {
-        acClass.d();
+        DataStore.d();
     }
 
     private static int r(int var0) {
@@ -6175,7 +6176,7 @@ final class sClass extends aa {
             if(aiClass.l == 89) {
                 s = "截止为止...";
             } else {
-                s = acClass.getNumberString(aiClass.year, 3, true) + "年" + acClass.getSeason(aiClass.q) + " " + var1;
+                s = DataStore.getNumberString(aiClass.year, 3, true) + "年" + DataStore.getSeason(aiClass.q) + " " + var1;
             }
 
             int var3 = s.length();
@@ -6190,7 +6191,7 @@ final class sClass extends aa {
     }
 
     public static void d(int var0) {
-        t = t + Canvas.getMessage(var0);
+        t = t + MankeyManCanvas.getMessage(var0);
     }
 
     public static void c(String var0) {

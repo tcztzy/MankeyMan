@@ -2,6 +2,7 @@
 // Source code recreated from name .class file by IntelliJ IDEA
 // (powered by Fernflower decompiler)
 //
+package com.tcztzy;
 
 import javax.microedition.lcdui.Graphics;
 
@@ -16,11 +17,11 @@ final class al extends d {
         switch(this.d) {
             case 1:
                 graphics.setColor(super.color);
-                graphics.fillRect(wClass.c.a, wClass.c.b, 240, 320);
+                graphics.fillRect(wClass.c.x, wClass.c.y, 240, 320);
                 return;
             case 2:
                 graphics.setColor(super.color);
-                graphics.fillRect(wClass.c.a, wClass.c.b, 240, 320);
+                graphics.fillRect(wClass.c.x, wClass.c.y, 240, 320);
             default:
         }
     }

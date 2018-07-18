@@ -2,16 +2,17 @@
 // Source code recreated from name .class file by IntelliJ IDEA
 // (powered by Fernflower decompiler)
 //
+package com.tcztzy;
 
 import javax.microedition.lcdui.Graphics;
 import javax.microedition.lcdui.Image;
 
 class d extends wClass {
-    private q d = new q(0, 0);
-    private q e = new q(0, 0);
-    private ImageSize g = new ImageSize(0, 0);
-    private ImageSize h = new ImageSize(256, 256);
-    private int i = 0;
+    private Point dst = new Point(0, 0);
+    private Point src = new Point(0, 0);
+    private ImageSize start = new ImageSize(0, 0);
+    private ImageSize end = new ImageSize(256, 256);
+    private int transform = 0;
     private PNGImage image;
     private int k = -1;
     private int l = 0;
@@ -30,57 +31,57 @@ class d extends wClass {
 
     public void a(Graphics graphics) {
         if((super.flags & 2) != 0) {
-            q var2;
+            Point point;
             if((super.flags & 1073741824) != 0) {
-                var2 = Canvas.c();
+                point = MankeyManCanvas.getPoint();
             } else {
-                var2 = new q();
+                point = new Point();
             }
 
-            int var3 = var2.a + super.a.a;
-            int var6 = var2.b + super.a.b;
-            var3 -= this.d.a;
-            if(this.h.height != 256) {
-                var6 -= this.d.b + 10;
+            int x_shift = point.x + super.a.x;
+            int y_shift = point.y + super.a.y;
+            x_shift -= this.dst.x;
+            if(this.end.height != 256) {
+                y_shift -= this.dst.y + 10;
             } else {
-                var6 -= this.d.b;
+                y_shift -= this.dst.y;
             }
 
-            int var4 = this.g.width * this.h.width >> 8;
-            int var5 = this.g.height * this.h.height >> 8;
-            if(var3 >= -var4 && var3 < var4 + 240 && var6 >= -var5 && var6 < var5 + 320) {
+            int var4 = this.start.width * this.end.width >> 8;
+            int var5 = this.start.height * this.end.height >> 8;
+            if(x_shift >= -var4 && x_shift < var4 + 240 && y_shift >= -var5 && y_shift < var5 + 320) {
                 if(this.image != null) {
-                    Image var7 = this.image.image;
+                    Image image = this.image.image;
                     if((super.flags & 16) != 0) {
-                        x.b(graphics, var7, this.e.a, this.e.b, this.g.width, this.g.height, this.i, wClass.c.a + var3, wClass.c.b + var6, 20);
+                        RegionPainter.drawRegionB(graphics, image, this.src.x, this.src.y, this.start.width, this.start.height, this.transform, wClass.c.x + x_shift, wClass.c.y + y_shift, 20);
                         return;
                     }
 
-                    x.a(graphics, var7, this.e.a, this.e.b, this.g.width, this.g.height, this.i, wClass.c.a + var3, wClass.c.b + var6, 20);
+                    RegionPainter.drawRegionA(graphics, image, this.src.x, this.src.y, this.start.width, this.start.height, this.transform, wClass.c.x + x_shift, wClass.c.y + y_shift, 20);
                     return;
                 }
 
                 graphics.setColor(super.color);
-                graphics.fillRect(wClass.c.a + var3, wClass.c.b + var6, var4, var5);
+                graphics.fillRect(wClass.c.x + x_shift, wClass.c.y + y_shift, var4, var5);
             }
         }
 
     }
 
-    public final void a(int var1) {
-        this.a(var1, 1);
+    public final void a(int imageId) {
+        this.a(imageId, 1);
     }
 
-    public final void a(int imageId, int var2) {
-        this.image = Canvas.getPNGImage(imageId);
+    public final void a(int imageId, int transformType) {
+        this.image = MankeyManCanvas.getPNGImage(imageId);
         if(this.image != null) {
-            Image var3 = this.image.image;
-            if(this.image.image != null) {
-                this.g.width = var3.getWidth();
-                this.g.height = var3.getHeight();
-                this.e.a = 0;
-                this.e.b = 0;
-                this.d.a(this.dMethod(var2));
+            Image image = this.image.image;
+            if(image != null) {
+                this.start.width = image.getWidth();
+                this.start.height = image.getHeight();
+                this.src.x = 0;
+                this.src.y = 0;
+                this.dst.moveTo(this.transformPoint(transformType));
             }
         } else {
             this.b(0, 0);
@@ -88,69 +89,69 @@ class d extends wClass {
 
     }
 
-    public final void a(int imageId, int var2, z var3) {
-        this.image = Canvas.getPNGImage(imageId);
+    public final void a(int imageId, int transformType, z var3) {
+        this.image = MankeyManCanvas.getPNGImage(imageId);
         if(this.image != null) {
-            this.e.a = var3.a;
-            this.e.b = var3.b;
-            this.g.width = var3.width;
-            this.g.height = var3.height;
-            this.d.a(this.dMethod(var2));
+            this.src.x = var3.x;
+            this.src.y = var3.y;
+            this.start.width = var3.width;
+            this.start.height = var3.height;
+            this.dst.moveTo(this.transformPoint(transformType));
         }
 
     }
 
-    private q dMethod(int var1) {
-        q var2 = new q();
-        if(var1 == 0) {
-            var2.a(this.g.width >> 1, this.g.height >> 1);
-        } else if(var1 == 1) {
-            var2.a(0, 0);
-        } else if(var1 == 8) {
-            var2.a(this.g.width >> 1, this.g.height);
-        } else if(var1 == 2) {
-            var2.a(0, this.g.height);
-        } else if(var1 == 3) {
-            var2.a(this.g.width, 0);
-        } else if(var1 == 4) {
-            var2.a(this.g.width, this.g.height);
-        } else if(var1 == 5) {
-            var2.a(0, this.g.height >> 1);
-        } else if(var1 == 6) {
-            var2.a(this.g.width, this.g.height >> 1);
-        } else if(var1 == 7) {
-            var2.a(this.g.width >> 1, 0);
+    private Point transformPoint(int transform_type) {
+        Point point = new Point();
+        if(transform_type == 0) {
+            point.moveTo(this.start.width >> 1, this.start.height >> 1);
+        } else if(transform_type == 1) {
+            point.moveTo(0, 0);
+        } else if(transform_type == 8) {
+            point.moveTo(this.start.width >> 1, this.start.height);
+        } else if(transform_type == 2) {
+            point.moveTo(0, this.start.height);
+        } else if(transform_type == 3) {
+            point.moveTo(this.start.width, 0);
+        } else if(transform_type == 4) {
+            point.moveTo(this.start.width, this.start.height);
+        } else if(transform_type == 5) {
+            point.moveTo(0, this.start.height >> 1);
+        } else if(transform_type == 6) {
+            point.moveTo(this.start.width, this.start.height >> 1);
+        } else if(transform_type == 7) {
+            point.moveTo(this.start.width >> 1, 0);
         }
 
-        return var2;
+        return point;
     }
 
     public final void b(int var1, int var2) {
-        this.g.width = var1;
-        this.g.height = var2;
+        this.start.width = var1;
+        this.start.height = var2;
     }
 
-    public final int b() {
-        return this.g.width;
+    final int getStartWidth() {
+        return this.start.width;
     }
 
-    public final int c() {
-        return this.g.height;
+    final int getStartHeight() {
+        return this.start.height;
     }
 
     public final void c(int var1, int var2) {
-        this.d.a = 0;
-        this.d.b = 11;
+        this.dst.x = 0;
+        this.dst.y = 11;
     }
 
-    public final void b(int var1) {
-        this.i = var1;
+    final void changeTransform(int transform) {
+        this.transform = transform;
     }
 
-    public final void d(int var1, int var2) {
-        this.h.width = var1;
-        this.h.height = var2;
-        if(this.h.width == 256 && this.h.height == 256) {
+    final void setEnd(int var1, int var2) {
+        this.end.width = var1;
+        this.end.height = var2;
+        if(this.end.width == 256 && this.end.height == 256) {
             super.flags &= -17;
         } else {
             super.flags |= 16;
@@ -159,7 +160,7 @@ class d extends wClass {
 
     private void l() {
         am var1;
-        if(this.k != -1 && --this.l <= 0 && (var1 = Canvas.k(this.k)) != null) {
+        if(this.k != -1 && --this.l <= 0 && (var1 = MankeyManCanvas.k(this.k)) != null) {
             c var2;
             while((var2 = var1.a[this.m]).d == 0) {
                 if(var2.c != 1) {
@@ -179,7 +180,7 @@ class d extends wClass {
                 this.a(var2.c, var2.f);
             }
 
-            this.i = var2.e;
+            this.transform = var2.e;
             ++this.m;
         }
 

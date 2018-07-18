@@ -2,15 +2,16 @@
 // Source code recreated from name .class file by IntelliJ IDEA
 // (powered by Fernflower decompiler)
 //
+package com.tcztzy;
 
-abstract class aa extends FlagBase {
-    private aa a = null;
+abstract class DataStoreBase extends FlagBase {
+    private DataStoreBase a = null;
     private int b = 0;
     private int c = 0;
     private int d = 0;
     private int e = 0;
 
-    public aa() {
+    public DataStoreBase() {
     }
 
     public boolean a() {
@@ -26,8 +27,8 @@ abstract class aa extends FlagBase {
     public final void f(int var1) {
         this.e = var1;
         super.flags |= 1;
-        Canvas.setFlagTrue(128);
-        Canvas.b(this);
+        MankeyManCanvas.setFlagTrue(128);
+        MankeyManCanvas.b(this);
     }
 
     public final int getE() {
@@ -59,18 +60,18 @@ abstract class aa extends FlagBase {
 
     public final void i(int var1) {
         this.b = var1;
-        Canvas.setFlagTrue(256); // flag9
+        MankeyManCanvas.setFlagTrue(256); // flag9
     }
 
     public final int getB() {
         return this.b;
     }
 
-    public final void setA(aa var1) {
+    public final void setA(DataStoreBase var1) {
         this.a = var1;
     }
 
-    public final aa getA() {
+    public final DataStoreBase getA() {
         return this.a;
     }
 

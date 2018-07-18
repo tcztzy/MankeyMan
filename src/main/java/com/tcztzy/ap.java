@@ -2,18 +2,19 @@
 // Source code recreated from name .class file by IntelliJ IDEA
 // (powered by Fernflower decompiler)
 //
+package com.tcztzy;
 
 final class ap {
     public int a;
     public int b;
     public int c;
     public int d;
-    public q e;
+    public Point e;
     public int f;
     public z g;
     public boolean h;
 
-    ap(int var1, int var2, int var3, int var4, q var5, int var6, boolean var7) {
+    ap(int var1, int var2, int var3, int var4, Point var5, int var6, boolean var7) {
         this.a = var1;
         this.b = var2;
         this.c = var3;
@@ -24,7 +25,7 @@ final class ap {
         this.g = null;
     }
 
-    ap(int var1, int var2, int var3, int var4, q var5, z var6, int var7, boolean var8) {
+    ap(int var1, int var2, int var3, int var4, Point var5, z var6, int var7, boolean var8) {
         this.a = var1;
         this.b = var2;
         this.c = var3;

@@ -2,12 +2,13 @@
 // Source code recreated from name .class file by IntelliJ IDEA
 // (powered by Fernflower decompiler)
 //
+package com.tcztzy;
 
-final class af extends aa {
+final class af extends DataStoreBase {
     private ao a;
     private ae b;
     private d[] c;
-    private q d;
+    private Point d;
     private int e;
     private boolean g;
     private int h;
@@ -27,9 +28,9 @@ final class af extends aa {
         this.i = 0;
         this.h = 0;
         this.k = 0;
-        this.d = new q(0, 0);
+        this.d = new Point(0, 0);
         this.c = new d[3];
-        Canvas.a(this.c);
+        MankeyManCanvas.a(this.c);
         this.c[0].a(163, 0, new z(13, 0, 12, 15));
         this.c[0].setFlag2(false);
         this.c[1].a(163, 0, new z(25, 0, 12, 15));
@@ -40,7 +41,7 @@ final class af extends aa {
     }
 
     public final void b() {
-        Canvas.b(this.c);
+        MankeyManCanvas.b(this.c);
         this.c = null;
         this.d = null;
     }
@@ -117,8 +118,8 @@ final class af extends aa {
         }
 
         int var2 = this.e;
-        if(!Canvas.e(196608) && this.k != 2) {
-            if(Canvas.e(786432) || this.k == 1) {
+        if(!MankeyManCanvas.e(196608) && this.k != 2) {
+            if(MankeyManCanvas.e(786432) || this.k == 1) {
                 ++this.e;
                 this.g = true;
             }
@@ -162,19 +163,19 @@ final class af extends aa {
             }
 
             var6.c(512, 512);
-            q var5 = var6.j();
-            q var3 = var6.i();
-            this.d.a = var5.a + var3.a;
-            this.d.b = var5.b + var3.b;
+            Point var5 = var6.j();
+            Point var3 = var6.i();
+            this.d.x = var5.x + var3.x;
+            this.d.y = var5.y + var3.y;
             this.b = var6;
             this.i = 0;
         }
 
         if(this.k == 0) {
-            var1 = Canvas.sin(18 * (this.i % 6)) << 3 >> 8;
-            this.c[0].f(this.d.a - 32 - var1 + 16, this.d.b - 32);
-            this.c[1].f(this.d.a + 32 + var1 - 16, this.d.b - 32);
-            this.c[2].f(this.d.a + 32 - 16 - 17, this.d.b - 32 - 22 + var1);
+            var1 = MankeyManCanvas.sin(18 * (this.i % 6)) << 3 >> 8;
+            this.c[0].f(this.d.x - 32 - var1 + 16, this.d.y - 32);
+            this.c[1].f(this.d.x + 32 + var1 - 16, this.d.y - 32);
+            this.c[2].f(this.d.x + 32 - 16 - 17, this.d.y - 32 - 22 + var1);
             this.c[0].setFlag2(true);
             this.c[1].setFlag2(true);
             this.c[2].setFlag2(true);

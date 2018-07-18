@@ -2,8 +2,9 @@
 // Source code recreated from name .class file by IntelliJ IDEA
 // (powered by Fernflower decompiler)
 //
+package com.tcztzy;
 
-final class aClass extends aa {
+final class aClass extends DataStoreBase {
     private ao a;
     private d[] b;
     private int d;
@@ -12,7 +13,7 @@ final class aClass extends aa {
     private int h;
     private int i;
     private int[] j;
-    private q k;
+    private Point k;
     private static final z[] l = new z[]{new z(20, 0, 20, 20), new z(40, 0, 20, 20), new z(120, 0, 20, 20), new z(140, 0, 20, 20)};
 
     aClass(int var1) {
@@ -21,13 +22,13 @@ final class aClass extends aa {
 
     public final boolean a() {
         this.i(1664);
-        this.k = new q();
+        this.k = new Point();
         this.j = new int[4];
         this.d = 0;
         this.g = 0;
         this.h = -1;
         this.b = new d[6];
-        Canvas.a(this.b);
+        MankeyManCanvas.a(this.b);
         this.b[4].a(163, 0, new z(13, 0, 12, 15));
         this.b[4].g(8192);
         this.b[4].setFlag2(false);
@@ -38,7 +39,7 @@ final class aClass extends aa {
     }
 
     public final void b() {
-        Canvas.b(this.b);
+        MankeyManCanvas.b(this.b);
         this.b = null;
         this.j = null;
         this.k = null;
@@ -52,8 +53,8 @@ final class aClass extends aa {
         switch(this.getD()) {
             case 1:
                 if(c == 0) {
-                    var1 = this.k.a - 10 * (this.d - 1);
-                    var2 = this.k.b;
+                    var1 = this.k.x - 10 * (this.d - 1);
+                    var2 = this.k.y;
 
                     for(var3 = 0; var3 < this.d; ++var3) {
                         this.b[var3].a(var1 + var3 * 20, var2, 4, 2);
@@ -67,8 +68,8 @@ final class aClass extends aa {
                 break;
             case 2:
                 var1 = this.e;
-                var2 = this.k.a - 10 * (this.d - 1);
-                var3 = this.k.b;
+                var2 = this.k.x - 10 * (this.d - 1);
+                var3 = this.k.y;
                 boolean var4 = false;
                 if(c == 0) {
                     for(var1 = 0; var1 < this.d; ++var1) {
@@ -78,18 +79,18 @@ final class aClass extends aa {
 
                     var4 = true;
                 } else if(this.i == 0) {
-                    if(Canvas.d(262144)) {
+                    if(MankeyManCanvas.d(262144)) {
                         ++this.e;
                         var4 = true;
                     }
 
-                    if(Canvas.d(65536)) {
+                    if(MankeyManCanvas.d(65536)) {
                         --this.e;
                         var4 = true;
                     }
                 } else if(this.i == 1) {
                     if(c % 4 == 0) {
-                        this.e += Canvas.h() % 100 > 50?1:0;
+                        this.e += MankeyManCanvas.h() % 100 > 50?1:0;
                         if(this.e < 0) {
                             this.e = this.d - 1;
                         }
@@ -116,16 +117,16 @@ final class aClass extends aa {
 
                     for(var1 = 0; var1 < this.d; ++var1) {
                         int var8 = var1 == this.e?512:256;
-                        this.b[var1].d(var8, var8);
+                        this.b[var1].setEnd(var8, var8);
                         this.b[var1].a(var2 + var1 * 20, var3, 2, 2);
                         this.b[var1].g(8192 - (var1 == this.e?1:0));
                     }
                 }
 
-                var1 = Canvas.sin(18 * (this.g % 6)) << 3 >> 8;
-                this.b[4].f(this.k.a - this.d * 10 - var1 - 20, this.k.b);
+                var1 = MankeyManCanvas.sin(18 * (this.g % 6)) << 3 >> 8;
+                this.b[4].f(this.k.x - this.d * 10 - var1 - 20, this.k.y);
                 this.b[4].setFlag2(true);
-                this.b[5].f(this.k.a + this.d * 10 + var1 + 20, this.k.b);
+                this.b[5].f(this.k.x + this.d * 10 + var1 + 20, this.k.y);
                 this.b[5].setFlag2(true);
                 ++this.g;
                 return;
@@ -138,8 +139,8 @@ final class aClass extends aa {
                     }
 
                     d var10000 = this.b[this.e];
-                    q var7 = this.k;
-                    var10000.a(var7.a, var7.b, 4, 2);
+                    Point var7 = this.k;
+                    var10000.a(var7.x, var7.y, 4, 2);
                     this.b[4].setFlag2(false);
                     this.b[5].setFlag2(false);
                     return;
@@ -192,8 +193,8 @@ final class aClass extends aa {
     }
 
     public final void a(int var1, int var2) {
-        this.k.a = 120;
-        this.k.b = var2;
+        this.k.x = 120;
+        this.k.y = var2;
     }
 
     private void h() {
@@ -219,7 +220,7 @@ final class aClass extends aa {
             this.b[var1].a(4, 0, l[this.j[var1]]);
             this.b[var1].f(120, 120);
             this.b[var1].setFlag2(false);
-            this.b[var1].d(256, 256);
+            this.b[var1].setEnd(256, 256);
             this.b[var1].g(8192);
         }
 

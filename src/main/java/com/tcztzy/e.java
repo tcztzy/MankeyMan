@@ -2,8 +2,9 @@
 // Source code recreated from name .class file by IntelliJ IDEA
 // (powered by Fernflower decompiler)
 //
+package com.tcztzy;
 
-final class e extends aa {
+final class e extends DataStoreBase {
     private d[] a;
     private ae b;
     private int c;
@@ -13,8 +14,8 @@ final class e extends aa {
     private int h;
     private int i;
     private int j;
-    private q k;
-    private q l;
+    private Point k;
+    private Point l;
     private static z[] m = new z[]{new z(0, 0, 20, 20), new z(20, 0, 20, 20), new z(40, 0, 20, 20), new z(60, 0, 20, 20), new z(80, 0, 20, 20), new z(100, 0, 20, 20), new z(160, 0, 20, 20), new z(40, 0, 20, 20), new z(60, 0, 20, 20), new z(80, 0, 20, 20)};
 
     e() {
@@ -26,10 +27,10 @@ final class e extends aa {
         this.e = 0;
         this.i = 0;
         this.d = new int[5];
-        this.l = new q(0, 0);
-        this.k = new q(0, 0);
+        this.l = new Point(0, 0);
+        this.k = new Point(0, 0);
         this.a = new d[8];
-        Canvas.a(this.a);
+        MankeyManCanvas.a(this.a);
         this.a[5].a(163, 0, new z(13, 0, 12, 15));
         this.a[6].a(163, 0, new z(25, 0, 12, 15));
         this.a[7].a(163, 0, new z(67, 0, 15, 15));
@@ -40,7 +41,7 @@ final class e extends aa {
     }
 
     public final void b() {
-        Canvas.b(this.a);
+        MankeyManCanvas.b(this.a);
         this.a = null;
         this.d = null;
     }
@@ -61,8 +62,8 @@ final class e extends aa {
                     var1.a[var6].setFlag2(false);
                 }
 
-                var6 = var1.k.a - 10 * (var1.e - 1);
-                var3 = var1.k.b - 76;
+                var6 = var1.k.x - 10 * (var1.e - 1);
+                var3 = var1.k.y - 76;
 
                 for(var4 = 0; var4 < var1.e; ++var4) {
                     var1.a[var4].a(4, 0, m[var1.h * 5 + var1.d[var4]]);
@@ -70,7 +71,7 @@ final class e extends aa {
                     var1.a[var4].a(var6 + var4 * 20, var3 + 21 - 13, 4, 2);
                     var1.a[var4].setFlag2(true);
                     var5 = var4 == var1.g?512:256;
-                    var1.a[var4].d(var5, var5);
+                    var1.a[var4].setEnd(var5, var5);
                     var1.a[var4].g(8192 - (var4 == var1.g?1:0));
                 }
 
@@ -95,8 +96,8 @@ final class e extends aa {
                     return;
                 }
 
-                var6 = this.k.a - 10 * (this.e - 1);
-                var3 = this.k.b - 76;
+                var6 = this.k.x - 10 * (this.e - 1);
+                var3 = this.k.y - 76;
 
                 for(var4 = 0; var4 < var1.e; ++var4) {
                     var1.a[var4].a(var6 + var1.g * 20, var3 + 21 - 13, 2, 1);
@@ -106,15 +107,15 @@ final class e extends aa {
             case 3:
                 var1 = this;
                 boolean var2 = false;
-                if(Canvas.e(262144)) {
+                if(MankeyManCanvas.e(262144)) {
                     ++this.g;
                     var2 = true;
-                } else if(Canvas.e(65536)) {
+                } else if(MankeyManCanvas.e(65536)) {
                     --this.g;
                     var2 = true;
-                } else if(Canvas.e(131072)) {
+                } else if(MankeyManCanvas.e(131072)) {
                     this.j = 1;
-                } else if(Canvas.e(524288)) {
+                } else if(MankeyManCanvas.e(524288)) {
                     this.j = 2;
                 }
 
@@ -128,12 +129,12 @@ final class e extends aa {
                         this.g = 0;
                     }
 
-                    var3 = this.k.a - 10 * (this.e - 1);
-                    var4 = this.k.b - 76;
+                    var3 = this.k.x - 10 * (this.e - 1);
+                    var4 = this.k.y - 76;
 
                     for(var5 = 0; var5 < var1.e; ++var5) {
                         var6 = var5 == var1.g?512:256;
-                        var1.a[var5].d(var6, var6);
+                        var1.a[var5].setEnd(var6, var6);
                         var1.a[var5].a(var3 + var5 * 20, var4 + 21 - 13, 2, 2);
                         var1.a[var5].g(8192 - (var5 == var1.g?1:0));
                     }
@@ -141,12 +142,12 @@ final class e extends aa {
                     var1.b.l(var1.d[var1.g]);
                 }
 
-                var1.l.a = var1.k.a;
-                var1.l.b = var1.k.b - 77;
-                var6 = Canvas.sin(18 * (var1.i % 6)) << 3 >> 8;
-                var1.a[5].f(var1.l.a - var1.e * 10 - 15 - var6 + 8, var1.l.b + 21 - 13);
-                var1.a[6].f(var1.l.a + var1.e * 10 + 15 + var6 - 8, var1.l.b + 21 - 13);
-                var1.a[7].f(var1.l.a + 32 - 16 - 17, var1.l.b + var6 + 21);
+                var1.l.x = var1.k.x;
+                var1.l.y = var1.k.y - 77;
+                var6 = MankeyManCanvas.sin(18 * (var1.i % 6)) << 3 >> 8;
+                var1.a[5].f(var1.l.x - var1.e * 10 - 15 - var6 + 8, var1.l.y + 21 - 13);
+                var1.a[6].f(var1.l.x + var1.e * 10 + 15 + var6 - 8, var1.l.y + 21 - 13);
+                var1.a[7].f(var1.l.x + 32 - 16 - 17, var1.l.y + var6 + 21);
                 var1.a[5].setFlag2(true);
                 var1.a[6].setFlag2(true);
                 var1.a[7].setFlag2(true);
@@ -190,7 +191,7 @@ final class e extends aa {
 
         for(var3 = 0; var3 < 5; ++var3) {
             this.a[var3].k();
-            this.a[var3].f(this.k.a, this.k.b - 32);
+            this.a[var3].f(this.k.x, this.k.y - 32);
             this.a[var3].setFlag2(false);
         }
 

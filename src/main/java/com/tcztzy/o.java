@@ -2,10 +2,20 @@
 // Source code recreated from name .class file by IntelliJ IDEA
 // (powered by Fernflower decompiler)
 //
+package com.tcztzy;
 
 final class o extends aj {
     private d[] a;
-    private static z[] d = new z[]{new z(0, 60, 20, 20), new z(20, 60, 20, 20), new z(40, 60, 20, 20), new z(60, 60, 20, 20), new z(80, 60, 20, 20), new z(100, 60, 20, 20), new z(120, 60, 20, 20), new z(140, 60, 20, 20)};
+    private static z[] d = new z[]{
+            new z(0, 60, 20, 20),
+            new z(20, 60, 20, 20),
+            new z(40, 60, 20, 20),
+            new z(60, 60, 20, 20),
+            new z(80, 60, 20, 20),
+            new z(100, 60, 20, 20),
+            new z(120, 60, 20, 20),
+            new z(140, 60, 20, 20)
+    };
 
     public o(int var1) {
         super.b = 11;
@@ -19,7 +29,7 @@ final class o extends aj {
         this.a = new d[1];
 
         for(int var1 = 0; var1 <= 0; ++var1) {
-            this.a[0] = Canvas.a(new d());
+            this.a[0] = MankeyManCanvas.a(new d());
         }
 
         this.a[0].a(2, 8, d[super.c[8]]);
@@ -47,8 +57,8 @@ final class o extends aj {
         this.a[0].g(24576 - (var4 + var2) * 10);
     }
 
-    public final q e() {
-        return new q(super.c[4], super.c[5]);
+    public final Point e() {
+        return new Point(super.c[4], super.c[5]);
     }
 
     public final void f() {

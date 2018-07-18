@@ -2,6 +2,7 @@
 // Source code recreated from name .class file by IntelliJ IDEA
 // (powered by Fernflower decompiler)
 //
+package com.tcztzy;
 
 final class ImageSize {
     int width;
@@ -12,8 +13,8 @@ final class ImageSize {
         this.height = height;
     }
 
-    ImageSize(ImageSize var1) {
-        this.width = var1.width;
-        this.height = var1.height;
+    ImageSize(ImageSize imageSize) {
+        this.width = imageSize.width;
+        this.height = imageSize.height;
     }
 }

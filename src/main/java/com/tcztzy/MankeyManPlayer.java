@@ -12,14 +12,14 @@ import javax.microedition.media.Player;
 import javax.microedition.media.PlayerListener;
 import javax.microedition.media.control.VolumeControl;
 
-final class kClass {
+final class MankeyManPlayer {
     private static boolean b = false;
     private static Player player;
     private static int d;
     private static boolean e;
     private static PlayerListener playerListener = null;
 
-    kClass() {
+    MankeyManPlayer() {
     }
 
     public static void a(int var0, boolean var1) {
@@ -27,13 +27,13 @@ final class kClass {
         e = var1;
         if(!b) {
             try {
-                i var6;
+                MankeyManAudio var6;
                 if((var6 = MankeyManCanvas.i(var0)) != null) {
                     b();
 
                     try {
-                        ByteArrayInputStream var7 = new ByteArrayInputStream(var6.a);
-                        player = Manager.createPlayer(new DataInputStream(var7), "audio/midi");
+                        ByteArrayInputStream in = new ByteArrayInputStream(var6.audioBytes);
+                        player = Manager.createPlayer(new DataInputStream(in), "audio/midi");
                         if(playerListener != null) {
                             player.addPlayerListener(playerListener);
                         }
@@ -52,8 +52,8 @@ final class kClass {
                         }
 
                         player.start();
-                        int a = 90;
-                        ((VolumeControl) player.getControl("VolumeControl")).setLevel(a);
+                        int level = 90;
+                        ((VolumeControl) player.getControl("VolumeControl")).setLevel(level);
                     } catch (Exception ignored) {}
                 }
             } catch (Exception ignored) {}
@@ -68,7 +68,7 @@ final class kClass {
     public static void b() {
         try {
             if(player != null) {
-                if(player.getState() == 400) {
+                if(player.getState() == Player.STARTED) {
                     player.stop();
                 }
 
@@ -79,8 +79,8 @@ final class kClass {
 
     }
 
-    public static boolean c() {
-        return player != null && player.getState() == 400;
+    static boolean isPlayerStarted() {
+        return player != null && player.getState() == Player.STARTED;
     }
 
     public final void a(boolean var1) {
@@ -101,7 +101,7 @@ final class kClass {
     public static void d() {
         if(player != null) {
             try {
-                if(player.getState() == 400) {
+                if(player.getState() == Player.STARTED) {
                     player.stop();
                 }
 
@@ -112,7 +112,7 @@ final class kClass {
 
     }
 
-    public static void a(PlayerListener var0) {
-        playerListener = var0;
+    public static void a(PlayerListener listener) {
+        playerListener = listener;
     }
 }

@@ -2,12 +2,13 @@
 // Source code recreated from name .class file by IntelliJ IDEA
 // (powered by Fernflower decompiler)
 //
+package com.tcztzy;
 
-final class ab extends aa {
+final class ab extends DataStoreBase {
     private d[] a;
-    private q b;
-    private q c;
-    private q d;
+    private Point b;
+    private Point c;
+    private Point d;
     private int e;
     private int g;
     private int h;
@@ -27,18 +28,18 @@ final class ab extends aa {
 
     public final boolean a() {
         this.i(1792);
-        this.b = new q(0, 0);
-        this.c = new q(0, 0);
-        this.d = new q(0, 0);
+        this.b = new Point(0, 0);
+        this.c = new Point(0, 0);
+        this.d = new Point(0, 0);
         this.k = new int[4];
         this.l = new int[4];
         this.a = new d[4];
-        Canvas.a(this.a);
+        MankeyManCanvas.a(this.a);
         return true;
     }
 
     public final void b() {
-        Canvas.b(this.a);
+        MankeyManCanvas.b(this.a);
         this.a = null;
     }
 
@@ -62,20 +63,20 @@ final class ab extends aa {
                             this.a[0].b(this.b);
                             this.a[0].g(this.j);
                             this.a[0].setFlag2(true);
-                            this.c.a = this.b.a << 8;
-                            this.c.b = this.b.b - 32 << 8;
-                            this.d.a = 0;
-                            this.d.b = 1536;
+                            this.c.x = this.b.x << 8;
+                            this.c.y = this.b.y - 32 << 8;
+                            this.d.x = 0;
+                            this.d.y = 1536;
                         }
 
                         if(this.m < 60) {
-                            this.d.b += 416;
-                            if((this.c.b += this.d.b) > this.b.b << 8) {
-                                this.c.b = this.b.b << 8;
-                                this.d.b = this.d.b * -224 >> 8;
+                            this.d.y += 416;
+                            if((this.c.y += this.d.y) > this.b.y << 8) {
+                                this.c.y = this.b.y << 8;
+                                this.d.y = this.d.y * -224 >> 8;
                             }
 
-                            this.a[0].f(this.c.a >> 8, this.c.b >> 8);
+                            this.a[0].f(this.c.x >> 8, this.c.y >> 8);
                         }
 
                         return;
@@ -83,16 +84,16 @@ final class ab extends aa {
                         var1 = this;
                         if(this.m == 0) {
                             this.h();
-                            this.c.a = this.b.a << 8;
-                            this.c.b = this.b.b << 8;
+                            this.c.x = this.b.x << 8;
+                            this.c.y = this.b.y << 8;
                         }
 
                         if(this.m < 15) {
-                            this.c.b = (this.b.b << 8) - 30 * Canvas.sin(6 * this.m);
+                            this.c.y = (this.b.y << 8) - 30 * MankeyManCanvas.sin(6 * this.m);
 
                             for(var2 = 0; var2 < var1.h; ++var2) {
-                                q var5 = var1.a[var2].f();
-                                var1.a[var2].f(var5.a, var1.c.b >> 8);
+                                Point var5 = var1.a[var2].f();
+                                var1.a[var2].f(var5.x, var1.c.y >> 8);
                                 var1.a[var2].setFlagTrue(1073741824);
                             }
 
@@ -133,11 +134,11 @@ final class ab extends aa {
                         }
 
                         for(var2 = 0; var2 < 2; ++var2) {
-                            var3 = p[var1.g] * Canvas.sin(15 * var1.m) >> 8;
-                            var1.a[var2].d(var3, var3);
-                            var3 = Canvas.h() % 360;
-                            int var4 = Canvas.h() % q[var1.g];
-                            var1.a[var2].f(var1.b.a + (Canvas.cos(var3) * var4 >> 8), var1.b.b + (Canvas.sin(var3) * var4 >> 8));
+                            var3 = p[var1.g] * MankeyManCanvas.sin(15 * var1.m) >> 8;
+                            var1.a[var2].setEnd(var3, var3);
+                            var3 = MankeyManCanvas.h() % 360;
+                            int var4 = MankeyManCanvas.h() % q[var1.g];
+                            var1.a[var2].f(var1.b.x + (MankeyManCanvas.cos(var3) * var4 >> 8), var1.b.y + (MankeyManCanvas.sin(var3) * var4 >> 8));
                         }
 
                         return;
@@ -149,8 +150,8 @@ final class ab extends aa {
                                 var1.a[var2].b(var1.b);
                                 var1.a[var2].g(var1.j);
                                 var1.a[var2].setFlag2(true);
-                                var1.k[var2] = 256 + Canvas.h() % 768;
-                                var1.l[var2] = 10 + Canvas.h() % 30;
+                                var1.k[var2] = 256 + MankeyManCanvas.h() % 768;
+                                var1.l[var2] = 10 + MankeyManCanvas.h() % 30;
                             }
                         }
 
@@ -162,11 +163,11 @@ final class ab extends aa {
                             return;
                         }
 
-                        var2 = var1.b.b - (Canvas.sin(14 * var1.m) * var1.l[0] >> 8);
-                        var3 = var1.b.a + (var1.k[0] * var1.m >> 8);
+                        var2 = var1.b.y - (MankeyManCanvas.sin(14 * var1.m) * var1.l[0] >> 8);
+                        var3 = var1.b.x + (var1.k[0] * var1.m >> 8);
                         var1.a[0].f(var3, var2);
-                        var2 = var1.b.b - (Canvas.sin(14 * var1.m) * var1.l[1] >> 8);
-                        var3 = var1.b.a - (var1.k[1] * var1.m >> 8);
+                        var2 = var1.b.y - (MankeyManCanvas.sin(14 * var1.m) * var1.l[1] >> 8);
+                        var3 = var1.b.x - (var1.k[1] * var1.m >> 8);
                         var1.a[1].f(var3, var2);
                         break;
                     case 5:
@@ -180,7 +181,7 @@ final class ab extends aa {
                         }
 
                         if(this.m % 3 == 0) {
-                            this.a[0].b((this.k[0] ^= 1) != 0?0:2);
+                            this.a[0].changeTransform((this.k[0] ^= 1) != 0?0:2);
                         }
 
                         return;
@@ -191,8 +192,8 @@ final class ab extends aa {
                             this.a[0].g(this.j);
                             this.a[0].setFlag2(true);
                             this.a[0].setFlagFalse(1073741824);
-                            this.k[0] = 5 + Canvas.h() % 10;
-                            this.a[0].a(this.b.a + (Canvas.cos(130) * 360 >> 8), this.b.b + (Canvas.sin(130) * 360 >> 8), this.k[0], 0);
+                            this.k[0] = 5 + MankeyManCanvas.h() % 10;
+                            this.a[0].a(this.b.x + (MankeyManCanvas.cos(130) * 360 >> 8), this.b.y + (MankeyManCanvas.sin(130) * 360 >> 8), this.k[0], 0);
                         }
 
                         if(this.m == this.k[0]) {
@@ -207,12 +208,12 @@ final class ab extends aa {
                             this.a[0].g(this.j);
                             this.a[0].setFlag2(true);
                             this.a[0].setFlagFalse(1073741824);
-                            this.k[0] = 20 + Canvas.h() % 20;
-                            this.k[1] = 80 + Canvas.h() % 20;
+                            this.k[0] = 20 + MankeyManCanvas.h() % 20;
+                            this.k[1] = 80 + MankeyManCanvas.h() % 20;
                         }
 
                         if(this.m <= this.k[1]) {
-                            this.a[0].f(this.b.a + (Canvas.sin(18 * this.m) * this.k[0] >> 8), this.b.b + ('\uf000' / this.k[1] * this.m >> 8));
+                            this.a[0].f(this.b.x + (MankeyManCanvas.sin(18 * this.m) * this.k[0] >> 8), this.b.y + ('\uf000' / this.k[1] * this.m >> 8));
                             if(this.m == this.k[1]) {
                                 this.g(0);
                             }
@@ -234,10 +235,10 @@ final class ab extends aa {
                             this.a[0].setFlagFalse(1073741824);
                         }
 
-                        var2 = this.b.a + (Canvas.sin(12 * (this.m % 30)) << 3 >> 8);
-                        var3 = this.b.b - (Canvas.sin(3 * (this.m % 30)) * 24 >> 8);
+                        var2 = this.b.x + (MankeyManCanvas.sin(12 * (this.m % 30)) << 3 >> 8);
+                        var3 = this.b.y - (MankeyManCanvas.sin(3 * (this.m % 30)) * 24 >> 8);
                         if(this.m >= 30) {
-                            var3 = this.b.b - 24;
+                            var3 = this.b.y - 24;
                         }
 
                         this.a[0].f(var2, var3);
@@ -263,14 +264,14 @@ final class ab extends aa {
                             this.a[0].setFlagFalse(1073741824);
                         }
 
-                        this.a[0].f(this.b.a, this.b.b + (12 * Canvas.sin(24 * (this.m + this.g) % 360) >> 8) + 40);
+                        this.a[0].f(this.b.x, this.b.y + (12 * MankeyManCanvas.sin(24 * (this.m + this.g) % 360) >> 8) + 40);
                         return;
                     case 14:
                         if(this.m == 0) {
                             this.a[0].setFlag2(true);
                             this.a[0].setFlagFalse(1073741824);
                             this.a[0].b(this.b);
-                            this.a[0].g(24576 - this.b.b * 10);
+                            this.a[0].g(24576 - this.b.y * 10);
                         }
 
                         this.a[0].a(11, 8, new z(this.m / 3 % 2 * 20, 0, 20, 28));
@@ -293,24 +294,24 @@ final class ab extends aa {
                             return;
                         }
 
-                        var2 = Canvas.sin(6 * this.m) * 3;
+                        var2 = MankeyManCanvas.sin(6 * this.m) * 3;
 
                         for(var3 = 0; var3 < var1.h; ++var3) {
                             var1.a[var3].setFlagTrue(1073741824);
-                            var1.a[var3].d(var2, var2);
-                            var1.a[var3].f(var1.b.a + (var3 * 1792 * var2 >> 16) - ((var1.h - 1) * 896 * var2 >> 16), var1.b.b);
+                            var1.a[var3].setEnd(var2, var2);
+                            var1.a[var3].f(var1.b.x + (var3 * 1792 * var2 >> 16) - ((var1.h - 1) * 896 * var2 >> 16), var1.b.y);
                         }
 
-                        var2 = Canvas.sin(6 * var1.m) << 1;
-                        var1.a[3].d(var2, var2);
-                        var1.a[3].f(var1.b.a - 1, var1.b.b + 2);
+                        var2 = MankeyManCanvas.sin(6 * var1.m) << 1;
+                        var1.a[3].setEnd(var2, var2);
+                        var1.a[3].f(var1.b.x - 1, var1.b.y + 2);
                         break;
                     case 16:
                         if(this.m == 0) {
                             this.a[0].a(12, 8, n[21 + this.g]);
                             this.a[0].setFlag2(true);
                             this.a[0].b(this.b);
-                            this.a[0].g(24576 - this.b.b * 10);
+                            this.a[0].g(24576 - this.b.y * 10);
                         }
 
                         return;
@@ -330,7 +331,7 @@ final class ab extends aa {
                             return;
                         }
 
-                        this.a[0].f(this.b.a + (20 * Canvas.a(10, this.m, 1) >> 8), this.b.b - (40 * Canvas.sin(14 * this.m) >> 8));
+                        this.a[0].f(this.b.x + (20 * MankeyManCanvas.a(10, this.m, 1) >> 8), this.b.y - (40 * MankeyManCanvas.sin(14 * this.m) >> 8));
                         break;
                     case 18:
                         if(this.m == 0) {
@@ -342,13 +343,13 @@ final class ab extends aa {
                         }
 
                         if(this.m < 6) {
-                            var2 = Canvas.sin(18 * this.m);
-                            this.a[0].d(var2, var2);
-                            this.a[0].f(this.b.a, this.b.b - (Canvas.sin(18 * this.m) << 5 >> 8));
+                            var2 = MankeyManCanvas.sin(18 * this.m);
+                            this.a[0].setEnd(var2, var2);
+                            this.a[0].f(this.b.x, this.b.y - (MankeyManCanvas.sin(18 * this.m) << 5 >> 8));
                         }
 
                         if(this.m >= 6) {
-                            this.a[0].f(this.b.a, this.b.b - 32 - (Canvas.sin(12 * ((this.m - 6) % 30)) << 3 >> 8));
+                            this.a[0].f(this.b.x, this.b.y - 32 - (MankeyManCanvas.sin(12 * ((this.m - 6) % 30)) << 3 >> 8));
                         }
                 }
             }
@@ -371,8 +372,8 @@ final class ab extends aa {
             this.a[var1].k();
             this.a[var1].f(0, 0);
             this.a[var1].setFlag2(false);
-            this.a[var1].d(256, 256);
-            this.a[var1].b(0);
+            this.a[var1].setEnd(256, 256);
+            this.a[var1].changeTransform(0);
             this.a[var1].setFlagFalse(1073741824);
             this.a[var1].e();
         }
@@ -385,8 +386,8 @@ final class ab extends aa {
     }
 
     public final void a(int var1, int var2) {
-        this.b.a = var1;
-        this.b.b = var2;
+        this.b.x = var1;
+        this.b.y = var2;
     }
 
     public final void a(int var1) {
@@ -409,8 +410,8 @@ final class ab extends aa {
             this.a[0].g(this.j);
             this.a[0].setFlag2(true);
             this.a[0].setFlagFalse(1073741824);
-            this.k[0] = 8 + Canvas.h() % 8;
-            this.a[0].a(this.b.a + (Canvas.cos(120) * 360 >> 8), this.b.b + (Canvas.sin(120) * 360 >> 8), this.k[0], 0);
+            this.k[0] = 8 + MankeyManCanvas.h() % 8;
+            this.a[0].a(this.b.x + (MankeyManCanvas.cos(120) * 360 >> 8), this.b.y + (MankeyManCanvas.sin(120) * 360 >> 8), this.k[0], 0);
         }
 
         if(this.m == this.k[0]) {
@@ -439,7 +440,7 @@ final class ab extends aa {
             int var4 = var1 / var2;
             var1 -= var4 * var2;
             this.a[var3].a(142, 8, new z(var4 * 6, 0, 6, 8));
-            this.a[var3].f(this.b.a + (var3 * 1792 >> 8) - ((this.h - 1) * 896 >> 8), this.b.b);
+            this.a[var3].f(this.b.x + (var3 * 1792 >> 8) - ((this.h - 1) * 896 >> 8), this.b.y);
             this.a[var3].g(this.j);
             this.a[var3].setFlag2(true);
             ++var3;

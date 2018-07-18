@@ -1,0 +1,13 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.tcztzy</groupId>
+    <artifactId>MankeyMan</artifactId>
+    <version>1</version>
+    <dependencies>
+        <dependency>
+            <groupId>org.microemu</groupId>
+            <artifactId>microemu-midp</artifactId>
+            <version>2.0.4</version>
+        </dependency>
+    </dependencies>
+</project>

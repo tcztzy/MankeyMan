@@ -2,6 +2,7 @@
 // Source code recreated from name .class file by IntelliJ IDEA
 // (powered by Fernflower decompiler)
 //
+package com.tcztzy;
 
 import javax.microedition.lcdui.Graphics;
 
@@ -41,11 +42,11 @@ final class at extends wClass {
 
     public final void a(Graphics graphics) {
         if(this.o != null) {
-            graphics.setFont(Canvas.a(this.k));
+            graphics.setFont(MankeyManCanvas.a(this.k));
             graphics.setColor(super.color);
-            int var2 = Canvas.a(this.k).getHeight();
-            int var3 = super.a.a;
-            int var4 = super.a.b + var2;
+            int var2 = MankeyManCanvas.a(this.k).getHeight();
+            int var3 = super.a.x;
+            int var4 = super.a.y + var2;
             int var5 = 0;
             int var6 = 0;
             if((super.flags & 16) != 0) {
@@ -56,9 +57,9 @@ final class at extends wClass {
                         ++var6;
                         if(var8 > 0 && var3 >= 0 - var2 - (var8 - var7) * var2 && var3 <= var2 + 240 && var4 >= 0 - var2 && var4 <= var2 + 320 && 0 < this.e.width && var5 < this.e.height && var6 > this.m) {
                             if(this.o.charAt(var8) == 9661) {
-                                graphics.drawString(this.o.substring(var7, var8), wClass.c.a + var3, wClass.c.b + var4, 68);
+                                graphics.drawString(this.o.substring(var7, var8), wClass.c.x + var3, wClass.c.y + var4, 68);
                             } else {
-                                graphics.drawString(this.o.substring(var7, var8 + 1), wClass.c.a + var3, wClass.c.b + var4, 68);
+                                graphics.drawString(this.o.substring(var7, var8 + 1), wClass.c.x + var3, wClass.c.y + var4, 68);
                             }
                         }
 
@@ -67,7 +68,7 @@ final class at extends wClass {
                         var7 = var8 + 1;
                         if(var6 <= this.m) {
                             var5 = 0;
-                            var4 = super.a.b + var2;
+                            var4 = super.a.y + var2;
                         }
                     }
                 }
@@ -102,7 +103,7 @@ final class at extends wClass {
     }
 
     public final void a(int messageId) {
-        this.a(Canvas.getMessage(messageId), 0);
+        this.a(MankeyManCanvas.getMessage(messageId), 0);
     }
 
     public final void a(int var1, int var2) {

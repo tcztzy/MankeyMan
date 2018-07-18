@@ -2,9 +2,10 @@
 // Source code recreated from name .class file by IntelliJ IDEA
 // (powered by Fernflower decompiler)
 //
+package com.tcztzy;
 
 final class an extends aj {
-    private static final q[] a = new q[]{new q(0, -1), new q(0, 1), new q(-1, 0), new q(1, 0)};
+    private static final Point[] a = new Point[]{new Point(0, -1), new Point(0, 1), new Point(-1, 0), new Point(1, 0)};
     private static int[] d = new int[5];
 
     an() {
@@ -79,8 +80,8 @@ final class an extends aj {
         for(var1 = 0; var1 < 2; ++var1) {
             int var4;
             do {
-                var3 = Canvas.h() % 9;
-                var4 = Canvas.h() % 10;
+                var3 = MankeyManCanvas.h() % 9;
+                var4 = MankeyManCanvas.h() % 10;
             } while(var8.a(var3, var4).a_() != 3);
 
             var8.a(var3, var4).l(1);
@@ -91,8 +92,8 @@ final class an extends aj {
                 b var9 = var8.a(var3, var1);
 
                 for(int var5 = 0; var5 < 4; ++var5) {
-                    int var6 = var3 + a[var5].a;
-                    int var7 = var1 + a[var5].b;
+                    int var6 = var3 + a[var5].x;
+                    int var7 = var1 + a[var5].y;
                     if(var6 < 0) {
                         var6 += 9;
                     }
@@ -169,7 +170,7 @@ final class an extends aj {
 
     public final void f() {
         an self = this;
-        q var2 = this.g();
+        Point var2 = this.g();
         int var3 = super.c[4];
         int var4;
         int var5;
@@ -205,10 +206,10 @@ final class an extends aj {
             for(var5 = 0; var5 < var4; ++var5) {
                 for(var6 = 0; var6 < 10; ++var6) {
                     if((self.c[var5 + 10] & 1) == 0) {
-                        var7 = Canvas.h() % 9;
-                        var8 = Canvas.h() % 10;
+                        var7 = MankeyManCanvas.h() % 9;
+                        var8 = MankeyManCanvas.h() % 10;
                         var10 = (var9 = self.a(var7, var8)).a_();
-                        if(var9.b(0) == 0 && var9.f() == 0 && var10 != 7 && var10 != 6 && var10 != 5 && var10 != 8 && var9.c[10] == 0 && (var2.a - 2 > var7 || var2.a + 2 < var7 || var2.b - 2 > var8 || var2.b + 2 < var8)) {
+                        if(var9.b(0) == 0 && var9.f() == 0 && var10 != 7 && var10 != 6 && var10 != 5 && var10 != 8 && var9.c[10] == 0 && (var2.x - 2 > var7 || var2.x + 2 < var7 || var2.y - 2 > var8 || var2.y + 2 < var8)) {
                             var9.a(0, 1);
                             self.c[var5 + 10] = 1;
                             self.c[var5 + 15] = var7;
@@ -239,9 +240,9 @@ final class an extends aj {
             for(var5 = 0; var5 < var4; ++var5) {
                 for(var6 = 0; var6 < 10; ++var6) {
                     if((self.c[var5 + 26] & 1) == 0) {
-                        var7 = Canvas.h() % 9;
-                        var8 = Canvas.h() % 10;
-                        if((var9 = self.a(var7, var8)).b(0) == 0 && var9.f() == 0 && var9.a_() != 7 && var9.c[10] == 0 && (var2.a - 2 > var7 || var2.a + 2 < var7 || var2.b - 2 > var8 || var2.b + 2 < var8)) {
+                        var7 = MankeyManCanvas.h() % 9;
+                        var8 = MankeyManCanvas.h() % 10;
+                        if((var9 = self.a(var7, var8)).b(0) == 0 && var9.f() == 0 && var9.a_() != 7 && var9.c[10] == 0 && (var2.x - 2 > var7 || var2.x + 2 < var7 || var2.y - 2 > var8 || var2.y + 2 < var8)) {
                             var9.i(1);
                             self.c[var5 + 26] = 1;
                             self.c[var5 + 31] = var7;
@@ -261,17 +262,17 @@ final class an extends aj {
             self.a(var4, var5).a(0, 0);
         }
 
-        q var12 = self.g();
+        Point var12 = self.g();
 
         for(var4 = 0; var4 < 5; ++var4) {
             if((self.c[var4 + 10] & 1) != 0) {
                 var5 = self.c[var4 + 15];
                 var6 = self.c[var4 + 20];
-                if(!aiClass.w && var5 == var12.a && var6 == var12.b) {
+                if(!aiClass.w && var5 == var12.x && var6 == var12.y) {
                     for(var7 = 0; var7 < 10; ++var7) {
                         var8 = var5;
                         int var13 = var6;
-                        switch(Canvas.h() % 6) {
+                        switch(MankeyManCanvas.h() % 6) {
                             case 0:
                                 var13 = var6 - 1;
                                 break;
@@ -333,7 +334,7 @@ final class an extends aj {
                     for(var6 = 0; var6 < 10; ++var6) {
                         var7 = var4;
                         var8 = var5;
-                        switch(Canvas.h() % 8) {
+                        switch(MankeyManCanvas.h() % 8) {
                             case 0:
                                 var8 = var5 - 1;
                                 break;
@@ -400,8 +401,8 @@ final class an extends aj {
         return (b) sClass.a(super.c[41 + var2 * 9 + var1]);
     }
 
-    public final b a(q var1) {
-        return this.a(var1.a, var1.b);
+    public final b a(Point var1) {
+        return this.a(var1.x, var1.y);
     }
 
     private void a(int var1, int var2, int var3, int var4, int var5, int var6) {
@@ -415,7 +416,7 @@ final class an extends aj {
             var4 = 0;
 
             while(var4 < d[var3]) {
-                var2 = var1 * 9 + Canvas.h() % 9;
+                var2 = var1 * 9 + MankeyManCanvas.h() % 9;
                 b var7;
                 if((var7 = (b) sClass.a(super.c[var2 + 41])).a_() == -1) {
                     var7.a(var3);
@@ -436,13 +437,13 @@ final class an extends aj {
         if((var1 = super.c[4]) > 1) {
             b var3;
             for(var2 = 0; var2 < 5; ++var2) {
-                if((var3 = (b) sClass.a(super.c[41 + Canvas.h() % 90])).c[7] == 0) {
+                if((var3 = (b) sClass.a(super.c[41 + MankeyManCanvas.h() % 90])).c[7] == 0) {
                     var3.d(1);
                 }
             }
 
             for(var2 = 0; var2 < 3; ++var2) {
-                int var4 = (var3 = (b) sClass.a(super.c[41 + Canvas.h() % 90])).a_();
+                int var4 = (var3 = (b) sClass.a(super.c[41 + MankeyManCanvas.h() % 90])).a_();
                 if(var3.c[7] == 0 && var4 != 3 && var4 != 8) {
                     var3.d(2);
                 }
@@ -505,13 +506,13 @@ final class an extends aj {
 
     }
 
-    public final void b(q var1) {
-        super.c[7] = var1.a;
-        super.c[8] = var1.b;
+    public final void b(Point var1) {
+        super.c[7] = var1.x;
+        super.c[8] = var1.y;
     }
 
-    public final q g() {
-        return new q(super.c[7], super.c[8]);
+    public final Point g() {
+        return new Point(super.c[7], super.c[8]);
     }
 
     public final boolean a(int var1) {
