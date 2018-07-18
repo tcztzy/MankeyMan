@@ -14,7 +14,7 @@ final class ao extends aj {
     private boolean i;
 
     ao() {
-        super.b = 80;
+        super.length = 80;
         super.c = new int[80];
         super.c[0] = 7;
     }
@@ -67,7 +67,7 @@ final class ao extends aj {
             case 2:
             case 3:
             case 4:
-                if((var9 = 1 + MankeyManCanvas.h() % 3) > super.c[9]) {
+                if((var9 = 1 + MankeyManCanvas.random() % 3) > super.c[9]) {
                     var9 = super.c[9];
                 }
 
@@ -78,7 +78,7 @@ final class ao extends aj {
                         break label105;
                     }
 
-                    var1.a(var4).r(1 + MankeyManCanvas.h() % 3);
+                    var1.a(var4).r(1 + MankeyManCanvas.random() % 3);
                     ++var4;
                 }
             case 6:
@@ -87,7 +87,7 @@ final class ao extends aj {
 
                 for(var4 = 0; var4 < var1.c[9]; ++var4) {
                     ae var5 = var1.a(var4);
-                    if((!var3 || MankeyManCanvas.h() % 100 < 50) && (var5.q() < 80 || var5.q() >= 80 && MankeyManCanvas.h() % 100 < 50)) {
+                    if((!var3 || MankeyManCanvas.random() % 100 < 50) && (var5.q() < 80 || var5.q() >= 80 && MankeyManCanvas.random() % 100 < 50)) {
                         var5.p(1);
                     }
                 }

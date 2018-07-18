@@ -7,11 +7,10 @@ package com.tcztzy;
 final class u extends DataStoreBase {
     private d[] a;
     private at[] b;
-    private int c;
     private int d;
     private int e;
 
-    public u(int var1, int var2) {
+    u(int var1, int var2) {
         this.d = var1;
         this.e = var2;
     }
@@ -21,7 +20,7 @@ final class u extends DataStoreBase {
         this.a = new d[5];
         MankeyManCanvas.a(this.a);
         this.a[0].setColor(15854563);
-        this.a[0].b(240, 320);
+        this.a[0].setStart(240, 320);
         this.a[0].f(0, 0);
         this.a[0].g(28672);
         this.a[2].e(42, 0);
@@ -42,21 +41,21 @@ final class u extends DataStoreBase {
 
         this.b = new at[1];
         MankeyManCanvas.a(this.b);
-        aiClass.F[2] = MankeyManCanvas.getMessage(131); // "────────　得分榜▽"
+        MankeyManRecordStore.F[2] = MankeyManCanvas.getMessage(131); // "────────　得分榜▽"
 
         for(int var1 = 0; var1 < 5; ++var1) {
-            aiClass.F[2] = aiClass.F[2] + DataStore.getNumberString(var1 + 1, 5, false);
-            aiClass.F[2] = aiClass.F[2] + MankeyManCanvas.getMessage(132); // "　---　"
-            aiClass.F[2] = aiClass.F[2] + DataStore.getNumberString(aiClass.b[var1], 6, true);
-            aiClass.F[2] = aiClass.F[2] + MankeyManCanvas.getMessage(133); // "点▽"
+            MankeyManRecordStore.F[2] = MankeyManRecordStore.F[2] + DataStore.getNumberString(var1 + 1, 5, false);
+            MankeyManRecordStore.F[2] = MankeyManRecordStore.F[2] + MankeyManCanvas.getMessage(132); // "　---　"
+            MankeyManRecordStore.F[2] = MankeyManRecordStore.F[2] + DataStore.getNumberString(MankeyManRecordStore.b[var1], 6, true);
+            MankeyManRecordStore.F[2] = MankeyManRecordStore.F[2] + MankeyManCanvas.getMessage(133); // "点▽"
         }
 
-        aiClass.F[2] = aiClass.F[2] + "　";
+        MankeyManRecordStore.F[2] = MankeyManRecordStore.F[2] + "　";
         this.b[0].setColor(8879214);
         this.b[0].a(12, 33);
         this.b[0].f(36, 24);
         this.b[0].g(28671);
-        this.b[0].a(aiClass.F[2]);
+        this.b[0].a(MankeyManRecordStore.F[2]);
         return true;
     }
 
@@ -68,10 +67,10 @@ final class u extends DataStoreBase {
     }
 
     public final void c() {
-        this.c = this.getC();
+        int c = this.getC();
         switch(this.getD()) {
             case 0:
-                if(this.c == 0) {
+                if(c == 0) {
                     switch(this.d) {
                         case 0:
                         case 1:
@@ -84,7 +83,7 @@ final class u extends DataStoreBase {
                     }
                 }
 
-                if(this.c == 3) {
+                if(c == 3) {
                     this.h(1);
                     return;
                 }
@@ -94,10 +93,10 @@ final class u extends DataStoreBase {
                     this.h(2);
                 }
 
-                this.a[1].setFlag2(this.c / 2 % 2 == 0);
+                this.a[1].setFlag2(c / 2 % 2 == 0);
                 return;
             case 2:
-                if(this.c == 2) {
+                if(c == 2) {
                     MankeyManCanvas.option(1, null);
                     this.f(0);
                 }

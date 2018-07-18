@@ -7,32 +7,31 @@ package com.tcztzy;
 import java.io.ByteArrayInputStream;
 import java.io.DataInputStream;
 import javax.microedition.media.Manager;
-import javax.microedition.media.MediaException;
 import javax.microedition.media.Player;
 import javax.microedition.media.PlayerListener;
 import javax.microedition.media.control.VolumeControl;
 
 final class MankeyManPlayer {
-    private static boolean b = false;
+    private static boolean paused = false;
     private static Player player;
-    private static int d;
-    private static boolean e;
+    private static int _audioIndex;
+    private static boolean _repeat;
     private static PlayerListener playerListener = null;
 
     MankeyManPlayer() {
     }
 
-    public static void a(int var0, boolean var1) {
-        d = var0;
-        e = var1;
-        if(!b) {
+    static void play(int index, boolean repeat) {
+        _audioIndex = index;
+        _repeat = repeat;
+        if(!paused) {
             try {
-                MankeyManAudio var6;
-                if((var6 = MankeyManCanvas.i(var0)) != null) {
-                    b();
+                MankeyManAudio audio = MankeyManCanvas.getAudio(index);
+                if(audio != null) {
+                    close();
 
                     try {
-                        ByteArrayInputStream in = new ByteArrayInputStream(var6.audioBytes);
+                        ByteArrayInputStream in = new ByteArrayInputStream(audio.audioBytes);
                         player = Manager.createPlayer(new DataInputStream(in), "audio/midi");
                         if(playerListener != null) {
                             player.addPlayerListener(playerListener);
@@ -45,7 +44,7 @@ final class MankeyManPlayer {
                     } catch (Exception ignored) {}
 
                     try {
-                        if(var1) {
+                        if(repeat) {
                             player.setLoopCount(-1);
                         } else {
                             player.setLoopCount(1);
@@ -61,11 +60,11 @@ final class MankeyManPlayer {
         }
     }
 
-    public final void a() {
-        a(d, e);
+    final void play() {
+        play(_audioIndex, _repeat);
     }
 
-    public static void b() {
+    static void close() {
         try {
             if(player != null) {
                 if(player.getState() == Player.STARTED) {
@@ -83,36 +82,22 @@ final class MankeyManPlayer {
         return player != null && player.getState() == Player.STARTED;
     }
 
-    public final void a(boolean var1) {
-        if(var1) {
-            b = true;
+    final void pause(boolean p) {
+        if(p) {
+            paused = true;
 
-            b();
+            close();
         } else {
-            b = false;
+            paused = false;
 
             try {
-                this.a();
+                this.play();
             } catch (Exception ignored) {}
         }
 
     }
 
-    public static void d() {
-        if(player != null) {
-            try {
-                if(player.getState() == Player.STARTED) {
-                    player.stop();
-                }
-
-                player.close();
-                player = null;
-            } catch (MediaException ignored) {}
-        }
-
-    }
-
-    public static void a(PlayerListener listener) {
+    static void setListener(PlayerListener listener) {
         playerListener = listener;
     }
 }

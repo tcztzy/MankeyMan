@@ -7,7 +7,7 @@ package com.tcztzy;
 final class am {
     public c[] a;
 
-    am(c[] var1, int var2) {
+    am(c[] var1) {
         this.a = var1;
     }
 }

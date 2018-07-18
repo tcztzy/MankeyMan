@@ -14,7 +14,7 @@ final class b extends aj {
     private static int[] i = new int[8];
 
     public b(an var1, int var2) {
-        super.b = 40;
+        super.length = 40;
         super.c = new int[40];
         super.c[0] = 2;
         super.c[4] = var1.c[1];
@@ -41,7 +41,7 @@ final class b extends aj {
         b var4 = this;
         an var5;
         int var6 = (var5 = this.g()).c[4];
-        if(this.b(0) == 0 && super.c[17] == 0 && var5.a(var5.g()) != this) {
+        if(this.c(0) == 0 && super.c[17] == 0 && var5.a(var5.g()) != this) {
             ++super.c[12];
         } else {
             super.c[12] = 0;
@@ -73,18 +73,18 @@ final class b extends aj {
                         }
                     }
 
-                    if(var8 && MankeyManCanvas.h() % 100 < 40) {
+                    if(var8 && MankeyManCanvas.random() % 100 < 40) {
                         var4.c[10] = 7;
-                        var4.c[15] = 3 + MankeyManCanvas.h() % 2;
+                        var4.c[15] = 3 + MankeyManCanvas.random() % 2;
                         var4.c[16] = 4;
                         break label365;
                     }
                 }
 
-                if(var7 == 0 && var6 >= 50 && var4.c[12] >= 12 && MankeyManCanvas.h() % 100 < 80) {
+                if(var7 == 0 && var6 >= 50 && var4.c[12] >= 12 && MankeyManCanvas.random() % 100 < 80) {
                     var4.c[12] = 0;
                     var4.c[10] = 1;
-                    var4.c[15] = 1 + MankeyManCanvas.h() % 2;
+                    var4.c[15] = 1 + MankeyManCanvas.random() % 2;
                 } else {
                     label368: {
                         if((var7 == 2 || var7 == 1) && !var5.a(511) && var6 >= 10) {
@@ -96,10 +96,10 @@ final class b extends aj {
                                 }
                             }
 
-                            if((var4.c[13] >= 2 || var8) && MankeyManCanvas.h() % 100 < 80) {
+                            if((var4.c[13] >= 2 || var8) && MankeyManCanvas.random() % 100 < 80) {
                                 var4.c[13] = 0;
                                 var4.c[10] = 2;
-                                var4.c[15] = 2 + MankeyManCanvas.h() % 3;
+                                var4.c[15] = 2 + MankeyManCanvas.random() % 3;
                                 var4.c[16] = 3;
                                 break label368;
                             }
@@ -108,21 +108,21 @@ final class b extends aj {
                         if(var7 == 4 && !var5.a(511) && var6 >= 20 && var4.c[14] > 0) {
                             var4.c[14] = 0;
                             var4.c[10] = 3;
-                            var4.c[15] = 2 + MankeyManCanvas.h() % 2;
+                            var4.c[15] = 2 + MankeyManCanvas.random() % 2;
                         } else if(var7 == 3 && !var5.a(511) && var6 >= 10 && var4.c[13] > 0) {
                             var4.c[13] = 0;
                             var4.c[10] = 4;
-                            var4.c[15] = 2 + MankeyManCanvas.h() % 2;
+                            var4.c[15] = 2 + MankeyManCanvas.random() % 2;
                         } else if(var7 == 4) {
                             if(var6 % 30 == 0) {
-                                if(MankeyManCanvas.h() % 100 < 50) {
+                                if(MankeyManCanvas.random() % 100 < 50) {
                                     var4.c[10] = 7;
-                                    var4.c[15] = 3 + MankeyManCanvas.h() % 2;
+                                    var4.c[15] = 3 + MankeyManCanvas.random() % 2;
                                     var4.c[16] = 4;
                                 }
-                            } else if(var6 % 5 == 0 && !var5.a(511) && MankeyManCanvas.h() % 100 < 30) {
+                            } else if(var6 % 5 == 0 && !var5.a(511) && MankeyManCanvas.random() % 100 < 30) {
                                 var4.c[10] = 6;
-                                var4.c[15] = 3 + MankeyManCanvas.h() % 2;
+                                var4.c[15] = 3 + MankeyManCanvas.random() % 2;
                                 var4.c[16] = 2;
                             }
                         }
@@ -144,12 +144,12 @@ final class b extends aj {
         int var13 = 0;
         switch(var3) {
             case 1:
-                var6 = 4 + MankeyManCanvas.h() % 5;
+                var6 = 4 + MankeyManCanvas.random() % 5;
             case 2:
             default:
                 break;
             case 3:
-                var6 = -10 + MankeyManCanvas.h() % 3;
+                var6 = -10 + MankeyManCanvas.random() % 3;
         }
 
         if(var10.a(1)) {
@@ -190,23 +190,23 @@ final class b extends aj {
 
         switch(var11) {
             case 1:
-                var7 += 2 + MankeyManCanvas.h() % 2;
+                var7 += 2 + MankeyManCanvas.random() % 2;
                 break;
             case 2:
-                var7 += -3 + MankeyManCanvas.h() % 2;
+                var7 += -3 + MankeyManCanvas.random() % 2;
         }
 
         switch(var12) {
             case 1:
             case 3:
             case 5:
-                var13 = -3 + MankeyManCanvas.h() % 2;
+                var13 = -3 + MankeyManCanvas.random() % 2;
                 break;
             case 2:
-                var13 = 4 + MankeyManCanvas.h() % 5;
+                var13 = 4 + MankeyManCanvas.random() % 5;
                 break;
             case 4:
-                var13 = 6 + MankeyManCanvas.h() % 5;
+                var13 = 6 + MankeyManCanvas.random() % 5;
         }
 
         var3 = super.c[8] + var6 + var7 + var13;
@@ -222,7 +222,7 @@ final class b extends aj {
         for(var12 = 1; var12 < 8; ++var12) {
             if(var1.c[6] != 7) {
                 var13 = a[(var3 << 5) + (var11 << 3) + var12];
-                var1.a(var12, var1.b(var12) + var13);
+                var1.a(var12, var1.c(var12) + var13);
             }
         }
 
@@ -242,14 +242,14 @@ final class b extends aj {
                 break;
             case 3:
                 for(var2 = 1; var2 < 8; ++var2) {
-                    var1.a(var2, (var1.b(var2) << 8) / 2 >> 8);
+                    var1.a(var2, (var1.c(var2) << 8) / 2 >> 8);
                 }
 
                 var1.h((var1.c[18] >> 8) / 2 << 8);
                 break;
             case 4:
                 for(var2 = 1; var2 < 8; ++var2) {
-                    var1.a(var2, (var1.b(var2) << 8) / 2 >> 8);
+                    var1.a(var2, (var1.c(var2) << 8) / 2 >> 8);
                 }
 
                 var1.h((var1.c[18] << 8) / 2 >> 8);
@@ -262,19 +262,19 @@ final class b extends aj {
                         break label239;
                     }
 
-                    var1.a(var2, (var1.b(var2) << 8) / 2 >> 8);
+                    var1.a(var2, (var1.c(var2) << 8) / 2 >> 8);
                     ++var2;
                 }
             case 6:
             case 7:
                 for(var2 = 1; var2 < 8; ++var2) {
-                    var1.a(var2, (var1.b(var2) << 8) / 2 >> 8);
+                    var1.a(var2, (var1.c(var2) << 8) / 2 >> 8);
                 }
         }
 
-        if(var1.b(0) > 0) {
+        if(var1.c(0) > 0) {
             for(var2 = 1; var2 < 8; ++var2) {
-                var1.a(var2, (var1.b(var2) << 8) / 2 >> 8);
+                var1.a(var2, (var1.c(var2) << 8) / 2 >> 8);
             }
         }
 
@@ -283,7 +283,7 @@ final class b extends aj {
     public final void a(int var1) {
         super.c[6] = var1;
         if(var1 != -1) {
-            int var2 = e[var1 << 3] + -4 + MankeyManCanvas.h() % 9;
+            int var2 = e[var1 << 3] + -4 + MankeyManCanvas.random() % 9;
             int var4 = var2 * 358 >> 8;
             if(var4 < 0) {
                 var4 = 0;
@@ -296,12 +296,12 @@ final class b extends aj {
             super.c[27] = var4;
             this.h(var2);
             i[0] = 0;
-            i[1] = -1 + MankeyManCanvas.h() % 3;
-            i[2] = -2 + MankeyManCanvas.h() % 5;
-            i[3] = -4 + MankeyManCanvas.h() % 9;
-            i[4] = -4 + MankeyManCanvas.h() % 9;
-            i[5] = -4 + MankeyManCanvas.h() % 9;
-            i[6] = -8 + MankeyManCanvas.h() % 17;
+            i[1] = -1 + MankeyManCanvas.random() % 3;
+            i[2] = -2 + MankeyManCanvas.random() % 5;
+            i[3] = -4 + MankeyManCanvas.random() % 9;
+            i[4] = -4 + MankeyManCanvas.random() % 9;
+            i[5] = -4 + MankeyManCanvas.random() % 9;
+            i[6] = -8 + MankeyManCanvas.random() % 17;
             i[7] = 0;
 
             for(var2 = 0; var2 < 8; ++var2) {
@@ -319,7 +319,7 @@ final class b extends aj {
 
             this.a(0, 0);
             this.b(0, 1);
-            super.c[8] = f[super.c[5] * 9 + var1] + -2 + MankeyManCanvas.h() % 5;
+            super.c[8] = f[super.c[5] * 9 + var1] + -2 + MankeyManCanvas.random() % 5;
             super.c[9] = super.c[8];
         }
     }
@@ -331,20 +331,6 @@ final class b extends aj {
     public final int d() {
         int var1;
         return (var1 = super.c[6]) != 5 && var1 != 6 && var1 != 7?0:1;
-    }
-
-    public final int b(int var1) {
-        if(var1 != 8) {
-            return super.c[g[var1]];
-        } else {
-            var1 = 0;
-
-            for(int var2 = 0; var2 < 8; ++var2) {
-                var1 += super.c[g[var2]];
-            }
-
-            return var1;
-        }
     }
 
     public final int c(int var1) {

@@ -26,7 +26,7 @@ final class ah extends aj {
     }
 
     ah(int var1) {
-        super.b = 17;
+        super.length = 17;
         super.c = new int[17];
         this.f = new Point(0, 0);
         this.g = new Point(0, 0);
@@ -49,8 +49,8 @@ final class ah extends aj {
         this.d.setFlagTrue(1073741824);
         this.d.setFlag2(false);
         var1 = super.c[11];
-        super.c[15] = m[var1] - m[var1 + 8] + MankeyManCanvas.h() % (1 + (m[var1 + 8] << 1));
-        super.c[13] = m[var1 + 16] - m[var1 + 24] + MankeyManCanvas.h() % (1 + (m[var1 + 24] << 1));
+        super.c[15] = m[var1] - m[var1 + 8] + MankeyManCanvas.random() % (1 + (m[var1 + 8] << 1));
+        super.c[13] = m[var1 + 16] - m[var1 + 24] + MankeyManCanvas.random() % (1 + (m[var1 + 24] << 1));
         super.c[14] = super.c[13];
         super.c[9] = m[var1 + 32];
         this.a(0);
@@ -130,7 +130,7 @@ final class ah extends aj {
 
     public final void a(int var1) {
         super.c[12] = var1;
-        this.a[0].e(l[super.c[11] * 3 + super.c[12]], MankeyManCanvas.h() % 3);
+        this.a[0].e(l[super.c[11] * 3 + super.c[12]], MankeyManCanvas.random() % 3);
     }
 
     public final void j() {
@@ -218,7 +218,7 @@ final class ah extends aj {
 
     public final void q() {
         if(m[48 + super.c[11]] != -1) {
-            aiClass.b(m[48 + super.c[11]]);
+            MankeyManRecordStore.b(m[48 + super.c[11]]);
         }
 
     }

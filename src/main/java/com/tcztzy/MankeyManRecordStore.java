@@ -6,7 +6,7 @@ package com.tcztzy;
 
 import javax.microedition.rms.RecordStore;
 
-final class aiClass {
+final class MankeyManRecordStore {
     private static int G;
     public static int a;
     public static int[] b = new int[5];
@@ -44,7 +44,7 @@ final class aiClass {
     private static int I;
     private static byte[] record = new byte[20706];
 
-    public aiClass() {
+    public MankeyManRecordStore() {
     }
 
     static void recordGame() {

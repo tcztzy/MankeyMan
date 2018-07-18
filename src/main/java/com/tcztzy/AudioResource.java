@@ -5,8 +5,8 @@
 package com.tcztzy;
 
 final class AudioResource {
-    public short audioIndex;
-    public short audioBaseName;
+    short audioIndex;
+    short audioBaseName;
 
     AudioResource(int var1, int var2) {
         this.audioIndex = (short)var1;

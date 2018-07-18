@@ -11,7 +11,7 @@ final class f extends DataStoreBase {
     private int e;
     private boolean g;
     private boolean h;
-    private static at[] i;
+    private static at i;
     private Point j;
     private d[] k;
     private at[] l;
@@ -26,16 +26,16 @@ final class f extends DataStoreBase {
 
     public final boolean a() {
         this.i(1664);
-        MankeyManCanvas.getImage(150, 96);
+        MankeyManCanvas.setImage(150, 96);
         this.b = 0;
         this.a = new d[14];
         MankeyManCanvas.a(this.a);
         MankeyManCanvas.a(this.a, r);
-        boolean var1 = (aiClass.a & 16) == 0;
+        boolean var1 = (MankeyManRecordStore.a & 16) == 0;
         this.a[2].a(150, 1, var1?new z(0, 19, 86, 19):new z(0, 38, 86, 19));
         MankeyManCanvas.option(0, null);
         MankeyManCanvas.option(1, null);
-        int score = aiClass.score;
+        int score = MankeyManRecordStore.score;
         int var2 = 100000;
 
         for(int digit = 0; digit < 6; var2 /= 10) {
@@ -62,7 +62,7 @@ final class f extends DataStoreBase {
             case 0:
                 if(c == 0) {
                     this.a[12].setFlag2(false);
-                    aiClass.y.a(1, 1, "", "", 24);
+                    MankeyManRecordStore.y.a(1, 1, "", "", 24);
                 }
 
                 if(c == 1) {
@@ -73,7 +73,7 @@ final class f extends DataStoreBase {
                     if(!DataStore.a) {
                         this.a[4].setFlag2(false);
                     }
-                } else if(aiClass.y.d()) {
+                } else if(MankeyManRecordStore.y.d()) {
                     this.h(1);
                 }
 
@@ -91,17 +91,17 @@ final class f extends DataStoreBase {
                             this.h(4);
                             break;
                         case 1:
-                            if((aiClass.a & 16) != 0) {
-                                aiClass.a &= -17;
+                            if((MankeyManRecordStore.a & 16) != 0) {
+                                MankeyManRecordStore.a &= -17;
                                 this.a[2].a(150, 1, new z(0, 19, 86, 19));
                                 MankeyManCanvas.b(true);
                             } else {
-                                aiClass.a |= 16;
+                                MankeyManRecordStore.a |= 16;
                                 this.a[2].a(150, 1, new z(0, 38, 86, 19));
                                 MankeyManCanvas.b(false);
                             }
 
-                            aiClass.a(0);
+                            MankeyManRecordStore.a(0);
                             break;
                         case 2:
                             this.h(3);
@@ -143,8 +143,8 @@ final class f extends DataStoreBase {
             case 2:
                 if(c == 0) {
                     this.a[12].setFlag2(false);
-                    aiClass.y.a(1);
-                } else if(aiClass.y.e()) {
+                    MankeyManRecordStore.y.a(1);
+                } else if(MankeyManRecordStore.y.e()) {
                     for(var1 = 0; var1 < 12; ++var1) {
                         this.a[var1].setFlag2(false);
                     }
@@ -166,7 +166,7 @@ final class f extends DataStoreBase {
                     MankeyManCanvas.a(this.l);
                     this.k = new d[3];
                     MankeyManCanvas.a(this.k);
-                    this.k[0].b(240, 320);
+                    this.k[0].setStart(240, 320);
                     this.k[0].setColor(14993624);
                     this.k[0].g(6144);
                     this.k[1].a(163, 0, new z(13, 0, 12, 15));
@@ -240,20 +240,20 @@ final class f extends DataStoreBase {
                 break;
             case 4:
                 if(!this.h) {
-                    if(aiClass.x != null) {
-                        aiClass.x.e();
+                    if(MankeyManRecordStore.x != null) {
+                        MankeyManRecordStore.x.e();
                     }
 
                     this.i(1536);
                     this.n = 0;
                     this.o = 0;
-                    this.q = 4 + aiClass.l / 9;
+                    this.q = 4 + MankeyManRecordStore.l / 9;
                     this.m = 0;
                     this.l = new at[1];
                     MankeyManCanvas.a(this.l);
                     this.k = new d[3];
                     MankeyManCanvas.a(this.k);
-                    this.k[0].b(240, 320);
+                    this.k[0].setStart(240, 320);
                     this.k[0].setColor(14674610);
                     this.k[0].g(6144);
                     this.k[1].a(163, 0, new z(13, 0, 12, 15));
@@ -262,7 +262,7 @@ final class f extends DataStoreBase {
                     this.k[2].a(163, 0, new z(25, 0, 12, 15));
                     this.k[2].g(6143);
                     this.k[2].setFlag2(false);
-                    this.f();
+                    this.someMethod();
                     MankeyManCanvas.option(1, "返回");
                     MankeyManCanvas.option(0, null);
                     this.h = true;
@@ -282,7 +282,7 @@ final class f extends DataStoreBase {
                             this.k[1].setFlag2(true);
                             this.k[2].setFlag2(true);
                         } else if(this.o == 2 && c % 15 == 0) {
-                            this.f();
+                            this.someMethod();
                         } else {
                             if(!MankeyManCanvas.e(65536) && !MankeyManCanvas.e(131072)) {
                                 if(!MankeyManCanvas.e(262144) && !MankeyManCanvas.e(524288)) {
@@ -297,7 +297,7 @@ final class f extends DataStoreBase {
                                     this.o = 0;
                                 }
 
-                                this.f();
+                                this.someMethod();
                                 break;
                             }
 
@@ -305,7 +305,7 @@ final class f extends DataStoreBase {
                                 this.o = this.q - 1;
                             }
 
-                            this.f();
+                            this.someMethod();
                         }
                         break;
                     case 2:
@@ -325,8 +325,8 @@ final class f extends DataStoreBase {
                     MankeyManCanvas.b(this.l);
                     this.l = null;
                     this.h(1);
-                    if(aiClass.x != null) {
-                        aiClass.x.d();
+                    if(MankeyManRecordStore.x != null) {
+                        MankeyManRecordStore.x.d();
                         return;
                     }
                 }
@@ -336,14 +336,14 @@ final class f extends DataStoreBase {
                 break;
             case 7:
                 if(c == 0) {
-                    MankeyManCanvas.a(i = new at[1]);
-                    i[0].setColor(10703744);
-                    i[0].a(12, 12);
-                    i[0].f(240 - MankeyManCanvas.font.stringWidth("是否返回主菜单？") >> 1, 160);
-                    i[0].a("是否返回主菜单？");
-                    i[0].g(0);
-                    i[0].setFlag2(true);
-                    this.a[13].b(240, 320);
+                    MankeyManCanvas.a(i = new at());
+                    i.setColor(10703744);
+                    i.a(12, 12);
+                    i.f(240 - MankeyManCanvas.font.stringWidth("是否返回主菜单？") >> 1, 160);
+                    i.a("是否返回主菜单？");
+                    i.g(0);
+                    i.setFlag2(true);
+                    this.a[13].setStart(240, 320);
                     this.a[13].setColor(14993624);
                     this.a[13].g(1);
                     this.a[13].setFlag2(true);
@@ -353,18 +353,18 @@ final class f extends DataStoreBase {
                 }
 
                 if(MankeyManCanvas.d(4194304)) {
-                    i[0].setFlag2(false);
+                    i.setFlag2(false);
                     this.a[13].setFlag2(false);
-                    this.a[13].b(0, 0);
+                    this.a[13].setStart(0, 0);
                     this.e = 6;
                     this.h(1);
                     return;
                 }
 
                 if(MankeyManCanvas.d(2097152)) {
-                    i[0].setFlag2(false);
+                    i.setFlag2(false);
                     this.a[13].setFlag2(false);
-                    this.a[13].b(0, 0);
+                    this.a[13].setStart(0, 0);
                     this.e = 6;
                     this.h(2);
                 }
@@ -373,7 +373,7 @@ final class f extends DataStoreBase {
     }
 
     private void d() {
-        this.j = aiClass.y.g();
+        this.j = MankeyManRecordStore.y.g();
         this.a[1].f(this.j.x + 56, this.j.y + 72);
         this.a[2].f(this.j.x + 56, this.j.y + 100);
         this.a[3].f(this.j.x + 56, this.j.y + 125);
@@ -395,7 +395,7 @@ final class f extends DataStoreBase {
         this.l[0].setColor(10703744);
     }
 
-    private void f() {
+    private void someMethod() {
         this.l[0].f(36, 24);
         this.l[0].a(12, 25);
         this.l[0].g(6142);
@@ -403,115 +403,124 @@ final class f extends DataStoreBase {
         int hour;
         int minute;
         int second;
+        String m;
         switch(this.o) {
             case 0:
-                String _message = MankeyManCanvas.getMessage(245);     // "───────　部落人数▽"
-                _message = _message + MankeyManCanvas.getMessage(246); // "男  -------　"
-                _message = _message + DataStore.getNumberString(aiClass.records[0], 4, true);
-                _message = _message + MankeyManCanvas.getMessage(249); // " ▽"
-                _message = _message + MankeyManCanvas.getMessage(247); // "女  -------　"
-                _message = _message + DataStore.getNumberString(aiClass.records[1], 4, true);
-                _message = _message + MankeyManCanvas.getMessage(249); // " ▽"
-                _message = _message + MankeyManCanvas.getMessage(248); // "合计  ----　"
-                _message = _message + DataStore.getNumberString(aiClass.records[2], 4, true);
-                _message = _message + MankeyManCanvas.getMessage(250); // " ▽▽"
-                _message = _message + MankeyManCanvas.getMessage(251); // "───────　死亡人数▽"
-                _message = _message + MankeyManCanvas.getMessage(252); // "寿终  ----　"
-                _message = _message + DataStore.getNumberString(aiClass.records[3], 4, true);
-                _message = _message + MankeyManCanvas.getMessage(249); // " ▽"
-                _message = _message + MankeyManCanvas.getMessage(253); // "饿死  ----　"
-                _message = _message + DataStore.getNumberString(aiClass.records[4], 4, true);
-                _message = _message + MankeyManCanvas.getMessage(249); // " ▽"
-                _message = _message + MankeyManCanvas.getMessage(254); // "病死  ----　"
-                _message = _message + DataStore.getNumberString(aiClass.records[5], 4, true);
-                _message = _message + MankeyManCanvas.getMessage(249); // " ▽"
-                _message = _message + MankeyManCanvas.getMessage(255); // "伤亡  ----　"
-                _message = _message + DataStore.getNumberString(aiClass.records[6], 4, true);
-                _message = _message + MankeyManCanvas.getMessage(249); // " ▽"
-                this.l[0].a(_message);
+                m = MankeyManCanvas.getMessage(245);
+                assert m != null;
+                StringBuilder _message = new StringBuilder(m);     // "───────　部落人数▽"
+                _message = (_message).append(MankeyManCanvas.getMessage(246)); // "男  -------　"
+                _message.append(DataStore.getNumberString(MankeyManRecordStore.records[0], 4, true));
+                _message.append(MankeyManCanvas.getMessage(249)); // " ▽"
+                _message.append(MankeyManCanvas.getMessage(247)); // "女  -------　"
+                _message.append(DataStore.getNumberString(MankeyManRecordStore.records[1], 4, true));
+                _message.append(MankeyManCanvas.getMessage(249)); // " ▽"
+                _message.append(MankeyManCanvas.getMessage(248)); // "合计  ----　"
+                _message.append(DataStore.getNumberString(MankeyManRecordStore.records[2], 4, true));
+                _message.append(MankeyManCanvas.getMessage(250)); // " ▽▽"
+                _message.append(MankeyManCanvas.getMessage(251)); // "───────　死亡人数▽"
+                _message.append(MankeyManCanvas.getMessage(252)); // "寿终  ----　"
+                _message.append(DataStore.getNumberString(MankeyManRecordStore.records[3], 4, true));
+                _message.append(MankeyManCanvas.getMessage(249)); // " ▽"
+                _message.append(MankeyManCanvas.getMessage(253)); // "饿死  ----　"
+                _message.append(DataStore.getNumberString(MankeyManRecordStore.records[4], 4, true));
+                _message.append(MankeyManCanvas.getMessage(249)); // " ▽"
+                _message.append(MankeyManCanvas.getMessage(254)); // "病死  ----　"
+                _message.append(DataStore.getNumberString(MankeyManRecordStore.records[5], 4, true));
+                _message.append(MankeyManCanvas.getMessage(249)); // " ▽"
+                _message.append(MankeyManCanvas.getMessage(255)); // "伤亡  ----　"
+                _message.append(DataStore.getNumberString(MankeyManRecordStore.records[6], 4, true));
+                _message.append(MankeyManCanvas.getMessage(249)); // " ▽"
+                this.l[0].a(_message.toString());
                 return;
             case 1:
-                _message = MankeyManCanvas.getMessage(256);            // "───────　狩猎记录▽"
-                _message = _message + MankeyManCanvas.getMessage(257); // "兔子  -------　"
-                _message = _message + DataStore.getNumberString(aiClass.records[9], 4, true);
-                _message = _message + MankeyManCanvas.getMessage(249); // " ▽"
-                _message = _message + MankeyManCanvas.getMessage(258); // "羚羊  -------　"
-                _message = _message + DataStore.getNumberString(aiClass.records[10], 4, true);
-                _message = _message + MankeyManCanvas.getMessage(249); //
-                _message = _message + MankeyManCanvas.getMessage(259); // "老虎  -------　"
-                _message = _message + DataStore.getNumberString(aiClass.records[11], 4, true);
-                _message = _message + MankeyManCanvas.getMessage(249);
-                _message = _message + MankeyManCanvas.getMessage(260); // "猛犸象  ----　"
-                _message = _message + DataStore.getNumberString(aiClass.records[12], 4, true);
-                _message = _message + MankeyManCanvas.getMessage(249);
-                _message = _message + MankeyManCanvas.getMessage(261); // "鱼   ---------　"
-                _message = _message + DataStore.getNumberString(aiClass.records[13], 4, true);
-                _message = _message + MankeyManCanvas.getMessage(249);
-                _message = _message + MankeyManCanvas.getMessage(262); // "鹦鹉螺  ----　"
-                _message = _message + DataStore.getNumberString(aiClass.records[14], 4, true);
-                _message = _message + MankeyManCanvas.getMessage(249);
-                _message = _message + MankeyManCanvas.getMessage(263); // "鲸鱼  -------　"
-                _message = _message + DataStore.getNumberString(aiClass.records[15], 4, true);
-                _message = _message + MankeyManCanvas.getMessage(249);
-                _message = _message + MankeyManCanvas.getMessage(264); // "恐龙  -------　"
-                _message = _message + DataStore.getNumberString(aiClass.records[16], 4, true);
-                _message = _message + MankeyManCanvas.getMessage(249);
-                _message = _message + MankeyManCanvas.getMessage(265); // "合计  ----　"
-                _message = _message + DataStore.getNumberString(aiClass.records[17], 5, true);
-                _message = _message + MankeyManCanvas.getMessage(249);
-                this.l[0].a(_message);
+                m = MankeyManCanvas.getMessage(256);
+                assert m != null;
+                _message = new StringBuilder(m);            // "───────　狩猎记录▽"
+                _message = (_message).append(MankeyManCanvas.getMessage(257)); // "兔子  -------　"
+                _message.append(DataStore.getNumberString(MankeyManRecordStore.records[9], 4, true));
+                _message.append(MankeyManCanvas.getMessage(249)); // " ▽"
+                _message.append(MankeyManCanvas.getMessage(258)); // "羚羊  -------　"
+                _message.append(DataStore.getNumberString(MankeyManRecordStore.records[10], 4, true));
+                _message.append(MankeyManCanvas.getMessage(249)); //
+                _message.append(MankeyManCanvas.getMessage(259)); // "老虎  -------　"
+                _message.append(DataStore.getNumberString(MankeyManRecordStore.records[11], 4, true));
+                _message.append(MankeyManCanvas.getMessage(249));
+                _message.append(MankeyManCanvas.getMessage(260)); // "猛犸象  ----　"
+                _message.append(DataStore.getNumberString(MankeyManRecordStore.records[12], 4, true));
+                _message.append(MankeyManCanvas.getMessage(249));
+                _message.append(MankeyManCanvas.getMessage(261)); // "鱼   ---------　"
+                _message.append(DataStore.getNumberString(MankeyManRecordStore.records[13], 4, true));
+                _message.append(MankeyManCanvas.getMessage(249));
+                _message.append(MankeyManCanvas.getMessage(262)); // "鹦鹉螺  ----　"
+                _message.append(DataStore.getNumberString(MankeyManRecordStore.records[14], 4, true));
+                _message.append(MankeyManCanvas.getMessage(249));
+                _message.append(MankeyManCanvas.getMessage(263)); // "鲸鱼  -------　"
+                _message.append(DataStore.getNumberString(MankeyManRecordStore.records[15], 4, true));
+                _message.append(MankeyManCanvas.getMessage(249));
+                _message.append(MankeyManCanvas.getMessage(264)); // "恐龙  -------　"
+                _message.append(DataStore.getNumberString(MankeyManRecordStore.records[16], 4, true));
+                _message.append(MankeyManCanvas.getMessage(249));
+                _message.append(MankeyManCanvas.getMessage(265)); // "合计  ----　"
+                _message.append(DataStore.getNumberString(MankeyManRecordStore.records[17], 5, true));
+                _message.append(MankeyManCanvas.getMessage(249));
+                this.l[0].a(_message.toString());
                 return;
             case 2:
-                _message = MankeyManCanvas.getMessage(266);            // "───────　采集记录▽"
-                _message = _message + MankeyManCanvas.getMessage(267); // "食物  --- "
-                _message = _message + DataStore.getNumberString(aiClass.records[7], 5, true);
-                _message = _message + MankeyManCanvas.getMessage(268); // "个▽▽"
-                _message = _message + MankeyManCanvas.getMessage(269); // "───────　石器记录▽"
-                _message = _message + MankeyManCanvas.getMessage(270); // "石器  --- "
-                _message = _message + DataStore.getNumberString(aiClass.records[8], 5, true);
-                _message = _message + MankeyManCanvas.getMessage(268); // "个▽▽"
-                _message = _message + MankeyManCanvas.getMessage(276); // "───────　其　它▽"
-                _message = _message + MankeyManCanvas.getMessage(271); // "积分  --- "
-                _message = _message + DataStore.getNumberString(aiClass.score, 6, true);
-                _message = _message + MankeyManCanvas.getMessage(272); // "点▽"
-                hour = aiClass.gameTime / 54000 % 99; // '티': 54000
-                minute = aiClass.gameTime % 54000 / 900 % 60; // '티': 54000
-                second = aiClass.gameTime / 15 % 60;
-                _message = _message + MankeyManCanvas.getMessage(273); // "计时＝"
-                _message = _message + DataStore.getNumberString(hour, 2, true);
-                _message = _message + "：";
-                _message = _message + DataStore.getNumberString(minute, 2, true);
-                _message = _message + "：";
-                _message = _message + DataStore.getNumberString(second, 2, true);
-                this.l[0].a(_message);
+                m = MankeyManCanvas.getMessage(266);
+                assert m != null;
+                _message = new StringBuilder(m);            // "───────　采集记录▽"
+                _message = (_message).append(MankeyManCanvas.getMessage(267)); // "食物  --- "
+                _message.append(DataStore.getNumberString(MankeyManRecordStore.records[7], 5, true));
+                _message.append(MankeyManCanvas.getMessage(268)); // "个▽▽"
+                _message.append(MankeyManCanvas.getMessage(269)); // "───────　石器记录▽"
+                _message.append(MankeyManCanvas.getMessage(270)); // "石器  --- "
+                _message.append(DataStore.getNumberString(MankeyManRecordStore.records[8], 5, true));
+                _message.append(MankeyManCanvas.getMessage(268)); // "个▽▽"
+                _message.append(MankeyManCanvas.getMessage(276)); // "───────　其　它▽"
+                _message.append(MankeyManCanvas.getMessage(271)); // "积分  --- "
+                _message.append(DataStore.getNumberString(MankeyManRecordStore.score, 6, true));
+                _message.append(MankeyManCanvas.getMessage(272)); // "点▽"
+                hour = MankeyManRecordStore.gameTime / 54000 % 99; // '티': 54000
+                minute = MankeyManRecordStore.gameTime % 54000 / 900 % 60; // '티': 54000
+                second = MankeyManRecordStore.gameTime / 15 % 60;
+                _message.append(MankeyManCanvas.getMessage(273)); // "计时＝"
+                _message.append(DataStore.getNumberString(hour, 2, true));
+                _message.append("：");
+                _message.append(DataStore.getNumberString(minute, 2, true));
+                _message.append("：");
+                _message.append(DataStore.getNumberString(second, 2, true));
+                this.l[0].a(_message.toString());
                 return;
             default:
                 hour = (this.o - 3) * 9;
                 this.l[0].f(6, 24);
-                _message = MankeyManCanvas.getMessage(275); // "─────────　大事记▽"
+                m = MankeyManCanvas.getMessage(275);
+                assert m != null;
+                _message = new StringBuilder(m); // "─────────　大事记▽"
 
                 for(minute = 0; minute < 9; ++minute) {
                     for(second = 0; second < 20; ++second) {
-                        _message = _message + String.valueOf(aiClass.n[hour * 20 + second]);
+                        _message = (_message).append(String.valueOf(MankeyManRecordStore.n[hour * 20 + second]));
                     }
 
-                    _message = _message + "▽";
-                    if(hour >= 64 || hour >= aiClass.l) {
+                    _message.append("▽");
+                    if(hour >= 64 || hour >= MankeyManRecordStore.l) {
                         break;
                     }
 
                     ++hour;
                 }
 
-                String s = "";
+                StringBuilder s = new StringBuilder();
 
                 for(hour = 0; hour < _message.length(); ++hour) {
                     if(_message.charAt(hour) != 0) {
-                        s = s + _message.charAt(hour);
+                        s.append(_message.charAt(hour));
                     }
                 }
 
-                this.l[0].a(s);
+                this.l[0].a(s.toString());
         }
     }
 }

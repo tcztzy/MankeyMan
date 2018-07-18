@@ -9,7 +9,7 @@ import javax.microedition.lcdui.Image;
 final class PNGImage {
     Image image;
 
-    PNGImage(Image image, int imageId) {
+    PNGImage(Image image) {
         this.image = image;
     }
 }

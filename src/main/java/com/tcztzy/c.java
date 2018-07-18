@@ -12,7 +12,7 @@ final class c {
     public int e;
     public int f;
 
-    public c(int var1, int var2, int var3, int var4) {
+    public c(int var2) {
         this.d = 0;
         this.c = var2;
         this.f = 0;
@@ -20,7 +20,7 @@ final class c {
         this.a = false;
     }
 
-    public c(int var1, int var2, z var3, int var4, int var5) {
+    public c(int var1, int var2, z var3) {
         this.d = var1;
         this.c = var2;
         this.f = 8;

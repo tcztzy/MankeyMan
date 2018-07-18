@@ -239,7 +239,7 @@ final class p extends DataStoreBase {
 
         this.v = true;
         if(MankeyManCanvas.d(1048576) && this.d() && !this.f()) {
-            if((this.s + 1) * this.t < this.i[0].b()) {
+            if((this.s + 1) * this.t < this.i[0].getWhiteDownTriangleNumber()) {
                 ++this.s;
                 this.i[0].b(this.s * this.t);
             }
@@ -316,7 +316,7 @@ final class p extends DataStoreBase {
     }
 
     public final boolean f() {
-        return (this.s + 1) * this.t >= this.i[0].b()?this.v:false;
+        return (this.s + 1) * this.t >= this.i[0].getWhiteDownTriangleNumber()?this.v:false;
     }
 
     private void a(int var1, int var2) {
@@ -408,7 +408,7 @@ final class p extends DataStoreBase {
     private void a(String var1) {
         int var2;
         for(var2 = 0; var2 < var1.length(); ++var2) {
-            int var3 = DataStore.a(var1.charAt(var2));
+            int var3 = DataStore.charAt(var1.charAt(var2));
             this.h[var2 + 3].a(164, 1, new z(var3 % 20 * 12, var3 / 20 * 13, 12, 13));
         }
 
@@ -425,7 +425,7 @@ final class p extends DataStoreBase {
         if(var1 == 0) {
             this.h[1].a(-1);
         } else {
-            MankeyManCanvas.getImage(196, x[var1]);
+            MankeyManCanvas.setImage(196, x[var1]);
             this.h[1].a(196, 1);
         }
 

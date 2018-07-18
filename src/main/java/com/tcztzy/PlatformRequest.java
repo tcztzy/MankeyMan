@@ -4,10 +4,10 @@
 //
 package com.tcztzy;
 
-public final class au extends Thread {
-    private boolean a = false;
+public final class PlatformRequest extends Thread {
+    private boolean a;
 
-    au(boolean ignore) {
+    PlatformRequest() {
         this.a = true;
     }
 
@@ -16,7 +16,7 @@ public final class au extends Thread {
             MankeyManCanvas.midlet.platformRequest("http://gamepie.g188.net/gamecms/go/jpgd");
             if(this.a) {
                 Thread.sleep(1000L);
-                MankeyManCanvas.midlet.a();
+                MankeyManCanvas.midlet.destroy();
             }
         } catch (Exception ignored) {}
     }

@@ -8,7 +8,6 @@ final class av extends DataStoreBase {
     private d[] a;
     private r[] b;
     private int c;
-    private int d;
     private static Point[] e = new Point[]{new Point(110, 19), new Point(110, 37), new Point(110, 57), new Point(186, 19), new Point(186, 38), new Point(186, 57)};
     private static Point[] g = new Point[]{new Point(144, 18), new Point(144, 37), new Point(144, 56), new Point(220, 18), new Point(220, 37), new Point(220, 56)};
     private static z[] h = new z[]{new z(0, 0, 0, 0), new z(0, 0, 20, 20), new z(40, 0, 20, 20), new z(20, 40, 20, 20)};
@@ -63,9 +62,9 @@ final class av extends DataStoreBase {
     }
 
     public final void c() {
-        this.d = this.getC();
-        if((this.c & 4) != 0 && aiClass.D != null && !aiClass.D.p()) {
-            this.a[3].setFlag2(this.d / 2 % 2 == 0);
+        int d = this.getC();
+        if((this.c & 4) != 0 && MankeyManRecordStore.D != null && !MankeyManRecordStore.D.p()) {
+            this.a[3].setFlag2(d / 2 % 2 == 0);
         }
 
     }
@@ -84,23 +83,23 @@ final class av extends DataStoreBase {
         this.a[0].a(199, 1);
         int var3;
         int var4;
-        if(aiClass.B != null) {
-            p[0] = aiClass.B.o();
-            p[1] = aiClass.B.p();
-            p[2] = aiClass.B.q();
-            p[3] = aiClass.B.r();
-            p[4] = aiClass.B.s();
-            p[5] = aiClass.B.c[36];
-            var3 = aiClass.B.a[0].getK();
+        if(MankeyManRecordStore.B != null) {
+            p[0] = MankeyManRecordStore.B.o();
+            p[1] = MankeyManRecordStore.B.p();
+            p[2] = MankeyManRecordStore.B.q();
+            p[3] = MankeyManRecordStore.B.r();
+            p[4] = MankeyManRecordStore.B.s();
+            p[5] = MankeyManRecordStore.B.c[36];
+            var3 = MankeyManRecordStore.B.a[0].getK();
             this.a[46].c(var3);
             this.a[46].e();
             String var8;
-            var4 = (var8 = aiClass.B.h()).length();
+            var4 = (var8 = MankeyManRecordStore.B.h()).length();
 
             int var5;
             int var6;
             for(var5 = 0; var5 < var4; ++var5) {
-                var6 = DataStore.a(var8.charAt(var5));
+                var6 = DataStore.charAt(var8.charAt(var5));
                 var2.a[var5 + 76].a(164, 1, new z(var6 % 20 * 12, var6 / 20 * 13, 12, 13));
             }
 
@@ -108,7 +107,7 @@ final class av extends DataStoreBase {
                 var2.a[var5 + 76].a(-1);
             }
 
-            var5 = aiClass.B.wMethod();
+            var5 = MankeyManRecordStore.B.wMethod();
             var6 = 1000;
 
             for(var3 = 0; var3 < 4; var6 /= 10) {
@@ -119,7 +118,7 @@ final class av extends DataStoreBase {
             }
 
             var2.a[86].a(143, 1, new z(80, 0, 14, 10));
-            var3 = aiClass.B.c[18];
+            var3 = MankeyManRecordStore.B.c[18];
             var2.a[80].a(3, 3, new z(var3 / 10 * 6, 0, 6, 8));
             var2.a[81].a(3, 3, new z(var3 % 10 * 6, 0, 6, 8));
 
@@ -133,7 +132,7 @@ final class av extends DataStoreBase {
             }
         }
 
-        if(aiClass.B != null) {
+        if(MankeyManRecordStore.B != null) {
             this.a[0].f(0, -120);
             this.a[0].a(0, 0, var1, 2);
             this.a[0].g(12288);
@@ -142,7 +141,7 @@ final class av extends DataStoreBase {
             this.a[46].a(46, 51, var1, 2);
             this.a[46].g(12285);
             int var7;
-            var3 = (var7 = aiClass.B.h().length()) * 10;
+            var3 = (var7 = MankeyManRecordStore.B.h().length()) * 10;
 
             for(var4 = 0; var4 < var7; ++var4) {
                 this.a[var4 + 76].f(43 - var3 / 2 + var4 * 13, -68);
@@ -164,7 +163,7 @@ final class av extends DataStoreBase {
             this.a[86].setFlag2(true);
             this.a[80].setFlag2(false);
             this.a[81].setFlag2(false);
-            var7 = (var4 = aiClass.B.c[18]) >= 10?2:1;
+            var7 = (var4 = MankeyManRecordStore.B.c[18]) >= 10?2:1;
             var3 = var4 >= 10?12:6;
 
             for(var4 = 0; var4 < var7; ++var4) {
@@ -228,10 +227,10 @@ final class av extends DataStoreBase {
 
         this.c |= 4;
         b var4;
-        int var5 = (var4 = aiClass.C.a(aiClass.f)) != null?var4.c[7]:0;
+        int var5 = (var4 = MankeyManRecordStore.C.a(MankeyManRecordStore.f)) != null?var4.c[7]:0;
         this.a[1].a(2, 1, h[var5]);
         this.a[2].a(2, 1, new z(140, 40, 20, 20));
-        this.a[3].b(1, 11);
+        this.a[3].setStart(1, 11);
         this.a[3].c(0, 11);
         this.a[3].setColor(16711680);
         int var6;
@@ -292,11 +291,11 @@ final class av extends DataStoreBase {
         this.c |= 8;
         av var2 = this;
         this.a[61].a(2, 1, new z(120, 0, 20, 20));
-        int var3 = aiClass.r;
+        int var3 = MankeyManRecordStore.r;
         int var4;
         int var5;
         int var6;
-        if(aiClass.r >= 0) {
+        if(MankeyManRecordStore.r >= 0) {
             var4 = 100;
 
             for(var5 = 0; var5 < 3; var4 /= 10) {
@@ -308,8 +307,8 @@ final class av extends DataStoreBase {
         }
 
         var2.a[65].a(2, 1, new z(20, 0, 20, 20));
-        var3 = aiClass.s;
-        if(aiClass.s >= 0) {
+        var3 = MankeyManRecordStore.s;
+        if(MankeyManRecordStore.s >= 0) {
             var4 = 100;
 
             for(var5 = 0; var5 < 3; var4 /= 10) {
@@ -384,8 +383,8 @@ final class av extends DataStoreBase {
             var4 = var3 % 3;
             int var5 = var3 / 3;
             int var6 = 7;
-            var4 += aiClass.f.x - 1;
-            var5 += aiClass.f.y - 1;
+            var4 += MankeyManRecordStore.f.x - 1;
+            var5 += MankeyManRecordStore.f.y - 1;
             if(var4 < 0) {
                 var4 = 8;
             }
@@ -403,7 +402,7 @@ final class av extends DataStoreBase {
             }
 
             b var9;
-            if((var9 = aiClass.C.a(var4, var5)) != null) {
+            if((var9 = MankeyManRecordStore.C.a(var4, var5)) != null) {
                 var6 = var9.a_();
             }
 
@@ -452,7 +451,7 @@ final class av extends DataStoreBase {
                     var10 = 1;
                 }
 
-                if(var9.b(0) > 0) {
+                if(var9.c(0) > 0) {
                     var10 = 0;
                 }
             }
@@ -479,7 +478,7 @@ final class av extends DataStoreBase {
             this.a[var8 + 37].setFlag2(true);
         }
 
-        this.a[36].b(82, 58);
+        this.a[36].setStart(82, 58);
         this.a[36].setColor(0);
         this.a[36].f(153, -86);
         this.a[36].a(153, 4, var1, 2);
@@ -511,14 +510,14 @@ final class av extends DataStoreBase {
 
         this.c |= 32;
         av var2 = this;
-        this.a[69].a(o[aiClass.d]);
-        if(aiClass.d != 2 && aiClass.d != 4 && aiClass.d != 6) {
+        this.a[69].a(o[MankeyManRecordStore.d]);
+        if(MankeyManRecordStore.d != 2 && MankeyManRecordStore.d != 4 && MankeyManRecordStore.d != 6) {
             this.a[70].a(-1);
         } else {
             this.a[70].a(16);
         }
 
-        int var3 = aiClass.year;
+        int var3 = MankeyManRecordStore.year;
         int var4 = 100;
 
         for(int var5 = 0; var5 < 3; var4 /= 10) {
@@ -529,7 +528,7 @@ final class av extends DataStoreBase {
         }
 
         var2.a[75].a(17, 2, new z(114, 0, 27, 16));
-        var2.a[71].a(18, 8, l[aiClass.q]);
+        var2.a[71].a(18, 8, l[MankeyManRecordStore.q]);
         this.a[69].f(4, -56);
         this.a[69].a(4, 4, var1, 2);
         this.a[69].g(17408);
@@ -595,7 +594,7 @@ final class av extends DataStoreBase {
         b var5;
         int var6;
         int var7;
-        switch((var5 = aiClass.C.a(aiClass.f)).a_()) {
+        switch((var5 = MankeyManRecordStore.C.a(MankeyManRecordStore.f)).a_()) {
             case 0:
             case 1:
             case 2:
@@ -605,7 +604,7 @@ final class av extends DataStoreBase {
                 for(var6 = 0; var6 < 4; ++var6) {
                     var7 = var9[var6];
                     var3.a[7 + (var6 << 2)].a(2, 1, m[var7]);
-                    var7 = var5.b(var7);
+                    var7 = var5.c(var7);
                     var3.a[7 + (var6 << 2) + 1].a(147, 1, new z(var7 / 100 << 3, 0, 8, 10));
                     var3.a[7 + (var6 << 2) + 2].a(147, 1, new z(var7 / 10 % 10 << 3, 0, 8, 10));
                     var3.a[7 + (var6 << 2) + 3].a(147, 1, new z(var7 % 10 << 3, 0, 8, 10));
@@ -619,7 +618,7 @@ final class av extends DataStoreBase {
                 for(var6 = 0; var6 < 3; ++var6) {
                     var7 = var9[var6 + 4];
                     var3.a[7 + (var6 << 2)].a(2, 1, m[var7]);
-                    var7 = var5.b(var7);
+                    var7 = var5.c(var7);
                     var3.a[7 + (var6 << 2) + 1].a(147, 1, new z(var7 / 100 << 3, 0, 8, 10));
                     var3.a[7 + (var6 << 2) + 2].a(147, 1, new z(var7 / 10 % 10 << 3, 0, 8, 10));
                     var3.a[7 + (var6 << 2) + 3].a(147, 1, new z(var7 % 10 << 3, 0, 8, 10));

@@ -18,7 +18,7 @@ final class o extends aj {
     };
 
     public o(int var1) {
-        super.b = 11;
+        super.length = 11;
         super.c = new int[11];
         super.c[0] = 5;
         super.c[8] = var1;

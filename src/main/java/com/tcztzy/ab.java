@@ -136,8 +136,8 @@ final class ab extends DataStoreBase {
                         for(var2 = 0; var2 < 2; ++var2) {
                             var3 = p[var1.g] * MankeyManCanvas.sin(15 * var1.m) >> 8;
                             var1.a[var2].setEnd(var3, var3);
-                            var3 = MankeyManCanvas.h() % 360;
-                            int var4 = MankeyManCanvas.h() % q[var1.g];
+                            var3 = MankeyManCanvas.random() % 360;
+                            int var4 = MankeyManCanvas.random() % q[var1.g];
                             var1.a[var2].f(var1.b.x + (MankeyManCanvas.cos(var3) * var4 >> 8), var1.b.y + (MankeyManCanvas.sin(var3) * var4 >> 8));
                         }
 
@@ -150,8 +150,8 @@ final class ab extends DataStoreBase {
                                 var1.a[var2].b(var1.b);
                                 var1.a[var2].g(var1.j);
                                 var1.a[var2].setFlag2(true);
-                                var1.k[var2] = 256 + MankeyManCanvas.h() % 768;
-                                var1.l[var2] = 10 + MankeyManCanvas.h() % 30;
+                                var1.k[var2] = 256 + MankeyManCanvas.random() % 768;
+                                var1.l[var2] = 10 + MankeyManCanvas.random() % 30;
                             }
                         }
 
@@ -192,7 +192,7 @@ final class ab extends DataStoreBase {
                             this.a[0].g(this.j);
                             this.a[0].setFlag2(true);
                             this.a[0].setFlagFalse(1073741824);
-                            this.k[0] = 5 + MankeyManCanvas.h() % 10;
+                            this.k[0] = 5 + MankeyManCanvas.random() % 10;
                             this.a[0].a(this.b.x + (MankeyManCanvas.cos(130) * 360 >> 8), this.b.y + (MankeyManCanvas.sin(130) * 360 >> 8), this.k[0], 0);
                         }
 
@@ -208,8 +208,8 @@ final class ab extends DataStoreBase {
                             this.a[0].g(this.j);
                             this.a[0].setFlag2(true);
                             this.a[0].setFlagFalse(1073741824);
-                            this.k[0] = 20 + MankeyManCanvas.h() % 20;
-                            this.k[1] = 80 + MankeyManCanvas.h() % 20;
+                            this.k[0] = 20 + MankeyManCanvas.random() % 20;
+                            this.k[1] = 80 + MankeyManCanvas.random() % 20;
                         }
 
                         if(this.m <= this.k[1]) {
@@ -410,7 +410,7 @@ final class ab extends DataStoreBase {
             this.a[0].g(this.j);
             this.a[0].setFlag2(true);
             this.a[0].setFlagFalse(1073741824);
-            this.k[0] = 8 + MankeyManCanvas.h() % 8;
+            this.k[0] = 8 + MankeyManCanvas.random() % 8;
             this.a[0].a(this.b.x + (MankeyManCanvas.cos(120) * 360 >> 8), this.b.y + (MankeyManCanvas.sin(120) * 360 >> 8), this.k[0], 0);
         }
 

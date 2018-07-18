@@ -58,7 +58,7 @@ final class j extends DataStoreBase {
                     a.b(c[var2]);
                 }
 
-                aiClass.A.d(1);
+                MankeyManRecordStore.A.d(1);
                 return true;
             }
         }
@@ -132,23 +132,23 @@ final class j extends DataStoreBase {
 
                         for(var36 = 0; var36 < var5; ++var36) {
                             if((var39 = var33[var36]) != null) {
-                                ae var40 = var37[MankeyManCanvas.h() % var4];
+                                ae var40 = var37[MankeyManCanvas.random() % var4];
                                 boolean var42 = false;
                                 if(var40 != null) {
                                     if(!var39.B()) {
                                         if(!var40.B()) {
-                                            if(MankeyManCanvas.h() % 100 < 80) {
+                                            if(MankeyManCanvas.random() % 100 < 80) {
                                                 var42 = true;
                                             }
-                                        } else if(MankeyManCanvas.h() % 100 < 30) {
+                                        } else if(MankeyManCanvas.random() % 100 < 30) {
                                             var42 = true;
                                         }
                                     } else if(var39.D()) {
                                         if(!var40.B()) {
-                                            if(MankeyManCanvas.h() % 100 < 50) {
+                                            if(MankeyManCanvas.random() % 100 < 50) {
                                                 var42 = true;
                                             }
-                                        } else if(MankeyManCanvas.h() % 100 < 10) {
+                                        } else if(MankeyManCanvas.random() % 100 < 10) {
                                             var42 = true;
                                         }
                                     }
@@ -195,7 +195,7 @@ final class j extends DataStoreBase {
 
                         if(i > 0) {
                             this.d();
-                            aiClass.A.d(0);
+                            MankeyManRecordStore.A.d(0);
                         } else {
                             this.h(3);
                         }
@@ -204,7 +204,7 @@ final class j extends DataStoreBase {
                             continue;
                         }
 
-                        aiClass.b(6);
+                        MankeyManRecordStore.b(6);
 
                         for(var1 = 0; var1 < i; ++var1) {
                             if((var28 = e[var1]).c[41] > 0) {
@@ -232,7 +232,7 @@ final class j extends DataStoreBase {
                 case 6:
                     if(n == 0) {
                         i = 0;
-                        var1 = MankeyManCanvas.h() % g;
+                        var1 = MankeyManCanvas.random() % g;
                         var2 = b.a_();
                         if(a(var3 = c[var1]) && var3.n() >= 2 && var3.G() && var2 != 6 && var2 != 5) {
                             var4 = var3.q() + m;
@@ -263,7 +263,7 @@ final class j extends DataStoreBase {
                                     var1 = 0;
                             }
 
-                            if(MankeyManCanvas.h() % 100 < var1) {
+                            if(MankeyManCanvas.random() % 100 < var1) {
                                 i = 1;
                                 e[0] = var3;
                             }
@@ -276,12 +276,12 @@ final class j extends DataStoreBase {
                             sClass.d(173);
                             a.f(k);
                             this.d();
-                            aiClass.A.d(0);
+                            MankeyManRecordStore.A.d(0);
                         } else {
                             this.h(3);
                         }
                     } else if(n == 15) {
-                        aiClass.b(13);
+                        MankeyManRecordStore.b(13);
                         byte var32 = 0;
                         if(k >= 10) {
                             var32 = 1;
@@ -299,7 +299,7 @@ final class j extends DataStoreBase {
                 case 7:
                     if(n != 0) {
                         if(n == 15) {
-                            aiClass.b(13);
+                            MankeyManRecordStore.b(13);
                             this.h(12);
                         }
                     } else {
@@ -308,7 +308,7 @@ final class j extends DataStoreBase {
                             for(var2 = 0; var2 < g; ++var2) {
                                 if(a(var3 = c[var2]) && var3.n() >= 2 && var3.G()) {
                                     for(var4 = 0; var4 < 8; ++var4) {
-                                        var36 = MankeyManCanvas.h() % 6;
+                                        var36 = MankeyManCanvas.random() % 6;
                                         var38 = a.c[var4 + 50];
                                         var8 = a.c[var4 + 58];
                                         var9 = var3.p() + m;
@@ -327,17 +327,17 @@ final class j extends DataStoreBase {
                                                     }
                                                     break;
                                                 case 3:
-                                                    if(var38 > 0 && aiClass.d >= 3) {
+                                                    if(var38 > 0 && MankeyManRecordStore.d >= 3) {
                                                         var43 = true;
                                                     }
                                                     break;
                                                 case 4:
-                                                    if(var8 > 0 && var9 >= 70 && var9 <= 99 && aiClass.d >= 5 && a.j(2)) {
+                                                    if(var8 > 0 && var9 >= 70 && var9 <= 99 && MankeyManRecordStore.d >= 5 && a.j(2)) {
                                                         var43 = true;
                                                     }
                                                     break;
                                                 case 5:
-                                                    if(var38 > 0 && aiClass.d >= 5 && a.j(9)) {
+                                                    if(var38 > 0 && MankeyManRecordStore.d >= 5 && a.j(9)) {
                                                         var43 = true;
                                                     }
                                             }
@@ -378,7 +378,7 @@ final class j extends DataStoreBase {
                                                 sClass.d(175);
                                                 sClass.c(MankeyManCanvas.getMessage(var44 + 340));
                                                 sClass.c(MankeyManCanvas.getMessage(var36 + 194));
-                                                aiClass.d(var14);
+                                                MankeyManRecordStore.d(var14);
                                                 break;
                                             }
                                         }
@@ -393,7 +393,7 @@ final class j extends DataStoreBase {
 
                         if(i > 0) {
                             this.d();
-                            aiClass.A.d(0);
+                            MankeyManRecordStore.A.d(0);
                         } else {
                             this.h(3);
                         }
@@ -402,7 +402,7 @@ final class j extends DataStoreBase {
                 case 8:
                     if(n != 0) {
                         if(n == 15) {
-                            aiClass.b(13);
+                            MankeyManRecordStore.b(13);
                             b.a(8);
                             this.h(12);
                         }
@@ -431,7 +431,7 @@ final class j extends DataStoreBase {
                                         var35 = 0;
                                     }
 
-                                    if(MankeyManCanvas.h() % 100 < var35) {
+                                    if(MankeyManCanvas.random() % 100 < var35) {
                                         b.m(1);
                                         e[i++] = var3;
                                         sClass.c(var3.getName(true));
@@ -443,7 +443,7 @@ final class j extends DataStoreBase {
 
                             if(i > 0) {
                                 this.d();
-                                aiClass.A.d(0);
+                                MankeyManRecordStore.A.d(0);
                             } else {
                                 this.h(3);
                             }
@@ -461,12 +461,12 @@ final class j extends DataStoreBase {
                                 sClass.f();
                             }
 
-                            aiClass.x.d();
+                            MankeyManRecordStore.x.d();
                             Point var31 = e[0].k();
                             sClass.a(18, techId, var31.x, var31.y - 30, e[0].m() + 1, 0);
-                            aiClass.b(13);
+                            MankeyManRecordStore.b(13);
                             this.h(12);
-                            aiClass.d(q[techId << 1] - aiClass.year * q[(techId << 1) + 1]);
+                            MankeyManRecordStore.d(q[techId << 1] - MankeyManRecordStore.year * q[(techId << 1) + 1]);
                         }
                     } else {
                         i = 0;
@@ -496,17 +496,17 @@ final class j extends DataStoreBase {
                                 int var22 = var13.H();
                                 int var23 = b.c[9];
                                 int var24 = b.a_();
-                                int var25 = MankeyManCanvas.h() % 100;
+                                int var25 = MankeyManCanvas.random() % 100;
                                 boolean var26 = false;
                                 if(var14 + var15 < 99 && var25 > 50 || var14 + var15 >= 99) {
                                     var26 = true;
                                 }
 
-                                if(aiClass.d >= 0 && techId == -1 && !a.j(16) && var22 >= 8 && var26) {
+                                if(MankeyManRecordStore.d >= 0 && techId == -1 && !a.j(16) && var22 >= 8 && var26) {
                                     techId = 16;
                                 }
 
-                                if(aiClass.d > 0 && techId == -1) {
+                                if(MankeyManRecordStore.d > 0 && techId == -1) {
                                     if(!a.j(17)) {
                                         if(var22 >= 16 && var17 >= 350 && var19 >= 16 && var26) {
                                             techId = 17;
@@ -532,7 +532,7 @@ final class j extends DataStoreBase {
                                     }
                                 }
 
-                                if(aiClass.d >= 2 && techId == -1) {
+                                if(MankeyManRecordStore.d >= 2 && techId == -1) {
                                     if(!a.j(20)) {
                                         if(var22 >= 16 && var17 >= 600 && var19 >= 20 && a.j(19) && var26) {
                                             techId = 20;
@@ -554,7 +554,7 @@ final class j extends DataStoreBase {
                                     }
                                 }
 
-                                if(aiClass.d >= 3 && techId == -1) {
+                                if(MankeyManRecordStore.d >= 3 && techId == -1) {
                                     if(!a.j(22)) {
                                         if(var22 >= 24 && var17 >= 800 && var19 >= 24 && a.j(21) && var26) {
                                             techId = 22;
@@ -584,7 +584,7 @@ final class j extends DataStoreBase {
                                     }
                                 }
 
-                                if(aiClass.d >= 4 && techId == -1) {
+                                if(MankeyManRecordStore.d >= 4 && techId == -1) {
                                     if(!a.j(24)) {
                                         if(var22 >= 24 && var17 >= 1000 && var19 >= 32 && var26 && a.j(23)) {
                                             techId = 24;
@@ -602,7 +602,7 @@ final class j extends DataStoreBase {
                                     }
                                 }
 
-                                if(aiClass.d >= 5 && techId == -1) {
+                                if(MankeyManRecordStore.d >= 5 && techId == -1) {
                                     if(!a.j(26) && var22 >= 32 && var17 >= 1200 && var19 >= 36 && var26 && a.j(25)) {
                                         techId = 26;
                                     }
@@ -612,7 +612,7 @@ final class j extends DataStoreBase {
                                     }
                                 }
 
-                                if(aiClass.d >= 6 && techId == -1) {
+                                if(MankeyManRecordStore.d >= 6 && techId == -1) {
                                     if(!a.j(27) && var22 >= 48 && var17 >= 1300 && var19 >= 40 && var26) {
                                         techId = 27;
                                     }
@@ -635,7 +635,7 @@ final class j extends DataStoreBase {
                                 var4 = var29 / 16;
                                 var29 %= 16;
                                 var30.c[var4 + 11] |= 1 << var29;
-                                aiClass.a(MankeyManCanvas.getMessage(217 + techId));
+                                MankeyManRecordStore.a(MankeyManCanvas.getMessage(217 + techId));
                                 var13.s(0);
                                 sClass.c(var13.getName(true));
                                 sClass.c("▽");
@@ -649,7 +649,7 @@ final class j extends DataStoreBase {
 
                         if(techId != -1) {
                             this.d();
-                            aiClass.A.d(0);
+                            MankeyManRecordStore.A.d(0);
                         } else {
                             this.h(3);
                         }
@@ -662,7 +662,7 @@ final class j extends DataStoreBase {
                 case 11:
                     if(n != 0) {
                         if(n == 15) {
-                            aiClass.b(20);
+                            MankeyManRecordStore.b(20);
                             if(i == 1) {
                                 sClass.c(e[0].getName(true));
                             }
@@ -691,9 +691,9 @@ final class j extends DataStoreBase {
                         }
 
                         if(i > 0) {
-                            aiClass.b(20);
+                            MankeyManRecordStore.b(20);
                             this.d();
-                            aiClass.A.d(0);
+                            MankeyManRecordStore.A.d(0);
                         } else {
                             this.h(3);
                         }
@@ -712,13 +712,13 @@ final class j extends DataStoreBase {
                         sClass.c(18);
                         MankeyManCanvas.c(8);
                         MankeyManCanvas.f(0);
-                        aiClass.x.d();
-                        aiClass.b(22);
+                        MankeyManRecordStore.x.d();
+                        MankeyManRecordStore.b(22);
 
                         for(var5 = 0; var5 < i; ++var5) {
                             ae var6;
                             Point var7 = (var6 = e[var5]).i();
-                            var6.a(var7.x - 200, var7.y, 12 + MankeyManCanvas.h() % 5, 1, false);
+                            var6.a(var7.x - 200, var7.y, 12 + MankeyManCanvas.random() % 5, 1, false);
                         }
 
                         MankeyManCanvas.b(17, false);
@@ -726,8 +726,8 @@ final class j extends DataStoreBase {
                     }
 
                     if(sClass.k() && n >= 14) {
-                        aiClass.A.setColor(0);
-                        aiClass.A.d(1);
+                        MankeyManRecordStore.A.setColor(0);
+                        MankeyManRecordStore.A.d(1);
                         this.h(3);
                     }
                     break;
@@ -757,8 +757,8 @@ final class j extends DataStoreBase {
                         c[var2].l();
                     }
 
-                    aiClass.A.setColor(0);
-                    aiClass.A.d(1);
+                    MankeyManRecordStore.A.setColor(0);
+                    MankeyManRecordStore.A.d(1);
                     this.f(0);
             }
         } while(this.getD() == 3 && i == 0);
@@ -800,7 +800,7 @@ final class j extends DataStoreBase {
             ae var5;
             (var5 = e[var2]).b(120, 144);
             var5.a(var4[var2].x + 200, var4[var2].y);
-            var5.a(var4[var2].x, var4[var2].y, 12 + MankeyManCanvas.h() % 5, 2, false);
+            var5.a(var4[var2].x, var4[var2].y, 12 + MankeyManCanvas.random() % 5, 2, false);
             var5.f();
             d[h++] = var5;
         }

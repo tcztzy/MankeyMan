@@ -120,7 +120,7 @@ final class e extends DataStoreBase {
                 }
 
                 if(var2) {
-                    aiClass.b(8);
+                    MankeyManRecordStore.b(8);
                     if(this.g < 0) {
                         this.g = this.e - 1;
                     }

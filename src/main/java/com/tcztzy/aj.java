@@ -5,7 +5,7 @@
 package com.tcztzy;
 
 abstract class aj {
-    protected int b;
+    protected int length;
     public int[] c;
     private int a;
 
@@ -26,7 +26,7 @@ abstract class aj {
 
     public void c_() {
         this.a |= -2147483648;
-        aiClass.x.setFlagTrue(1073741824);
+        MankeyManRecordStore.x.setFlagTrue(1073741824);
         sClass.b(this);
     }
 
@@ -36,21 +36,21 @@ abstract class aj {
 
     public final void x(int var1) {
         this.c[3] = var1;
-        if(aiClass.x != null) {
-            aiClass.x.setFlagTrue(536870912);
+        if(MankeyManRecordStore.x != null) {
+            MankeyManRecordStore.x.setFlagTrue(536870912);
         }
 
     }
 
-    public final int a(int[] var1, int var2) {
-        System.arraycopy(this.c, 0, var1, var2, this.b);
+    final int copyTo(int[] dest, int destPos) {
+        System.arraycopy(this.c, 0, dest, destPos, this.length);
 
-        return this.b;
+        return this.length;
     }
 
-    public final int b(int[] var1, int var2) {
-        System.arraycopy(var1, var2, this.c, 0, this.b);
+    final int pasteFrom(int[] src, int srcPos) {
+        System.arraycopy(src, srcPos, this.c, 0, this.length);
 
-        return this.b;
+        return this.length;
     }
 }

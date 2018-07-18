@@ -6,6 +6,7 @@ package com.tcztzy;
 
 import java.io.InputStream;
 import java.util.Random;
+import javax.microedition.lcdui.Canvas;
 import javax.microedition.lcdui.Font;
 import javax.microedition.lcdui.Graphics;
 import javax.microedition.lcdui.Image;
@@ -14,14 +15,13 @@ import javax.microedition.media.Player;
 import javax.microedition.media.PlayerListener;
 
 abstract class MankeyManCanvas extends GameCanvas implements Runnable, PlayerListener {
-    public static Font font = Font.getFont(32, 0, 8);
+    static Font font = Font.getFont(32, 0, 8);
     public static int b = -40;
     private static Image optionsImage = null;
     private static boolean f = false;
-    public static MankeyManMIDlet midlet;
+    static MankeyManMIDlet midlet;
     private static v g;
-    private static Thread h;
-    private static int i;
+    private static int seed;
     private static int flags;
     private static int k;
     private static int l;
@@ -40,14 +40,11 @@ abstract class MankeyManCanvas extends GameCanvas implements Runnable, PlayerLis
     private static String[] y;
     private static DataStoreBase[] z;
     private static int A;
-    private static DataStoreBase B;
     private static wClass[] C;
     private static int D;
     private static int E;
-    private static MankeyManPlayer F;
+    private static MankeyManPlayer player;
     public static boolean d;
-    private static int G;
-    private static int H;
     private static PNGImage[] pngImages;
     private static MankeyManAudio[] audioList;
     private static String[] messages;
@@ -59,7 +56,7 @@ abstract class MankeyManCanvas extends GameCanvas implements Runnable, PlayerLis
         this.setFullScreenMode(true);
         midlet = null;
         g = new v(this);
-        i = ((new Random()).nextInt() >>> 1) % 32768; // the unicode for 耀 is 32768, 2**16
+        seed = ((new Random()).nextInt() >>> 1) % 32768; // the unicode for 耀 is 32768, 2**16
         keyFlags = 0;
         t = 0;
         u = 0;
@@ -76,13 +73,13 @@ abstract class MankeyManCanvas extends GameCanvas implements Runnable, PlayerLis
         D = 0;
         E = 0;
         pngImages = new PNGImage[256];
-        audioList = new MankeyManAudio[DataStore.d.length];
+        audioList = new MankeyManAudio[DataStore.audioResources.length];
         messages = new String[DataStore.MESSAGES.length];
         L = new am[180];
         loadingString = "";
         process = 0;
-        F = new MankeyManPlayer();
-        MankeyManPlayer.a(this);
+        player = new MankeyManPlayer();
+        MankeyManPlayer.setListener(this);
         optionStrings = new String[2];
         y = new String[2];
 
@@ -97,22 +94,23 @@ abstract class MankeyManCanvas extends GameCanvas implements Runnable, PlayerLis
 
     public void playerUpdate(Player var1, String var2, Object var3) {
         if(!var2.equals("deviceUnavailable") && var2.equals("deviceAvailable")) {
-            F.a();
+            player.play();
         }
     }
 
     public void repaint(MankeyManMIDlet mmmidlet) {
         g.repaintGameCanvas();
         midlet = mmmidlet;
+        Thread h;
         (h = new Thread(this)).start();
     }
 
     public static void a() {
-        midlet.a();
+        midlet.destroy();
     }
 
-    public static Font a(int var0) {
-        return Font.getFont(32, 0, var0);
+    static Font setFontSize(int size) {
+        return Font.getFont(32, 0, size);
     }
 
     public static void a(boolean var0) {
@@ -127,7 +125,7 @@ abstract class MankeyManCanvas extends GameCanvas implements Runnable, PlayerLis
                 }
             }
 
-            MankeyManPlayer.d();
+            MankeyManPlayer.close();
         } else {
             f = false;
             flags &= -8193;
@@ -137,7 +135,7 @@ abstract class MankeyManCanvas extends GameCanvas implements Runnable, PlayerLis
             }
 
             if(!DataStore.b && !DataStore.c) {
-                F.a();
+                player.play();
             }
 
         }
@@ -293,12 +291,12 @@ abstract class MankeyManCanvas extends GameCanvas implements Runnable, PlayerLis
             try {
                 Thread.sleep(100L);
             } catch (Exception ignored) {}
-        } while(!nClass.b);
+        } while(!WelcomeCanvas.b);
 
-        b(d = !nClass.a);
+        b(d = !WelcomeCanvas.audioEnabled);
 
         do {
-            if((flags & 6) != 0) {
+            if((flags & 6/*0b110*/) != 0) {
                 i();
             }
 
@@ -323,7 +321,6 @@ abstract class MankeyManCanvas extends GameCanvas implements Runnable, PlayerLis
                         t = keyFlags;
                     }
                 } else if(keyFlags == 0 && k != 0) {
-                    keyFlags = 0;
                     w = 0;
                     v = 0;
                     t = 0;
@@ -358,15 +355,16 @@ abstract class MankeyManCanvas extends GameCanvas implements Runnable, PlayerLis
 
                 int var10;
                 for(var10 = 0; var10 < var9; ++var10) {
-                    if((B = z[var10]).isFlag1() && !B.getFlag(4)) {
-                        B.r();
+                    DataStoreBase b1;
+                    if((b1 = z[var10]).isFlag1() && !b1.getFlag(4)) {
+                        b1.r();
                     }
                 }
 
                 var10 = 0;
 
                 while(true) {
-                    if((flags & 128) == 0) { // not flag8
+                    if((flags & 128/*0b10000000*/) == 0) { // not flag8
                         if(var10 > 0) {
                             for(var5 = 0; var5 < A - 1; ++var5) {
                                 if(z[var5] == null) {
@@ -468,7 +466,7 @@ abstract class MankeyManCanvas extends GameCanvas implements Runnable, PlayerLis
             ++l;
         } while((flags & 4096) == 0);
 
-        midlet.a();
+        midlet.destroy();
     }
 
     public static boolean d(int var0) {
@@ -479,54 +477,55 @@ abstract class MankeyManCanvas extends GameCanvas implements Runnable, PlayerLis
         return (var0 & t) != 0;
     }
 
-    public void keyPressed(int var1) {
-        if(f && (var1 == -6 || var1 == -5 || var1 == 53)) {
+    public void keyPressed(int keyCode) {
+        if(f && (keyCode == -6 || keyCode == -5 || keyCode == Canvas.KEY_NUM5)) {
             a(false);
         }
 
-        if(var1 == 48) {
-            keyFlags |= 1;
-        } else if(var1 == 49) {
-            keyFlags |= 2;
-        } else if(var1 == 50) {
-            keyFlags |= 131072;
-        } else if(var1 == 51) {
-            keyFlags |= 8;
-        } else if(var1 == 52) {
-            keyFlags |= 65536;
-        } else if(var1 == 53) {
-            keyFlags |= 1048576;
-        } else if(var1 == 54) {
-            keyFlags |= 262144;
-        } else if(var1 == 55) {
-            keyFlags |= 128;
-        } else if(var1 == 56) {
-            keyFlags |= 524288;
-        } else if(var1 == 57) {
-            keyFlags |= 512;
-        } else if(var1 == 35) {
-            keyFlags |= 2048;
-        } else if(var1 == 42) {
-            keyFlags |= 1024;
-        } else if(var1 == -6) {
-            keyFlags |= 2097152;
-        } else if(var1 == -7) {
-            keyFlags |= 4194304;
-        } else if(var1 == -5) {
-            keyFlags |= 1048576;
-        } else if((var1 = this.getGameAction(var1)) == 8) {
-            keyFlags |= 1048576;
-        } else if(var1 == 1) {
-            keyFlags |= 131072;
-        } else if(var1 == 6) {
-            keyFlags |= 524288;
-        } else if(var1 == 2) {
-            keyFlags |= 65536;
-        } else {
-            if(var1 == 5) {
-                keyFlags |= 262144;
-            }
-
+        switch (keyCode) {
+            case Canvas.KEY_NUM0:
+                keyFlags |= 1; break;
+            case Canvas.KEY_NUM1:
+                keyFlags |= 2; break;
+            case Canvas.KEY_NUM2:
+                keyFlags |= 131072; break;
+            case Canvas.KEY_NUM3:
+                keyFlags |= 8; break;
+            case Canvas.KEY_NUM4:
+                keyFlags |= 65536; break;
+            case Canvas.KEY_NUM5:
+                keyFlags |= 1048576; break;
+            case Canvas.KEY_NUM6:
+                keyFlags |= 262144; break;
+            case Canvas.KEY_NUM7:
+                keyFlags |= 128; break;
+            case Canvas.KEY_NUM8:
+                keyFlags |= 524288; break;
+            case Canvas.KEY_NUM9:
+                keyFlags |= 512; break;
+            case Canvas.KEY_POUND:
+                keyFlags |= 2048; break;
+            case Canvas.KEY_STAR:
+                keyFlags |= 1024; break;
+            case -5:
+                keyFlags |= 1048576; break;
+            case -6:
+                keyFlags |= 2097152; break;
+            case -7:
+                keyFlags |= 4194304; break;
+        }
+        int gameAction = this.getGameAction(keyCode);
+        switch (gameAction) {
+            case Canvas.FIRE:
+                keyFlags |= 1048576; break;
+            case Canvas.UP:
+                keyFlags |= 131072; break;
+            case Canvas.DOWN:
+                keyFlags |= 524288; break;
+            case Canvas.LEFT:
+                keyFlags |= 65536; break;
+            case Canvas.RIGHT:
+                keyFlags |= 262144; break;
         }
     }
 
@@ -686,11 +685,11 @@ abstract class MankeyManCanvas extends GameCanvas implements Runnable, PlayerLis
             return false;
         } else {
             if(MankeyManPlayer.isPlayerStarted()) {
-                MankeyManPlayer.b();
+                MankeyManPlayer.close();
             }
 
             if(var0 != -1) {
-                MankeyManPlayer.a(var0, var1);
+                MankeyManPlayer.play(var0, var1);
             }
 
             return true;
@@ -702,30 +701,30 @@ abstract class MankeyManCanvas extends GameCanvas implements Runnable, PlayerLis
     }
 
     public static void d() {
-        MankeyManPlayer.b();
+        MankeyManPlayer.close();
     }
 
     public static void e() {
-        F.a();
+        player.play();
     }
 
-    public static void b(boolean var0) {
-        if(var0) {
-            F.a(true);
+    public static void b(boolean audioDisabled) {
+        if(audioDisabled) {
+            player.pause(true);
             flags |= 16;
         } else {
-            F.a(false);
+            player.pause(false);
             flags &= -17;
         }
 
-        d = var0;
+        d = audioDisabled;
     }
 
     public static void f() {
-        MankeyManPlayer.d();
+        MankeyManPlayer.close();
     }
 
-    public static boolean loading(l[] var0, AudioResource[] audioResources, Message[] messages, m[] var3, boolean var4) {
+    static void loading(MankeyManImage[] images, AudioResource[] audioResources, Message[] messages, m[] var3, boolean var4) {
         String loading = "载入中...";
         y[0] = optionStrings[0];
         y[1] = optionStrings[1];
@@ -739,24 +738,24 @@ abstract class MankeyManCanvas extends GameCanvas implements Runnable, PlayerLis
 
         loadingString = loading;
         o(0);
-        G = 0;
-        H = 0;
+        int g1 = 0;
+        int h = 0;
         int i;
-        if(var0 != null) {
-            G += var0.length;
+        if(images != null) {
+            g1 += images.length;
 
-            for(i = 0; i < var0.length; ++i) {
-                getImage(var0[i].a, var0[i].b);
-                o(++H * 100 / G);
+            for(i = 0; i < images.length; ++i) {
+                setImage(images[i].imageId, images[i].imageName);
+                o(++h * 100 / g1);
             }
         }
 
         if(audioResources != null) {
-            G += audioResources.length;
+            g1 += audioResources.length;
 
             for(i = 0; i < audioResources.length; ++i) {
                 loadAudio(audioResources[i].audioIndex, audioResources[i].audioBaseName);
-                o(++H * 100 / G);
+                o(++h * 100 / g1);
             }
         }
 
@@ -768,15 +767,15 @@ abstract class MankeyManCanvas extends GameCanvas implements Runnable, PlayerLis
         }
 
         if(var3 != null) {
-            G += var3.length;
+            g1 += var3.length;
 
             for(i = 0; i < var3.length; ++i) {
                 c[] var7 = var3[i].b;
                 short var6 = var3[i].a;
                 short var8 = var3[i].a;
                 L[var8] = null;
-                L[var6] = new am(var7, 0);
-                o(++H * 100 / G);
+                L[var6] = new am(var7);
+                o(++h * 100 / g1);
             }
         }
 
@@ -785,30 +784,26 @@ abstract class MankeyManCanvas extends GameCanvas implements Runnable, PlayerLis
         optionStrings[1] = y[1];
         flags = (flags |= 6) | 6;
         k = 4;
-        return true;
     }
 
-    public static void a(l[] var0, AudioResource[] var1, Message[] var2, m[] var3) {
-        if(var0 != null) {
-            var0 = var0;
+    public static void a(MankeyManImage[] images, AudioResource[] var1, Message[] var2, m[] var3) {
+        if(images != null) {
 
-            for(int var4 = 0; var4 < var0.length; ++var4) {
-                nullImage(var0[var0.length - var4 - 1].a);
+            for(int var4 = 0; var4 < images.length; ++var4) {
+                nullImage(images[images.length - var4 - 1].imageId);
             }
         }
 
     }
 
-    public static boolean getImage(int imageId, int imageName) {
+    static void setImage(int imageId, int imageName) {
         nullImage(imageId);
 
         try {
             Image image = Image.createImage("/" + imageName + ".png");
-            pngImages[imageId] = new PNGImage(image, imageName);
-            return true;
-        } catch (Exception var3) {
+            pngImages[imageId] = new PNGImage(image);
+        } catch (Exception ignored) {
             pngImages[imageId] = null;
-            return false;
         }
     }
 
@@ -821,7 +816,7 @@ abstract class MankeyManCanvas extends GameCanvas implements Runnable, PlayerLis
     }
 
     static PNGImage getPNGImage(int imageId) {
-        return imageId >= 0 && imageId < 256? pngImages[imageId]:null;
+        return imageId >= 0 && imageId < 256? pngImages[imageId] : null;
     }
 
     private static void loadAudio(int audioIndex, int audioBaseName) {
@@ -851,8 +846,8 @@ abstract class MankeyManCanvas extends GameCanvas implements Runnable, PlayerLis
 
     }
 
-    public static MankeyManAudio i(int index) {
-        if (index >= 0 && index < DataStore.d.length)
+    static MankeyManAudio getAudio(int index) {
+        if (index >= 0 && index < DataStore.audioResources.length)
             return audioList[index];
         else
             return null;
@@ -866,72 +861,70 @@ abstract class MankeyManCanvas extends GameCanvas implements Runnable, PlayerLis
         return var0 >= 0 && var0 < 180 ? L[var0] : null;
     }
 
-    public static void setI(int var0) {
-        i = var0;
+    static void setSeed(int s) {
+        seed = s;
     }
 
-    public static int getI() {
-        return i;
+    static int getSeed() {
+        return seed;
     }
 
-    public static int h() {
-        if(i < 0) {
-            i = -i;
-        }
+    public static int random() {
+        seed = Math.abs(seed);
 
-        return i = (i * 109 + 1021) % 32768; // '耀'
+        return seed = (seed * 109 + 1021) % 32768; // '耀'
     }
 
-    public static int sin(int var0) {
+    public static int sin(int degree) {
         byte var1 = 1;
-        if(var0 < 0) {
+        if(degree < 0) {
             var1 = -1;
-            var0 = Math.abs(var0);
+            degree = Math.abs(degree);
         }
 
-        var0 %= 360;
+        degree %= 360;
         int var2 = 0;
-        if(var0 >= 0 && var0 < 90) {
-            var2 = MagicArray[var0];
+        if(degree >= 0 && degree < 90) {
+            var2 = MagicArray[degree];
         }
 
-        if(var0 >= 90 && var0 < 180) {
-            var2 = MagicArray[180 - var0];
+        if(degree >= 90 && degree < 180) {
+            var2 = MagicArray[180 - degree];
         }
 
-        if(var0 >= 180 && var0 < 270) {
-            var2 = -MagicArray[var0 - 180];
+        if(degree >= 180 && degree < 270) {
+            var2 = -MagicArray[degree - 180];
         }
 
-        if(var0 >= 270 && var0 < 360) {
-            var2 = -MagicArray[360 - var0];
+        if(degree >= 270 && degree < 360) {
+            var2 = -MagicArray[360 - degree];
         }
 
         return var1 * var2;
     }
 
-    static int cos(int var0) {
+    static int cos(int degree) {
         // Guess this is cos function. Get the degree and produce the 256 based cos value.
-        if(var0 < 0) {
-            var0 = Math.abs(var0);
+        if(degree < 0) {
+            degree = Math.abs(degree);
         }
 
-        var0 %= 360;
+        degree %= 360;
         int var1 = 0;
-        if(var0 >= 0 && var0 < 90) {
-            var1 = MagicArray[var0 + 91];
+        if(degree >= 0 && degree < 90) {
+            var1 = MagicArray[degree + 91];
         }
 
-        if(var0 >= 90 && var0 < 180) {
-            var1 = -MagicArray[271 - var0];
+        if(degree >= 90 && degree < 180) {
+            var1 = -MagicArray[271 - degree];
         }
 
-        if(var0 >= 180 && var0 < 270) {
-            var1 = -MagicArray[var0 + 91 - 180];
+        if(degree >= 180 && degree < 270) {
+            var1 = -MagicArray[degree + 91 - 180];
         }
 
-        if(var0 >= 270 && var0 < 360) {
-            var1 = MagicArray[451 - var0];
+        if(degree >= 270 && degree < 360) {
+            var1 = MagicArray[451 - degree];
         }
 
         return var1;

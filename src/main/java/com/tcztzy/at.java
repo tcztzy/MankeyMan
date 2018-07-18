@@ -9,25 +9,23 @@ import javax.microedition.lcdui.Graphics;
 final class at extends wClass {
     private ImageSize d = new ImageSize(12, 12);
     private ImageSize e = new ImageSize(240, 320);
-    private int g = 0;
     private int h = 0;
     private int i = 0;
     private int j = 0;
-    private int k = 8;
-    private int l;
+    private int whiteDownTriangleNumber;
     private int m = 0;
     private boolean n = false;
-    private String o = null;
+    private String message = null;
 
     at() {
         super.flags |= 16;
     }
 
     public final void a() {
-        if(this.o != null && !this.n) {
-            if(this.o.length() > this.h) {
+        if(this.message != null && !this.n) {
+            if(this.message.length() > this.h) {
                 if(this.i == 0) {
-                    this.h = this.o.length();
+                    this.h = this.message.length();
                 } else if(++this.j >= this.i) {
                     ++this.h;
                     this.j = 0;
@@ -41,34 +39,42 @@ final class at extends wClass {
     }
 
     public final void a(Graphics graphics) {
-        if(this.o != null) {
-            graphics.setFont(MankeyManCanvas.a(this.k));
+        if(this.message != null) {
+            int fontSize = 8;
+            graphics.setFont(MankeyManCanvas.setFontSize(fontSize));
             graphics.setColor(super.color);
-            int var2 = MankeyManCanvas.a(this.k).getHeight();
-            int var3 = super.a.x;
-            int var4 = super.a.y + var2;
+            int fontHeight = MankeyManCanvas.setFontSize(fontSize).getHeight();
+            int x_shift = super.a.x;
+            int y_shift = super.a.y + fontHeight;
             int var5 = 0;
             int var6 = 0;
             if((super.flags & 16) != 0) {
-                int var7 = 0;
+                int j = 0;
 
-                for(int var8 = 0; var8 < this.h; ++var8) {
-                    if(this.o.charAt(var8) == 9661 || var8 == this.o.length() - 1) {
+                for(int i = 0; i < this.h; ++i) {
+                    if(this.message.charAt(i) == 9661/* ▽ */ || i == this.message.length() - 1) {
                         ++var6;
-                        if(var8 > 0 && var3 >= 0 - var2 - (var8 - var7) * var2 && var3 <= var2 + 240 && var4 >= 0 - var2 && var4 <= var2 + 320 && 0 < this.e.width && var5 < this.e.height && var6 > this.m) {
-                            if(this.o.charAt(var8) == 9661) {
-                                graphics.drawString(this.o.substring(var7, var8), wClass.c.x + var3, wClass.c.y + var4, 68);
+                        if(i > 0 &&
+                                x_shift >= 0 - fontHeight - (i - j) * fontHeight &&
+                                x_shift <= fontHeight + 240 &&
+                                y_shift >= 0 - fontHeight &&
+                                y_shift <= fontHeight + 320 &&
+                                0 < this.e.width &&
+                                var5 < this.e.height &&
+                                var6 > this.m) {
+                            if(this.message.charAt(i) == 9661/* ▽ */) {
+                                graphics.drawString(this.message.substring(j, i), wClass.c.x + x_shift, wClass.c.y + y_shift, 68);
                             } else {
-                                graphics.drawString(this.o.substring(var7, var8 + 1), wClass.c.x + var3, wClass.c.y + var4, 68);
+                                graphics.drawString(this.message.substring(j, i + 1), wClass.c.x + x_shift, wClass.c.y + y_shift, 68);
                             }
                         }
 
-                        var4 += this.d.height;
+                        y_shift += this.d.height;
                         var5 += this.d.height;
-                        var7 = var8 + 1;
+                        j = i + 1;
                         if(var6 <= this.m) {
                             var5 = 0;
-                            var4 = super.a.y + var2;
+                            y_shift = super.a.y + fontHeight;
                         }
                     }
                 }
@@ -77,33 +83,29 @@ final class at extends wClass {
 
     }
 
-    private void a(String message, int var2) {
+    void a(String message) {
         this.i = 0;
         this.j = 0;
         this.h = 0;
-        this.g = 0;
+        int messageLength;
         this.n = false;
-        this.o = message;
+        this.message = message;
         this.m = 0;
-        this.l = 0;
-        if(this.o != null) {
-            this.g = this.o.length();
+        this.whiteDownTriangleNumber = 0;
+        if(this.message != null) {
+            messageLength = this.message.length();
 
-            for(int var3 = 0; var3 < this.g; ++var3) {
-                if(this.o.charAt(var3) == 9661) {
-                    ++this.l;
+            for(int i = 0; i < messageLength; ++i) {
+                if(this.message.charAt(i) == 9661/* ▽ */) {
+                    ++this.whiteDownTriangleNumber;
                 }
             }
         }
 
     }
 
-    public final void a(String var1) {
-        this.a(var1, 0);
-    }
-
     public final void a(int messageId) {
-        this.a(MankeyManCanvas.getMessage(messageId), 0);
+        this.a(MankeyManCanvas.getMessage(messageId));
     }
 
     public final void a(int var1, int var2) {
@@ -111,13 +113,13 @@ final class at extends wClass {
         this.d.height = var2;
     }
 
-    public final void a(ImageSize var1) {
-        this.e.width = var1.width;
-        this.e.height = var1.height;
+    public final void a(ImageSize imageSize) {
+        this.e.width = imageSize.width;
+        this.e.height = imageSize.height;
     }
 
-    public final int b() {
-        return this.l;
+    final int getWhiteDownTriangleNumber() {
+        return this.whiteDownTriangleNumber;
     }
 
     public final void b(int var1) {

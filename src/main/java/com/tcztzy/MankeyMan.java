@@ -7,18 +7,18 @@ package com.tcztzy;
 public class MankeyMan extends MankeyManMIDlet {
     public MankeyMan() {
         MainCanvas var1 = new MainCanvas();
-        new nClass(this, var1);
+        new WelcomeCanvas(this, var1);
         var1.repaint(this);
     }
 
     protected void pauseApp() {
-        aiClass.recordGame();
+        MankeyManRecordStore.recordGame();
         super.pauseApp();
         MankeyManCanvas.a(true);
     }
 
     protected void destroyApp(boolean destroy) {
-        aiClass.recordGame();
+        MankeyManRecordStore.recordGame();
         super.destroyApp(destroy);
     }
 }

@@ -90,7 +90,7 @@ final class aClass extends DataStoreBase {
                     }
                 } else if(this.i == 1) {
                     if(c % 4 == 0) {
-                        this.e += MankeyManCanvas.h() % 100 > 50?1:0;
+                        this.e += MankeyManCanvas.random() % 100 > 50?1:0;
                         if(this.e < 0) {
                             this.e = this.d - 1;
                         }
@@ -106,7 +106,7 @@ final class aClass extends DataStoreBase {
                 }
 
                 if(var4) {
-                    aiClass.b(8);
+                    MankeyManRecordStore.b(8);
                     if(this.e < 0) {
                         this.e = this.d - 1;
                     }

@@ -20,7 +20,7 @@ abstract class MankeyManMIDlet extends MIDlet {
     protected void destroyApp(boolean var1) {
     }
 
-    public final void a() {
+    final void destroy() {
         this.destroyApp(false);
         this.notifyDestroyed();
     }

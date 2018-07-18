@@ -15,15 +15,15 @@ import javax.microedition.media.Player;
 import javax.microedition.media.control.VolumeControl;
 import javax.microedition.midlet.MIDlet;
 
-public final class nClass extends Canvas implements Runnable {
-    public static boolean a = false;
+public final class WelcomeCanvas extends Canvas implements Runnable {
+    static boolean audioEnabled = false;
     private static boolean c = true;
     public static boolean b = false;
     private boolean d = true;
     private boolean e = true;
     private int f = 0;
-    private int g = -6;
-    private int h = -7;
+    private int KEY_YES = -6;
+    private int KEY_NO = -7;
     private int width;
     private int height;
     private MIDlet midlet;
@@ -46,27 +46,27 @@ public final class nClass extends Canvas implements Runnable {
     private long timeAnchor;
     private static int interval = 40;
     private int E;
-    private int[] F;
+    private int[] x_shifts;
 
-    nClass(MIDlet var1, Displayable var2) {
+    WelcomeCanvas(MIDlet var1, Displayable var2) {
         int[] y = new int[]{16, 14, 5, 1, -3, -2, 2};
         this.A = new int[][]{{2, y[6], 0, y[6], 1, y[6], 500}, {2, y[2], 0, y[2], 1, y[2], interval}, {2, y[1], 0, y[1], 1, y[1], interval}, {2, y[0], 0, y[0], 1, y[0], interval, 2}, {-1, this.z[0], -1, this.z[0], -1, this.z[0], interval}, {-1, this.z[0], 5, this.z[0], -1, this.z[0], interval}, {-1, this.z[0], 5, this.z[1], -1, this.z[0], interval}, {-1, this.z[0], 5, this.z[2], -1, this.z[0], interval}, {-1, this.z[0], 5, this.z[3], -1, this.z[0], interval}, {-1, this.z[0], 5, this.z[0], -1, this.z[0], interval}, {-1, this.z[0], 5, this.z[1], 5, this.z[0], interval, 1}, {-1, this.z[0], 5, this.z[2], 5, this.z[1], interval}, {5, this.z[0], 5, this.z[3], 5, this.z[2], interval}, {5, this.z[1], 5, this.z[0], 5, this.z[3], interval}, {5, this.z[2], 5, this.z[1], 5, this.z[0], interval}, {5, this.z[3], 5, this.z[2], 5, this.z[1], interval}, {5, this.z[0], 5, this.z[3], 5, this.z[2], interval}, {5, this.z[1], 5, this.z[0], 5, this.z[3], interval}, {5, this.z[2], 2, y[0], 5, this.z[0], interval}, {5, this.z[3], 2, y[1], 5, this.z[1], interval}, {5, this.z[0], 2, y[2], 5, this.z[2], interval}, {5, this.z[1], 2, y[3], 5, this.z[3], interval}, {5, this.z[2], 2, y[4], 5, this.z[0], interval}, {5, this.z[3], 2, y[5], 5, this.z[1], interval}, {3, y[0], 2, y[6], 5, this.z[2], interval}, {3, y[1], 2, y[6], 5, this.z[3], interval}, {3, y[2], 2, y[6], 5, this.z[0], interval}, {3, y[3], 2, y[6], 5, this.z[1], interval}, {3, y[4], 2, y[6], 5, this.z[2], interval}, {3, y[5], 2, y[6], 5, this.z[3], interval}, {4, y[0], 2, y[6], 3, y[6], interval}, {4, y[1], 2, y[6], 3, y[6], interval}, {4, y[2], 2, y[6], 3, y[6], interval}, {4, y[6], 2, y[6], 3, y[6], 1000}};
         this.timeAnchor = 0L;
-        this.F = new int[]{0, -1, -1};
+        this.x_shifts = new int[]{0, -1, -1};
         this.setFullScreenMode(true);
         this.midlet = var1;
         this.displayable = var2;
         this.width = this.getWidth();
         this.height = this.getHeight();
-        this.a();
-        nClass self = this;
+        this.loadImages();
+        WelcomeCanvas self = this;
 
         try {
             self.player = Manager.createPlayer(self.midlet.getClass().getResourceAsStream("/sound.mid"), "audio/midi");
             self.player.realize();
-            VolumeControl var5;
-            if((var5 = (VolumeControl)self.player.getControl("VolumeControl")) != null) {
-                var5.setLevel(60);
+            VolumeControl volumeControl = (VolumeControl)self.player.getControl("VolumeControl");
+            if(volumeControl != null) {
+                volumeControl.setLevel(60);
             }
         } catch (Exception ignored) {}
 
@@ -75,7 +75,7 @@ public final class nClass extends Canvas implements Runnable {
         this.thread.start();
     }
 
-    private void a() {
+    private void loadImages() {
         try {
             this.brandImage = Image.createImage("/111.png");
             this.gstarImage = Image.createImage("/gstar.png");
@@ -95,17 +95,17 @@ public final class nClass extends Canvas implements Runnable {
         } catch (Exception ignored) {}
     }
 
-    public final void keyPressed(int var1) {
+    public final void keyPressed(int keyCode) {
         if(this.e) {
-            if(var1 == this.g) {
-                a = true;
+            if(keyCode == this.KEY_YES) {
+                audioEnabled = true;
                 c = true;
                 this.e = false;
                 return;
             }
 
-            if(var1 == this.h) {
-                a = false;
+            if(keyCode == this.KEY_NO) {
+                audioEnabled = false;
                 c = true;
                 this.e = false;
             }
@@ -113,72 +113,72 @@ public final class nClass extends Canvas implements Runnable {
 
     }
 
-    protected final void pointerPressed(int var1, int var2) {
-        super.pointerPressed(var1, var2);
-        if(var1 > 0 && var1 < this.yesImage.getWidth() + 5 && var2 > this.height - this.yesImage.getHeight() - 5 && var2 < this.height) {
-            this.keyPressed(this.g);
+    protected final void pointerPressed(int x, int y) {
+        super.pointerPressed(x, y);
+        if(x > 0 && x < this.yesImage.getWidth() + 5 && y > this.height - this.yesImage.getHeight() - 5 && y < this.height) {
+            this.keyPressed(this.KEY_YES);
         } else {
-            if(var1 > this.width - this.noImage.getWidth() - 5 && var1 < this.width && var2 > this.height - this.noImage.getHeight() - 5 && var2 < this.height) {
-                this.keyPressed(this.h);
+            if(x > this.width - this.noImage.getWidth() - 5 && x < this.width && y > this.height - this.noImage.getHeight() - 5 && y < this.height) {
+                this.keyPressed(this.KEY_NO);
             }
 
         }
     }
 
-    public final void paint(Graphics var1) {
-        var1.setClip(0, 0, this.width, this.height);
+    public final void paint(Graphics graphics) {
+        graphics.setClip(0, 0, this.width, this.height);
         if(this.d) {
-            var1.setColor(0);
-            var1.fillRect(0, 0, this.width, this.height);
-            var1.drawImage(this.brandImage, this.width >> 1, this.height >> 2, 3);
-            var1.drawImage(this.gstarImage, this.width >> 1, this.height >> 1, 17);
+            graphics.setColor(0);
+            graphics.fillRect(0, 0, this.width, this.height);
+            graphics.drawImage(this.brandImage, this.width >> 1, this.height >> 2, 3);
+            graphics.drawImage(this.gstarImage, this.width >> 1, this.height >> 1, 17);
         } else if(this.e) {
-            var1.setColor(0);
-            var1.fillRect(0, 0, this.width, this.height);
-            var1.drawImage(this.brandImage, this.width >> 1, this.height >> 2, 3);
-            var1.drawImage(this.gstarImage, this.width >> 1, this.height >> 1, 17);
-            var1.drawImage(this.soundAskImage, this.width >> 1, this.height - this.yesImage.getHeight() - this.bannerImage.getHeight() - 15, 33);
-            var1.drawImage(this.bannerImage, this.width >> 1, this.height - this.yesImage.getHeight() - 10, 33);
-            var1.drawImage(this.yesImage, 0, this.height - 2, 36);
-            var1.drawImage(this.noImage, this.width - 2, this.height - 2, 40);
+            graphics.setColor(0);
+            graphics.fillRect(0, 0, this.width, this.height);
+            graphics.drawImage(this.brandImage, this.width >> 1, this.height >> 2, 3);
+            graphics.drawImage(this.gstarImage, this.width >> 1, this.height >> 1, 17);
+            graphics.drawImage(this.soundAskImage, this.width >> 1, this.height - this.yesImage.getHeight() - this.bannerImage.getHeight() - 15, 33);
+            graphics.drawImage(this.bannerImage, this.width >> 1, this.height - this.yesImage.getHeight() - 10, 33);
+            graphics.drawImage(this.yesImage, 0, this.height - 2, 36);
+            graphics.drawImage(this.noImage, this.width - 2, this.height - 2, 40);
         } else if(c) {
-            nClass var4 = this;
-            var1.setClip(0, 0, var1.getClipWidth(), var1.getClipHeight());
-            var1.setColor(0);
-            var1.fillRect(0, 0, var1.getClipWidth(), var1.getClipHeight());
-            var1.drawImage(this.backgroundImage, var1.getClipWidth() >> 1, var1.getClipHeight() >> 1, 3);
+            WelcomeCanvas self = this;
+            graphics.setClip(0, 0, graphics.getClipWidth(), graphics.getClipHeight());
+            graphics.setColor(0);
+            graphics.fillRect(0, 0, graphics.getClipWidth(), graphics.getClipHeight());
+            graphics.drawImage(this.backgroundImage, graphics.getClipWidth() >> 1, graphics.getClipHeight() >> 1, 3);
 
-            for(int var3 = 0; var3 < 3; ++var3) {
-                if(var4.A[var4.f][var3 << 1] != -1) {
-                    var4.E = var4.x[var3];
-                    if(var4.A[var4.f][var3 << 1] == 3) {
-                        var4.E = var4.x[0];
-                    } else if(var4.A[var4.f][var3 << 1] == 4) {
-                        var4.E = var4.x[2];
+            for(int i = 0; i < 3; ++i) {
+                if(self.A[self.f][i << 1] != -1) {
+                    self.E = self.x[i];
+                    if(self.A[self.f][i << 1] == 3) {
+                        self.E = self.x[0];
+                    } else if(self.A[self.f][i << 1] == 4) {
+                        self.E = self.x[2];
                     }
 
-                    var4.E += var4.width >> 1;
-                    if(var4.A[var4.f][var3 << 1] == 5) {
-                        if(var4.A[var4.f][(var3 << 1) + 1] == var4.z[0]) {
-                            var1.drawImage(var4.logo51Image, var4.E + var4.F[var3], (var4.height >> 1) - 30, 17);
-                        } else if(var4.A[var4.f][(var3 << 1) + 1] == var4.z[1]) {
-                            var1.drawImage(var4.logoImages[var4.A[var4.f][var3 << 1]], var4.E, var4.height >> 1, 3);
-                        } else if(var4.A[var4.f][(var3 << 1) + 1] == var4.z[2]) {
-                            var1.drawImage(var4.logo52Image, var4.E + var4.F[var3], (var4.height >> 1) - 31, 17);
+                    self.E += self.width >> 1;
+                    if(self.A[self.f][i << 1] == 5) {
+                        if(self.A[self.f][(i << 1) + 1] == self.z[0]) {
+                            graphics.drawImage(self.logo51Image, self.E + self.x_shifts[i], (self.height >> 1) - 30, 17);
+                        } else if(self.A[self.f][(i << 1) + 1] == self.z[1]) {
+                            graphics.drawImage(self.logoImages[self.A[self.f][i*2]], self.E, self.height >> 1, 3);
+                        } else if(self.A[self.f][(i << 1) + 1] == self.z[2]) {
+                            graphics.drawImage(self.logo52Image, self.E + self.x_shifts[i], (self.height >> 1) - 31, 17);
                         }
                     } else {
-                        var1.drawImage(var4.logoImages[var4.A[var4.f][var3 << 1]], var4.E, var4.A[var4.f][(var3 << 1) + 1] + (var4.height >> 1), 3);
+                        graphics.drawImage(self.logoImages[self.A[self.f][i << 1]], self.E, self.A[self.f][(i << 1) + 1] + (self.height >> 1), 3);
                     }
                 }
             }
 
         } else {
-            var1.setColor(0);
-            var1.fillRect(0, 0, var1.getClipWidth(), var1.getClipHeight());
+            graphics.setColor(0);
+            graphics.fillRect(0, 0, graphics.getClipWidth(), graphics.getClipHeight());
         }
     }
 
-    private synchronized void b() {
+    private synchronized void killThread() {
         if(this.thread != null) {
             this.thread = null;
         }
@@ -206,10 +206,10 @@ public final class nClass extends Canvas implements Runnable {
                 this.width = this.getWidth();
                 this.height = this.getHeight();
                 if(this.f == 0) {
-                    nClass var1 = this;
+                    WelcomeCanvas var1 = this;
 
                     try {
-                        if(a) {
+                        if(audioEnabled) {
                             if(var1.player != null) {
                                 var1.player.start();
                             }
@@ -225,8 +225,8 @@ public final class nClass extends Canvas implements Runnable {
                 this.serviceRepaints();
                 Thread.sleep((long)this.A[this.f][6]);
                 ++this.f;
-                long timeUsage;
-                if(this.timeAnchor != 0L && (timeUsage = System.currentTimeMillis() - this.timeAnchor) < (long) interval) {
+                long timeUsage = System.currentTimeMillis() - this.timeAnchor;
+                if(this.timeAnchor != 0L && timeUsage < (long) interval) {
                     Thread.sleep((long) interval - timeUsage);
                 }
 
@@ -239,18 +239,18 @@ public final class nClass extends Canvas implements Runnable {
         }
         catch (Exception ignored) {}
         finally {
-            this.b();
+            this.killThread();
             if(this.displayable != null) {
                 Display.getDisplay(this.midlet).setCurrent(this.displayable);
                 b = true;
-                this.c();
+                this.close();
             }
 
         }
 
     }
 
-    private void c() {
+    private void close() {
         this.brandImage = null;
         this.gstarImage = null;
         this.soundAskImage = null;

@@ -22,7 +22,7 @@ final class ae extends aj {
     private static z[] r = new z[]{new z(0, 0, 0, 0), new z(0, 0, 8, 7), new z(8, 0, 12, 11), new z(20, 0, 22, 20), new z(0, 0, 0, 0), new z(55, 0, 9, 13), new z(64, 0, 12, 16), new z(76, 0, 17, 22)};
 
     ae() {
-        super.b = 59;
+        super.length = 59;
         super.c = new int[59];
         super.c[0] = 6;
     }
@@ -62,7 +62,7 @@ final class ae extends aj {
             this.a((ae)null);
         }
 
-        aiClass.x.a(this.getName(false));
+        MankeyManRecordStore.x.a(this.getName(false));
         super.c_();
     }
 
@@ -82,7 +82,7 @@ final class ae extends aj {
                 }
 
                 if(var2 != -1) {
-                    aiClass.x.a(0, var2, this.k(), this.m());
+                    MankeyManRecordStore.x.a(0, var2, this.k(), this.m());
                 }
             }
 
@@ -194,7 +194,7 @@ final class ae extends aj {
             var3 = var4.c[51];
         }
 
-        String var5 = aiClass.x.b(var3);
+        String var5 = MankeyManRecordStore.x.b(var3);
 
         int var6;
         for(var6 = 0; var6 < var5.length(); ++var6) {
@@ -207,7 +207,7 @@ final class ae extends aj {
 
         super.c[17] = var3;
         super.c[18] = var2;
-        super.c[16] = MankeyManCanvas.h() % 3;
+        super.c[16] = MankeyManCanvas.random() % 3;
         if(var4 != null) {
             super.c[26] = var4.c[1];
             super.c[27] = var4.c[56];
@@ -220,25 +220,25 @@ final class ae extends aj {
         if(var4 != null) {
             var6 = var4.c[49];
         } else {
-            switch(aiClass.d) {
+            switch(MankeyManRecordStore.d) {
                 case 0:
                 case 1:
-                    var6 = 400 + MankeyManCanvas.h() % 30;
+                    var6 = 400 + MankeyManCanvas.random() % 30;
                     break;
                 case 2:
-                    var6 = 600 + MankeyManCanvas.h() % 200;
+                    var6 = 600 + MankeyManCanvas.random() % 200;
                     break;
                 case 3:
-                    var6 = 800 + MankeyManCanvas.h() % 200;
+                    var6 = 800 + MankeyManCanvas.random() % 200;
                     break;
                 case 4:
-                    var6 = 1000 + MankeyManCanvas.h() % 200;
+                    var6 = 1000 + MankeyManCanvas.random() % 200;
                     break;
                 case 5:
-                    var6 = 1200 + MankeyManCanvas.h() % 100;
+                    var6 = 1200 + MankeyManCanvas.random() % 100;
                     break;
                 case 6:
-                    var6 = 1300 + MankeyManCanvas.h() % 100;
+                    var6 = 1300 + MankeyManCanvas.random() % 100;
                     break;
                 case 7:
                     var6 = 1450;
@@ -249,7 +249,7 @@ final class ae extends aj {
         if(var4 != null) {
             var2 = var4.c[50];
         } else {
-            var2 = 24 + MankeyManCanvas.h() % 5;
+            var2 = 24 + MankeyManCanvas.random() % 5;
         }
 
         this.b(var2);
@@ -259,10 +259,10 @@ final class ae extends aj {
         } else {
             switch(var3) {
                 case 0:
-                    var2 = 50 + MankeyManCanvas.h() % 50;
+                    var2 = 50 + MankeyManCanvas.random() % 50;
                     break;
                 case 1:
-                    var2 = 40 + MankeyManCanvas.h() % 30;
+                    var2 = 40 + MankeyManCanvas.random() % 30;
             }
         }
 
@@ -274,16 +274,16 @@ final class ae extends aj {
             switch(var3) {
                 case 0:
                     if(var2 >= 70) {
-                        var7 = 30 + MankeyManCanvas.h() % 20;
+                        var7 = 30 + MankeyManCanvas.random() % 20;
                     } else {
-                        var7 = 50 + MankeyManCanvas.h() % 50;
+                        var7 = 50 + MankeyManCanvas.random() % 50;
                     }
                     break;
                 case 1:
                     if(var2 >= 50) {
-                        var7 = 50 + MankeyManCanvas.h() % 20;
+                        var7 = 50 + MankeyManCanvas.random() % 20;
                     } else {
-                        var7 = 70 + MankeyManCanvas.h() % 30;
+                        var7 = 70 + MankeyManCanvas.random() % 30;
                     }
             }
         }
@@ -295,10 +295,10 @@ final class ae extends aj {
         } else {
             switch(var3) {
                 case 0:
-                    var2 = 40 + MankeyManCanvas.h() % 50;
+                    var2 = 40 + MankeyManCanvas.random() % 50;
                     break;
                 case 1:
-                    var2 = 30 + MankeyManCanvas.h() % 70;
+                    var2 = 30 + MankeyManCanvas.random() % 70;
             }
         }
 
@@ -306,7 +306,7 @@ final class ae extends aj {
         if(var4 != null) {
             var2 = var4.c[55];
         } else {
-            var2 = 4 + MankeyManCanvas.h() % 7;
+            var2 = 4 + MankeyManCanvas.random() % 7;
         }
 
         this.i(var2);
@@ -603,7 +603,7 @@ final class ae extends aj {
             var3 = 5;
         }
 
-        int var5 = MankeyManCanvas.h() % 3;
+        int var5 = MankeyManCanvas.random() % 3;
         var1 = var4 * 36 + (var3 * 3 << 1) + (var1 << 1) + var2;
         this.a[0].e(n[var1], var5);
         this.a[0].setFlag2(this.d);
@@ -755,8 +755,8 @@ final class ae extends aj {
             var2 = var3.j(14);
         }
 
-        if(!var2 && super.c[39] > 0 && super.c[20] > 0 && MankeyManCanvas.h() % 100 < 50) {
-            this.p(MankeyManCanvas.h() % 2);
+        if(!var2 && super.c[39] > 0 && super.c[20] > 0 && MankeyManCanvas.random() % 100 < 50) {
+            this.p(MankeyManCanvas.random() % 2);
         }
 
         if(super.c[19] - super.c[20] < super.c[18]) {
@@ -797,7 +797,7 @@ final class ae extends aj {
             super.c[58] = 1;
         } else if(super.c[18] > super.c[19]) {
             super.c[58] = 4;
-        } else if(super.c[18] == super.c[19] && super.c[21] >= aiClass.q) {
+        } else if(super.c[18] == super.c[19] && super.c[21] >= MankeyManRecordStore.q) {
             super.c[58] = 4;
         }
 
@@ -907,24 +907,24 @@ final class ae extends aj {
 
             int var1 = this.K().c(1);
             int var4 = this.K().c(0);
-            var4 = var1 >= 3 && var4 >= 3? MankeyManCanvas.h() % 2:(var1 > var4?0:1);
+            var4 = var1 >= 3 && var4 >= 3? MankeyManCanvas.random() % 2:(var1 > var4?0:1);
             super.c[51] = var4;
             var1 = var3?20:0;
             if(super.c[27] != super.c[28]) {
-                switch(aiClass.d) {
+                switch(MankeyManRecordStore.d) {
                     case 0:
                     case 1:
                     case 2:
-                        var1 += 25 + MankeyManCanvas.h() % 16;
+                        var1 += 25 + MankeyManCanvas.random() % 16;
                         break;
                     case 3:
                     case 4:
-                        var1 += 25 + MankeyManCanvas.h() % 21;
+                        var1 += 25 + MankeyManCanvas.random() % 21;
                         break;
                     case 5:
                     case 6:
                     case 7:
-                        var1 += 30 + MankeyManCanvas.h() % 16;
+                        var1 += 30 + MankeyManCanvas.random() % 16;
                 }
             }
 
@@ -960,12 +960,12 @@ final class ae extends aj {
             }
 
             super.c[49] = var1;
-            if((var1 = (super.c[19] + var2.c[19]) / 2 - (2 + MankeyManCanvas.h() % 11)) < 24) {
+            if((var1 = (super.c[19] + var2.c[19]) / 2 - (2 + MankeyManCanvas.random() % 11)) < 24) {
                 var1 = 24;
             }
 
             super.c[50] = var1;
-            var1 = (var2.o() + this.o() + 30) / 2 + -20 + MankeyManCanvas.h() % 41;
+            var1 = (var2.o() + this.o() + 30) / 2 + -20 + MankeyManCanvas.random() % 41;
             if(var4 == 1) {
                 var1 -= 30;
                 if(var1 > 69) {
@@ -975,12 +975,12 @@ final class ae extends aj {
 
             if(var3) {
                 var1 += 3;
-                if(MankeyManCanvas.h() % 100 <= 0) {
+                if(MankeyManCanvas.random() % 100 <= 0) {
                     var1 += 30;
-                } else if(MankeyManCanvas.h() % 100 < 2) {
+                } else if(MankeyManCanvas.random() % 100 < 2) {
                     var1 -= 15;
                 }
-            } else if(MankeyManCanvas.h() % 100 < 3) {
+            } else if(MankeyManCanvas.random() % 100 < 3) {
                 var1 -= 30;
             }
 
@@ -989,45 +989,45 @@ final class ae extends aj {
             switch(var4) {
                 case 0:
                     if(var1 >= 70) {
-                        var7 += -30 + MankeyManCanvas.h() % 41;
+                        var7 += -30 + MankeyManCanvas.random() % 41;
                     }
 
                     if(var1 <= 69) {
-                        var7 += -20 + MankeyManCanvas.h() % 41;
+                        var7 += -20 + MankeyManCanvas.random() % 41;
                     }
                     break;
                 case 1:
                     if(var1 >= 50) {
-                        var7 += -10 + MankeyManCanvas.h() % 21;
+                        var7 += -10 + MankeyManCanvas.random() % 21;
                     }
 
                     if(var1 <= 49) {
-                        var7 += -10 + MankeyManCanvas.h() % 41;
+                        var7 += -10 + MankeyManCanvas.random() % 41;
                     }
             }
 
             if(var3) {
-                if(MankeyManCanvas.h() % 100 <= 0) {
+                if(MankeyManCanvas.random() % 100 <= 0) {
                     var7 += 30;
                 }
 
-                if(MankeyManCanvas.h() % 100 < 2) {
+                if(MankeyManCanvas.random() % 100 < 2) {
                     var7 -= 15;
                 }
-            } else if(MankeyManCanvas.h() % 100 < 3) {
+            } else if(MankeyManCanvas.random() % 100 < 3) {
                 var7 -= 30;
             }
 
             super.c[53] = var7;
-            var1 = (var2.c[33] + super.c[33]) / 2 + -18 + MankeyManCanvas.h() % 37;
+            var1 = (var2.c[33] + super.c[33]) / 2 + -18 + MankeyManCanvas.random() % 37;
             if(var3) {
                 var1 += 3;
-                if(MankeyManCanvas.h() % 100 <= 0) {
+                if(MankeyManCanvas.random() % 100 <= 0) {
                     var1 += 30;
-                } else if(MankeyManCanvas.h() % 100 < 2) {
+                } else if(MankeyManCanvas.random() % 100 < 2) {
                     var1 -= 15;
                 }
-            } else if(MankeyManCanvas.h() % 100 < 3) {
+            } else if(MankeyManCanvas.random() % 100 < 3) {
                 var1 -= 30;
             }
 

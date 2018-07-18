@@ -5,9 +5,9 @@
 package com.tcztzy;
 
 final class MankeyManAudio {
-    public byte[] audioBytes;
+    byte[] audioBytes;
 
-    public MankeyManAudio(byte[] var1, int var2) {
+    MankeyManAudio(byte[] var1, int var2) {
         this.audioBytes = var1;
     }
 }

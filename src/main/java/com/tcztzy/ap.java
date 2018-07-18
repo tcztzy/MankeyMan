@@ -14,7 +14,7 @@ final class ap {
     public z g;
     public boolean h;
 
-    ap(int var1, int var2, int var3, int var4, Point var5, int var6, boolean var7) {
+    ap(int var1, int var2, int var3, Point var5, int var6) {
         this.a = var1;
         this.b = var2;
         this.c = var3;

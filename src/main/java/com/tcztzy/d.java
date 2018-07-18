@@ -84,7 +84,7 @@ class d extends wClass {
                 this.dst.moveTo(this.transformPoint(transformType));
             }
         } else {
-            this.b(0, 0);
+            this.setStart(0, 0);
         }
 
     }
@@ -126,7 +126,7 @@ class d extends wClass {
         return point;
     }
 
-    public final void b(int var1, int var2) {
+    final void setStart(int var1, int var2) {
         this.start.width = var1;
         this.start.height = var2;
     }

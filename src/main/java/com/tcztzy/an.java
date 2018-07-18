@@ -9,7 +9,7 @@ final class an extends aj {
     private static int[] d = new int[5];
 
     an() {
-        super.b = 131;
+        super.length = 131;
         super.c = new int[131];
         super.c[0] = 1;
     }
@@ -22,7 +22,7 @@ final class an extends aj {
         int var1;
         for(var1 = 0; var1 < 90; ++var1) {
             b var2 = new b(this, var1 / 9);
-            var2 = (b) aiClass.x.a(var2);
+            var2 = (b) MankeyManRecordStore.x.a(var2);
             super.c[var1 + 41] = var2.c[1];
         }
 
@@ -80,8 +80,8 @@ final class an extends aj {
         for(var1 = 0; var1 < 2; ++var1) {
             int var4;
             do {
-                var3 = MankeyManCanvas.h() % 9;
-                var4 = MankeyManCanvas.h() % 10;
+                var3 = MankeyManCanvas.random() % 9;
+                var4 = MankeyManCanvas.random() % 10;
             } while(var8.a(var3, var4).a_() != 3);
 
             var8.a(var3, var4).l(1);
@@ -161,7 +161,7 @@ final class an extends aj {
         }
 
         for(var2 = 0; var2 < 5; ++var2) {
-            if((var1.c[var2 + 10] & 1) != 0 && var1.a(var1.c[var2 + 15], var1.c[var2 + 20]).b(0) == 0) {
+            if((var1.c[var2 + 10] & 1) != 0 && var1.a(var1.c[var2 + 15], var1.c[var2 + 20]).c(0) == 0) {
                 var1.c[var2 + 10] = 0;
             }
         }
@@ -206,10 +206,10 @@ final class an extends aj {
             for(var5 = 0; var5 < var4; ++var5) {
                 for(var6 = 0; var6 < 10; ++var6) {
                     if((self.c[var5 + 10] & 1) == 0) {
-                        var7 = MankeyManCanvas.h() % 9;
-                        var8 = MankeyManCanvas.h() % 10;
+                        var7 = MankeyManCanvas.random() % 9;
+                        var8 = MankeyManCanvas.random() % 10;
                         var10 = (var9 = self.a(var7, var8)).a_();
-                        if(var9.b(0) == 0 && var9.f() == 0 && var10 != 7 && var10 != 6 && var10 != 5 && var10 != 8 && var9.c[10] == 0 && (var2.x - 2 > var7 || var2.x + 2 < var7 || var2.y - 2 > var8 || var2.y + 2 < var8)) {
+                        if(var9.c(0) == 0 && var9.f() == 0 && var10 != 7 && var10 != 6 && var10 != 5 && var10 != 8 && var9.c[10] == 0 && (var2.x - 2 > var7 || var2.x + 2 < var7 || var2.y - 2 > var8 || var2.y + 2 < var8)) {
                             var9.a(0, 1);
                             self.c[var5 + 10] = 1;
                             self.c[var5 + 15] = var7;
@@ -240,9 +240,9 @@ final class an extends aj {
             for(var5 = 0; var5 < var4; ++var5) {
                 for(var6 = 0; var6 < 10; ++var6) {
                     if((self.c[var5 + 26] & 1) == 0) {
-                        var7 = MankeyManCanvas.h() % 9;
-                        var8 = MankeyManCanvas.h() % 10;
-                        if((var9 = self.a(var7, var8)).b(0) == 0 && var9.f() == 0 && var9.a_() != 7 && var9.c[10] == 0 && (var2.x - 2 > var7 || var2.x + 2 < var7 || var2.y - 2 > var8 || var2.y + 2 < var8)) {
+                        var7 = MankeyManCanvas.random() % 9;
+                        var8 = MankeyManCanvas.random() % 10;
+                        if((var9 = self.a(var7, var8)).c(0) == 0 && var9.f() == 0 && var9.a_() != 7 && var9.c[10] == 0 && (var2.x - 2 > var7 || var2.x + 2 < var7 || var2.y - 2 > var8 || var2.y + 2 < var8)) {
                             var9.i(1);
                             self.c[var5 + 26] = 1;
                             self.c[var5 + 31] = var7;
@@ -268,11 +268,11 @@ final class an extends aj {
             if((self.c[var4 + 10] & 1) != 0) {
                 var5 = self.c[var4 + 15];
                 var6 = self.c[var4 + 20];
-                if(!aiClass.w && var5 == var12.x && var6 == var12.y) {
+                if(!MankeyManRecordStore.w && var5 == var12.x && var6 == var12.y) {
                     for(var7 = 0; var7 < 10; ++var7) {
                         var8 = var5;
                         int var13 = var6;
-                        switch(MankeyManCanvas.h() % 6) {
+                        switch(MankeyManCanvas.random() % 6) {
                             case 0:
                                 var13 = var6 - 1;
                                 break;
@@ -304,7 +304,7 @@ final class an extends aj {
 
                         b var11;
                         var10 = (var11 = self.a(var8, var13)).a_();
-                        if(var11.b(0) == 0 && var11.f() == 0 && var10 != 7 && var10 != 6 && var10 != 5 && var10 != 8 && var11.c[10] == 0) {
+                        if(var11.c(0) == 0 && var11.f() == 0 && var10 != 7 && var10 != 6 && var10 != 5 && var10 != 8 && var11.c[10] == 0) {
                             var5 = var8;
                             var6 = var13;
                             break;
@@ -330,11 +330,11 @@ final class an extends aj {
             if((self.c[var3 + 26] & 1) != 0) {
                 var4 = self.c[var3 + 31];
                 var5 = self.c[var3 + 36];
-                if(!aiClass.w) {
+                if(!MankeyManRecordStore.w) {
                     for(var6 = 0; var6 < 10; ++var6) {
                         var7 = var4;
                         var8 = var5;
-                        switch(MankeyManCanvas.h() % 8) {
+                        switch(MankeyManCanvas.random() % 8) {
                             case 0:
                                 var8 = var5 - 1;
                                 break;
@@ -365,7 +365,7 @@ final class an extends aj {
                         }
 
                         b var14;
-                        if((var14 = self.a(var7, var8)).b(0) == 0 && var14.f() == 0 && var14.a_() != 7 && var14.c[10] == 0) {
+                        if((var14 = self.a(var7, var8)).c(0) == 0 && var14.f() == 0 && var14.a_() != 7 && var14.c[10] == 0) {
                             var4 = var7;
                             var5 = var8;
                             break;
@@ -416,7 +416,7 @@ final class an extends aj {
             var4 = 0;
 
             while(var4 < d[var3]) {
-                var2 = var1 * 9 + MankeyManCanvas.h() % 9;
+                var2 = var1 * 9 + MankeyManCanvas.random() % 9;
                 b var7;
                 if((var7 = (b) sClass.a(super.c[var2 + 41])).a_() == -1) {
                     var7.a(var3);
@@ -437,13 +437,13 @@ final class an extends aj {
         if((var1 = super.c[4]) > 1) {
             b var3;
             for(var2 = 0; var2 < 5; ++var2) {
-                if((var3 = (b) sClass.a(super.c[41 + MankeyManCanvas.h() % 90])).c[7] == 0) {
+                if((var3 = (b) sClass.a(super.c[41 + MankeyManCanvas.random() % 90])).c[7] == 0) {
                     var3.d(1);
                 }
             }
 
             for(var2 = 0; var2 < 3; ++var2) {
-                int var4 = (var3 = (b) sClass.a(super.c[41 + MankeyManCanvas.h() % 90])).a_();
+                int var4 = (var3 = (b) sClass.a(super.c[41 + MankeyManCanvas.random() % 90])).a_();
                 if(var3.c[7] == 0 && var4 != 3 && var4 != 8) {
                     var3.d(2);
                 }

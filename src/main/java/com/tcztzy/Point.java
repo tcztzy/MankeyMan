@@ -23,12 +23,12 @@ final class Point {
         this.y = point.y;
     }
 
-    public final void moveTo(int x, int y) {
+    final void moveTo(int x, int y) {
         this.x = x;
         this.y = y;
     }
 
-    public final void moveTo(Point point) {
+    final void moveTo(Point point) {
         this.x = point.x;
         this.y = point.y;
     }

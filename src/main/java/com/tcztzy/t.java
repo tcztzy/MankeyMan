@@ -15,8 +15,8 @@ final class t extends aj {
     private boolean j;
     private boolean k;
 
-    public t() {
-        super.b = 19;
+    t() {
+        super.length = 19;
         super.c = new int[19];
         super.c[0] = 3;
     }
