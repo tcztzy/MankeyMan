@@ -2,6 +2,7 @@
 // Source code recreated from name .class file by IntelliJ IDEA
 // (powered by Fernflower decompiler)
 //
+package com.tcztzy;
 
 import java.io.ByteArrayInputStream;
 import java.io.DataInputStream;
@@ -27,7 +28,7 @@ final class kClass {
         if(!b) {
             try {
                 i var6;
-                if((var6 = Canvas.i(var0)) != null) {
+                if((var6 = MankeyManCanvas.i(var0)) != null) {
                     b();
 
                     try {
